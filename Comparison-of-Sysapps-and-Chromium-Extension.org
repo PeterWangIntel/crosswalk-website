@@ -1,0 +1,83 @@
+* Introduction
+  System Applications specification is to define a runtime environment, security model, and associated APIs for building Web applications with comparable capabilities to native applications. The purpose of this document is to summarize the major differences between Chromium extension and Sysapps core specs, and give some ideas of how to implement Sysapps on Chromium.
+
+  The Sysapps specs are all in draft status now, and need a long time discussion to complete, so this wiki will be continuous update. 
+* Differences between Chromium Extension and Sysapps
+  Below are the differences of manifest between Chromium Extension and Sysapps spec:
+|-------------------+------------------------+--------------------+-------------------|
+| modules           | item                   | Chromium           | Sysapps           |
+|-------------------+------------------------+--------------------+-------------------|
+| manifest file     | manifest version       | Yes                | N/A               |
+|                   | developer              | N/A                | Yes               |
+|                   | appcache path          | offline_enabled   | Yes               |
+|                   | locales                | N/A                | Yes               |
+|                   | release notes          | N/A                | Yes               |
+|                   | browser action         | Yes                | N/A               |
+|                   | page action            | Yes                | N/A               |
+|                   | theme                  | Yes                | N/A               |
+|                   | app                    | Yes                | N/A               |
+|                   | background             | Yes                | N/A               |
+|                   | content scripts        | Yes                | N/A               |
+|                   | CSP                    | Yes                | N/A               |
+|                   | file browser handlers  | Yes                | N/A               |
+|                   | id                     | Key                | N/A               |
+|                   | update url             | Yes                | N/A               |
+|                   | sandbox                | Yes                | N/A               |
+|                   | incognito              | Yes                | N/A               |
+|                   | minimum version        | Yes                | N/A               |
+|                   | nacl modules           | Yes                | N/A               |
+|                   | plugins                | Yes                | N/A               |
+|                   | options page           | Yes                | N/A               |
+|                   | omnibox                | Yes                | N/A               |
+| package structure | package format         | zip (magic header) | zip               |
+|                   | Magic Header           | Yes                | N/A               |
+|                   | signed package         | Yes                | Yes, hosted app   |
+|                   | signed manifest        | N/A                | Yes, packaged app |
+|                   | locales                | Yes                | N/A               |
+| security          | privileged application | No                 | trusted origin    |
+|                   | CSP                    | Yes                | Fixed rule        |
+|                   | sandbox                | Yes                | N/A               |
+| URI               | URI                    | package id         | instance id       |
+| System Messages   | System Messages API    | N/A                | Yes               |
+  
+  Generally, sysapps is much easier than the extension module in Chromium, so implement the parser of sysapps based on Chromium is possible.
+* Ideas for implementation of Sysapps
+  Will list the sysapps required feature and some ideas.
+** Package and Manifest 
+	Which support unpacking and parsing the package file, storing/getting the application information. In this module, although the package and manifest are different between Chromium and Sysapps, but the implementation can also follow what Chromium does, and align with the spec with a little changes.
+   - Application package file type support (zip), and also the signed package check.
+   - Manifest file parsing
+   - Offline appcache resource loading, it will try to download the appcache manifest and store the resource files are listed in it.
+   - Application information saving and querying, suggest to use database instead of a preference file. In Chromium, all application information is saved in a preference file, which is JSON format, but I don't think it's enough for Crosswalk, because in run-time usage model, this file should be read when being written, and it might cause some mistake because of the wrong JSON format and incomplete information.
+** Runtime model
+	Which support managing the application's life cycle, it contains a group of APIs, which can control the applications installed in the run-time, and also include the extenstion URI scheme. 
+	-  The app:// URI supporting, in sysapps, the URI contains the id of application's instance id, but in Chromium, it's extension's id, the sysapps' URI support multi-instance for one application, but seems that Chromium doesn't.
+	- Localization mechanism of Sysapps, it very different from Chromium's.
+	- Application life-cycle is different, sysapps have running, paused and terminated status.
+	- Support multi instance for one application model, in some case, like mobile usage model, multi instance for one application is needed, such as a text edit service need to provide different instance for each customers, otherwise, the edit content will not be restored when switching between those applications are editing. This feature are under discussion in the working group.
+    - The ApplicationRegistry, Application and ApplicationManagement APIs, which are described in Sysapp spec.
+** Security
+	Which contains CSP, resource loading, APIs access checking.
+	- For API access permission control, need to figure out the APIs access required in manifest file, but in sysapps, for some special APIs (like  ApplicationManagemen), need an additional check, and it can only be accessed by special applications, such as install API, only specific application can use it. So it's need some additional check to control such kinds of special APIs, maybe a special signature of application is needed.
+    - Privileged applications supporting, an application is said to be a privileged application if the origin installing the application is trusted by the UA and the origin installing the application considers the application to be trustworthy.
+    - Plugins are also needed to do permission check when access.
+** Plugins
+	Which provide many APIs for applications that can be used in application context.
+    - Plugin framework (based on Chromium/Blink or Extension APIs way are all okay), in which any one can easily add a new API. But a signification check is needed, and only the plugins which pass the validation can be loaded.
+    - Loading on demand, which will save memory consumption in mobile usage model. 
+** System Messages
+   System Messages are events sent by the system to an application which has registered for it before. Those events are different from DOM events in the sense that they are always originated by the system and that if the targeted application is not currently running, it will be started. In addition, unhandled messages will stay in a queue. Chromium doesn't have this mechanism.
+* Sysapps core specifications
+   The sysapps WG contains these specifications:
+- [[http://www.w3.org/2012/sysapps/runtime/][Runtime & Security Model]]
+
+  This document specifies two classes of Web application: hosted Web applications and packaged applications, and also define application package format, core APIs and security model.
+- [[http://www.w3.org/2012/sysapps/manifest/][App Manifest]]
+
+  An application manifest is a JSON document that describes various aspects of web application. Some of these aspects are presentational, while others aspects have security implications.
+- [[http://www.w3.org/2012/sysapps/app-uri/][App URI]]
+
+  This specification defines the app: URI scheme and rules for dereferencing an app: URI, which can be used to address resources inside a package (e.g., a packaged application). 
+- [[http://www.w3.org/2012/sysapps/][System Applications Working Group]]
+
+  The mission of the System Applications Working Group is to define a runtime environment, security model, and associated APIs for building Web applications with comparable capabilities to native applications. You can find more Sysapps specifications in this group.
