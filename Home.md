@@ -1,7 +1,10 @@
-## Introducing Crosswalk
+## Crosswalk Developer Wiki
 Welcome to the Crosswalk developer's wiki.
 
-Here you will find all the resources needed to use or work with Crosswalk and related projects.
+Here you will find developer notes and information related to the Crosswalk project. The information on this portion 
+of the website is subject to change. Information that many people reference on a frequent basis is periodically pruned 
+out of the wiki and planted in the higher level documentation under either [Documentation](#documentation) or 
+[Contribute](#contribute).
 
 ## For Application Developers
 
