@@ -28,6 +28,7 @@ If you any question on how to use Crosswalk you can ask on IRC. On freenode.net,
 
 ## Crosswalk's infrastructure
 * [Testing Framework](wiki/Crosswalk-testing-framework) 
+* [Website](wiki/Website)
 
 ## Other resources
 * [Chromium command line switches](http://peter.sh/experiments/chromium-command-line-switches/) (external link) could be useful for developers (e.g. ```--allow-file-access-from-files```)
