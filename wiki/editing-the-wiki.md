@@ -11,9 +11,11 @@ The general workflow is:
 ```sh
 git clone git@github.com:crosswalk-project/crosswalk-website.wiki.git
 gollum --base-path wiki --live-preview ${PWD}/crosswalk-website.wiki >/dev/null 2>&1 &
+gollum_pid=$!
 xdg-open http://localhost:4567
 # Make your changes, create pages, etc.
 git push origin master
+kill ${gollum_pid}
 ```
 You can verify your content is correct by viewing the pages at http://github.com/crosswalk-project/crosswalk-website/wiki.
 
