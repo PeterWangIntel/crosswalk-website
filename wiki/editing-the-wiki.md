@@ -8,7 +8,7 @@ Once you have Gollum running locally, you can point your browser to http://local
 and edit the content in the live preview editor. When you are satisfied with your content, you can push it back to the GitHub project.
 
 The general workflow is:
-```
+```sh
 git clone git@github.com/crosswalk-project/crosswalk-website.wiki.git
 gollum --base-path wiki --live-preview ${PWD}/crosswalk-website.wiki >/dev/null 2>&1 &
 xdg-open http://localhost:4567
