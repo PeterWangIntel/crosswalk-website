@@ -1,12 +1,14 @@
-Crosswalk is not ready for production application development, but if you'd like to try it, here are instructions for packaging your HTML5/CSS/JS application with a copy of the runtime. We humbly present an early milestone on the Application Runtime. This version is designed to be shared among multiple applications.  Except sharing isn't implemented yet as it's not possible to install it OS-wise. An early milestone- exactly.
+_If you are a C/C++ developer and want to develop your own runtime built 
+with Crosswalk, reference [Crosswalk Build Instructions](Build-Crosswalk) for instructions on how to build your own 
+binary._
 
-_If you are a C/C++ developer and want to develop your own runtime built with Crosswalk, reference [Crosswalk Build Instructions](Build-Crosswalk) for instructions on how to build your own binary._
+## Downloads
 
-### <a name="Get Crosswalk"></a>Get Crosswalk
+For official binaries, see [Downloads](#documentation/downloads). If you 
+would like a binary for an operating system not provided, you will need 
+to build Crosswalk yourself.
 
-You can download the pre-built binaries that are packaged into a .zip file (~30M) from:
-
-https://github.com/crosswalk-project/crosswalk/releases
+Once you have the binaries built, you can follow these instructions.
 
 ### Install Crosswalk
 
@@ -38,40 +40,19 @@ You should see a native app window that renders the `www.google.com` page. Refer
 
 #### On Android
 
-You will need to install [adb](http://developer.android.com/tools/help/adb.html), and use it to connect your device to your development machine.
+See [Installing Crosswalk](#documentation/installing_crosswalk/android).
 
-Once you've done that, follow these steps to install crosswalk. (In this example, we were installing onto an HTC One X.)
+#### On Tizen
 
-1.  Download the binary for Android from the URL in <a href="#Get Crosswalk">Get Crosswalk</a>.
-
-1.  Install the xwalk runtime library on the device (here we're assuming the *xwalk-android.zip* file is in the *~/Downloads* directory on a Linux machine):
-
-        host$ cd ~/Downloads
-        host$ unzip xwalk-android.zip
-        host$ adb shell 'pm set-install-location 2'
-        host$ adb install -r xwalk-android/apks/XWalkRuntimeLib.apk
-
-1.  Install the sample application and run it.
-
-        host$ adb install -r xwalk-android/apks/XWalkAppTemplate.apk
-
-    On the device, go to the application list and locate the 'XWalkAppTemplate' icon.
-
-See the <a href="#package-your-web-app">Package Your Web App</a> section below for details of how to package a web app + Crosswalk into an Android APK file.
-
-#### On Tizen 2.1
-
-1. Log into the device as root by default: `sdb root on`.
-1. Push the crosswalk RPM to the device: `sdb push [crosswalk].rpm /tmp`
-1. Push the crosswalk Tizen extensions RPM to the device: `sdb push [crosswalk extensions].rpm /tmp`
-1. Install the RPMs on the device: `sdb shell` then `rpm -i /tmp/[crosswalk].rpm /tmp/[crosswalk extensions].rpm`.
-1. From there, you can launch: `xwalk http://www.google.com`
-1. You will be able to create an xwalk icon on the home screen (to launch xwalk) later. (It is a 'work in progress'.)
+See [Installing Crosswalk](#documentation/installing_crosswalk/tizen).
 
 ### Package Your Web App  
-Given a web app written in HTML5 and Javascript with an `index.html` entry page, the Crosswalk tools allows you to package it into a native app installer.
+Given a web app written in HTML5 and Javascript with an `index.html` 
+entry page, the Crosswalk tools allows you to package it into a native 
+app installer.
 
-You can also pack a manifest.json file with your application. Reference [Crosswalk manifest](https://github.com/crosswalk-project/crosswalk/wiki/Crosswalk-manifest) to see how to write a manifest file.
+You can also pack a manifest.json file with your application. Reference 
+[Crosswalk manifest](wiki/Crosswalk-manifest) to see how to write a manifest file.
 
 #### For Windows Installer
 The `create_windows_installer.bat` contained in the Crosswalk binaries is used to package a web app into a native app installer. 
