@@ -9,6 +9,7 @@ Crosswalk 1.29.3.0 - **Canary Build**
 **NOTE:**
 This is a Canary build of Crosswalk. Canary builds are intended for active Crosswalk developers and may not be stable. See Release Methodology for a description of the Crosswalk release cycle and channel descriptions.
 
+### Files
 <table width=100%>
 <thead style='font-weight:bold'><tr><td>Platform</td><td>Latest Version</td><td>Instructions</td></tr></thead>
 <tbody>
@@ -36,4 +37,3 @@ upstream version:
 ```
   29.0.1500.36 sha1 id: fbe291949676bb15f17146cf3fd9ffc842c80c1b
 ```
-
