@@ -1,12 +1,12 @@
 ## Installing Crosswalk
+
 ### Android
 
-You will need to install [adb](http://developer.android.com/tools/help/adb.html), and use it to connect your device to your development machine.
+You will need to install the Android SDK, including [adb](http://developer.android.com/tools/help/adb.html), and use it to connect your device to your development machine.
 
 Once you've done that, follow these steps to install crosswalk. (In this example, we were installing onto an HTC One X.)
 
-1.  Download the binary for Android from the URL in [Downloads](#documentation/downloads).
-
+1.  Download the Crosswalk binary for Android from the URL in [Downloads](#documentation/downloads/files).
 2. Install the Crosswalk binary on the device (here we're assuming the *crosswalk-1.29.3.0-android.zip* file is the *~/Downloads* directory on a Linux machine):
 ```sh
 cd ~/Downloads
@@ -23,6 +23,7 @@ Success
 ### Tizen
 These steps assume you have the Tizen SDK installed and correctly configured on your system. You can use the Tizen emulator as a target for running and developing Crosswalk applications on Tizen.
 
+1.  Download the Crosswalk binary for Tizen from the URL in [Downloads](#documentation/downloads/files).
 1. With the Tizen emulator started or a Tizen device connected to the computer, log into the device as root by default:
 ```sh
 sdb root on
