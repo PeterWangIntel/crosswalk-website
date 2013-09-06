@@ -12,12 +12,14 @@ This is a Canary build of Crosswalk. Canary builds are intended for active Cross
 <table width=100%>
 <thead style='font-weight:bold'><tr><td>Platform</td><td>Latest Version</td><td>Instructions</td></tr></thead>
 <tbody>
-<tr><td>Android</td><td><a href='https://origin-download.01.org/crosswalk/releases/android/canary/crosswalk-android-1.29.3.0.zip'>1.29.3.0</a></td>
+<tr><td>Android</td><td><a href='https://origin-download.01.org/crosswalk/releases/android/canary/crosswalk-android-1.29.3.0.zip'>1.29.3.0.apk</a></td>
 <td><a href='#documentation/installing_crosswalk/android'>Installation</td></tr>
-<tr><td>Tizen</td><td><a href='https://origin-download.01.org/crosswalk/releases/tizen/canary/crosswalk-tizen-1.29.3.0.rpm'>1.29.3.0</a></td><td><a href='#documentation/installing_crosswalk/tizen'>Installation</td></tr></tr>
+<tr><td>Tizen</td><td><a href='https://origin-download.01.org/crosswalk/releases/tizen/canary/crosswalk-tizen-1.29.3.0.rpm'>1.29.3.0.rpm</a></td><td><a href='#documentation/installing_crosswalk/tizen'>Installation</td></tr></tr>
 </tbody>
 </table>
-[All releases](https://origin-download.01.org/crosswalk/releases/)
+[More releases...](https://origin-download.01.org/crosswalk/releases/)
+
+Information on the [Release Channels](wiki/release_methodology).
 
 ## Tizen Features
 * Basic application launcher with manifest support. See [Crosswalk Manifest](wiki/Crosswalk-manifest).
