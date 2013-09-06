@@ -4,7 +4,12 @@ The [Crosswalk wiki](http://crosswalk-project.org/#wiki) is managed by the Gollu
 To edit content you need to have commit access to the crosswalk-website project.
 
 ## Workflow
-The most efficient workflow for editing content is to do so with a local install of Gollum running in a .
+The most efficient workflow for editing content is to do so with a local install of Gollum running in a local instance of the website.  
+1. Edit the content locally using the live preview editor provided by Gollum's web interface.
+1. Saving changes locally via Gollum. 
+1. Verify your content looks correct when rendered in the local instance of the website. 
+1. Push your changes to crosswalk-website.wiki.git
+1. The next content update cycle on the Crosswalk website will automatically pull in your content. 
 
 ## Local Wiki in a Local Website
 The detailed steps for installing the Crosswalk website and Gollum are documented in the [Crosswalk website README.md](https://github.com/crosswalk-project/crosswalk-website/blob/master/README.md). 
