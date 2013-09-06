@@ -19,7 +19,7 @@ This is a Canary build of Crosswalk. Canary builds are intended for active Cross
 </table>
 [More releases...](https://origin-download.01.org/crosswalk/releases/)
 
-Information on the [Release Channels](wiki/release_methodology).
+Information on the [Release Channels](wiki/Release-methodology).
 
 ## Tizen Features
 * Basic application launcher with manifest support. See [Crosswalk Manifest](wiki/Crosswalk-manifest).
