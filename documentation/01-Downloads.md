@@ -10,10 +10,11 @@ Crosswalk 1.29.3.0 - **Canary Build**
 This is a Canary build of Crosswalk. Canary builds are intended for active Crosswalk developers and may not be stable. See Release Methodology for a description of the Crosswalk release cycle and channel descriptions.
 
 <table width=100%>
-<thead style='font-weight:bold'><tr><td>Platform</td><td>Latest Version</td></tr></thead>
+<thead style='font-weight:bold'><tr><td>Platform</td><td>Latest Version</td><td>Instructions</td></tr></thead>
 <tbody>
-<tr><td>Android</td><td><a href='https://origin-download.01.org/crosswalk/releases/android/canary/crosswalk-android-1.29.3.0.zip'>1.29.3.0</a></td></tr>
-<tr><td>Tizen</td><td><a href='https://origin-download.01.org/crosswalk/releases/tizen/canary/crosswalk-tizen-1.29.3.0.rpm'>1.29.3.0</a></td></tr>
+<tr><td>Android</td><td><a href='https://origin-download.01.org/crosswalk/releases/android/canary/crosswalk-android-1.29.3.0.zip'>1.29.3.0</a></td>
+<td><a href='#documentation/installing_crosswalk/android'>Installation</td></tr>
+<tr><td>Tizen</td><td><a href='https://origin-download.01.org/crosswalk/releases/tizen/canary/crosswalk-tizen-1.29.3.0.rpm'>1.29.3.0</a></td><td><a href='#documentation/installing_crosswalk/tizen'>Installation</td></tr></tr>
 </tbody>
 </table>
 [All releases](https://origin-download.01.org/crosswalk/releases/)
