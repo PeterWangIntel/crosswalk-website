@@ -25,6 +25,7 @@ If you any question on how to use Crosswalk you can ask on IRC. On freenode.net,
 * [Development Tasks](wiki/Development-Tasks)
 * [Standardization Tasks](wiki/Standardization-Tasks)
 * [[Crosswalk on Android]]
+* [Remote debugging xwalk on PR3 / Tizen-2.1] (wiki/Remote-debugging-xwalk-on-PR3---Tizen-2.1)
 
 ## Crosswalk's infrastructure
 * [Testing Framework](wiki/Crosswalk-testing-framework) 
@@ -32,7 +33,7 @@ If you any question on how to use Crosswalk you can ask on IRC. On freenode.net,
 * [Editing the Wiki](wiki/Editing-the-Wiki)
 
 ## Other resources
-* [Chromium command line switches](http://peter.sh/experiments/chromium-command-line-switches/) (external link) could be useful for developers (e.g. ```--allow-file-access-from-files```)
+* [Chromium command line switches](http://peter.sh/experiments/chromium-command-line-switches/) (external link) some are especially useful for developers (e.g. ```--allow-file-access-from-files```)
 * [Android WebView](wiki/Android-WebView)
 * [Tizen 2.1 Features and Tasks](wiki/Tizen-2.1-WRT-features-and-related-tasks)
 * [[Tizen Integration]]

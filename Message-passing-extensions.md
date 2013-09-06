@@ -1,6 +1,6 @@
 *NOTE: This document is the original design document for Crosswalk Extensions. We'll release an updated one with the current work on running extensions in an external process.*
 
-Contact: caio.de.oliveira.filho@intel.com
+Contact: caio.oliveira@intel.com
 
 # Introduction: Why extensions?
 

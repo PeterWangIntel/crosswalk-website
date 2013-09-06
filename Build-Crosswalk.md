@@ -53,6 +53,10 @@ Optionally, to build the tests, execute:
     ninja -C out/Release xwalk_browsertest
 
 #### Build Instructions for Android
+Install the dependency of building crosswalk on Ubuntu machine
+
+    sudo ./build/install-build-deps-android.sh
+
 Setup environment for Android build for IA platform(Change x86 to arm for ARM build)
 
     . xwalk/build/android/envsetup.sh --target-arch=x86
@@ -62,7 +66,7 @@ Generate Crosswalk projects, execute
      export GYP_GENERATORS='ninja'
      xwalk_android_gyp
 
-To build xwalk core and runtime shell(for developer testing purpose), execute:
+To build xwalk core and runtime shell(for developer testing purpose, not used by public), execute:
 
     ninja -C out/Release xwalk_core_shell_apk xwalk_runtime_shell_apk
 

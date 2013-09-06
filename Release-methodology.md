@@ -12,7 +12,7 @@ The release schedule follows a six week cascading release methodology as follows
 A new feature landing on the master tip of Crosswalk will take between six and twelve weeks before it can possibly land in a Stable release.
 
 ## Beta Branch
-Once a branch is created for the stabilization process no new features are added to the tree. If a feature has not landed by the beginning of the Beta phase, it must wait until the following Beta release cycle (six weeks) to begin. New features may be removed from the Beta branch if they are unstable and can not be fixed in order to meet the Stable release metrics.
+Once a branch is created for the stabilization process no new features are added to its tree. If a feature has not landed in tip by the beginning of the Beta phase, it will wait until the following Beta release cycle (six weeks) to enter in a stabilization branch. New features may be removed from the Beta branch if they are unstable and can not be fixed in order to meet the Stable release metrics.
 
 This allows a greater stability in the releases, faster accommodation of industry shifts, and a forecastable load on the engineering resources, reducing contributor burn-out.
 

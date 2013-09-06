@@ -8,7 +8,19 @@ ninja -C out/Debug xwalk_core_shell_apk
 ```
 adb install -r out/Debug/apks/XWalkCoreShell.apk
 ```
+## Test
+```
+# Build and install test suite
+ninja -C out/Debug xwalk_core_shell_apk xwalk_core_test_apk
+adb install -r out/Debug/apks/XWalkCoreTest.apk
 
+# Set up environment
+export XWALK_OS_ANDROID=1
+. xwalk/build/android/envsetup.sh --target-arch=x86 
+
+# Run test
+build/android/run_instrumentation_tests.py --test-apk XWalkCoreTest --verbose -I -f testExtensionEcho
+```
 ## Debug Native Code with "adb_gdb*"
 * On Device, launch the App
 * On Host machine, to debug the browser process, use:

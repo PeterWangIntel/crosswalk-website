@@ -1,76 +1,56 @@
-We have identified a list of standardization tasks that we need to get started with. We hope to get to a point where we have clear visibility and accountability for contributions from each team/site, assuming responsibility for sub-tasks of Crosswalk.
+We have identified a set of standardization tasks that we need to get started with. We hope to get to a point where we have clear visibility and accountability for contributions from each team/site, assuming responsibility for sub-tasks of Crosswalk.
 
 The page shares its basic structure and boilerplate with [[Development-Tasks|Development tasks]] for consistency.
 
 == Runtime and Security Model for Web Applications ==
 
-On a high-level, we would like to see the [[Runtime and Security Model for Web Applications|http://www.w3.org/2012/sysapps/runtime/]] spec to better consider and address non-mobile use cases for desktop, IVI, TV. We believe the current spec is too focused on mobile use cases.
+On a high-level, we would like to see the [[Runtime and Security Model for Web Applications|http://www.w3.org/2012/sysapps/runtime/]] (partially obsoleted as of 2013-09) spec to better consider and address non-mobile use cases e.g. desktop web browsers, and web runtimes in desktop context. We believe the current spec is too focused on mobile use cases. For example, parts of the spec (e.g. Application Lifecycle and Events) address issues relevant to web browsers and regular web apps too. We should split these parts out i.e. modularize the currently monolithic specification.
 
-See also: [[Runtime-and-Security-Model-for-Web-Applications|comparison with Tizen]]
+Relevant W3C working groups:
 
-=== Tasks ===
+* SysApps working group ([[public-sysapps|http://lists.w3.org/Archives/Public/public-sysapps/]]) - Runtime and Security Model, Package Format (incl. Web Manifest extensions for Packaged Apps), SysApps APIs
+* WebApps working group ([[public-webapps|http://lists.w3.org/Archives/Public/public-webapps/]]) - Web Manifest
+
+See also: [[Runtime-and-Security-Model-for-Web-Applications|comparison with Tizen]] (NB! the comparison is against the now largely obsoleted version of the SysApps Runtime Model spec)
+
+=== Tasks (high priority) ===
 
 ==== Application Lifecycle and Events (Kenneth and Anssi) ====
 
-[[Application Lifecycle and Events|https://docs.google.com/document/d/1tIDThsExb2EJkN9uHPby-yfmCzkPt9leSL5gu_fGoiA/]] draft to be proposed to SysApps. See the draft for use cases, requirements and the draft spec.
+Status: draft spec available
 
-<!--
-* System messages
+[[Application Lifecycle and Events|http://anssiko.github.io/runtime/app-lifecycle.html]] draft is being worked on in the SysApps working group. See the draft for use cases, requirements and the draft spec.
 
-Event registration for system messages is currently unspecified, see [[issue #73|https://github.com/sysapps/runtime/issues/73]]. See also [[event registration|http://developer.chrome.com/dev/extensions/event_pages.html#registration]] in the event page model of Chrome Packaged Apps.
+==== Manifest ====
 
-[[Broadcast messages to same-origin globals API|https://www.w3.org/Bugs/Public/show_bug.cgi?id=22628]] (see the comments 2 and 3, a strawman proposal) could address requirements for system messages (similar to SharedWorker-based messaging).
+Status: exploring
 
-* Application lifecycle
+The Web Manifest spec is scope for the WebApps working group, targeted at regular web apps. Extensions specific to Packaged Apps to be specified in the SysApps working group.
 
-Clarify how the app lifecycle works, especially pausing/suspending. Perhaps add a lifecycle diagram.
+The "event page" and Web Manifest integration to be specified. Pointers to relevant discussion on public-webapps for follow-up: [[event pages/workers synchronous access to its visible tabs|http://lists.w3.org/Archives/Public/public-webapps/2013AprJun/0979.html]], [[the grouping of a set of pages using an origin plus wildcard matching|http://lists.w3.org/Archives/Public/public-webapps/2013AprJun/0946.html]]
 
-* SysApps runtime
-** Application.state: <code>running</code>, <code>paused</code>, <code>terminated</code>
-** Event handlers:
-*** <code>Application.on{launch|pause|resume|terminate}</code>
-*** <code>ApplicationManager.on{install|uninstall}</code>
+==== Package Format ====
 
-* Chrome Packaged Apps' runtime
-** [[States|http://developer.chrome.com/trunk/apps/app_lifecycle.html]] (<code>launched</code>, <code>suspended</code>) not exposed via a sync API
-** Event handlers:
-*** <code>chrome.runtime.on{Startup|Installed|Suspend|SuspendCanceled|UpdateAvailable|BrowserUpdateAvailable}</code>
-*** <code>chrome.runtime.on{Connect|ConnectExternal|Message|MessageExternal}</code>
-*** <code>chrome.app.runtime.on{Launched|Restarted}</code>
+Status: exploring
 
-For comparison with native, see [[iOS App States and Multitasking|http://developer.apple.com/library/ios/#documentation/iphone/conceptual/iphoneosprogrammingguide/ManagingYourApplicationsFlow/ManagingYourApplicationsFlow.html]]
--->
-==== Privileged applications extensions (Anssi) ====
+=== Tasks (low priority) ===
+
+==== Multiple window support (Hongbo) ==== 
+
+Status: exploring
+
+Closely related to the Application Lifecycle and Events proposal. see the strawman proposal for [[Application Windowing|http://anssiko.github.io/runtime/app-windowing.html]].
+
+Managing multiple windows is an important use case in non-mobile contexts. Hongbo Min [[started discussion|http://lists.w3.org/Archives/Public/public-sysapps/2013Apr/0205.html]], related to [[issue #98|https://github.com/sysapps/runtime/issues/98]] and [[issue #100|https://github.com/sysapps/runtime/issues/100]]. We should revisit these issues and try get the spec better address non-mobile use cases.
+
+Related to multiple window support, we need to investigate how to prevent race conditions (see [[issue #100|https://github.com/sysapps/runtime/issues/100]]).
+
+Should investigate if <code>window.open()</code> will address all requirements for creating new windows. See also <code>chrome.app.window</code> which provides a more expressive API. See also Mozilla's [[extensions to window.open()|https://developer.mozilla.org/en-US/docs/Web/API/window.open#Features_requiring_privileges]] that require special privileges.
+
+==== Privileged Applications extensions (Anssi) ====
 
 APIs that are not web-facing should be split into their own specification. Anssi [[proposed on the public-sysapps|http://lists.w3.org/Archives/Public/public-sysapps/2013Jun/0005.html]] to split ApplicationManagement interface and other parts of the Runtime spec relevant to privileged applications only into their own spec. Related to [[issue #4|https://github.com/sysapps/runtime/issues/4]] and [[issue #92|https://github.com/sysapps/runtime/issues/92]].
 
 ==== Design principles (Anssi) ====
 
-We need to clarify design principles, scope, use cases, and make sure they align with our high-level goals. Anssi [[started discussion on public-sysapps|http://lists.w3.org/Archives/Public/public-sysapps/2013May/0142.html]]. Related to [[issue #43|https://github.com/sysapps/runtime/issues/43]], [[issue #95|https://github.com/sysapps/runtime/issues/95]], and [[issue #97|https://github.com/sysapps/runtime/issues/97]].
-
-==== Multiple window support (Hongbo) ==== 
-
-This is closely related to the Application Lifecycle and Events proposal, and will likely be merged with it.
-
-Managing multiple windows is an important use case in non-mobile contexts. Hongbo Min [[started discussion|http://lists.w3.org/Archives/Public/public-sysapps/2013Apr/0205.html]], related to [[issue #98|https://github.com/sysapps/runtime/issues/98]] and [[issue #100|https://github.com/sysapps/runtime/issues/100]]. We should revisit these issues and try get the spec better address non-mobile use cases.
-
-Related to multiple window support, we need to investigate how to prevent race conditions (see [[issue #100|https://github.com/sysapps/runtime/issues/100]]). [[Event pages|http://developer.chrome.com/dev/extensions/event_pages.html]] used by Chrome Packaged Apps is one model to learn from.
-
-Should investigate if <code>window.open()</code> will address all requirements for creating new windows. See also <code>chrome.app.window</code> which provides a more expressive API. Hongbo put up a rough draft of the [[Windowing API|http://htmlpreview.github.io/?http://raw.github.com/hmin/display-api/master/windowing.html]] that can be used as input to the group. See also Mozilla's [[extensions to window.open()|https://developer.mozilla.org/en-US/docs/Web/API/window.open#Features_requiring_privileges]] that require privileges.
-
-==== Manifest ====
-
-The discussion around Manifest is happening in [[WebApps working group|http://lists.w3.org/Archives/Public/public-webapps/]], no consensus yet.
-
-The Event Page and Manifest integration needs to be specified. Pointers to relevant discussion below for follow-up:
-
-"And if we want to enable event pages/workers to have synchronous access to
-its visible tabs, then a manifest could be used to describe the scope of
-that event page/worker such that the UA can make sure to put all relevant
-tabs in the same process." -[[Jonas of Moz|http://lists.w3.org/Archives/Public/public-webapps/2013AprJun/0979.html]]
-
-"Navigation Controller solves the grouping of a set of pages using an
-origin plus wildcard matching for a set of URLs, although as currently
-proposed a subset of those URLs might be something else altogether
-again, without much declarative control. For event pages/workers you'll want something similar. To identify
-what a URL's associated event page/worker is." -[[Anne of Moz proposes|http://lists.w3.org/Archives/Public/public-webapps/2013AprJun/0946.html]]
+We need to clarify design principles, scope, use cases, and make sure they align with the high-level goals. Anssi [[started discussion on public-sysapps|http://lists.w3.org/Archives/Public/public-sysapps/2013May/0142.html]], see also the Application Lifecycle and Events proposal. Related to [[issue #43|https://github.com/sysapps/runtime/issues/43]], [[issue #95|https://github.com/sysapps/runtime/issues/95]], and [[issue #97|https://github.com/sysapps/runtime/issues/97]].
