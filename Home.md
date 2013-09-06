@@ -32,6 +32,11 @@ If you any question on how to use Crosswalk you can ask on IRC. On freenode.net,
 * [Website](https://github.com/crosswalk-project/crosswalk-website/blob/master/README.md)
 * [Editing the Wiki](wiki/Editing-the-Wiki)
 
+## Working with Blink and Chromium
+* [How to checkout Chromium/Blink for Development](wiki/Chromium-Checkout)
+* [How to contribute a patch in Chromium/Blink](wiki/Contribute-a-patch-in-Blink-Chromium)
+* [Tips and Tricks for Chromium Committers](wiki/Tips-and-Tricks-for-Chromium-Committers)
+
 ## Other resources
 * [Chromium command line switches](http://peter.sh/experiments/chromium-command-line-switches/) (external link) some are especially useful for developers (e.g. ```--allow-file-access-from-files```)
 * [Android WebView](wiki/Android-WebView)

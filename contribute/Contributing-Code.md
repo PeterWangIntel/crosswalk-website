@@ -29,6 +29,9 @@ In addition, make sure that any new source code and script files you introduce c
 ## Code Style Guidelines
 Patches must comply with the code style guidelines. Your patch will be automatically checked for style compliance when you upload it to the bug tracker.
 
+### Code Style Guide for Android
+* [Crosswalk coding style for Android](wiki/Coding-Style-of-XWalk-for-Android)
+
 ## Regression tests
 
 A buildbot infrastructure will be available soon. Those buildbots will run the unit tests and the browser tests. You are responsible to keep 
