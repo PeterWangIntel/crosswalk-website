@@ -6,16 +6,18 @@ To edit content you need to have commit access to the crosswalk-website project.
 The wiki content hosted under the **contribute/** directory populates the [Contribute](#contribute) portion of the 
 Crosswalk website. Similarly, the **documentation/** directory populates [Documentation](#documentation).
 
+### Wiki and Website references in content
+
 Direct links to the Crosswalk website pages should be entered as follows: #SECTION/PAGE/ANCHOR
 
-### SECTION
+#### SECTION
 The section is either [#wiki](#wiki), [#documentation](#documentation), or [#contribute](#contribute).
 
-### PAGE
+#### PAGE
 The page is the wiki page itself, for example "editing-the-wiki" (for this page). The syntax to reference this page, 
 since it is presented in the wiki portion of the website, is: [#wiki/editing-the-wiki](#wiki/editing-the-wiki).
 
-### ANCHOR
+#### ANCHOR
 If you want to link to a particular section of a page, you can provide one final path element--the anchor name. To 
 link straight to this section the syntax is: [#wiki/editing-the-wiki/ANCHOR](#wiki/editing-the-wiki/ANCHOR).
 
@@ -99,7 +101,10 @@ xdg-open http://localhost:4567
 ```
 And you're good to go. You can edit your content in the tab pointing to the Gollum server (port 4567) and after you click the Save icon for any content, you can change over to your localhost/crosswalk-website tab and hit refresh to see the new content.
 
-For the above to all work, you also need to have Apache2 installed, with PHP enabled. In your Apache2 installation you must disable MultiViews and enable FollowSymLinks in your site configuration (typically /etc/apache2/sites-enabled/000-default)
+
+For the above to all work, you also need to have Apache2 installed, with PHP enabled. In your Apache2 installation you 
+must disable MultiViews and enable FollowSymLinks in your site configuration (typically /etc/apache2/sites-enabled/000-default).
+
 
 Once you're done editing content, you can push your Wiki changes back to GitHub:
 
@@ -108,5 +113,6 @@ cd /var/www/crosswalk-website/wiki
 git push origin master
 ```
 You can verify your content is correct by viewing the pages at http://github.com/crosswalk-project/crosswalk-website/wiki.
+
 
 Content will be merged to the live website during the next release/update cycle of Crosswalk.
