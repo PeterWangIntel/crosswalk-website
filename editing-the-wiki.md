@@ -12,6 +12,15 @@ The most efficient workflow for editing content is to do so with a local install
 1. Push your changes to crosswalk-website.wiki.git
 1. The next content update cycle on the Crosswalk website will automatically pull in your content. 
 
+## Editing on GitHub
+If you just need to get in and make a quick edit, feel free to do so using the [GitHub Crosswalk wiki 
+interface](http://github.com/crosswalk-project/crosswalk-website/wiki). Be warned that GitHub flattens the directory 
+structure, so editing of sub-pages (documentation and contribute sections) can be tricky and isn't recommended. Pages 
+in the root structure of the site (wiki/*) are fine to edit.
+
+Your content won't show up on the live website until the next content update is pulled to the live pages. The 
+publishing schedule for this is still TBD based on the frequency of content updates and quality of those edits.
+
 ## Local Wiki in a Local Website
 The detailed steps for installing the Crosswalk website and Gollum are documented in the [Crosswalk website README.md](https://github.com/crosswalk-project/crosswalk-website/blob/master/README.md). 
 
