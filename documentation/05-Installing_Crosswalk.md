@@ -24,8 +24,9 @@ Success
 4.  You should now see a white screen with a simple message at the top of the window.
 
 ### Tizen
+These steps assume you have the Tizen SDK installed and correctly configured on your system. You can use the Tizen emulator as a target for running and developing Crosswalk applications on Tizen.
 
-1. Log into the device as root by default: 
+1. With the Tizen emulator started or a Tizen device connected to the computer, log into the device as root by default:
 
 ```sh
 sdb root on
@@ -33,7 +34,7 @@ sdb root on
 
 2. Push the crosswalk RPM to the device:
 
-```
+```sh
 sdb push crosswalk-1.29.3.0.rpm /tmp
 ```
 
