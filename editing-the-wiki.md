@@ -4,42 +4,51 @@ The [Crosswalk wiki](http://crosswalk-project.org/#wiki) is managed by the Gollu
 To edit content you need to have commit access to the crosswalk-website project.
 
 ## Workflow
-The most efficient workflow for editing content is to do so with a local install of Gollum. The steps for installing Gollum are documented in the Crosswalk website's README.md page in the section [Gollum and the Wiki](https://github.com/crosswalk-project/crosswalk-website/blob/master/README.md#gollum-and-the-wiki).)
+The most efficient workflow for editing content is to do so with a local install of Gollum running in a .
 
-Once you have Gollum running locally, you can point your browser to http://localhost:4567
-and edit the content in the live preview editor. When you are satisfied with your content, you can push it back to the GitHub project.
+## Local Wiki in a Local Website
+The detailed steps for installing the Crosswalk website and Gollum are documented in the [Crosswalk website README.md](https://github.com/crosswalk-project/crosswalk-website/blob/master/README.md). 
 
-## Wiki in the Website
-The best way to see your content is to review it in the website before pushing it to GitHub. To do that, you need to install a local version of the Crosswalk website. The detailed steps for doing that are documented in the [Crosswalk website README.md](https://github.com/crosswalk-project/crosswalk-website/blob/master/README.md). The quick steps on an Ubuntu system are as follows:
-```
+For those that just want to copy commands to their console, the quick steps on an Ubuntu system are as follows:
+```sh
 # Install Ruby >=1.9.1
 sudo apt-get install ruby1.9.3 rubygems1.9
+
 # Select gem1.9.1
 sudo update-alternatives --config gem
+
 # Select ruby1.9.1
 sudo update-alternatives --config ruby
+
 # Install Gollum and the various markup parsers
 sudo gem install gollum redcarpet org-ruby wikicloth
+
 # Install the SASS compiler (with source map support)
 sudo gem install sass -v ">=3.3.0alpha" --pre
+
 # Change to the root path of your web server installation path
 cd /var/www
+
 # Clone the Crosswalk site
 git clone git@github.com:crosswalk-project/crosswalk-website
-cd crosswalk-website
+
 # Clone the Crosswalk website wiki
-cd wiki
+cd crosswalk-website/wiki
 git clone git@github.com:crosswalk-project/crosswalk-website.wiki.git --bare .git
 sed -i -e 's/bare = true/bare = false/' .git/config
 git checkout
 cd ..
+
 # Change the permissions of all the files checked out so the web-server software can edit it
-sudo chown :www-data . -R
-sudo chmod g+rwX . -R
+sudo chown :www-data /var/www/crosswalk-website -R
+sudo chmod g+rwX /var/www/crosswalk-website -R
+
 # Launch Gollum pointing to where you just cloned the wiki
 gollum --base-path wiki --live-preview /var/www/crosswalk-website/wiki &
+
 # Launch a browser pointing to the website
 xdg-open http://localhost/crosswalk-website/#wiki
+
 # Launch a browser pointing to the Wiki content
 xdg-open http://localhost:4567
 ```
@@ -49,9 +58,6 @@ For the above to all work, you also need to have Apache2 installed, with PHP ena
 
 Once you're done editing content, you can push your Wiki changes back to GitHub:
 
-```
-## Quick steps
-The general workflow cycle is:
 ```sh
 cd /var/www/crosswalk-website/wiki
 git push origin master
