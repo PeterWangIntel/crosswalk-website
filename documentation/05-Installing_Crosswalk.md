@@ -12,9 +12,8 @@ unzip crosswalk-android-1.29.3.0.zip
 1. Install the XWalkCoreShell package:
 ```sh
 adb install crosswalk-android-1.29.3.0/apks/XWalkCoreShell.apk
-...
-Success
 ```
+On successful completion, you should see the final string *Success* displayed.
 1. On the device/emulator, go to the application list, locate the **XWalkCoreShell** app, and start it.
 1. You should now see a white screen with a simple message at the top of the window.
 
@@ -46,4 +45,4 @@ rpm -i /tmp/crosswalk*rpm.rpm
 ```sh
 xwalk http://www.google.com
 ```
-1. 'Work in Progress' Installing Crosswalk will install an icon on the Tizen home screen.
+1. *Work in Progress* Installing Crosswalk will install an icon on the Tizen home screen.
