@@ -19,13 +19,13 @@ This is a Canary build of Crosswalk. Canary builds are intended for active Cross
 [All releases](https://origin-download.01.org/crosswalk/releases/)
 
 ## Tizen Features
-* Basic application launcher with manifest support. See Crosswalk Manifest.
-* Initial Extension System model defined and implemented. See Crosswalk Extensions.
-* Selected Tizen 2.x Web APIs implemented: Bluetooth, Notification, Power, Time, System Settings, System Information, Download
+* Basic application launcher with manifest support. See [Crosswalk Manifest](wiki/Crosswalk-manifest).
+* Initial Extension System model defined and implemented. See [Crosswalk Extensions](wiki/Crosswalk-extensions).
+* Selected Tizen 2.x Web APIs implemented: Bluetooth, Notification, Power, Time, System Settings, System Information, Download. See [Crosswalk APIs](#documenation/APIs).
 
 ## Android Features
-* Basic application launcher with manifest support. See Crosswalk Manifest.
-* Initial Extension System model defined and implemented. See Crosswalk Extensions.
+* Basic application launcher with manifest support. See [Crosswalk Manifest](wiki/Crosswalk-manifest).
+* Initial Extension System model defined and implemented. See [Crosswalk Extensions](wiki/Crosswalk-extensions).
 
 ## Upstream Information
 Version 1.29.3.0 of Crosswalk is based on the Chromium content module from
