@@ -3,6 +3,25 @@ The [Crosswalk wiki](http://crosswalk-project.org/#wiki) is managed by the Gollu
 
 To edit content you need to have commit access to the crosswalk-website project.
 
+The wiki content hosted under the **contribute/** directory populates the [Contribute](#contribute) portion of the 
+Crosswalk website. Similarly, the **documentation/** directory populates [Documentation](#documentation).
+
+Direct links to the Crosswalk website pages should be entered as follows: #SECTION/PAGE/ANCHOR
+
+### SECTION
+The section is either [#wiki](#wiki), [#documentation](#documentation), or [#contribute](#contribute).
+
+### PAGE
+The page is the wiki page itself, for example "editing-the-wiki" (for this page). The syntax to reference this page, 
+since it is presented in the wiki portion of the website, is: [#wiki/editing-the-wiki](#wiki/editing-the-wiki).
+
+### ANCHOR
+If you want to link to a particular section of a page, you can provide one final path element--the anchor name. To 
+link straight to this section the syntax is: [#wiki/editing-the-wiki/ANCHOR](#wiki/editing-the-wiki/ANCHOR).
+
+NOTE: The ANCHOR syntax is not recognized by Gollum or the GitHub wiki system itself--it is coded into the 
+http://crosswalk-project.org website itself.
+
 ## Workflow
 The most efficient workflow for editing content is to do so with a local install of Gollum running in a local instance of the website.
 
@@ -20,6 +39,17 @@ in the root structure of the site (wiki/*) are fine to edit.
 
 Your content won't show up on the live website until the next content update is pulled to the live pages. The 
 publishing schedule for this is still TBD based on the frequency of content updates and quality of those edits.
+
+## Local Wiki in your own editor
+If you want to edit the Wiki content locally using your own editor, the steps are pretty quick:
+```sh
+git clone git@github.com:crosswalk-project/crosswalk-website.wiki.git
+cd crosswalk-website.wiki
+# Edit your content
+git commit -s -a
+git push
+```
+You can then go to http://github.com/crosswalk-project/crosswalk-website/wiki to see your changes.
 
 ## Local Wiki in a Local Website
 The detailed steps for installing the Crosswalk website and Gollum are documented in the [Crosswalk website README.md](https://github.com/crosswalk-project/crosswalk-website/blob/master/README.md). 
