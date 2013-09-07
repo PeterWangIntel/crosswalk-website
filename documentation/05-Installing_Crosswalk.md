@@ -27,19 +27,20 @@ You can use the Tizen emulator as a target for running and developing Crosswalk 
 ```sh
 sdb root on
 ```
-1. Push the crosswalk RPM to the device:
+1. Push the RPMs to the device:
 ```sh
 sdb push crosswalk-1.29.3.0.rpm /tmp
-```
-1. Push the crosswalk Tizen extensions RPM to the device:
-```sh
+sdb push crosswalk-emulator-support-1.29.3.0.rpm /tmp
 sdb push crosswalk-tizen-extensions-1.29.3.0.rpm.rpm /tmp
 ```
 1. Install the RPMs on the device:
 ```sh
 sdb shell
 # While in the shell on the Tizen device
-rpm -i /tmp/crosswalk*rpm.rpm
+rpm -i /tmp/crosswalk-1.29.3.0-0.i586.rpm
+rpm -i /tmp/tizen-extensions-crosswalk-0.2-0.i586.rpm
+# IF running on an emulator:
+rpm -i /tmp/crosswalk-emulator-support1.29.3.0-0.i586.rpm
 ```
 1. While still in the shell, you can launch xwalk: 
 ```sh
