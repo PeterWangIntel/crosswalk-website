@@ -49,10 +49,15 @@ The apk file is output to the same directory as the make_apk.py script, with a f
 Install the APK on your device:
 
 ```sh
-adb install -r ABC.apk Test1.apk
+adb install -r ABC.apk
 ```
 
 ### Packaging for Tizen
 There is currently no application packager for Tizen. To run your application in the Tizen environment, you can launch xwalk and point it to a web server hosting your application.
+
+```sh
+sdb shell
+xwalk http://server/application
+```
 
 Alternatively you can rsync the contents of your application directory to the Tizen device and run the application locally.
