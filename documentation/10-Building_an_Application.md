@@ -35,8 +35,6 @@ cd xwalk_app_template
 ```
 The xwalk_app_template contains utilities and dependencies for packaging an application into an APK file, so it can be installed on an Android device.
 
-make_apk.py is the key script for packaging a web app as an APK.
-
 **Note**: For this script to work, you should ensure that the android command from the Android SDK is on your path. It is located in <Android SDK location>/tools/android.
 
 Below is an example of how to package a local web app. We assume that the files for the app are in /home/abc/dist and the main entry point HTML file is /home/abc/dist/src/index.html:
