@@ -1,3 +1,5 @@
+# Crosswalk Manifest Format
+
 Crosswalk currently follows the manifest format used by [Chromium packaged applications](http://developer.chrome.com/apps/manifest.html).
 
 However, many of the features are not yet supported in Crosswalk
@@ -12,9 +14,7 @@ Currently the required manifest fields are:
 The optional manifest fields are:
 * **manifest_version**: One integer specifying the version of the manifest file format your package requires.
 
-# Creating an application package
-With this crosswalk version only unpacked application is supported.
-
+## Minimal manifest file
 Developer can add a typical application manifest like below to declare application meta data:
 ```
 {
@@ -27,13 +27,4 @@ Developer can add a typical application manifest like below to declare applicati
     }
   }
 }
-```
-
-# Launching an application
-Application can be launched in commandline line with argument which specifies application's manifest directory.
-
-Both relative and absolute path are supported.
-```
-$./xwalk ~/webapp/calculator 
-$./xwalk calculator
 ```
