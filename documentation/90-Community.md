@@ -2,7 +2,7 @@
 Crosswalk is an open source project. All of our communication, source files, and infrastructure are hosted in the open. If you would like to help out, or chat with developers and users of Crosswalk, you can connect with us in the following ways:
 
 ### Mailing lists
-We are currently working on getting a mailing list configured. Check back soon.
+You can join the Crosswalk developer and user mailing lists on the [Crosswalk MailMan](http://lists.crosswalk-project.org) page.
 
 ### IRC Channel
 Connect to the [Freenode IRC Network](irc://freenode.net) and join us on the [#crosswalk](irc://irc.freenode.net/clowns) channel.
