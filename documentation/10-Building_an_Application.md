@@ -20,10 +20,10 @@ For more details on the manifest file, see the [Crosswalk Manifest](#wiki/Crossw
 ### The Application Structure
 A typical application structure contains the manifest.json file in the root directory. The main entry point to the application is then referenced from that manifest file. In most applications this file is in the root directory as well.
 ```
-application/manifest.json
-application/index.html
-application/appliactions.js
-application/assets/images.jpg
+/home/abc/dist/src/manifest.json
+/home/abc/dist/src/index.html
+/home/abc/dist/src/appliactions.js
+/home/abc/dist/src/assets/images.jpg
 ```
 ### Packaging for Android
 The Android APK maker is included with the crosswalk-android binaries available in [Downloads](#documentation/downloads).
