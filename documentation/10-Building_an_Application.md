@@ -51,3 +51,8 @@ Install the APK on your device:
 ```sh
 adb install -r ABC.apk Test1.apk
 ```
+
+### Packaging for Tizen
+There is currently no application packager for Tizen. To run your application in the Tizen environment, you can launch xwalk and point it to a web server hosting your application.
+
+Alternatively you can rsync the contents of your application directory to the Tizen device and run the application locally.
