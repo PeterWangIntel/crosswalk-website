@@ -14,6 +14,25 @@ tizen_apis     A sample application using the Tizen APIs
 <img class='sample-thumb' src='assets/sampapp-icon-helloworld.png'>
 The smallest of applications--Hello, World! This sample provides a manifest.json and a minimal set of HTML files to start an application from the ground up.
 
+Follow the steps on [Running an Application](#documentation/running_an_application), using ***hello_world*** as the source path for either Android or Tizen.
+
+### Hello World on Android
+Following the steps from the [Packaging for Android](#building_an_application/packaging-for-android), you build the APK as follows:
+```sh
+python make_apk.py --package=com.sample.hello_world --name=HelloWorld \ --app-root=samples/hello_world --app-local-path=index.html
+```
+Then install the APK on Android:
+```sh
+adb install HelloWorld.apk
+```
+
+### Hello World on Tizen
+Following the steps from the [Running on Tizen](#documentation/running_an_application/running-on-tizen), you can install and run the Hello World sample as follows:
+```sh
+sdb push samples/hello_world /home/developer/hello_world
+sdb shell "xwalk /home/developer/hello_world/index.html"
+```
+
 ## WebGL
 <img class='sample-thumb' src='assets/sampapp-icon-webgl.png'>
 Ah, the power of WebGL. This sample provides a quick example of integrating ThreeJS into a Crosswalk application.
@@ -35,6 +54,7 @@ Following the steps from the [Running on Tizen](#documentation/running_an_applic
 sdb push samples/webgl /home/developer/webgl
 sdb shell "xwalk --usegl=osmesa /home/developer/webgl/index.html"
 ```
+
 ## Tizen APIs
 <img class='sample-thumb' src='assets/sampapp-icon-api.png'>
 A sample application leveraging a Crosswalk extension which implements some of the Tizen APIs.
