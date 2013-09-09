@@ -62,4 +62,20 @@ sdb shell
 xwalk http://server/application
 ```
 
-Alternatively you can rsync the contents of your application directory to the Tizen device and run the application locally.
+If you are running Tizen via the emulator, you can enable [File Sharing](https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.gettingstarted%2Fhtml%2Fdev_env%2Femulator_file_sharing.htm) which can allow you to access your application files directly in the Tizen environment. You can then launch xwalk from an sdb shell providing it with the path to your application:
+
+```sh
+sdb shell
+xwalk ...
+```
+
+Alternatively you can use '''sdb push''' to push the entire contents of your application directory to the Tizen device and run the application locally. A full sequence of command, including the enabling of remote debugging on the Tizen emulator:
+
+```sh
+sdb root on
+sdb forward tcp:9222 tcp:9222
+sdb push samples/hello_world /home/developer/hello_world
+sdb shell "xwalk --remote-debugging-port=9222 --use-gl=osmesa /home/developer/hello_world/index.html"
+```
+
+On the host, you can then connect to http://localhost:9222/
