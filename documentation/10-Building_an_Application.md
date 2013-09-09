@@ -48,15 +48,15 @@ python make_apk.py --package=com.abc.app --name=ABC \
 
 The apk file is output to the same directory as the make_apk.py script, with a filename <name&gt.apk, where <name> is the name you set with the --name flag.
 
-Install the APK on your device:
-
-```sh
-adb install -r ABC.apk
-```
+For information on installing and running the application on Android, 
+see 
+ [Running on 
+Android](#documentation/running_an_application/running_on_android).
 
 ### Packaging for Tizen
 There is currently no application packager for Tizen. To run your 
 application in the Tizen environment, you can launch xwalk manually, 
 directing it to load your application via the command line. See the 
-steps in [Running on 
+steps in
+ [Running on 
 Tizen](#documentation/running_an_application/running_on_tizen).
