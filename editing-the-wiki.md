@@ -1,5 +1,10 @@
 ## Logistics
-The [Crosswalk wiki](http://crosswalk-project.org/#wiki) is managed by the Gollum infrastructure hosted on [GitHub](http://github.com/crosswalk-project/crosswalk-website.wiki.git).
+The [Crosswalk wiki](http://crosswalk-project.org/#wiki) is 
+attached to the 
+[crosswalk-website](http://github.com/crosswalk-project/crosswalk-website) 
+project and accessible via the 
+[crosswalk-website.wiki.git](http://github.com/crosswalk-project/crosswalk-website.wiki.git) 
+repository.
 
 To edit content you need to have commit access to the crosswalk-website project.
 
