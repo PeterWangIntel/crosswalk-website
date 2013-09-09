@@ -5,11 +5,10 @@ We have packaged three simple applications to get you up and running with Crossw
 tar xf crosswalk-samples-0.1.tgz
 ```
 Decompressing that archive will create a samples subdirectory with three projects:
-```
-hello_world    A minimalistic example
-webgl          Get up and running with WebGL in Crosswalk
-tizen_apis     A sample application using the Tizen APIs
-```
+* samples/hello_world    A minimalistic example
+* samples/webgl          Get up and running with WebGL in Crosswalk
+* samples/tizen_apis     A sample application using the Tizen APIs
+
 ## Hello World
 <img class='sample-thumb' src='assets/sampapp-icon-helloworld.png'>
 The smallest of applications--Hello, World! This sample provides a manifest.json and a minimal set of HTML files to start an application from the ground up.
@@ -19,7 +18,8 @@ Follow the steps on [Running an Application](#documentation/running_an_applicati
 ### Hello World on Android
 Following the steps from the [Packaging for Android](#building_an_application/packaging-for-android), you build the APK as follows:
 ```sh
-python make_apk.py --package=com.sample.hello_world --name=HelloWorld \ --app-root=samples/hello_world --app-local-path=index.html
+python make_apk.py --package=com.sample.hello_world --name=HelloWorld \
+           --app-root=samples/hello_world --app-local-path=index.html
 ```
 Then install the APK on Android:
 ```sh
@@ -41,7 +41,8 @@ Follow the steps on [Running an Application](#documentation/running_an_applicati
 ### WebGL on Android
 Following the steps from the [Packaging for Android](#building_an_application/packaging-for-android), you build the APK as follows:
 ```sh
-python make_apk.py --package=com.sample.webgl --name=WebGL \ --app-root=samples/webgl --app-local-path=index.html
+python make_apk.py --package=com.sample.webgl --name=WebGL \
+      --app-root=samples/webgl --app-local-path=index.html
 ```
 Then install the APK on Android:
 ```sh
