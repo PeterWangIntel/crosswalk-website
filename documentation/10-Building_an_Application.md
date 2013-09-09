@@ -69,7 +69,11 @@ sdb push samples/hello_world /home/developer/hello_world
 sdb shell "xwalk --remote-debugging-port=9222 --use-gl=osmesa /home/developer/hello_world/index.html"
 ```
 
-On the host, you can point your browser to http://localhost:9222/ and debug your application.
+On the host, you can point your browser to http://localhost:9222/ and debug your application. As you debug and develop your application, you only need to run the '''sdb push''' command:
+```sh
+sdb push samples/hello_world /home/developer/hello_world
+```
+and then refresh the debugger in your browser via CTRL-R.
 
 **TIP** &mdash; If you are running Tizen via the emulator, you can enable [File Sharing](https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.gettingstarted%2Fhtml%2Fdev_env%2Femulator_file_sharing.htm) which can allow you to access your application files directly in the Tizen environment. This removes the ```sdb push...``` step.
 
