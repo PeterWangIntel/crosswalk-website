@@ -8,6 +8,11 @@ repository.
 
 To edit content you need to have commit access to the crosswalk-website project.
 
+The Crossalk Wiki is inteneded to be viewed through the 
+http://crosswalk-project.org/#wiki site, and not through the GitHub Wiki 
+viewer. As such, some links may not work when viewing the wiki via 
+GitHub.
+
 The wiki content hosted under the **contribute/** directory populates the [Contribute](#contribute) portion of the 
 Crosswalk website. Similarly, the **documentation/** directory populates [Documentation](#documentation).
 
