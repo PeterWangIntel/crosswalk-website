@@ -16,11 +16,13 @@ The smallest of applications--Hello, World!
 ### Installing and Running Hello World
 
 ## WebGL
+<img class='sample-thumb' src='assets/sampapp-icon-webgl.png'>
 A WebGL sample...
 
 ### Installing and Running WebGL
 
 ## Tizen APIs
+<img class='sample-thumb' src='assets/sampapp-icon-api.png'>
 A sample application leveraging a Crosswalk extension which implements some of the
 Tizen APIs.
 
