@@ -14,23 +14,32 @@ launched by clicking on its icon.
 Launching Crosswalk applications on Tizen is currently a 
 developer manual process:
 
+To access the files, xwalk needs to be launched as root
 ```sh
-# To access the files, xwalk needs to be launched as root
 sdb root on
-# Set up port forwarding from the host port 9222 to the
-# emulator port 9222
+```
+
+Set up port forwarding from the host port 9222 to the emulator port 9222
+```sh
 sdb forward tcp:9222 tcp:9222
-# Sync your application contents to the device
+```
+
+Sync your application contents to the device
+```sh
 sdb push samples/hello_world /home/developer/hello_world
-# Launch Crosswalk. NOTE: This command passes the following parameters:
-#  --use-gl=osmesa                Enable WebGL via Mesa (if running in 
-#                                 the emulator)
-#  --remote-debugging-port=9222   Listen on port 9222 for web debugging
-#
-# The last parameter is the full path to the HTML file to load. 
-# Eventually you will only need to point it to the base directory and 
-# Crosswalk will load the manifest.json file it finds there.
-#
+```
+
+Launch Crosswalk. NOTE: This command passes the following parameters:
+```
+  --use-gl=osmesa                Enable WebGL via Mesa (if running in 
+                                 the emulator)
+  --remote-debugging-port=9222   Listen on port 9222 for web debugging
+```
+
+The last parameter is the full path to the HTML file to load. 
+Eventually you will only need to point it to the base directory and 
+Crosswalk will load the manifest.json file it finds there.
+```sh
 sdb shell "xwalk --remote-debugging-port=9222 --use-gl=osmesa /home/developer/hello_world/index.html"
 ```
 
