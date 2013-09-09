@@ -18,6 +18,33 @@ The smallest of applications--Hello, World! This sample provides a manifest.json
 <img class='sample-thumb' src='assets/sampapp-icon-webgl.png'>
 Ah, the power of WebGL. This sample provides a quick example of integrating ThreeJS into a Crosswalk application.
 
+Follow the steps on [Running an Application](#documentation/running_an_application), using ***webgl*** as the source path for either Android or Tizen.
+### WebGL on Android
+Following the steps from the [Packaging for Android](#building_an_application/packaging-for-android), you build the APK as follows:
+```sh
+python make_apk.py --package=com.sample.webgl --name=WebGL \ --app-root=samples/webgl --app-local-path=index.html
+```
+Then install the APK on Android:
+```sh
+adb install WebGL.apk
+```
+
+### WebGL on Tizen
+Following the steps from the [Running on Tizen](#documentation/running_an_application/running-on-tizen), you can install and run the WebGL sample as follows:
+```sh
+sdb push samples/webgl /home/developer/webgl
+sdb shell "xwalk --usegl=osmesa /home/developer/webgl/index.html"
+```
 ## Tizen APIs
 <img class='sample-thumb' src='assets/sampapp-icon-api.png'>
 A sample application leveraging a Crosswalk extension which implements some of the Tizen APIs.
+
+To use this example, you need to run the application on a Tizen device or in the [Tizen emulator](https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.gettingstarted%2Fhtml%2Fdev_env%2Femulator.htm).
+
+Make sure the tizen-extension-crosswalk RPM is installed on the Target device, as described on  [Installing Crosswalk on Tizen](#documentation/installing_crosswalk/tizen).
+
+Follow the steps on [Running on Tizen](#documentation/running_an_application/running-on-tizen), using ***tizen_apis*** as the source path:
+```sh
+sdb push samples/tizen_apis /home/developer/tizen_apis
+sdb shell "xwalk --usegl=osmesa /home/developer/tizen_apis/index.html"
+```
