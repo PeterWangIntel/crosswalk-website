@@ -5,7 +5,7 @@ Crosswalk is an open source project. All of our communication, source files, and
 You can join the Crosswalk developer and user mailing lists on the [Crosswalk MailMan](http://lists.crosswalk-project.org) page.
 
 ### IRC Channel
-Connect to the [Freenode IRC Network](irc://freenode.net) and join us on the [#crosswalk](irc://irc.freenode.net/clowns) channel.
+Connect to the [Freenode IRC Network](irc://freenode.net) and join us on the [#crosswalk](irc://irc.freenode.net/crosswalk) channel.
 
 ### GitHub
 All of the source code for Crosswalk can be found on the [Crosswalk GitHub project page](http://github.com/crosswalk-project).
