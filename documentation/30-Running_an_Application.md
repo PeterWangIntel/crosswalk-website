@@ -51,5 +51,5 @@ sdb push samples/hello_world /home/developer/hello_world
 
 and then refresh the debugger in your browser via CTRL-R.
 
-**TIP** &mdash; If you are running Tizen via the emulator, you can enable [File Sharing](https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.gettingstarted%2Fhtml%2Fdev_env%2Femulator_file_sharing.htm) which can allow you to access your application files directly in the Tizen environment. This removes the ```sdb push...``` step.
+**TIP** &mdash; If you are running Tizen via the emulator, you can enable [File Sharing](https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.gettingstarted%2Fhtml%2Fdev_env%2Femulator_file_sharing.htm) which can allow you to access your application files directly in the Tizen environment. This removes the ```sdb push``` step.
 
