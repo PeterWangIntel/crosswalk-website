@@ -30,7 +30,7 @@ In addition, make sure that any new source code and script files you introduce c
 Patches must comply with the code style guidelines. Your patch will be automatically checked for style compliance when you upload it to the bug tracker.
 
 ### Code Style Guide for Android
-* [Crosswalk coding style for Android](wiki/Coding-Style-of-XWalk-for-Android)
+* [Crosswalk coding style for Android](Coding-Style-of-XWalk-for-Android)
 
 ## Regression tests
 
