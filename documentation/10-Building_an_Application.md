@@ -51,7 +51,7 @@ The apk file is output to the same directory as the make_apk.py script, with a f
 For information on installing and running the application on Android, 
 see 
  [Running on 
-Android](#documentation/running_an_application/running_on_android).
+Android](#documentation/running_an_application/running-on-android).
 
 ### Packaging for Tizen
 There is currently no application packager for Tizen. To run your 
@@ -59,4 +59,4 @@ application in the Tizen environment, you can launch xwalk manually,
 directing it to load your application via the command line. See the 
 steps in
  [Running on 
-Tizen](#documentation/running_an_application/running_on_tizen).
+Tizen](#documentation/running_an_application/running-on-tizen).
