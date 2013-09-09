@@ -23,7 +23,9 @@ sdb forward tcp:9222 tcp:9222
 sdb push samples/hello_world /home/developer/hello_world
 # Launch Crosswalk, pointing it to the application and setting up the remote 
 # debugging port on port 9222
-sdb shell "xwalk --remote-debugging-port=9222 --use-gl=osmesa /home/developer/hello_world/index.html"
+sdb shell "xwalk --remote-debugging-port=9222 
+                 --use-gl=osmesa 
+                 /home/developer/hello_world/index.html"
 ```
 
 On the host, you can point your browser to http://localhost:9222/ and debug your application. As you debug and develop your application, you only need to run the '''sdb push''' command:
