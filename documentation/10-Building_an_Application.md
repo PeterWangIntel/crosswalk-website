@@ -55,27 +55,21 @@ adb install -r ABC.apk
 ```
 
 ### Packaging for Tizen
-There is currently no application packager for Tizen. To run your application in the Tizen environment, you can launch xwalk and point it to a web server hosting your application.
+There is currently no application packager for Tizen. To run your application in the Tizen environment, you can launch xwalk manually, directing it to load your application via the command line.
 
 ```sh
-sdb shell
-xwalk http://server/application
-```
-
-If you are running Tizen via the emulator, you can enable [File Sharing](https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.gettingstarted%2Fhtml%2Fdev_env%2Femulator_file_sharing.htm) which can allow you to access your application files directly in the Tizen environment. You can then launch xwalk from an sdb shell providing it with the path to your application:
-
-```sh
-sdb shell
-xwalk ...
-```
-
-Alternatively you can use '''sdb push''' to push the entire contents of your application directory to the Tizen device and run the application locally. A full sequence of command, including the enabling of remote debugging on the Tizen emulator:
-
-```sh
+# To access the files, xwalk needs to be launched as root
 sdb root on
+# Set up port forwarding from the host port 9222 to the emulator port 9222
 sdb forward tcp:9222 tcp:9222
+# Sync your application contents to the device
 sdb push samples/hello_world /home/developer/hello_world
+# Launch Crosswalk, pointing it to the application and setting up the remote 
+# debugging port on port 9222
 sdb shell "xwalk --remote-debugging-port=9222 --use-gl=osmesa /home/developer/hello_world/index.html"
 ```
 
-On the host, you can then connect to http://localhost:9222/
+On the host, you can point your browser to http://localhost:9222/ and debug your application.
+
+**TIP** &mdash; If you are running Tizen via the emulator, you can enable [File Sharing](https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.gettingstarted%2Fhtml%2Fdev_env%2Femulator_file_sharing.htm) which can allow you to access your application files directly in the Tizen environment. This removes the ```sdb push...``` step.
+
