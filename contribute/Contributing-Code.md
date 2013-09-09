@@ -21,7 +21,7 @@ The github issue tracker is the central point of communication for contributions
 
 Choose a bug report to work on. You can also create a new report. Be sure to search the database before creating new reports to avoid duplication.
 
-If your change may be controversial, you may want to check in advance with the cameo-dev mailing list.
+If your change may be controversial, you may want to check in advance with the crosswalk-dev mailing list.
 
 ## Develop your changes
 In addition, make sure that any new source code and script files you introduce contain license text at the beginning of the file. If you are the author of a new file, preferred license text to include can be found in the LICENSE file or any existing file. You need to add yourself to the AUTHORS file the first time you make a patch.

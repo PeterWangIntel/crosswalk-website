@@ -20,7 +20,7 @@ If you any question on how to use Crosswalk you can ask on IRC. On freenode.net,
 * [Build Crosswalk](wiki/Build-Crosswalk)
 * [Contributing Code](wiki/Contributing-Code)
 * [Rebasing Strategy](wiki/Rebasing-Strategy)
-* [Development Mailing List (only about development of Crosswalk itself)](http://linux.intel.com/mailman/listinfo/cameo-dev)
+* [Development Mailing List (only about development of Crosswalk itself)](https://lists.crosswalk-project.org/mailman/listinfo/crosswalk-dev)
 * [Crosswalk Reviewer Policy](wiki/Crosswalk's-Reviewer-Policy)
 * [Development Tasks](wiki/Development-Tasks)
 * [Standardization Tasks](wiki/Standardization-Tasks)
