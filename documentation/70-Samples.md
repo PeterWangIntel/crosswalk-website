@@ -10,6 +10,16 @@ webgl        Get up and running with WebGL in Crosswalk
 tizen_apis   A sample application using the Tizen APIs
 ```
 
+<style>
+.sample-thumb {
+  display: inline-block;
+  width: 200px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+</style>
+<div class='sample-thumb' style='background-image:url(assets/sampapp-icon-helloworld.png'></div>
 ## Hello World
 The smallest of applications--Hello, World!
 ### Installing and Running Hello World
