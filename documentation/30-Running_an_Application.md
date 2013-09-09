@@ -22,11 +22,16 @@ sdb root on
 sdb forward tcp:9222 tcp:9222
 # Sync your application contents to the device
 sdb push samples/hello_world /home/developer/hello_world
-# Launch Crosswalk, pointing it to the application and setting 
-# up the remote debugging port on port 9222
-sdb shell "xwalk --remote-debugging-port=9222 
-                 --use-gl=osmesa 
-                 /home/developer/hello_world/index.html"
+# Launch Crosswalk. NOTE: This command passes the following parameters:
+#  --use-gl=osmesa                Enable WebGL via Mesa (if running in 
+#                                 the emulator)
+#  --remote-debugging-port=9222   Listen on port 9222 for web debugging
+#
+# The last parameter is the full path to the HTML file to load. 
+# Eventually you will only need to point it to the base directory and 
+# Crosswalk will load the manifest.json file it finds there.
+#
+sdb shell "xwalk --remote-debugging-port=9222 --use-gl=osmesa /home/developer/hello_world/index.html"
 ```
 
 On the host, you can point your browser to http://localhost:9222/ and debug your application. As you debug and develop your application, you only need to run the '''sdb push''' command:
