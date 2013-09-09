@@ -5,9 +5,12 @@ We have packaged three simple applications to get you up and running with Crossw
 tar xf crosswalk-samples-0.1.tgz
 ```
 Decompressing that archive will create a samples subdirectory with three projects:
-* samples/hello_world    A minimalistic example
-* samples/webgl          Get up and running with WebGL in Crosswalk
-* samples/tizen_apis     A sample application using the Tizen APIs
+* **samples/hello_world**
+  A minimalistic example
+* **samples/webgl**
+  Get up and running with WebGL in Crosswalk
+* **samples/tizen_apis**
+  A sample application using the Tizen APIs
 
 ## Hello World
 <img class='sample-thumb' src='assets/sampapp-icon-helloworld.png'>
