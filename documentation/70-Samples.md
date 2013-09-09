@@ -19,7 +19,7 @@ tizen_apis   A sample application using the Tizen APIs
   background-position: 50% 50%;
 }
 </style>
-<img src='/assets/sampapp-icon-helloworld.png'>
+<img class='sample-thumb' src='assets/sampapp-icon-helloworld.png'>
 ## Hello World
 The smallest of applications--Hello, World!
 ### Installing and Running Hello World
