@@ -17,12 +17,13 @@ developer manual process:
 ```sh
 # To access the files, xwalk needs to be launched as root
 sdb root on
-# Set up port forwarding from the host port 9222 to the emulator port 9222
+# Set up port forwarding from the host port 9222 to the
+# emulator port 9222
 sdb forward tcp:9222 tcp:9222
 # Sync your application contents to the device
 sdb push samples/hello_world /home/developer/hello_world
-# Launch Crosswalk, pointing it to the application and setting up the remote 
-# debugging port on port 9222
+# Launch Crosswalk, pointing it to the application and setting 
+# up the remote debugging port on port 9222
 sdb shell "xwalk --remote-debugging-port=9222 
                  --use-gl=osmesa 
                  /home/developer/hello_world/index.html"
