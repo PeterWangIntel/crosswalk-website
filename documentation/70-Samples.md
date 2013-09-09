@@ -1,4 +1,5 @@
-# Samples
+## Samples
+
 We have packaged up four simple applications to get you up and running with Crosswalk. These applications can be found in the archive <a href='https://origin-download.01.org/crosswalk/releases/crosswalk-sapmles-0.1.tgz'>crosswalk-samples-0.1.tgz</a>.
 ```sh
 tar xf crosswalk-samples-0.1.tgz
