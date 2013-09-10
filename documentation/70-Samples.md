@@ -19,7 +19,8 @@ Follow the steps on [Running an Application](#documentation/running_an_applicati
 
 ### Hello World on Android
 Following the steps from the [Packaging for 
-Android](#building_an_application/packaging-for-android), you build 
+Android](#documentation/building_an_application/packaging-for-android), 
+you build 
 the HelloWorld.apk as follows:
 ```sh
 python make_apk.py --package=com.sample.hello_world --name=HelloWorld \
@@ -44,7 +45,8 @@ Ah, the power of WebGL. This sample provides a quick example of integrating Thre
 Follow the steps on [Running an Application](#documentation/running_an_application), using ***webgl*** as the source path for either Android or Tizen.
 ### WebGL on Android
 Following the steps from the [Packaging for 
-Android](#building_an_application/packaging-for-android), you build the WebGL.APK as follows:
+Android](#documentation/building_an_application/packaging-for-android), 
+you build the WebGL.APK as follows:
 ```sh
 python make_apk.py --package=com.sample.webgl --name=WebGL \
       --app-root=samples/webgl --app-local-path=index.html
