@@ -14,3 +14,7 @@ function versionCallback (version) {
 
 xwalk.getAPIVersion (versionCallback);
 ```
+
+In addition to the Crosswalk APIs, the Crosswalk developers have created 
+a Crosswalk extension for Tizen users which provides many of the Tizen 
+APIs. You can find information on those APIs in [Tizen Extension APIs](https://github.com/crosswalk-project/tizen-extensions-crosswalk/wiki/APIs) list.
