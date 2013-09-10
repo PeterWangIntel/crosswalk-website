@@ -33,9 +33,9 @@ Information on the [Release Channels](#wiki/Release-methodology).
 * Basic application launcher with manifest support. See [Crosswalk Manifest](#wiki/Crosswalk-manifest).
 * Initial Extension System model defined and implemented. See [Crosswalk Extensions](#wiki/Crosswalk-extensions).
 
-## Upstream Information
+## Repository Information
 Version 1.29.3.0 of Crosswalk is based on the Chromium content module from
 upstream version:
 ```
-  29.0.1500.36 sha1 id: fbe291949676bb15f17146cf3fd9ffc842c80c1b
+  29.0.1547.57 sha1 id: 38e877d7523268fcd04b39599ff86100e8214083
 ```
