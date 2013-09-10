@@ -65,14 +65,17 @@ sdb shell "xwalk --usegl=osmesa /home/developer/webgl/index.html"
 
 ## Tizen APIs
 <img class='sample-thumb' src='assets/sampapp-icon-api.png'>
-A sample application leveraging a Crosswalk extension which implements some of the Tizen APIs.
+A sample application leveraging a Crosswalk extension which implements 
+some of the Tizen APIs. This sample demonstrates usage of the 
+tizen.systeminfo API.
 
 To use this example, you need to run the application on a Tizen device or in the [Tizen emulator](https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.gettingstarted%2Fhtml%2Fdev_env%2Femulator.htm).
 
 Make sure the tizen-extension-crosswalk RPM is installed on the Target device, as described on  [Installing Crosswalk on Tizen](#documentation/installing_crosswalk/tizen).
 
-Follow the steps on [Running on Tizen](#documentation/running_an_application/running-on-tizen), using ***tizen_apis*** as the source path:
+The following steps use the helper script **tizen-extension-crosswalk** 
+to load the Tizen extension API into Crosswalk during load time.
 ```sh
 sdb push samples/tizen_apis /home/developer/tizen_apis
-sdb shell "xwalk --usegl=osmesa /home/developer/tizen_apis/index.html"
+sdb shell "tizen-extensions-crosswalk /home/developer/tizen_apis/index.html"
 ```
