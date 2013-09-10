@@ -27,7 +27,9 @@ Information on the [Release Channels](#wiki/Release-methodology).
 ## Tizen Features
 * Basic application launcher with manifest support. See [Crosswalk Manifest](#wiki/Crosswalk-manifest).
 * Initial Extension System model defined and implemented. See [Crosswalk Extensions](#wiki/Crosswalk-extensions).
-* Selected Tizen 2.x Web APIs implemented: Bluetooth, Notification, Power, Time, System Settings, System Information, Download. See [Crosswalk APIs](#documentation/APIs).
+* Selected Tizen 2.x Web APIs implemented: Bluetooth, Notification, 
+Power, Time, System Settings, System Information, Download. See 
+[Tizen Extensions Crosswalk APIs](https://github.com/crosswalk-project/tizen-extensions-crosswalk/wiki/APIs).
 
 ## Android Features
 * Basic application launcher with manifest support. See [Crosswalk Manifest](#wiki/Crosswalk-manifest).
