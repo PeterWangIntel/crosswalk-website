@@ -10,13 +10,15 @@ You will need to install the Android SDK, including [adb](http://developer.andro
 ```sh
 unzip crosswalk-android-1.29.3.0.zip
 ```
-1. Install the XWalkCoreShell package:
+1. Install the XWalkRuntimeLib package:
 ```sh
-adb install crosswalk-android-1.29.3.0/apks/XWalkCoreShell.apk
+adb install crosswalk-android-1.29.3.0/apks/XWalkRuntimeLib.apk
 ```
 On successful completion, you should see the final string *Success* displayed.
-1. On the device/emulator, go to the application list, locate the **XWalkCoreShell** app, and start it.
-1. You should now see a white screen with a simple message at the top of the window.
+
+You are now ready to install Crosswalk applications on your Android 
+system. If you go to your system Settings, you should see 
+**XWalkRuntimeLib** listed under the **Apps/Downloaded** list.
 
 ### Tizen
 These steps assume you have the [Tizen SDK](https://developer.tizen.org/downloads/tizen-sdk) installed and correctly configured on your system. 
