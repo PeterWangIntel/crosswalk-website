@@ -46,3 +46,6 @@ If you any question on how to use Crosswalk you can ask on IRC. On freenode.net,
 * [Linux Debugging](wiki/Linux-Debugging)
 * [Web API Extension Policy](wiki/Web-API-Extension-Policy)
 * [Working with Github Issue Tracker] (wiki/Working-with-Github-Issue-Tracker)
+
+## Privacy Policy
+* [Privacy Policy](wiki/Privacy-Policy)
