@@ -32,14 +32,14 @@ sdb root on
 1. Push the RPMs to the device:
 ```sh
 sdb push crosswalk-1.29.3.0.rpm /tmp
-sdb push tizen-extensions-crosswalk-0.2-0.i586.rpm /tmp
+sdb push tizen-extensions-crosswalk-0.3-0.i586.rpm /tmp
 ```
 1. Install the RPMs on the device:
 ```sh
 sdb shell
 # While in the shell on the Tizen device
 rpm -i /tmp/crosswalk-1.29.3.0-0.i586.rpm
-rpm -i /tmp/tizen-extensions-crosswalk-0.2-0.i586.rpm
+rpm -i /tmp/tizen-extensions-crosswalk-0.3-0.i586.rpm
 ```
 1. Additionally, if installing Crosswalk on the Tizen Emulator, you need to install an additional package:
 ```sh
