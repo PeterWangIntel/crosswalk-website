@@ -11,6 +11,11 @@ The release schedule follows a six week cascading release methodology as follows
 
 A new feature landing on the master tip of Crosswalk will take between six and twelve weeks before it can possibly land in a Stable release.
 
+## Canary Release
+A canary release is a test release; it is intended to be the first 
+indicator if things are working or broken. A canary release has had 
+minmal (if any) manual testing.
+
 ## Beta Branch
 Once a branch is created for the stabilization process no new features are added to its tree. If a feature has not landed in tip by the beginning of the Beta phase, it will wait until the following Beta release cycle (six weeks) to enter in a stabilization branch. New features may be removed from the Beta branch if they are unstable and can not be fixed in order to meet the Stable release metrics.
 
