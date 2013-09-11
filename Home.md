@@ -18,10 +18,10 @@ If you any question on how to use Crosswalk you can ask on IRC. On freenode.net,
 
 ## For Developers
 * [Build Crosswalk](wiki/Build-Crosswalk)
-* [Contributing Code](wiki/Contributing-Code)
+* [Contributing Code](#contribute/contributing-code)
 * [Rebasing Strategy](wiki/Rebasing-Strategy)
 * [Development Mailing List (only about development of Crosswalk itself)](https://lists.crosswalk-project.org/mailman/listinfo/crosswalk-dev)
-* [Crosswalk Reviewer Policy](wiki/Crosswalk's-Reviewer-Policy)
+* [Crosswalk Reviewer Policy](#contribute/reviewer_policy)
 * [Development Tasks](wiki/Development-Tasks)
 * [Standardization Tasks](wiki/Standardization-Tasks)
 * [[Crosswalk on Android]]
