@@ -42,4 +42,4 @@ you or can't fix themselves the problem.
 A Crosswalk reviewer must approve your patch before Crosswalk can accept it into the source control repository. A reviewer will typically either approve your patch (by responding with an LGTM in the pull request) or request revisions to your patch. In rare cases a patch may be permanently rejected, meaning that the reviewer believes the feature should never be committed to the tree. The review process can consist of multiple iterations between you and the reviewer as you submit revised patches.
 
 ## Obtaining Review Privileges
-Our [Reviewer policy](Reviewer_Policy) provides details on obtaining review privileges.
+Our [Reviewer policy](#contribute/Reviewer_Policy) provides details on obtaining review privileges.
