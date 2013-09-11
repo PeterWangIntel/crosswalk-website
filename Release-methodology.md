@@ -11,11 +11,6 @@ The release schedule follows a six week cascading release methodology as follows
 
 A new feature landing on the master tip of Crosswalk will take between six and twelve weeks before it can possibly land in a Stable release.
 
-## Canary Release
-A canary release is a test release; it is intended to be the first 
-indicator if things are working or broken. A canary release has had 
-minmal (if any) manual testing.
-
 ## Beta Branch
 Once a branch is created for the stabilization process no new features are added to its tree. If a feature has not landed in tip by the beginning of the Beta phase, it will wait until the following Beta release cycle (six weeks) to enter in a stabilization branch. New features may be removed from the Beta branch if they are unstable and can not be fixed in order to meet the Stable release metrics.
 
@@ -29,11 +24,19 @@ The result of this process is that a “stable” release of Crosswalk does not 
 ## Crosswalk Binaries
 As mentioned previously, Crosswalk development occurs in three areas: master (trunk), beta-branch, and stable-branch. The Crosswalk project provides three classes of binaries: Canary, Beta, and Stable.
 
-The **Canary build** is generated on a frequent basis (sometimes daily) based on a recent tip of master that passes a full build and automatic basic acceptance test. The Canary build lets developers that are interested in the absolute latest features, and which don’t want to build Crosswalk themselves, an easy option for working with the latest Crosswalk releases.
+### Canary Release
+The **Canary release** is generated on a frequent basis (sometimes 
+daily) based 
+on a recent tip of master that passes a full build and automatic basic acceptance test. The Canary build lets developers that are interested in the absolute latest features, and which don’t want to build Crosswalk themselves, an easy option for working with the latest Crosswalk releases.
 
-The **Beta build** is intended primarily for application developers looking to test their application against any new changes to Crosswalk, or to use new features intended to land in the next Stable cycle. Beta builds are published based on automated basic acceptance tests (ABAT), manual testing results, and functionality changes. There is an expected level of stability with Beta releases, however it is still Beta and may contain significant bugs.
+### Beta Release
+The **Beta release** is intended primarily for application developers 
+looking 
+to test their application against any new changes to Crosswalk, or to use new features intended to land in the next Stable cycle. Beta builds are published based on automated basic acceptance tests (ABAT), manual testing results, and functionality changes. There is an expected level of stability with Beta releases, however it is still Beta and may contain significant bugs.
 
-The **Stable releases** are end-user targeting releases. Once a Crosswalk release is promoted to the Stable channel, that release will only see new binaries for critical bugs and security issues.
+### Stable Release
+A **Stable release** is an end-user targeting release. Once a Crosswalk 
+release is promoted to the Stable channel, that release will only see new binaries for critical bugs and security issues.
 
 ## Version Numbers
 The Crosswalk version numbers is a four part decimal number, in the form of A.B.C.D for example: 1.28.52.3
