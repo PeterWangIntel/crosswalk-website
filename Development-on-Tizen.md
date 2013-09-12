@@ -14,11 +14,6 @@
  * gbs can bake xwalk rpm.
  * When gbs runs, gbs creates chroot environment to build i586 target
  * gbs automatically downloads all dependencies from tizen server
-* download build-config that gbs needs.
-```
-> cd <where you want to>
-> git clone ssh://review.tizen.org:29418/scm/meta/build-config
-```
 * Make .gbs.conf
 `> vi ~/.gbs.conf`
  * For example, my .gbs.conf
@@ -30,12 +25,10 @@ work_dir=.
 
 [profile.mobile_public]
 repos = repo.mobile_public_2.1
-buildconf=/media/dshwang/ExtHDD/tizen/build-config/build.conf
 
 [repo.mobile_public_2.1]
 url = http://download.tizen.org/releases/2.1/tizen-2.1_20130517.6/
 ```
- * put your build.conf path into buildconf
 
 * If you are curious what happen, refer to [Creating a Tizen Platform Image from Scratch through Local Build](https://source.tizen.org/documentation/developer-guide/creating-tizen-platform-image-scratch-through-local-build)
 
