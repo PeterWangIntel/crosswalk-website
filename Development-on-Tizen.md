@@ -22,6 +22,12 @@ url = http://download.tizen.org/releases/2.1/tizen-2.1_20130517.6/
 ```
 
 # Build xwalk
+## Preface
+* We will work in both HOST and CHROOT.
+* I distinguish each as follows:
+ * In HOST `> command`
+ * In CHROOT `$ command`
+
 ## Bake rpm
 * Refer to "Building an RPM package for Tizen" in [[Build-Crosswalk]]
 * If you bake rpm once, chroot environment is created. You can build xwalk inside chroot! Refer to next section.
@@ -101,10 +107,12 @@ $ make -j6 -C src BUILDTYPE=Release xwalk
 ```
 
 ### Deploy
+* Copy binary into device
 ```
 > sdb root on
 > sdb push out/Release/xwalk /usr/lib/xwalk/xwalk
 ```
+* You can run xwalk on device using `sdb shell`. Refer to following section.
 
 ## Run
 * Refer to [[05-Installing_Crosswalk]]
