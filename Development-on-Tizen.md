@@ -30,6 +30,7 @@ url = http://download.tizen.org/releases/2.1/tizen-2.1_20130517.6/
 ## Build XWalk inside chroot.
 * You need to bake rpm once, because gbs creates chroot environment.
 * If you bake rpm once and you don't change spec file, just build inside chroot. Don't waste time to bake rpm again.
+
 ### Build
 * mount your source to chroot
 ```
