@@ -6,7 +6,7 @@
 
 ## Install development tools
 * On host, you must have gbs and mic.
-** There are some steps until you can install on Ubuntu by `sudo apt-get install gbs mic`
+ * There are some steps until you can install on Ubuntu by `sudo apt-get install gbs mic`
 * Until `sudo apt-get install gbs mic`, follow [Installing development tools](https://source.tizen.org/documentation/developer-guide/installing-development-tools)
 
 ## Set up gbs environment
