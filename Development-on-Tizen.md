@@ -59,7 +59,6 @@ url = http://download.tizen.org/releases/2.1/tizen-2.1_20130517.6/
 * mount your source to chroot
 ```
 # make directory of mounting point
-
 > cd /home/<yourID>/GBS-ROOT/local/BUILD-ROOTS/scratch.i586.0/home/abuild/
 > mkdir workspace
 > cd -
@@ -79,7 +78,7 @@ Patch3:         %{name}-1.29-revert-nss-commits.patch
 ```
 > cd [your source]
 > patch -p1 < <xwalk dir>/package/%{name}-1.29-do-not-look-for-gtk2-when-using-aura.patch
-...
+# do all patches
 ```
 * go inside chroot
 ```
