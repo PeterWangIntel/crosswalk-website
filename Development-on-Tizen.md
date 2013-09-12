@@ -71,7 +71,7 @@ Patch3:         %{name}-1.29-revert-nss-commits.patch
 ```
 > cd [your source]
 > patch -p1 < <xwalk dir>/package/%{name}-1.29-do-not-look-for-gtk2-when-using-aura.patch
-# do all patches
+# do all patches (some patch 
 ```
 * go inside chroot
 ```
