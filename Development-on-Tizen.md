@@ -70,12 +70,12 @@ Patch3:         %{name}-1.29-revert-nss-commits.patch
  * patch manually
 ```
 > cd [your source]
-> patch -p1 < <xwalk dir>/package/%{name}-1.29-do-not-look-for-gtk2-when-using-aura.patch
-# do all patches (some patch 
+> patch -p1 <xwalk dir>/package/%{name}-1.29-do-not-look-for-gtk2-when-using-aura.patch
+# do all patches (some patch need -p2, not -p1)
 ```
 * go inside chroot
 ```
-> sudo gbs chroot /home/dshwang/GBS-ROOT/local/BUILD-ROOTS/scratch.i586.0
+> sudo gbs chroot /home/<yourID>/GBS-ROOT/local/BUILD-ROOTS/scratch.i586.0
 $ cd ~/workspace   # this is your mounting point
 ```
 * gyp
