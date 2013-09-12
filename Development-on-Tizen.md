@@ -2,7 +2,7 @@
 [Installing development tools](https://source.tizen.org/documentation/developer-guide/installing-development-tools)
 * On host, you must have gbs and mic.
 Install on Ubuntu by `sudo apt-get install gbs mic`
-* If you suffer Intel proxy, refer to [Using git at intel](https://opensource.intel.com/linux-wiki/Using_git)
+* If you have issues because of the Intel proxy, refer to [Using git at intel](https://opensource.intel.com/linux-wiki/Using_git)
 
 [Creating a Tizen Platform Image from Scratch through Local Build](https://source.tizen.org/documentation/developer-guide/creating-tizen-platform-image-scratch-through-local-build)
 * For example, my .gbs.conf
