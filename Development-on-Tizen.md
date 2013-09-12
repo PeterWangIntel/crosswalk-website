@@ -5,7 +5,7 @@
 * If you suffer Intel proxy, refer to [Using git at intel](https://opensource.intel.com/linux-wiki/Using_git)
 
 [Creating a Tizen Platform Image from Scratch through Local Build](https://source.tizen.org/documentation/developer-guide/creating-tizen-platform-image-scratch-through-local-build)
-For example, my .gbs.conf
+* For example, my .gbs.conf
 ```
 [general]
 tmpdir = /media/dshwang/ExtHDD/tmp
