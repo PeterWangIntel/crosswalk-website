@@ -61,7 +61,8 @@ url = http://download.tizen.org/releases/2.1/tizen-2.1_20130517.6/
 # make directory of mounting point
 > mkdir /home/dshwang/GBS-ROOT/local/BUILD-ROOTS/scratch.i586.0/home/abuild/workspace
 # mount your source
-> sudo mount --bind <your source path> /home/dshwang/GBS-ROOT/local/BUILD-ROOTS/scratch.i586.0/home/abuild/workspace/xwalk
+> sudo mount --bind <your source path> /home/dshwang/GBS-ROOT/local/BUILD-ROOTS/scratch.i586.0/home/abuild/workspace
+# e.g. <your source path> is /home/<yourID>/chromium if your xwalk is in /home/<yourID>/chromium/src/xwalk
 ```
 * manually patch patches
  * spec includes as follows
