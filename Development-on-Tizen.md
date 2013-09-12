@@ -1,14 +1,29 @@
 # Set up your Tizen environment
-[Installing development tools](https://source.tizen.org/documentation/developer-guide/installing-development-tools)
-* On host, you must have gbs and mic.
-Install on Ubuntu by `sudo apt-get install gbs mic`
-* If you have issues because of the Intel proxy, refer to [Using git at intel](https://opensource.intel.com/linux-wiki/Using_git)
+## Setting up Gerrit Access
+* When using gbs, gbs download many resources from server. So you need to set up Gerrit Access.
+* Follow [Setting up Development Environment](https://source.tizen.org/documentation/developer-guide/environment-setup)
+* If you are Intel guy, follow Intel proxy setting: [Using git at intel](https://opensource.intel.com/linux-wiki/Using_git)
 
-[Creating a Tizen Platform Image from Scratch through Local Build](https://source.tizen.org/documentation/developer-guide/creating-tizen-platform-image-scratch-through-local-build)
-* For example, my .gbs.conf
+## Install development tools
+* On host, you must have gbs and mic.
+** There are some steps until you can install on Ubuntu by `sudo apt-get install gbs mic`
+* Until `sudo apt-get install gbs mic`, follow [Installing development tools](https://source.tizen.org/documentation/developer-guide/installing-development-tools)
+
+## Set up gbs environment
+* What is gbs?
+ * gbs can bake xwalk rpm.
+ * When gbs runs, gbs creates chroot environment to build i586 target
+ * gbs automatically downloads all dependencies from tizen server
+* download build-config that gbs needs.
+```
+> cd <where you want to>
+> git clone ssh://review.tizen.org:29418/scm/meta/build-config
+```
+* Make .gbs.conf
+`> vi ~/.gbs.conf`
+ * For example, my .gbs.conf
 ```
 [general]
-tmpdir = /media/dshwang/ExtHDD/tmp
 profile = profile.mobile_public
 buildroot = ~/GBS-ROOT/
 work_dir=.
@@ -20,6 +35,9 @@ buildconf=/media/dshwang/ExtHDD/tizen/build-config/build.conf
 [repo.mobile_public_2.1]
 url = http://download.tizen.org/releases/2.1/tizen-2.1_20130517.6/
 ```
+ * put your build.conf path into buildconf
+
+* If you are curious what happen, refer to [Creating a Tizen Platform Image from Scratch through Local Build](https://source.tizen.org/documentation/developer-guide/creating-tizen-platform-image-scratch-through-local-build)
 
 # Build xwalk
 ## Preface
