@@ -97,7 +97,7 @@ export GYP_GENERATORS='make'
 -Denable_xi21_mt=1 \
 -Dtizen_mobile=1
 ```
- * you can do it in chroot. Note you need -Dtarget-arch=ia32 in addition.
+ * you can do it in chroot. Note you need -Dtarget_arch=ia32 in addition.
 ```
 $ export GYP_GENERATORS='make'
 $ ./src/xwalk/gyp_xwalk src/xwalk/xwalk.gyp \
