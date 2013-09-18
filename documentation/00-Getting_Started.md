@@ -14,5 +14,3 @@ Crosswalk applications are made up of your HTML5 files and a manifest file. When
 
 ### Step 4 - Running your application
 The steps for pushing your application to the target device and launching Crosswalk with your application are covered on the [Running an Application](#documentation/Running_an_Application) page.
-
-test edit
