@@ -15,7 +15,7 @@ This is a Canary build of Crosswalk. Canary builds are intended for active Cross
 <tbody>
 <tr><td>Android</td><td><a href='https://download.01.org/crosswalk/releases/android/canary/crosswalk-1.29.5.0.zip'>crosswalk-1.29.5.0.zip</a></td>
 <td><a href='#documentation/installing_crosswalk/android'>Installation</td></tr>
-<tr><td>Tizen</td><td><a href='https://download.01.org/crosswalk/releases/tizen/canary/crosswalk-1.29.5.0-0.i586.rpm'>crosswalk-tizen-1.29.5.0-0.i586.rpm</a></td><td><a href='#documentation/installing_crosswalk/tizen'>Installation</td></tr></tr>
+<tr><td>Tizen</td><td><a href='https://download.01.org/crosswalk/releases/tizen/canary/crosswalk-1.29.5.0-0.i586.rpm'>crosswalk-1.29.5.0-0.i586.rpm</a></td><td><a href='#documentation/installing_crosswalk/tizen'>Installation</td></tr></tr>
 <tr><td>Tizen</td><td><a href='https://download.01.org/crosswalk/releases/tizen/canary/crosswalk-emulator-support-1.29.5.0-0.i586.rpm'>crosswalk-emulator-support-1.29.5.0-0.i586.rpm</a></td><td><a href='#documentation/installing_crosswalk/tizen'>Installation</td></tr></tr>
 <tr><td>Tizen</td><td><a href='https://download.01.org/crosswalk/releases/tizen/canary/tizen-extensions-crosswalk-0.3-0.i586.rpm'>tizen-extensions-crosswalk-0.3-0.i586.rpm</a></td><td><a href='#documentation/installing_crosswalk/tizen'>Installation</td></tr></tr>
 </tbody>
