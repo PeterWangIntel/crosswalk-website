@@ -43,7 +43,8 @@ The instrumentation tests for Android port has been enabled for runtime core but
     ninja -C out/Release xwalk_core_test_apk
     build/android/adb_install_apk.py --release --apk XWalkCoreShell.apk
 
-* Run all testing cases 
+* Run all testing cases
+
     build/android/run_instrumentation_tests.py --test-apk XWalkCoreTest --test_data xwalkview:xwalk/test/data/device_files/  --verbose -I
 
 
