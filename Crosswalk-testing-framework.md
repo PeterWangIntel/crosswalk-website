@@ -35,18 +35,18 @@ To use `InProcessBrowserTest` do the following:
 ## Tests in Android port
 The instrumentation tests for Android port has been enabled for runtime core but not for app wrapper(will be supported soon). To understand the background of this kind of tests, please refer to [Testing Android](http://developer.android.com/tools/testing/testing_android.html). Below is the instruction on how to run instrumentation tests for crosswalk runtime core:
 * Set up the environment for Android build for IA. It's always needed when running instrumentation tests.
-
+```
     . xwalk/build/android/envsetup.sh --target-arch=x86
-
+```
 * Build the testing APK for runtime core and install it to the target Android device.
-
+```
     ninja -C out/Release xwalk_core_test_apk
     build/android/adb_install_apk.py --release --apk XWalkCoreShell.apk
-
+```
 * Run all testing cases
-
+```
     build/android/run_instrumentation_tests.py --test-apk XWalkCoreTest --test_data xwalkview:xwalk/test/data/device_files/  --verbose -I
-
+```
 
 ## Code Reviewing and Trybots
 Crosswalk's developer is required to add test for any non-trivial code change. A effective and collaborate testing for your code is always a good practice when uploading a patch to trunk. Generally, a reviewer might reject a patch without testing code.
