@@ -33,7 +33,7 @@ To use `InProcessBrowserTest` do the following:
 * If you subclass and override SetUp, be sure and invoke `InProcessBrowserTest::SetUp`. (But see also `SetUpOnMainThread`, `SetUpInProcessBrowserTestFixture` and other related hook methods for a cleaner alternative).
 
 ## Tests in Android port
-The instrumentation tests for Android port has been enabled for runtime core but not for app wrapper(will be supported soon). Below is the instruction on how to run instrumentation tests for crosswalk runtime core:
+The instrumentation tests for Android port has been enabled for runtime core but not for app wrapper(will be supported soon). To understand the background of this kind of tests, please refer to [Testing Android](http://developer.android.com/tools/testing/testing_android.html). Below is the instruction on how to run instrumentation tests for crosswalk runtime core:
 * Set up the environment for Android build for IA. It's always needed when running instrumentation tests.
 
     . xwalk/build/android/envsetup.sh --target-arch=x86
