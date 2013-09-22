@@ -32,6 +32,21 @@ To use `InProcessBrowserTest` do the following:
 * Your test method is invoked on the UI thread. If you need to block until state changes you'll need to run the message loop from your test method.
 * If you subclass and override SetUp, be sure and invoke `InProcessBrowserTest::SetUp`. (But see also `SetUpOnMainThread`, `SetUpInProcessBrowserTestFixture` and other related hook methods for a cleaner alternative).
 
+## Tests in Android port
+The instrumentation tests for Android port has been enabled for runtime core but not for app wrapper(will be supported soon). Below is the instruction on how to run instrumentation tests for crosswalk runtime core:
+* Set up the environment for Android build for IA. It's always needed when running instrumentation tests.
+
+    . xwalk/build/android/envsetup.sh --target-arch=x86
+
+* Build the testing APK for runtime core and install it to the target Android device.
+
+    ninja -C out/Release xwalk_core_test_apk
+    build/android/adb_install_apk.py --release --apk XWalkCoreShell.apk
+
+* Run all testing cases 
+    build/android/run_instrumentation_tests.py --test-apk XWalkCoreTest --test_data xwalkview:xwalk/test/data/device_files/  --verbose -I
+
+
 ## Code Reviewing and Trybots
 Crosswalk's developer is required to add test for any non-trivial code change. A effective and collaborate testing for your code is always a good practice when uploading a patch to trunk. Generally, a reviewer might reject a patch without testing code.
 
