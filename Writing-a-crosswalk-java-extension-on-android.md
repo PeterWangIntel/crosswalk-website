@@ -22,7 +22,7 @@ class XWalkExtensionClient {
        "class": "[the Java class name]",
        "js_api": "[the file name of JavaScript stub code]"
      }
-    }
+    ]
 ```
 * Package them with the Crosswalk packaging tool.
 
