@@ -1,7 +1,7 @@
 Not completed yet. Will continue to refine this page.
 
 ## Implementing an external extension
-* Write the JavaScript code stub same as the native extension system.
+* Write the JavaScript stub code same as the native extension system.
 * A new class inherited from the class XWalkExtensionClient implements the methods used by JavaScript.
 ```
 class XWalkExtensionClient {
@@ -24,7 +24,7 @@ class XWalkExtensionClient {
      }
     }
 ```
- * Package them with the Crosswalk packaging tool.
+* Package them with the Crosswalk packaging tool.
 
 ## Example
 * Write the stub code in JavaScript, called myextension.js
