@@ -18,9 +18,9 @@ class XWalkExtensionClient {
 ```
     [
      {
-       "name": "myextension",
-       "class": "com.example.MyExtension",
-       "js_api": "myextension.js"
+       "name": "[the extension name]",
+       "class": "[the Java class name]",
+       "js_api": "[the file name of JavaScript stub code]"
      }
     }
 ```
