@@ -47,9 +47,12 @@ exports.echoSync = function(msg) {
 ```
 package com.example.extension;
 
+import org.xwalk.app.runtime.extension.XWalkExtensionClient;
+import org.xwalk.app.runtime.extension.XWalkExtensionContextClient;
+
 public class MyExtension extends XWalkExtensionClient {
     final private XWalkExtensionContextClient mExtensionContext;
-
+    // Don't change the parameters in Constructor.
     public MyExtension(Activity activity, String name, String JsApiContent, XWalkExtensionContextClient context) {
         super(activity, name, JsApiContent, context);
         mExtensionContext = context;
