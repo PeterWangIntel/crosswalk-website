@@ -66,7 +66,7 @@ public class MyExtension extends XWalkExtensionClient {
     }
 }
 ```
-* Configure the extension so that Crosswalk can load them.
+* Configure the extension in extensions-config.json so that Crosswalk can load them.
 ```
 [{
   "name":       "echo",               // The name of external extension.
@@ -104,4 +104,3 @@ try {
 </html>
 ```
 * Build extension and package them with Crosswalk packaging tool.
-
