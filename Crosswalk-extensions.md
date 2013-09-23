@@ -1,6 +1,7 @@
 Crosswalk Extensions allow exposing new functionality to JavaScript environment of your application. This functionality can be implemented in native code.
 
 * [Writing a Crosswalk Extension](Writing-a-Crosswalk-Extension)
+* [Writing a Crosswalk Java Extension on Android](Writing-a-Crosswalk-Java-Extension-on-Android)
 * [Running Brackets with Crosswalk](Running-Brackets): Brackets editor is used as a test case for Crosswalk Extensions.
 * [Running Tizen Device API with Crosswalk](Running-Tizen-Device-API)
 
