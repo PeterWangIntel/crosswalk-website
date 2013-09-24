@@ -7,7 +7,10 @@ Developers can use remote debugging to debug web applications from Chrome Browse
 ```
  * Or, send intents to a web app to enable/disable remote debugging when it's running:
 ```
-  adb shell am broadcast -a org.xwalk.intent -e remotedebugging true
+  adb shell am broadcast -a org.xwalk.intent -e remotedebugging true  
+```
+ * To disable remote debugging,
+```
   adb shell am broadcast -a org.xwalk.intent -e remotedebugging false
 ```
 * Open Chrome browser(version >=29) in the host machine and input "chrome://inspect" in the address bar.
