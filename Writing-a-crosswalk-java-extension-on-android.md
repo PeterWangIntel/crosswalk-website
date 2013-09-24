@@ -20,7 +20,7 @@ class XWalkExtensionClient {
      {
        "name": "mandatory property - the extension name",
        "class": "mandatory property - the Java class name",
-       "js_api": "mandatory property - the file name of JavaScript stub code",
+       "jsapi": "mandatory property - the file name of JavaScript stub code",
        "permissions": "optional property - Android permissions used in this extension, like CAMERA. Its value is a list"
      }
     ]
