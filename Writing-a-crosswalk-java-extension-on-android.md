@@ -5,7 +5,7 @@ Not completed yet. Will continue to refine this page.
 * A new class inherited from the class XWalkExtensionClient implements the methods used by JavaScript.
 ```
 class XWalkExtensionClient {
-  public XWalkExtensionClient(Activity activity, String name, String jsApi, XWalkExtensionContextClient context) {
+  public XWalkExtensionClient(String name, String jsApi, XWalkExtensionContextClient context) {
   }
   public void onMessage() {
   }
@@ -52,8 +52,8 @@ import org.xwalk.app.runtime.extension.XWalkExtensionContextClient;
 
 public class MyExtension extends XWalkExtensionClient {
     final private XWalkExtensionContextClient mExtensionContext;
-    // Don't change the parameters in Constructor.
-    public MyExtension(Activity activity, String name, String JsApiContent, XWalkExtensionContextClient context) {
+    // Don't change the parameters in Constructor because XWalk need to call this constructor.
+    public MyExtension(String name, String JsApiContent, XWalkExtensionContextClient context) {
         super(activity, name, JsApiContent, context);
         mExtensionContext = context;
     }
