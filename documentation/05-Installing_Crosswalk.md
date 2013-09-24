@@ -19,6 +19,12 @@ adb install crosswalk-1.29.5.0/apks/XWalkRuntimeLib.apk
 ```
 On successful completion, you should see the final string *Success* displayed.
 
+NOTE: If you have previously installed the XWalkRuntimeLib:
+```sh
+adb shell
+pm uninstall org.xwalk.runtime.lib
+```
+
 You are now ready to install Crosswalk applications on your Android 
 system. If you go to your system Settings, you should see 
 **XWalkRuntimeLib** listed under the **Apps/Downloaded** list.
