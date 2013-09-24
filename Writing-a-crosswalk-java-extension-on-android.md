@@ -78,7 +78,7 @@ public class MyExtension extends XWalkExtensionClient {
 * Configure the extension in extensions-config.json so that Crosswalk can load them.
 ```
 [{
-  "name":       "echo",               // The name of external extension.
+  "name":       "Echo",               // The name of external extension.
   "class":      "com.example.extension.MyExtension",   // The name of the class that implements the extension.
   "js_api":     "myextension.js"             // The path of the JavaScript code stub file.
 }]
@@ -93,7 +93,7 @@ public class MyExtension extends XWalkExtensionClient {
 <script>
 try {
   var d = new Date().toString();
-  echo.echo(d, function(msg) {
+  Echo.echo(d, function(msg) {
     document.write(msg + "<br>");
     var expected = "From java:" + d;
     if (msg === expected) {
