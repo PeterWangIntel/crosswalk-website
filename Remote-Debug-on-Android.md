@@ -1,12 +1,12 @@
 ## Remote debugging for web applications on Android
 Developers can use remote debugging to debug web applications from Chrome Browser on Linux host machines.
  * Two ways to enable the remote debugging feature for a web application. You can either enable the remote debugging by default when packaging the web app or send Android intents to the web app if it's running.
-  * Option 1: Enable remote debugging by default when packaging a web app,
+  * Option 1: Enable remote debugging by default when packaging a web app, for example,
 ```
   host$ python make_apk.py --package=com.abc.app --name=ABC --app-root=/home/abc/dist --app-local-path=src/index.html --enable-remote-debugging
 ```
   Launch the packaged web app APK and remote debugging is enabled by default.
-  * Option 2: If a web app APK is not packaged with remote debugging, you can launch it and send intents to a web app to enable/disable remote debugging when it's running,
+  * Option 2: If a web app APK is not packaged with remote debugging, you can launch it and send an intent to enable/disable remote debugging when it's running. Note that below intent will enable remote debugging feature for all running web apps with Crosswalk.
 ```
   host$ adb shell am broadcast -a org.xwalk.intent -e remotedebugging true  
 ```
