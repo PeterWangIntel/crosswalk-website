@@ -26,6 +26,7 @@ class XWalkExtensionClient {
     ]
 ```
 See details about [Android permissions](http://developer.android.com/reference/android/Manifest.permission.html).
+* Use Web APIs in web apps.
 * Package them with the Crosswalk packaging tool.
 
 ## Example
