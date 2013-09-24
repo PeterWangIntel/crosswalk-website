@@ -33,5 +33,4 @@ shell@android$ cat /proc/net/unix |grep devtools_remote
 If you don't see the string combined with the package name and '_devtools_remote', then you probably have to enable remote debugging for the web app.
 
 ## Reference
-* http://powerbuilder.sh.intel.com/projects/wrtonandroid/wiki/cameo/remote-debugging-enabling
 * https://developers.google.com/chrome-developer-tools/docs/remote-debugging
