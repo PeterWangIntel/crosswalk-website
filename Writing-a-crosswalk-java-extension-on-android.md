@@ -55,7 +55,7 @@ import org.xwalk.app.runtime.extension.XWalkExtensionContextClient;
 
 public class MyExtension extends XWalkExtensionClient {
     final private XWalkExtensionContextClient mExtensionContext;
-    // Don't change the parameters in Constructor because XWalk need to call this constructor.
+    // Don't change the parameters in Constructor because XWalk needs to call this constructor.
     public MyExtension(String name, String JsApiContent, XWalkExtensionContextClient context) {
         super(activity, name, JsApiContent, context);
         mExtensionContext = context;
