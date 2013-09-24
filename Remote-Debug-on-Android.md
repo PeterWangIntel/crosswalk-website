@@ -1,27 +1,26 @@
 ## Remote debugging for web applications on Android
 Developers can use remote debugging to debug web applications from Chrome Browser on Linux host machines.
-* Two ways to enable the remote debugging feature for a web application. You can either enable the remote debugging by default when packaging the web app or send Android intents to the web app if it's running.
- * Enable remote debugging by default when packaging a web app,
+ * Two ways to enable the remote debugging feature for a web application. You can either enable the remote debugging by default when packaging the web app or send Android intents to the web app if it's running.
+  * Option 1: Enable remote debugging by default when packaging a web app,
 ```
-  python make_apk.py --package=com.abc.app --name=ABC --app-root=/home/abc/dist --app-local-path=src/index.html --enable-remote-debugging
+  host$ python make_apk.py --package=com.abc.app --name=ABC --app-root=/home/abc/dist --app-local-path=src/index.html --enable-remote-debugging
 ```
- * Or, send intents to a web app to enable/disable remote debugging when it's running,
+  Launch the packaged web app APK and remote debugging is enabled by default.
+  * Option 2: If a web app APK is not packaged with remote debugging, you can launch it and send intents to a web app to enable/disable remote debugging when it's running,
 ```
-  adb shell am broadcast -a org.xwalk.intent -e remotedebugging true  
+  host$ adb shell am broadcast -a org.xwalk.intent -e remotedebugging true  
 ```
- * To disable remote debugging,
+  * To disable remote debugging if a web app is running,
 ```
-  adb shell am broadcast -a org.xwalk.intent -e remotedebugging false
+  host$ adb shell am broadcast -a org.xwalk.intent -e remotedebugging false
 ```
-* Open Chrome browser(version >=29) in the host machine and input "chrome://inspect" in the address bar.
-* The web page or web app will be shown in the inspection page. Click to inspect it.
+ * Inspect web pages or web apps in Chrome Browser
+  * Open Chrome Browser(version >=29) in the host machine and input "chrome://inspect" in the address bar.
+  * Web pages or web apps will be shown in the inspection page. Click to the button 'inspect' to inspect it.
 
 ## Remote debugging for XWalk Core Shell on Android
 XWalkCoreShell is an internal test shell for Crosswalk developers. It enables remote debugging by default. 
-
-### Use Chrome in Host to Remote Debugging
-In host machine connected with device, launch Chrome desktop, open "http://127.0.0.1:9222", or open "chrome://inspect" (requires Chrome version>28)
-
+Follow the steps 'Inspect web pages or web apps in Chrome Browser.
 
 ## Trouble shooting
 If you can't see the web page or web app shown in Chrome Browser in the host machine, Please check with below steps:
