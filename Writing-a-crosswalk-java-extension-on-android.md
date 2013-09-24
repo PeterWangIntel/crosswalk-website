@@ -77,11 +77,13 @@ public class MyExtension extends XWalkExtensionClient {
 ```
 * Configure the extension in extensions-config.json so that Crosswalk can load them.
 ```
-[{
-  "name":       "Echo",               // The name of external extension.
-  "class":      "com.example.extension.MyExtension",   // The name of the class that implements the extension.
-  "js_api":     "myextension.js"             // The path of the JavaScript code stub file.
-}]
+[
+  {
+    "name":       "Echo",               // The name of external extension.
+    "class":      "com.example.extension.MyExtension",   // The name of the class that implements the extension.
+    "js_api":     "myextension.js"             // The path of the JavaScript code stub file.
+  }
+]
 ```
 * Call the APIs in the web page.
 ```
