@@ -30,7 +30,7 @@ See details about [Android permissions](http://developer.android.com/reference/a
 * Package them with the Crosswalk packaging tool.
 
 ## Example
-* Write the stub code in JavaScript, called myextension.js
+* Write the stub code in JavaScript, called myextension.js.
 ```
 var echoListener = null;
 extension.setMessageListener(function(msg) {
@@ -48,7 +48,7 @@ exports.echoSync = function(msg) {
   return extension.internal.sendSyncMessage(msg);
 };
 ```
-* Implementing the inherited Java class MyExtension.java
+* Implementing the inherited Java class, called MyExtension.java.
 ```
 package com.example.extension;
 
@@ -75,7 +75,7 @@ public class MyExtension extends XWalkExtensionClient {
     }
 }
 ```
-* Configure the extension in extensions-config.json so that Crosswalk can load them.
+* Configure the extension in extensions-config.json so that Crosswalk can load the above files.
 ```
 [
   {
@@ -85,7 +85,7 @@ public class MyExtension extends XWalkExtensionClient {
   }
 ]
 ```
-* Call the APIs in the web page.
+* Call the create web APIs in the web app.
 ```
 <html>
 <head>
