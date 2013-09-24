@@ -23,7 +23,7 @@ XWalkCoreShell is an internal test shell for Crosswalk developers. It enables re
 Follow the steps 'Inspect web pages or web apps in Chrome Browser.
 
 ## Trouble shooting
-If you can't see the web page or web app shown in Chrome Browser in the host machine, Please check with below steps:
+If you can't see the web page or web app shown in Chrome Browser in the host machine, please check with below steps:
 ```
 host$ adb shell 
 shell@android$ cat /proc/net/unix |grep devtools_remote
