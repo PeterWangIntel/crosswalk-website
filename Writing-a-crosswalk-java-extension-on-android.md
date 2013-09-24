@@ -20,7 +20,8 @@ class XWalkExtensionClient {
      {
        "name": "[the extension name]",
        "class": "[the Java class name]",
-       "js_api": "[the file name of JavaScript stub code]"
+       "js_api": "[the file name of JavaScript stub code]",
+       "permissions": "[android permissions used in this extension, like CAMERA, see [Android permissions](http://developer.android.com/reference/android/Manifest.permission.html)]"
      }
     ]
 ```
