@@ -18,13 +18,14 @@ class XWalkExtensionClient {
 ```
     [
      {
-       "name": "[the extension name]",
-       "class": "[the Java class name]",
-       "js_api": "[the file name of JavaScript stub code]",
-       "permissions": "[android permissions used in this extension, like CAMERA, see [Android permissions](http://developer.android.com/reference/android/Manifest.permission.html)]"
+       "name": "[mandatory property - the extension name]",
+       "class": "[mandatory property - the Java class name]",
+       "js_api": "[mandatory property - the file name of JavaScript stub code]",
+       "permissions": "[optional property - android permissions used in this extension, like CAMERA]"
      }
     ]
 ```
+See details about [Android permissions](http://developer.android.com/reference/android/Manifest.permission.html).
 * Package them with the Crosswalk packaging tool.
 
 ## Example
