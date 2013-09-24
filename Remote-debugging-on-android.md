@@ -1,5 +1,5 @@
 ## Remote debugging for web applications on Android
-Developers can use remote debugging to debug web applications from Chrome Browser on Linux host machines.
+Developers can use remote debugging to debug web applications on Android from Chrome Browser on Linux host machines.
  * Two ways to enable the remote debugging feature for a web application. You can either enable the remote debugging by default when packaging the web app or send Android intents to the web app if it's running.
   * Option 1: Enable remote debugging by default when packaging a web app, for example,
 ```
