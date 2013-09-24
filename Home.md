@@ -12,7 +12,7 @@ out of the wiki and planted in the higher level documentation under either [Docu
 * [Crosswalk Command Line Options](wiki/Crosswalk-Command-Line-Options)
 * [Experimental JS APIs](wiki/Experimental-APIs)
 * [Crosswalk Extensions](wiki/Crosswalk-Extensions)
-* [Remote Debugging on Android] (wiki/Remote-Debug-on-Android)
+* [Remote Debugging on Android] (wiki/Remote-Debugging-on-Android)
 
 If you any question on how to use Crosswalk you can ask on IRC. On freenode.net, we hang out on the #crosswalk channel.
 
