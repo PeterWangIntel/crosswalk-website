@@ -118,7 +118,7 @@ The following options are supported:
 
 #### For Android APK
 
-The Android APK maker is included with the xwalk-android download.
+The Android APK maker is included with the xwalk-android download. It can work on Linux, Windows and Mac OSX. For setting up the environment for Windows, please see the section 'Windows environment setup'.
 
 To package your own web app, unpack the Crosswalk app template tarball. This is located inside the xwalk-android directory:
 
@@ -182,6 +182,16 @@ In both cases, the apk file is output to the same directory as the <em>make_apk.
 Install the APK on your device:
 
     host$ adb install -r ABC.apk Test1.apk
+##### Windows environment setup
+1. Install the Android SDK. Make sure to add “%SDK_PATH%\platform-tools” and “%SDK_PATH%\platform-tools\tools” into the "PATH" environment variable.
+
+2. Update to the lasted Android API level.
+
+3. Install python and ant. Add the installed path of python and the bin path of ant are added into the "PATH" environment variable as well.
+
+4. Install Oracle JDK and add the paths of “%JAVA_HOME%/bin” and “%JAVA_HOME%/jre/bin” into "PATH". Make sure 'where java' is the path you've set. This is very IMPORTANT.
+
+Note: The Android APK maker works slower on Windows than Linux and Mac.
 
 ##### Example Usage
 TBD
