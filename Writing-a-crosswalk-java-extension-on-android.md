@@ -26,8 +26,8 @@ class XWalkExtensionClient {
     ]
 ```
 See details about [Android permissions](http://developer.android.com/reference/android/Manifest.permission.html).
-* Call Web APIs in web apps.
-* Package them with the Crosswalk packaging tool.
+* So for each extension, there will be three files: .java, .js and .json.
+* Package 3 files with the Crosswalk packaging tool. The packaging tool supports to package multiple extensions for one web app.
 
 ## Example
 * Write the stub code in JavaScript, called myextension.js.
