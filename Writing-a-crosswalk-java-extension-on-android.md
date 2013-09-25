@@ -26,7 +26,7 @@ class XWalkExtensionClient {
     ]
 ```
 See details about [Android permissions](http://developer.android.com/reference/android/Manifest.permission.html).
-* So for each extension, there will be three files: .java, .js and .json.
+* So for each extension, there will be three files: .jar, .js and .json.
 * Package 3 files with the Crosswalk packaging tool. The packaging tool supports to package multiple extensions for one web app.
 
 ## Example
