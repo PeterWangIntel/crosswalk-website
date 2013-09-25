@@ -111,8 +111,8 @@ try {
 </body>
 </html>
 ```
-* Build extension and package them with Crosswalk packaging tool.
- * Put three key files in one directory called 'myextension'
+* Include the extension and package its files with Crosswalk packaging tool.
+ * Put three files in one directory called 'myextension'
 ```
 myextension/
   myextension.js
