@@ -30,7 +30,7 @@ The rest of the options are recommended to use the defaults.
 Once the installation is complete, start a git-bash session by going to your home directory: 
 
 <!--img style='float:left' src='assets/launch.png'-->
-Start => type **%HOMEPATH** and press ENTER. 
+Start => type **%USERPROFILE%** and press ENTER. 
 
 <!--img style='float:left' src='assets/gitbash.png'-->
 Windows will display a file explorer window open to your home directory. Right click on that window and select **Git Bash Here**.
@@ -40,9 +40,19 @@ You will then be presented with a git-bash command shell. The prompt will be the
 cd ~
 ```
 
+To simplify installation and usage, you will want to add various directories to your PATH when you enter the git-bash session. To do this, open notepad, paste the following, and save it as **%USERPROFILE%/.bashrc**:
+```bash
+export PATH=${PATH}:${HOMEPATH}/android/sdk/platform-tools
+export PATH=${PATH}:${HOMEPATH}/android/sdk/tools
+export PATH=${PATH}:${HOMEPATH}/Python27
+export PATH="C:/Program\ Files/Java/jdk1.7.0_40/jre/bin":${PATH}
+export PATH="C:/Program\ Files/Java/jdk1.7.0_40/bin":${PATH}
+export PATH=${PATH}:${HOMEPATH}/apache-ant-1.9.2/bin 
+```
+
 ### Installing the Android SDK
 1. Download Android SDK - http://developer.android.com/sdk/index.html#download..
-1. Extract the contents into %HOMEPATH%/android
+1. Extract the contents into %USERPROFILE%/android
 1. Add Android's **platform-tools** and **tools** to your PATH within the git-bash session:
 ```bash
 export PATH=${PATH}:${HOMEPATH}/android/sdk/platform-tools
@@ -103,7 +113,7 @@ emulator-5554   device
 Install Python 2.7.x (don't install 3.x as some of the scripts do not support newer 3.x syntax)
 http://www.python.org/getit
 
-For the rest of the instructions, it is assumed you install Python into %HOMEPATH%\Python27\
+For the rest of the instructions, it is assumed you install Python into the default location **C:\Python27\**.
 
 ### Install the Oracle JDK
 Download the Oracle JDK from:
