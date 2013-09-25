@@ -91,7 +91,7 @@ public class MyExtension extends XWalkExtensionClient {
 <script>
 try {
   var d = new Date().toString();
-  // Echo is the name defined in extensions-config.json.
+  // Echo is the name defined in myextension.json.
   Echo.echo(d, function(msg) {
     document.write(msg + "<br>");
     var expected = "From java:" + d;
