@@ -148,7 +148,7 @@ tar xvf crosswalk-samples-0.1.tgz
 cd crosswalk-1.29.5.0
 tar xvf xwalk_app_template.tgz
 cd xwalk_app_template
-python make_apk.py --package=com.sample.webgl --name=W3ebGL --app-root=../../samples/webgl --app-local-path=index.html
+python make_apk.py --package=com.sample.webgl --name=WebGL --app-root=../../samples/webgl --app-local-path=index.html
 ```
 And then you can install and run it on your device:
 ```bash
