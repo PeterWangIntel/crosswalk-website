@@ -81,7 +81,7 @@ public class MyExtension extends XWalkExtensionClient {
     "jsapi":   "myextension.js"             // The path of the JavaScript code stub file.
   }
 ```
-* Call the create web APIs in the web app.
+* Call the create web APIs in the web app. It's one example. Not needed for developing an extension for Crosswalk on Android.
 ```
 <html>
 <head>
