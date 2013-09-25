@@ -79,9 +79,9 @@ public class MyExtension extends XWalkExtensionClient {
 ```
 [
   {
-    "name":       "Echo",               // The name of external extension.
+    "name":       "MyExtension",               // The name of external extension.
     "class":      "com.example.extension.MyExtension",   // The name of the class that implements the extension.
-    "js_api":     "myextension.js"             // The path of the JavaScript code stub file.
+    "jsapi":     "myextension.js"             // The path of the JavaScript code stub file.
   }
 ]
 ```
