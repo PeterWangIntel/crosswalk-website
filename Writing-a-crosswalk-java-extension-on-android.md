@@ -24,8 +24,9 @@ class XWalkExtensionClient {
      }
 ```
 See details about [Android permissions](http://developer.android.com/reference/android/Manifest.permission.html).
-* So for each extension, there will be three files: .jar, .js and .json.
-* Package 3 files with the Crosswalk packaging tool. The packaging tool supports to package multiple extensions for one web app.
+* So for each extension, put three files '*.jar, *.js and *.json' into one directory. Package them with the option '--extensions=/path/to/extension/directory' of make_apk.py. 
+
+Note: The packaging tool supports to package multiple extensions for one web app.
 
 ## Example
 * Write the stub code in JavaScript, called myextension.js.
