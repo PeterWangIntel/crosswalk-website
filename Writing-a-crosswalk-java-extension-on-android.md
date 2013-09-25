@@ -61,7 +61,6 @@ public class MyExtension extends XWalkExtensionClient {
     public MyExtension(String name, String JsApiContent, XWalkExtensionContextClient context) {
         super(activity, name, JsApiContent, context);
         mExtensionContext = context;
-        ...
     }
 
     @Override
