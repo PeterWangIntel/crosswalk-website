@@ -100,13 +100,13 @@ emulator-5554   device
 ```
 
 ### Install Python
-1. Install Python 2.7.x (don't install 3.x as some of the scripts do not support newer 3.x syntax)
+Install Python 2.7.x (don't install 3.x as some of the scripts do not support newer 3.x syntax)
 http://www.python.org/getit
 
 For the rest of the instructions, it is assumed you install Python into %HOMEPATH%\Python27\
 
 ### Install the Oracle JDK
-1. Download the Oracle JDK from:
+Download the Oracle JDK from:
 http://www.oracle.com/technetwork/java/javase/downloads/index.html
 
 Make a note of the path where you install. If you accept the defaults, it will install to **C:\Program Files\Java\jdk1.7.0_40**.
@@ -122,22 +122,22 @@ We will install ant within the git-bash shell using the following commands, whic
 curl http://apache.spinellicreations.com//ant/binaries/apache-ant-1.9.2-bin.zip -o apache-ant-1.9.2-bin.zip
 unzip apache-ant-1.9.2-bin -x '*/manual/*'
 export PATH=${PATH}:${PWD}/apache-ant-1.9.2/bin
+```
 
 ### Install the Crosswalk for Android packages
-1. Download the latest Crosswalk for Android release from http://crosswalk-project/#documentation/downloads:
+The following steps will download the latest Crosswalk for Android release from http://crosswalk-project/#documentation/downloads and unzip it in ${HOMEPATH}:
 ```bash
 cd ${HOMEPATH}
 curl https://download.01.org/crosswalk/releases/android/canary/crosswalk-1.29.5.0.zip -o crosswalk-1.29.5.0.zip
-```
-1.Uncompress the ZIP
-```bash
 unzip crosswalk-1.29.5.0.zip
 ```
 
-!. Install Crosswalk to your device:
+To install the Crosswalk runtime onto your device, use the **adb install** command:
 ```bash
-adb install ${HOMEPATH}/crosswalk-1.29.5.0/apks/XWalkRuntimeLib.apk 
+adb install -r ${HOMEPATH}/crosswalk-1.29.5.0/apks/XWalkRuntimeLib.apk 
 ```
+Passing **-r** will re-install the Crosswalk runtime (if you already have a version installed on your device.)
+
 At this point, if you go to your Android system settings, you should see XWalkRuntimeLib listed in the set of installed applications.
 
 ### Building a Crosswalk enabled Android application
