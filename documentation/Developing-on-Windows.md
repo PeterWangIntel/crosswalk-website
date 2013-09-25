@@ -35,7 +35,7 @@ Start => type **%HOMEPATH** and press ENTER.
 <!--img style='float:left' src='assets/gitbash.png'-->
 Windows will display a file explorer window open to your home directory. Right click on that window and select **Git Bash Here**.
 
-You will then be presented with a git-bash command shell. The prompt will be the dollar sign (**$**). To ensure you are in the correct directory, change to your home:
+You will then be presented with a git-bash command shell. The prompt will be the dollar sign. To ensure you are in the correct directory, change to your home:
 ```bash
 cd ~
 ```
