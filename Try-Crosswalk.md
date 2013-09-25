@@ -189,7 +189,7 @@ Install the APK on your device:
 
 3. Install python and ant. Add the installed path of python and the bin path of ant are added into the "PATH" environment variable as well.
 
-4. Install Oracle JDK and add the paths of “%JAVA_HOME%/bin” and “%JAVA_HOME%/jre/bin” into "PATH". Make sure 'where java' is the path you've set. This is very IMPORTANT.
+4. Install Oracle JDK and add the paths of “%JAVA_HOME%/bin” and “%JAVA_HOME%/jre/bin” into "PATH". Make sure 'where java' is the path you've set with Oracle JDK. This is very IMPORTANT. The version 1.6.x is preferred.
 
 Note: The Android APK maker works much slower on Windows than Linux and Mac because it takes a so long time to search executives on Windows.
 
