@@ -1,8 +1,8 @@
 Not completed yet. Will continue to refine this page.
 
 ## Implementing an external extension
-* Write the JavaScript stub code same as the native extension system.
-* A new class inherited from the class XWalkExtensionClient implements the methods used by JavaScript.
+* Write the JavaScript stub code same as the native extension system
+* A new class inherited from the class XWalkExtensionClient implements the methods used by JavaScript and compile it as 'extension.jar'.
 ```
 class XWalkExtensionClient {
   public XWalkExtensionClient(String name, String jsApi, XWalkExtensionContextClient context) {
@@ -14,16 +14,14 @@ class XWalkExtensionClient {
   ...
 }
 ```
-* Configure the extension in extensions-config.json which should be packaged in android asset, like:
+* Configure the extension in a json format which should be packaged in android asset, like:
 ```
-    [
-     {
-       "name": "mandatory property - the extension name",
+    {
+       "name":  "mandatory property - the extension name",
        "class": "mandatory property - the Java class name",
        "jsapi": "mandatory property - the file name of JavaScript stub code",
        "permissions": "optional property - Android permissions used in this extension, like CAMERA. Its value is a list"
      }
-    ]
 ```
 See details about [Android permissions](http://developer.android.com/reference/android/Manifest.permission.html).
 * So for each extension, there will be three files: .jar, .js and .json.
@@ -48,7 +46,7 @@ exports.echoSync = function(msg) {
   return extension.internal.sendSyncMessage(msg);
 };
 ```
-* Implementing the inherited Java class, called MyExtension.java.
+* Implementing the inherited Java class, called MyExtension.java. Compile and package it as 'myextension.jar'.
 ```
 package com.example.extension;
 
@@ -74,8 +72,7 @@ public class MyExtension extends XWalkExtensionClient {
     }
 }
 ```
-* Build this file as a MyExtension.jar.
-* Configure the extension in extensions-config.json so that Crosswalk can load the above files.
+* Configure the extension in myextension.json so that Crosswalk can load the above files.
 ```
 [
   {
@@ -120,7 +117,10 @@ try {
 ```
 myextension/
   myextension.js
-  extensions-config.json
-  MyExtension.jar
+  myextension.json
+  myextension.jar
 ```
  * Specify the extension directory when using 'make_apk.py'.
+```
+python make_apk.py --extensions="/path/to/myextension/" ...
+```
