@@ -2,7 +2,7 @@ Not completed yet. Will continue to refine this page.
 
 ## Implementing an external extension
 * Write the JavaScript stub code same as the native extension system
-* A new class inherited from the class XWalkExtensionClient implements the methods used by JavaScript and compile it as 'extension.jar'.
+* Create a new class inherited from the class XWalkExtensionClient implements the methods used by JavaScript and compile and package it as a jar file.
 ```
 class XWalkExtensionClient {
   public XWalkExtensionClient(String name, String jsApi, XWalkExtensionContextClient context) {
