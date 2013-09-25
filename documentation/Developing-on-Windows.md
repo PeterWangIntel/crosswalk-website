@@ -1,9 +1,9 @@
-## Setting up a Windows environment to build Crosswalk enabled Android applications.
+## Building Crosswalk enabled Android applications
 
-This tutorial goes over the steps for setting up a Windows host environment to build Crosswalk enabled Android applications. Development and testing of the Crosswalk application will be done using the hardware accelerated Android emulator on the host system. If you have an x86 based Android device, you can skip the emulator setup and use your target device instead.
+This tutorial goes over the steps for setting up a Windows host environment to build Crosswalk enabled Android applications. 
 
 ### Install the GIT tools
-This tutorial will use various commands provided by the git-scm tool package. Each step is written out in a way that lets you copy and paste them directly into your terminal window.
+The steps on this page use various commands provided by the git-scm tool package. Each step is written out in a way that lets you copy and paste them directly into your terminal window.
 
 You can find the git-scm tools here:
 
