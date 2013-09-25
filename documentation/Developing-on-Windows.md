@@ -42,12 +42,12 @@ cd ~
 
 To simplify installation and usage, you will want to add various directories to your PATH when you enter the git-bash session. To do this, open notepad, paste the following, and save it as **%USERPROFILE%/.bashrc**:
 ```bash
-export PATH=${PATH}:${HOMEPATH}/android/sdk/platform-tools
-export PATH=${PATH}:${HOMEPATH}/android/sdk/tools
-export PATH=${PATH}:${HOMEPATH}/Python27
+export PATH=${PATH}:${USERPROFILE}/android/sdk/platform-tools
+export PATH=${PATH}:${USERPROFILE}/android/sdk/tools
+export PATH=${PATH}:${USERPROFILE}/Python27
 export PATH="C:/Program\ Files/Java/jdk1.7.0_40/jre/bin":${PATH}
 export PATH="C:/Program\ Files/Java/jdk1.7.0_40/bin":${PATH}
-export PATH=${PATH}:${HOMEPATH}/apache-ant-1.9.2/bin 
+export PATH=${PATH}:${USERPROFILE}/apache-ant-1.9.2/bin 
 ```
 
 ### Installing the Android SDK
@@ -55,13 +55,13 @@ export PATH=${PATH}:${HOMEPATH}/apache-ant-1.9.2/bin
 1. Extract the contents into %USERPROFILE%/android
 1. Add Android's **platform-tools** and **tools** to your PATH within the git-bash session:
 ```bash
-export PATH=${PATH}:${HOMEPATH}/android/sdk/platform-tools
-export PATH=${PATH}:${HOMEPATH}/android/sdk/tools
+export PATH=${PATH}:${USERPROFILE}/android/sdk/platform-tools
+export PATH=${PATH}:${USERPROFILE}/android/sdk/tools
 ```
 
 1. Run the SDK Manager.
 ```bash
-cd ${HOMEPATH}/android
+cd ${USERPROFILE}/android
 "SDK Manager.exe"
 ```
 1. Within the SDK Manager you need to install:
@@ -77,18 +77,18 @@ cd ${HOMEPATH}/android
 #### OPTIONAL: Emulator Setup
 1. Install HAXM. The Android SDK Manager will download the HAXM installer, however it does not install it.
 ```bash
-cd ${HOMEPATH}/android/sdk/extras/Hardware_Accelerated_Execution_Manager
+cd ${USERPROFILE}/android/sdk/extras/Hardware_Accelerated_Execution_Manager
 IntelHaxm.exe
 ```
 **NOTE:** The path may change where it places the IntelHaxm installation program. To find it:
 ```bash
-cd ${HOMEPATH}/android
+cd ${USERPROFILE}/android
 find . -iname intelhaxm.exe
 ```
 
 1. Create a new emulator image using the AVD Manager:
 ```bash
-cd ${HOMEPATH}/android
+cd ${USERPROFILE}/android
 sdk/"AVD Manager.exe"
 ```
 <!--img style='float:left' src='assets/emulator.png'-->
@@ -127,7 +127,7 @@ export PATH=/c/Program\ Files/Java/jdk1.7.0_40/jre7/bin:/c/Program\ Files/Java/j
 ```
 
 ### Install ANT
-We will install ant within the git-bash shell using the following commands, which will download the binary distribution and decompress it to ${HOMEPATH}, and add it to the PATH:
+We will install ant within the git-bash shell using the following commands, which will download the binary distribution and decompress it to ${USERPROFILE}, and add it to the PATH:
 ```bash
 curl http://apache.spinellicreations.com//ant/binaries/apache-ant-1.9.2-bin.zip -o apache-ant-1.9.2-bin.zip
 unzip apache-ant-1.9.2-bin -x '*/manual/*'
@@ -135,16 +135,16 @@ export PATH=${PATH}:${PWD}/apache-ant-1.9.2/bin
 ```
 
 ### Install the Crosswalk for Android packages
-The following steps will download the latest Crosswalk for Android release from http://crosswalk-project/#documentation/downloads and unzip it in ${HOMEPATH}:
+The following steps will download the latest Crosswalk for Android release from http://crosswalk-project/#documentation/downloads and unzip it in ${USERPROFILE}:
 ```bash
-cd ${HOMEPATH}
+cd ${USERPROFILE}
 curl https://download.01.org/crosswalk/releases/android/canary/crosswalk-1.29.5.0.zip -o crosswalk-1.29.5.0.zip
 unzip crosswalk-1.29.5.0.zip
 ```
 
 To install the Crosswalk runtime onto your device, use the **adb install** command:
 ```bash
-adb install -r ${HOMEPATH}/crosswalk-1.29.5.0/apks/XWalkRuntimeLib.apk 
+adb install -r ${USERPROFILE}/crosswalk-1.29.5.0/apks/XWalkRuntimeLib.apk 
 ```
 Passing **-r** will re-install the Crosswalk runtime (if you already have a version installed on your device.)
 
