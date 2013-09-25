@@ -40,7 +40,7 @@ You will then be presented with a git-bash command shell. The prompt will be the
 cd ~
 ```
 
-To simplify installation and usage, you will want to add various directories to your PATH when you enter the git-bash session. To do this, open notepad, paste the following, and save it as **%USERPROFILE%/.bashrc**:
+To simplify installation and usage, you will want to add various directories to your PATH when you enter the git-bash session. To do this, open notepad, paste the following, and save it as **%USERPROFILE%\.bashrc**:
 ```bash
 export PATH=${PATH}:${USERPROFILE}/android/sdk/platform-tools
 export PATH=${PATH}:${USERPROFILE}/android/sdk/tools
