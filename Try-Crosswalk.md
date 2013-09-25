@@ -185,7 +185,7 @@ Install the APK on your device:
 ##### Windows environment setup
 1. Install the Android SDK. Make sure to add “%SDK_PATH%\platform-tools” and “%SDK_PATH%\platform-tools\tools” into the "PATH" environment variable.
 
-2. Update to the lasted Android API level.
+2. Update to the latest Android API level.
 
 3. Install python and ant. Add the installed path of python and the bin path of ant are added into the "PATH" environment variable as well.
 
