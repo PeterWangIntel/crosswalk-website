@@ -1,34 +1,59 @@
 ## Setting up a Windows environment to build Crosswalk enabled Android applications.
 
-In this tutorial we walk you through setting up a Windows host environment to build Crosswalk enabled Android applications. Development and testing is going to be performed using the hardware accelerated Android emulator on the host system. If you have an x86 based Android device, you can skip the emulator setup and use your target device instead.
+This tutorial goes over the steps for setting up a Windows host environment to build Crosswalk enabled Android applications. Development and testing of the Crosswalk application will be done using the hardware accelerated Android emulator on the host system. If you have an x86 based Android device, you can skip the emulator setup and use your target device instead.
 
 ### Install the GIT tools
-The easiest way to perform a lot of these routines is inside the git bash environment. This tutorial will use various commands provided by that package, allowing you to copy/paste the commands from this tutorial straight to your command console.
+This tutorial will use various commands provided by the git-scm tool package. Each step is written out in a way that lets you copy and paste them directly into your terminal window.
 
-You can find the git-scm tools on their website: http://git-scm.com/download/win
+You can find the git-scm tools here:
 
-During the installation, select to add the utilities to your path.
-[ image of utilities selection ]
+http://git-scm.com/download/win
 
-### The command line
+While installing git-scm, select the following options:
 
-Most of these steps are performed via the command line. To launch a command line session, go to your start menu and select 'Run' and type the command "cmd".
+<!--img style='float:left' src='assets/integrate.png'-->
+```
+[x] Windows Explorer integration
+ |-(o)Simple context menu (Registry based)
+ |  |-[x] Git Bash Here
+ |  `-[ ] Git GUI Here
+ ...
+```
 
-[ image command line ]
+Then select Run Git from the Windows Command Prompt:
+```
+(o) Run Git From the Windows Command Prompt
+```
+<!--img style='float:left' src='assets/path.png'-->
+The rest of the options are recommended to use the defaults.
+
+Once the installation is complete, start a git-bash session by going to your home directory: 
+
+<!--img style='float:left' src='assets/launch.png'-->
+Start => type **%HOMEPATH** and press ENTER. 
+
+<!--img style='float:left' src='assets/gitbash.png'-->
+Windows will display a file explorer window open to your home directory. Right click on that window and select **Git Bash Here**.
+
+You will then be presented with a git-bash command shell. The prompt will be the dollar sign (**$**). To ensure you are in the correct directory, change to your home:
+```bash
+cd ~
+```
 
 ### Installing the Android SDK
-
-Regardless of the target environment, you need the Android SDK.
-
-1. Download Android SDK - http://developer.android.com/sdk/index.html#download
+1. Download Android SDK - http://developer.android.com/sdk/index.html#download. Save the zip 
 1. Unzipped the contents into %HOMEPATH%/android
-1. Add Android tools to your PATH:
-```sh
-set PATH=%PATH%;%HOMEPATH%\android\sdk\platform-tools;%HOMEPATH%\android\sdk\tools
+1. Add Android's **platform-tools** and **tools** to your PATH:
+```bash
+set PATH=%PATH%;%HOMEPATH%\android\sdk\platform-tools
+set PATH=%PATH%;%HOMEPATH%\android\sdk\tools
 ```
-1. Run the SDK Manager. 
+
+1. Run the SDK Manager.
+```bash
 cd %HOMEPATH%\android
 "SDK Manager.exe"
+```
 
 4> You need to install:
 Android 4.3 (API 18) => Intel x86 Atom System Image
