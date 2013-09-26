@@ -13,8 +13,6 @@ emulator.
 * **Download the Crosswalk packages**
 * **Build a Crosswalk sample application**
 
-All of the commands documented on written to execute within a Git Bash session, and not in the Windows Command Prompt.
-
 ### Install Git Bash
 The Git Bash is provided within the Git SCM tools. In addition to Git Bash, those tools also provide tar, unzip, and gzip which 
 are also used on this page.
@@ -53,7 +51,7 @@ You can now open a Git Bash session by going to your Start Menu and typing in **
 1. Extract the contents into %USERPROFILE%/android
 1. Android's **platform-tools** and **tools** directories were added to the Git Bash session's PATH file while installing the Git SCM tools.
 
-1. Run the SDK Manager.
+1. Run the SDK Manager. You can do this in the Git Bash session by running:
 ```bash
 cd ${USERPROFILE}/android
 "SDK Manager.exe"
@@ -70,18 +68,18 @@ cd ${USERPROFILE}/android
 #### OPTIONAL: Emulator Setup
 If you do not have an x86 based Android device, you can use the hardware accelerated execution manager (HAXM) to provide 
 an emulated Android device on your host computer.
-1. Install HAXM. The Android SDK Manager will download the HAXM installer, however it does not install it.
+1. Install HAXM. The Android SDK Manager will download the HAXM installer, however it does not install it. You can do this in the Git Bash session by running:
 ```bash
 cd ${USERPROFILE}/android/sdk/extras/Hardware_Accelerated_Execution_Manager
 IntelHaxm.exe
 ```
-**NOTE:** The path may change where it places the IntelHaxm installation program. To find it:
+**NOTE:** The path may change where it places the IntelHaxm installation program. To find this in the Git Bash session by running::
 ```bash
 cd ${USERPROFILE}/android
 find . -iname intelhaxm.exe
 ```
 
-1. Create a new emulator image using the AVD Manager:
+1. Create a new emulator image using the AVD Manager.  You can do this in the Git Bash session by running:
 ```bash
 cd ${USERPROFILE}/android
 sdk/"AVD Manager.exe"
@@ -91,12 +89,12 @@ For these instructions, we call the image Tablet. Select **Intel Atom (x86)** fo
 
 <img src='wiki/assets/emulator.png'><br>
 
-1. Launch the emulator
+1. Launch the emulator. You can do this in the Git Bash session by running:
 ```bash
 emulator -avd Tablet
 ```
 
-1. Once the emulator has loaded, you can use the adb comment to connect to the emulator:
+1. Once the emulator has loaded, you can use the adb comment to connect to the emulator.  You can do this in the Git Bash session by running:
 ```bash
 adb devices
 ```
@@ -110,7 +108,7 @@ emulator-5554   device
 Install Python 2.7.x (don't install 3.x as some of the scripts do not support newer 3.x syntax)
 http://www.python.org/getit
 
-For the rest of the instructions, it is assumed you install Python into the default location **C:\Python27\**.
+This tutorial assumes Python is installed into the default location **C:\Python27\**.
 
 ### Install the Oracle JDK
 Download the Oracle JDK from:
@@ -121,7 +119,9 @@ Make a note of the path where you install. If you accept the defaults, it will i
 The JDK's  **jre/bin** and **bin** directories were added to the Git Bash session's PATH file while installing the Git SCM tools.
 
 ### Install ANT
-We will install ant within the Git Bash shell using the following commands, which will download the binary distribution and decompress it to ${USERPROFILE}, and add it to the PATH:
+We will install ant within the Git Bash shell using the following commands, which will download the binary distribution and 
+decompress it to ${USERPROFILE}, and add it to the PATH.  You can do this in the Git Bash session by running:
+
 ```bash
 curl http://apache.spinellicreations.com//ant/binaries/apache-ant-1.9.2-bin.zip -o apache-ant-1.9.2-bin.zip
 unzip apache-ant-1.9.2-bin -x '*/manual/*'
@@ -130,8 +130,8 @@ unzip apache-ant-1.9.2-bin -x '*/manual/*'
 The Apache ANT **bin** directory was added to the Git Bash session's PATH file while installing the Git SCM tools.
 
 ### Install the Crosswalk for Android packages
-The following commands download the Crosswalk for Android package, decompress that package, and install it onto a 
-connected Android devices using **adb** command:
+Now you can download the Crosswalk for Android package, decompress that package, and install it onto a 
+connected Android devices using **adb** command. You can do this in the Git Bash session by running:
 ```bash
 cd ${USERPROFILE}
 curl https://download.01.org/crosswalk/releases/android/beta/crosswalk-1.29.4.1.zip -o crosswalk-1.29.4.1.zip
@@ -147,8 +147,8 @@ At this point, if you go to your Android system settings, you should see XWalkRu
 ### Building a Crosswalk enabled Android application
 You are now ready to build a Crosswalk application!
 
-The following steps will download the **crosswalk-samples** source package, decompress it, and then build a Crosswalk enabled 
-Android application hosting the WebGL sample.
+Download the **crosswalk-samples** source package, decompress it, and then build a Crosswalk enabled 
+Android application hosting the WebGL sample. You can do this in the Git Bash session by running:
 ```bash
 curl https://download.01.org/crosswalk/releases/crosswalk-samples-0.1.tgz -o crosswalk-samples-0.1.tgz
 tar xvf crosswalk-samples-0.1.tgz
@@ -157,7 +157,7 @@ tar xvf xwalk_app_template.tgz
 cd xwalk_app_template
 python make_apk.py --package=com.sample.webgl --name=WebGL --app-root=../../samples/webgl --app-local-path=index.html
 ```
-You can install the WebGL sample on your device using **adb install**:
+You can install the WebGL sample on your device using **adb install**. You can do this in the Git Bash session by running:
 ```bash
 adb install WebGL.apk
 ```
