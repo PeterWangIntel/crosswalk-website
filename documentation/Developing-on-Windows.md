@@ -4,19 +4,22 @@ This tutorial goes over the steps for setting up a Windows host environment to b
 
 It will walk you through the following:
 
-* **Install the GIT SCM tools** - used as a command shell interpreter and for access to utilities like unzip, tar, and gzip.
-* **Install the Android SDK** - necessary for building Android applications. Also provides a hardware accelerated Android 
+* **Installing the GIT SCM tools** - used as a command shell interpreter and for access to utilities like unzip, tar, and gzip.
+* **Installing the Android SDK** - necessary for building Android applications. Also provides a hardware accelerated Android 
 emulator.
-* **Install Oracle JDK** - necessary for building Anrdoid applications.
-* **Install Python27** - necessary to build Crosswalk enabled Android applications.
-* **Install Apache ANT** - necessary to build Crosswalk enabled Android applications.
+* **Installing Oracle JDK** - necessary for building Anrdoid applications.
+* **Installing Python27** - necessary to build Crosswalk enabled Android applications.
+* **Installing Apache ANT** - necessary to build Crosswalk enabled Android applications.
 * **Download the Crosswalk packages**
 * **Build a Crosswalk sample application**
 
-### Install the GIT tools
-The steps on this page use various commands provided by the git-scm tool package. Each step is written out in a way that lets you copy and paste them directly into your terminal window.
+All of the commands documented on written to execute within a Git Bash session, and not in the Windows Command Prompt.
 
-You can find the git-scm tools here: http://git-scm.com/download/win
+### Install Git Bash
+The Git Bash is provided within the Git SCM tools. In addition to Git Bash, those tools also provide tar, unzip, and gzip which 
+are also used on this page.
+
+Download and install the git-scm tools from the git-scm website: http://git-scm.com/download/win
 
 While installing git-scm, select the following options:
 
@@ -25,9 +28,8 @@ While installing git-scm, select the following options:
 Then select Run Git from the Windows Command Prompt:
 
 <img src='wiki/assets/path.png'><br>
-The rest of the options are recommended to use the defaults.
 
-To simplify installation and usage, you will want to add various directories to your PATH when you enter the git-bash session. To do this, open notepad, paste the following, and save it as **%USERPROFILE%\.bashrc**:
+Once installed, you will want to add various directories to your PATH when you enter the Git Bash session. To do this, open notepad, paste the following, and save it as **%USERPROFILE%\.bashrc**:
 ```bash
 export PATH=${PATH}:${USERPROFILE}/android/sdk/platform-tools
 export PATH=${PATH}:${USERPROFILE}/android/sdk/tools
@@ -40,18 +42,13 @@ export PATH=${PATH}:${USERPROFILE}/apache-ant-1.9.2/bin
 **NOTE:** If you already have the Android SDK, Python27, Apache ANT, or the JDK installed on your system, adjust the above path 
 variables appropriately for your system configuration.
 
-Finally, open a Git Bash session by going to your Start Menu and typing in **git bash** and select Git Bash.
+#### Launching the Git Bash session
+
+You can now open a Git Bash session by going to your Start Menu and typing in **git bash** and select Git Bash:
 
 <img src='wiki/assets/launch.png'><br>
 
-You will then be presented with a Git Bash command shell. The prompt will be the dollar sign. To ensure you are in the correct directory, change to your home:
-```bash
-cd ~
-```
-
 ### Installing the Android SDK
-In all of the following steps, it is assumed that interaction is performed within a Git Bash shell. 
-
 1. Download Android SDK - http://developer.android.com/sdk/index.html#download..
 1. Extract the contents into %USERPROFILE%/android
 1. Android's **platform-tools** and **tools** directories were added to the Git Bash session's PATH file while installing the Git SCM tools.
@@ -69,9 +66,10 @@ cd ${USERPROFILE}/android
 [ ] Extras
     [x] Intel x86 Emulator Accelerator (HAXM)
 ```
-1. Click **Install packages...**
 
 #### OPTIONAL: Emulator Setup
+If you do not have an x86 based Android device, you can use the hardware accelerated execution manager (HAXM) to provide 
+an emulated Android device on your host computer.
 1. Install HAXM. The Android SDK Manager will download the HAXM installer, however it does not install it.
 ```bash
 cd ${USERPROFILE}/android/sdk/extras/Hardware_Accelerated_Execution_Manager
@@ -123,7 +121,7 @@ Make a note of the path where you install. If you accept the defaults, it will i
 The JDK's  **jre/bin** and **bin** directories were added to the Git Bash session's PATH file while installing the Git SCM tools.
 
 ### Install ANT
-We will install ant within the git-bash shell using the following commands, which will download the binary distribution and decompress it to ${USERPROFILE}, and add it to the PATH:
+We will install ant within the Git Bash shell using the following commands, which will download the binary distribution and decompress it to ${USERPROFILE}, and add it to the PATH:
 ```bash
 curl http://apache.spinellicreations.com//ant/binaries/apache-ant-1.9.2-bin.zip -o apache-ant-1.9.2-bin.zip
 unzip apache-ant-1.9.2-bin -x '*/manual/*'
