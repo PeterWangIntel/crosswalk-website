@@ -28,7 +28,7 @@ Then select Run Git from the Windows Command Prompt:
 <img src='wiki/assets/path.png'><br>
 
 Once installed, you will want to add various directories to your PATH when you enter the Git Bash session. To do this, open 
-notepad, paste the following, and save it as %USERPROFILE%\.bashrc:
+notepad, paste the following, and save it as %USERPROFILE%\\.bashrc:
 ```bash
 export PATH=${PATH}:${USERPROFILE}/android/sdk/platform-tools
 export PATH=${PATH}:${USERPROFILE}/android/sdk/tools
