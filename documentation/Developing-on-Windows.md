@@ -149,6 +149,9 @@ At this point, if you go to your Android system settings, you should see XWalkRu
 
 ### Building a Crosswalk enabled Android application
 You are now ready to build a Crosswalk application!
+
+The following steps will download the **crosswalk-samples** source package, decompress it, and then build a Crosswalk enabled 
+Android application hosting the WebGL sample.
 ```bash
 curl https://download.01.org/crosswalk/releases/crosswalk-samples-0.1.tgz -o crosswalk-samples-0.1.tgz
 tar xvf crosswalk-samples-0.1.tgz
@@ -157,7 +160,19 @@ tar xvf xwalk_app_template.tgz
 cd xwalk_app_template
 python make_apk.py --package=com.sample.webgl --name=WebGL --app-root=../../samples/webgl --app-local-path=index.html
 ```
-And then you can install and run it on your device:
+You can install the WebGL sample on your device using **adb install**:
+
 ```bash
 adb install WebGL.apk
 ```
+
+The WebGL sample will now be in your application listing:
+
+<img src='wiki/assets/android-apps.png'><br>
+
+After launching WebGL, you should see the following application:
+
+<img src='wiki/assets/android-webgl.png'><br>
+
+
+
