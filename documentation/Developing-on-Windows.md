@@ -132,21 +132,19 @@ unzip apache-ant-1.9.2-bin -x '*/manual/*'
 The Apache ANT **bin** directory was added to the Git Bash session's PATH file while installing the Git SCM tools.
 
 ### Install the Crosswalk for Android packages
-The following steps will download the latest Crosswalk for Android release from http://crosswalk-project/#documentation/downloads 
-and unzip it in ${USERPROFILE}:
+The following commands download the Crosswalk for Android package, decompress that package, and install it onto a 
+connected Android devices using **adb** command:
 ```bash
 cd ${USERPROFILE}
 curl https://download.01.org/crosswalk/releases/android/beta/crosswalk-1.29.4.1.zip -o crosswalk-1.29.4.1.zip
 unzip crosswalk-1.29.4.1.zip
-```
-
-To install the Crosswalk runtime onto your device, use the **adb install** command:
-```bash
 adb install -r ${USERPROFILE}/crosswalk-1.29.4.1/apks/XWalkRuntimeLib.apk 
 ```
-Passing **-r** will re-install the Crosswalk runtime (if you already have a version installed on your device.)
+**NOTE:** Passing **-r** will re-install the Crosswalk runtime (if you already have a version installed on your device.)
 
 At this point, if you go to your Android system settings, you should see XWalkRuntimeLib listed in the set of installed applications.
+
+<img src='wiki/assets/android-settings.png'><br>
 
 ### Building a Crosswalk enabled Android application
 You are now ready to build a Crosswalk application!
