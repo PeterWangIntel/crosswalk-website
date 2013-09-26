@@ -28,6 +28,9 @@ export PATH="C:/Program\ Files/Java/jdk1.7.0_40/bin":${PATH}
 export PATH=${PATH}:${USERPROFILE}/apache-ant-1.9.2/bin 
 ```
 
+**NOTE:** If you already have the Android SDK, Python27, Apache ANT, or the JDK installed on your system, adjust the above path 
+variables appropriately for your system configuration.
+
 Finally, open a Git Bash session by going to your Start Menu and typing in **git bash** and select Git Bash.
 
 <img src='wiki/assets/launch.png'><br>
