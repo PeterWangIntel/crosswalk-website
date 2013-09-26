@@ -14,6 +14,7 @@ While installing git-scm, select the following options:
 <img src='wiki/assets/integrate.png'><br>
 
 Then select Run Git from the Windows Command Prompt:
+
 <img src='wiki/assets/path.png'><br>
 The rest of the options are recommended to use the defaults.
 
@@ -76,7 +77,7 @@ cd ${USERPROFILE}/android
 sdk/"AVD Manager.exe"
 ```
 
-For these instructions, we call the image Tablet. Select Intel Atom (x86) for CPU/ABI:
+For these instructions, we call the image Tablet. Select **Intel Atom (x86)** for CPU/ABI and **Use Host GPU**:
 
 <img src='wiki/assets/emulator.png'><br>
 
