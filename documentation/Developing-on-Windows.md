@@ -138,13 +138,13 @@ export PATH=${PATH}:${PWD}/apache-ant-1.9.2/bin
 The following steps will download the latest Crosswalk for Android release from http://crosswalk-project/#documentation/downloads and unzip it in ${USERPROFILE}:
 ```bash
 cd ${USERPROFILE}
-curl https://download.01.org/crosswalk/releases/android/canary/crosswalk-1.29.5.0.zip -o crosswalk-1.29.5.0.zip
-unzip crosswalk-1.29.5.0.zip
+curl https://download.01.org/crosswalk/releases/android/beta/crosswalk-1.29.4.1.zip -o crosswalk-1.29.4.1.zip
+unzip crosswalk-1.29.4.1.zip
 ```
 
 To install the Crosswalk runtime onto your device, use the **adb install** command:
 ```bash
-adb install -r ${USERPROFILE}/crosswalk-1.29.5.0/apks/XWalkRuntimeLib.apk 
+adb install -r ${USERPROFILE}/crosswalk-1.29.4.1/apks/XWalkRuntimeLib.apk 
 ```
 Passing **-r** will re-install the Crosswalk runtime (if you already have a version installed on your device.)
 
@@ -155,7 +155,7 @@ You are now ready to build a Crosswalk application!
 ```bash
 curl https://download.01.org/crosswalk/releases/crosswalk-samples-0.1.tgz -o crosswalk-samples-0.1.tgz
 tar xvf crosswalk-samples-0.1.tgz
-cd crosswalk-1.29.5.0
+cd crosswalk-1.29.4.1
 tar xvf xwalk_app_template.tgz
 cd xwalk_app_template
 python make_apk.py --package=com.sample.webgl --name=WebGL --app-root=../../samples/webgl --app-local-path=index.html
