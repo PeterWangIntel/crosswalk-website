@@ -132,7 +132,8 @@ unzip apache-ant-1.9.2-bin -x '*/manual/*'
 The Apache ANT **bin** directory was added to the Git Bash session's PATH file while installing the Git SCM tools.
 
 ### Install the Crosswalk for Android packages
-The following steps will download the latest Crosswalk for Android release from http://crosswalk-project/#documentation/downloads and unzip it in ${USERPROFILE}:
+The following steps will download the latest Crosswalk for Android release from http://crosswalk-project/#documentation/downloads 
+and unzip it in ${USERPROFILE}:
 ```bash
 cd ${USERPROFILE}
 curl https://download.01.org/crosswalk/releases/android/beta/crosswalk-1.29.4.1.zip -o crosswalk-1.29.4.1.zip
@@ -161,7 +162,6 @@ cd xwalk_app_template
 python make_apk.py --package=com.sample.webgl --name=WebGL --app-root=../../samples/webgl --app-local-path=index.html
 ```
 You can install the WebGL sample on your device using **adb install**:
-
 ```bash
 adb install WebGL.apk
 ```
