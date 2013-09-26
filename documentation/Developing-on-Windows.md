@@ -11,34 +11,11 @@ http://git-scm.com/download/win
 
 While installing git-scm, select the following options:
 
-<!--img style='float:left' src='assets/integrate.png'-->
-```
-[x] Windows Explorer integration
- |-(o)Simple context menu (Registry based)
- |  |-[x] Git Bash Here
- |   -[ ] Git GUI Here
- ...
-```
+<img src='wiki/assets/integrate.png'><br>
 
 Then select Run Git from the Windows Command Prompt:
-```
-(o) Run Git From the Windows Command Prompt
-```
-<!--img style='float:left' src='assets/path.png'-->
+<img src='wiki/assets/path.png'><br>
 The rest of the options are recommended to use the defaults.
-
-Once the installation is complete, start a git-bash session by going to your home directory: 
-
-<!--img style='float:left' src='assets/launch.png'-->
-Start => type **%USERPROFILE%** and press ENTER. 
-
-<!--img style='float:left' src='assets/gitbash.png'-->
-Windows will display a file explorer window open to your home directory. Right click on that window and select **Git Bash Here**.
-
-You will then be presented with a git-bash command shell. The prompt will be the dollar sign. To ensure you are in the correct directory, change to your home:
-```bash
-cd ~
-```
 
 To simplify installation and usage, you will want to add various directories to your PATH when you enter the git-bash session. To do this, open notepad, paste the following, and save it as **%USERPROFILE%\.bashrc**:
 ```bash
@@ -50,14 +27,21 @@ export PATH="C:/Program\ Files/Java/jdk1.7.0_40/bin":${PATH}
 export PATH=${PATH}:${USERPROFILE}/apache-ant-1.9.2/bin 
 ```
 
+Finally, open a Git Bash session by going to your Start Menu and typing in **git bash** and select Git Bash.
+
+<img src='wiki/assets/launch.png'><br>
+
+You will then be presented with a Git Bash command shell. The prompt will be the dollar sign. To ensure you are in the correct directory, change to your home:
+```bash
+cd ~
+```
+
 ### Installing the Android SDK
+In all of the following steps, it is assumed that interaction is performed within a Git Bash shell. 
+
 1. Download Android SDK - http://developer.android.com/sdk/index.html#download..
 1. Extract the contents into %USERPROFILE%/android
-1. Add Android's **platform-tools** and **tools** to your PATH within the git-bash session:
-```bash
-export PATH=${PATH}:${USERPROFILE}/android/sdk/platform-tools
-export PATH=${PATH}:${USERPROFILE}/android/sdk/tools
-```
+1. Android's **platform-tools** and **tools** directories were added to the Git Bash session's PATH file while installing the Git SCM tools.
 
 1. Run the SDK Manager.
 ```bash
@@ -121,18 +105,16 @@ http://www.oracle.com/technetwork/java/javase/downloads/index.html
 
 Make a note of the path where you install. If you accept the defaults, it will install to **C:\Program Files\Java\jdk1.7.0_40**.
 
-You will need to add the JDK's **jre/bin** and **bin** directories to your path:
-```bash
-export PATH=/c/Program\ Files/Java/jdk1.7.0_40/jre7/bin:/c/Program\ Files/Java/jdk1.7.0_40/bin:${PATH}
-```
+The JDK's  **jre/bin** and **bin** directories were added to the Git Bash session's PATH file while installing the Git SCM tools.
 
 ### Install ANT
 We will install ant within the git-bash shell using the following commands, which will download the binary distribution and decompress it to ${USERPROFILE}, and add it to the PATH:
 ```bash
 curl http://apache.spinellicreations.com//ant/binaries/apache-ant-1.9.2-bin.zip -o apache-ant-1.9.2-bin.zip
 unzip apache-ant-1.9.2-bin -x '*/manual/*'
-export PATH=${PATH}:${PWD}/apache-ant-1.9.2/bin
 ```
+
+The Apache ANT **bin** directory was added to the Git Bash session's PATH file while installing the Git SCM tools.
 
 ### Install the Crosswalk for Android packages
 The following steps will download the latest Crosswalk for Android release from http://crosswalk-project/#documentation/downloads and unzip it in ${USERPROFILE}:
