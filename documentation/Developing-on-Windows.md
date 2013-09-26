@@ -2,12 +2,21 @@
 
 This tutorial goes over the steps for setting up a Windows host environment to build Crosswalk enabled Android applications. 
 
+It will walk you through the following:
+
+* **Install the GIT SCM tools** - used as a command shell interpreter and for access to utilities like unzip, tar, and gzip.
+* **Install the Android SDK** - necessary for building Android applications. Also provides a hardware accelerated Android 
+emulator.
+* **Install Oracle JDK** - necessary for building Anrdoid applications.
+* **Install Python27** - necessary to build Crosswalk enabled Android applications.
+* **Install Apache ANT** - necessary to build Crosswalk enabled Android applications.
+* **Download the Crosswalk packages**
+* **Build a Crosswalk sample application**
+
 ### Install the GIT tools
 The steps on this page use various commands provided by the git-scm tool package. Each step is written out in a way that lets you copy and paste them directly into your terminal window.
 
-You can find the git-scm tools here:
-
-http://git-scm.com/download/win
+You can find the git-scm tools here: http://git-scm.com/download/win
 
 While installing git-scm, select the following options:
 
