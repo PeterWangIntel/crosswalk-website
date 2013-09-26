@@ -17,7 +17,8 @@ emulator.
 The Git Bash is provided within the Git SCM tools. In addition to Git Bash, those tools also provide tar, unzip, and gzip which 
 are also used on this page.
 
-Download and install the git-scm tools from the git-scm website: http://git-scm.com/download/win
+Download and install the git-scm tools from the git-scm website:
+<a href='http://git-scm.com/download/win' target='_blank'>http://git-scm.com/download/win</a>
 
 While installing git-scm, select the following options:
 
@@ -48,7 +49,8 @@ You can now open a Git Bash session by going to your Start Menu and typing in **
 <img src='wiki/assets/launch.png'><br>
 
 ### Installing the Android SDK
-1. Download Android SDK - http://developer.android.com/sdk/index.html#download..
+1. Download Android SDK:
+<a href='http://developer.android.com/sdk/index.html#download' target='_blank'>http://developer.android.com/sdk/index.html#download</a>
 1. Extract the contents into %USERPROFILE%\android
 1. Android's **platform-tools** and **tools** directories were added to the Git Bash session's PATH file while installing the Git SCM tools.
 
@@ -114,8 +116,8 @@ http://www.python.org/getit
 This tutorial assumes Python is installed into the default location **C:\Python27\**.
 
 ### Install the Oracle JDK
-Download the Oracle JDK from:
-http://www.oracle.com/technetwork/java/javase/downloads/index.html
+Download the Oracle JDK:
+<a href='http://www.oracle.com/technetwork/java/javase/downloads/index.html' targe='_blank'>http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>
 
 Make a note of the path where you install. If you accept the defaults, it will install to **C:\Program Files\Java\jdk1.7.0_40**.
 
