@@ -27,7 +27,8 @@ Then select Run Git from the Windows Command Prompt:
 
 <img src='wiki/assets/path.png'><br>
 
-Once installed, you will want to add various directories to your PATH when you enter the Git Bash session. To do this, open notepad, paste the following, and save it as **%USERPROFILE%\.bashrc**:
+Once installed, you will want to add various directories to your PATH when you enter the Git Bash session. To do this, open 
+notepad, paste the following, and save it as %USERPROFILE%\.bashrc:
 ```bash
 export PATH=${PATH}:${USERPROFILE}/android/sdk/platform-tools
 export PATH=${PATH}:${USERPROFILE}/android/sdk/tools
@@ -48,7 +49,7 @@ You can now open a Git Bash session by going to your Start Menu and typing in **
 
 ### Installing the Android SDK
 1. Download Android SDK - http://developer.android.com/sdk/index.html#download..
-1. Extract the contents into %USERPROFILE%/android
+1. Extract the contents into %USERPROFILE%\android
 1. Android's **platform-tools** and **tools** directories were added to the Git Bash session's PATH file while installing the Git SCM tools.
 
 1. Run the SDK Manager. You can do this in the Git Bash session by running:
