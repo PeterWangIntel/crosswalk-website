@@ -75,8 +75,10 @@ find . -iname intelhaxm.exe
 cd ${USERPROFILE}/android
 sdk/"AVD Manager.exe"
 ```
-<!--img style='float:left' src='assets/emulator.png'-->
-For these instructions, we call the image Tablet. Select Intel Atom (x86) for CPU/ABI.
+
+For these instructions, we call the image Tablet. Select Intel Atom (x86) for CPU/ABI:
+
+<img src='wiki/assets/emulator.png'><br>
 
 1. Launch the emulator
 ```bash
