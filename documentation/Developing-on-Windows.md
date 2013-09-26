@@ -68,7 +68,9 @@ cd ${USERPROFILE}/android
 #### OPTIONAL: Emulator Setup
 If you do not have an x86 based Android device, you can use the hardware accelerated execution manager (HAXM) to provide 
 an emulated Android device on your host computer.
-1. Install HAXM. The Android SDK Manager will download the HAXM installer, however it does not install it. You can do this in the Git Bash session by running:
+
+1. Install HAXM. The Android SDK Manager will download the HAXM installer, however it does not install it. You can do this in the 
+Git Bash session by running:
 ```bash
 cd ${USERPROFILE}/android/sdk/extras/Hardware_Accelerated_Execution_Manager
 IntelHaxm.exe
