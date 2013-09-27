@@ -7,8 +7,8 @@ The Crosswalk project provides binaries for multiple operating systems and platf
 Crosswalk 1.29.4.1 - **Beta Build**
 
 **NOTE:**
-This is a Beta stabilization build of Crosswalk. The Beta channel is where Crosswalk is stabilized for an eventual Stable 
-release. Only bug fixes go into the Beta channel; new feature development occurs in the minimally tested Canary releases.
+Beta builds are where Crosswalk is iteratively improved until released in the Stable 
+channel. Only bug fixes go into the Beta channel; new feature development occurs in the releases provided in the minimally tested Canary channel.
 
 See [Release Methodology](#wiki/Release-methodology) for a description of the Crosswalk release cycle and channel descriptions.
 
