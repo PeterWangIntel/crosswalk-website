@@ -4,8 +4,8 @@ Not completed yet. Will continue to refine this page.
 * Write the JavaScript stub code same as the native extension system, saved as a javascript file.
 * Create a new class inherited from the class XWalkExtensionClient implements the methods used by JavaScript and compile and package it as a jar file.
 ```
-class XWalkExtensionClient {
-  public XWalkExtensionClient(String name, String jsApi, XWalkExtensionContextClient context) {
+class MyExtension extends XWalkExtensionClient {
+  public MyExtension(String name, String jsApi, XWalkExtensionContextClient context) {
   }
   public void onMessage() {
   }
