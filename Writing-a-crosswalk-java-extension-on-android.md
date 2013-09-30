@@ -1,7 +1,5 @@
-Not completed yet. Will continue to refine this page.
-
 ## Implementing an external extension for Crosswalk on Android
-* Write the JavaScript stub code same as the native extension system, saved as a javascript file.
+* Write the JavaScript stub code same as the native extension system, saved as a .js file.
 * Create a new class inherited from the class XWalkExtensionClient implements the methods used by JavaScript and compile and package it as a jar file.
 ```
 class MyExtension extends XWalkExtensionClient {
@@ -24,9 +22,9 @@ class MyExtension extends XWalkExtensionClient {
      }
 ```
 See details about [Android permissions](http://developer.android.com/reference/android/Manifest.permission.html).
-* So for each extension, put three files '*.jar, *.js and *.json' into one directory. Package them with the option '--extensions=/path/to/extension/directory' of make_apk.py. 
-
-Note: The packaging tool supports to package multiple extensions for one web app.
+* So for each extension, put three files '*.jar, *.js and *.json' into one directory. 
+* Package them with the option '--extensions=/path/to/extension' of make_apk.py. 
+* The packaging tool supports to package multiple extensions for one web app. For each extension, follow the first 4 steps and package them by adding all paths in the option '--extensions' with the path separator. For example, --extensions='/path/to/extension1:/path/to/extension2' on Linux and Mac.
 
 ## Example
 * Write the stub code in JavaScript, called myextension.js.
