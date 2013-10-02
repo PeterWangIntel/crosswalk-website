@@ -160,7 +160,7 @@ Now that the forks themselves have been updated, we need to work on the Crosswal
 
 1. Update `DEPS.xwalk`.
 
-    This should not require many explanations: this is the file used to generate `.gclient-xwalk` and determines where we fetch Blink and Chromium from and at what revision.
+    This should not require many explanations: it is the file used to generate `.gclient-xwalk` and determines where we fetch Blink and Chromium from and at what revision.
 
     First of all, check if there are entries there that could be removed (for example, there could be an entry saying "Delete the dependency below once we track Chromium >M30"), and remove them.
 
