@@ -26,7 +26,9 @@ When creating new branches or updating existing ones, it is important to pay att
 The most basic distinction is between the `master_*` and `upstream_*` branches:
 * `master`, as usual in a git-based workflow, is the current development branch and the one everyone works on at the moment.
 * When rebasing to track a different release, the previous `master` branch should be backed up and preserved as `master_history_<release_number>`. For example, `master_history_28_0_1500_36` corresponds to all the commits we made to chromium-crosswalk (or blink-crosswalk) while we were tracking Chromium's 28.0.1500.36 release.
-* An `upstream_<release_number>` branch contains a pristine copy of an upstream Chromium (or Blink) branch; for example, `upstream_28_0_1500_36` contains all upstream Chromium commits that were made up to the 28.0.1500.36 release. It is equivalent to a Chromium branch in chromium.org. In other words, `master_history_<release_number>` simply contains a certain number of commits made by Crosswalk contributors on top of an `upstream_<release_number>` branch.
+* An `upstream_<release_number>` branch contains a pristine copy of an upstream Chromium (or Blink) branch; for example, `upstream_28_0_1500_36` contains all upstream Chromium commits that were made up to the 28.0.1500.36 release. It is equivalent to a Chromium branch in chromium.org.
+
+In other words, `master_history_<release_number>` simply contains a certain number of commits made by Crosswalk contributors on top of an `upstream_<release_number>` branch.
 
 At least for now, we do not keep `lkgr` branches.
 
