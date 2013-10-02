@@ -40,14 +40,14 @@ Let's start with the dependency deepest down the stack we have: Blink. Most of t
     In case this was not obvious, make sure you have your own fork of the blink-crosswalk both for experimenting and also for submitting pull requests and exercising the bots. Do **NOT** push your changes directly to `crosswalk-project/blink-crosswalk.git` directly without testing and talking to people first!
 
     Also, do not forget to add your remote to your checkout if you have not done so yet:
-    ```
+    ```shell
     git remote add my-fork git@github.com:myusername/blink-crosswalk.git
     ```
 
 1. Back up the existing `master` branch.
 
     As mentioned above, since the `master` branch is going to have its history changed, it must be backed up into a history branch first. For example, if we are currently tracking Chromium release 28.0.1500.36, a branch called `master_history_28_0_1500_36` must be created.
-    ```
+    ```shell
     git branch master_history_28_0_1500_36 master
     ```
 
@@ -58,7 +58,7 @@ Let's start with the dependency deepest down the stack we have: Blink. Most of t
 1. Fetch the new Blink branch and create a new `upstream` branch.
 
     This use of `git fetch` is a bit unusual, and it assumes your `origin` remote points to a read-write checkout of blink-crosswalk, such as `git@github.com:myusername/blink-crosswalk.git`.
-    ```
+    ```shell
     git fetch https://chromium.googlesource.com/chromium/blink.git branch-heads/chromium/1599:refs/heads/upstream_30_0_1599_66
     ```
     A new local branch called `upstream_30_0_1599_66` should now exist and be visible if you call `git branch`.
@@ -66,7 +66,7 @@ Let's start with the dependency deepest down the stack we have: Blink. Most of t
 1. Rebase existing fork-specific changes in `master` on top of the new `upstream` branch.
 
     1. In the trivial case, we have no fork-specific commits on top of the upstream ones (yay). This means both `master` (and `master_history_28_0_1500_36`) point to the same commit as `upstream_28_0_1500_36`). Updating `master` should be very simple: just make it point to the same change as the new `upstream` branch.
-    ```
+    ```shell
     git checkout master
     git reset --hard upstream_30_0_1599_66
     ```
@@ -76,7 +76,7 @@ Let's start with the dependency deepest down the stack we have: Blink. Most of t
         This process involves some manual work. Use `git log` and any other tools at your disposal to study the Crosswalk-specific commits we have. In some cases, their commit messages say "this commit will not be needed once we rebase", or "this commit is only necessary until release XX.YY". Take note of them, because they will probably not be needed anymore. After that, use `git rebase -i` to rebase our commits on top of the new branch. It will try to add a lot of previous Chromium commits as well, so you need to remove a handful of lines (anything before the first Crosswalk-specific commit belongs to the previous Chromium branch and must be removed) and check which commits should actually be added.
 
         Note that there some manual effort is required here: there are likely going to be a lot of conflicts, so you need to check the commits, remove some and adjust some others. Also note that the automatic merge commits from GitHub will be lost.
-        ```
+        ```shell
         git checkout master
         git rebase -i upstream_30_0_1599_66 # Choose the right commits, resolve conflicts.
         ```
@@ -84,7 +84,7 @@ Let's start with the dependency deepest down the stack we have: Blink. Most of t
 1. Push your new branches to your fork.
 
     Your new commits will have to be tested with Crosswalk (and Chromium) later, so you need to push them to your fork first.
-    ```
+    ```shell
     git push my-fork upstream_30_0_1599_66
     git push -f my-fork master
     ```
@@ -99,14 +99,14 @@ The parts of the process that are similar to blink-crosswalk have shorter descri
     Once again, fork the repository if you haven't done it yet, and **DO NOT** push your changes directly to `crosswalk-project/chromium-crosswalk.git` directly without testing and talking to people first!
 
     And, if you haven't done so, add your remote to your checkout:
-    ```
+    ```shell
     git remote add my-fork git@github.com:myusername/chromium-crosswalk.git
     ```
 
 1. Back up the existing `master` branch.
 
     Assuming we are currently tracking Chromium release 28.0.1500.36:
-    ```
+    ```shell
     git branch master_history_28_0_1500_36 master
     ```
 
@@ -116,7 +116,7 @@ The parts of the process that are similar to blink-crosswalk have shorter descri
 
 1. Fetch the new Chromium branch and create a new `upstream` branch.
 
-    ```
+    ```shell
     git fetch https://chromium.googlesource.com/chromium/src.git branch-heads/1599_66:refs/heads/upstream_30_0_1599_66
     ```
 
@@ -125,20 +125,20 @@ The parts of the process that are similar to blink-crosswalk have shorter descri
 1. Rebase existing fork-specific changes in `master` on top of the new `upstream` branch.
 
     1. In the trivial case (ie. we have no commits on top of upstream):
-    ```
+    ```shell
     git checkout master
     git reset --hard upstream_30_0_1599_66
     ```
 
     1. If we do have commits of our own, use `git log` to check if some of the commit messages say certain commits can be safely removed when moving to a newer Chromium release, then rebase:
-    ```
+    ```shell
     git checkout master
     git rebase -i upstream_30_0_1599_66 # Choose the right commits, resolve conflicts.
     ```
 
 1. Push your new branches to your fork.
 
-    ```
+    ```shell
     git push my-fork upstream_30_0_1599_66
     git push -f my-fork master
     ```
@@ -172,7 +172,7 @@ Now that the forks themselves have been updated, we need to work on the Crosswal
 
     The first way to verify your rebases went well and nothing is broken is to build Chromium's content shell. You should already be familiar with content shell, so let's go directly to the commands:
 
-    ```
+    ```shell
     gclient sync -v
     # gclient should now checkout a new 30.0.1599.66 directory and
     # then fetch new versions of a lot of third-party dependencies.
@@ -188,7 +188,7 @@ Now that the forks themselves have been updated, we need to work on the Crosswal
 
     Once you are sure content shell is OK, it is time to verify Crosswalk itself. Start by trying to build xwalk and its tests, then running them.
 
-    ```
+    ```shell
     cd /path/to/chromium-crosswalk
     python xwalk/gyp_xwalk # Optional arguments etc etc.
     ninja -C out/Debug xwalk
@@ -214,7 +214,7 @@ By now it should be fairly clear that the rebases have been done correctly and C
 First, talk to people who have access to the build/try bots infrastructure (such as @wang16, @halton, @rakuco and @darktears), and either ask for access yourself or ask them to shut down the build and try bot masters before you push your blink-crosswalk and chromium-crosswalk changes to the repositories belonging to crosswalk-project.
 
 Once that is done, push your new branches:
-```
+```shell
 # Assuming origin points to git@github.com:crosswalk-project/{blink,chromium}-crosswalk.git
 cd /path/to/chromium-crosswalk/third_party/WebKit
 git push origin upstream_30_0_1599_66
@@ -232,7 +232,7 @@ After that, restart the build and try bot masters. If the new commits to blink-c
 ## Push your changes
 Once everything is working, you can push your blink-crosswalk and chromium-crosswalk changes to crosswalk-project if you haven't done so yet.
 
-```
+```shell
 # Assuming origin points to git@github.com:crosswalk-project/{blink,chromium}-crosswalk.git
 cd /path/to/chromium-crosswalk/third_party/WebKit
 git push origin master_history_28_0_1500_36
