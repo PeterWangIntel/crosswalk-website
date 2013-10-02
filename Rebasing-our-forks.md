@@ -211,7 +211,7 @@ _This is an annoying step that we are trying to get rid of. It is required only 
 
 By now it should be fairly clear that the rebases have been done correctly and Crosswalk is also working as expected, but if you are rebasing to track a different Chromium milestone (ie. you are working on Crosswalk's development branch) the QA infrastructure needs to be updated as well.
 
-First, talk to people who have access to the build/try bots infrastructure (such as @wang16, @halton, @rakuco and @darktears), and either ask for access yourself or ask them to shut down the build and try bot masters before you push your blink-crosswalk and chromium-crosswalk changes to the repositories belonging to crosswalk-project.
+First, talk to people who have access to the build/try bots infrastructure (such as Shiliu Wang, Halton Huo, Raphael Kubo da Costa and Alexis Menard), and either ask for access yourself or ask them to shut down the build and try bot masters before you push your blink-crosswalk and chromium-crosswalk changes to the repositories belonging to crosswalk-project.
 
 Once that is done, push your new branches:
 ```shell
