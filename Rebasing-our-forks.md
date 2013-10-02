@@ -41,6 +41,7 @@ Let's start with the dependency deepest down the stack we have: Blink. Most of t
 
     Also, do not forget to add your remote to your checkout if you have not done so yet:
     ```shell
+    cd third_party/WebKit
     git remote add my-fork git@github.com:myusername/blink-crosswalk.git
     ```
 
