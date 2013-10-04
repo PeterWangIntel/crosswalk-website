@@ -52,9 +52,19 @@ Let's start with the dependency deepest down the stack we have: Blink. Most of t
     git branch master_history_28_0_1500_36 master
     ```
 
-1. Determine the new Blink branch that is going to be used.
+1. Determine the new Blink branch and revision that are going to be used.
 
     Let us assume we are working on Crosswalk's development branch (`master`). We look at the proper row (linux-beta) in OmahaProxy, and determine its version number is **30.0.1599.66**. Moving right, we see that the _true branch_ column shows the branch number is **1599_59**. This means the Subversion branch in Blink's repository is `branches/chromium/1599` (not 1599_55, as explained above), which can also be accessed with [ViewVC](http://src.chromium.org/viewvc/blink/branches/chromium/1599/).
+
+    As mentioned above, the `DEPS` and `DEPS.git` files are not updated in the Subversion branches. You need to check the correct Subversion revision for Blink and Chromium in the _release_ `DEPS` file (ie. `/releases/30.0.1599.66/DEPS`). In this file, we can see the following snippet:
+    ```python
+    # ...
+    'src/third_party/WebKit':
+      Var("webkit_trunk")[:-6] + '/branches/chromium/1599@158213',
+    # ...
+    ```
+
+    This means Blink needs to be at SVN revision **158213**.
 
 1. Fetch the new Blink branch and create a new `upstream` branch.
 
@@ -63,6 +73,12 @@ Let's start with the dependency deepest down the stack we have: Blink. Most of t
     git fetch https://chromium.googlesource.com/chromium/blink.git branch-heads/chromium/1599:refs/heads/upstream_30_0_1599_66
     ```
     A new local branch called `upstream_30_0_1599_66` should now exist and be visible if you call `git branch`.
+
+    As the same branch can be used for more than one release, the commit at the tip of the branch might not be the one corresponding to the release we want. Use `git log` or `git svn find-rev` to determine the SHA1 hash corresponding to the Subversion revision determined in the previous section (158213), and then reset to it:
+    ```shell
+    git checkout upstream_30_0_1599_66
+    git reset --hard <SHA1>
+    ```
 
 1. Rebase existing fork-specific changes in `master` on top of the new `upstream` branch.
 
@@ -111,9 +127,17 @@ The parts of the process that are similar to blink-crosswalk have shorter descri
     git branch master_history_28_0_1500_36 master
     ```
 
-1. Determine the new Chromium branch that is going to be used.
+1. Determine the new Chromium branch and revision that are going to be used.
 
     Assuming we are tracking **linux-beta** and it is now at release **30.0.1599.66**: the _true branch_ column in OmahaProxy says the branch number is **1599_59**, so the Subversion branch in Chromium's repository is `branches/1599_66`.
+
+    Contrary to Blink, there is no need to check the `DEPS` file in the release branch; if you still want to, the `'src'` section in `releases/30.0.1599.66/DEPS` should point to the same revision as _true branch_ in OmahaProxy, **226662**:
+    ```python
+    # ...
+    'src':
+      '/branches/1650/src@226662',
+    # ...
+    ```
 
 1. Fetch the new Chromium branch and create a new `upstream` branch.
 
@@ -122,6 +146,12 @@ The parts of the process that are similar to blink-crosswalk have shorter descri
     ```
 
     Verify the new branch `upstream_30_0_1599_66` has been created by running `git branch`.
+
+    As the same branch can be used for more than one release, the commit at the tip of the branch might not be the one corresponding to the release we want. Use `git log` or `git svn find-rev` to determine the SHA1 hash corresponding to the Subversion revision determined in the previous section (226662), and then reset to it:
+    ```shell
+    git checkout upstream_30_0_1599_66
+    git reset --hard <SHA1>
+    ```
 
 1. Rebase existing fork-specific changes in `master` on top of the new `upstream` branch.
 
