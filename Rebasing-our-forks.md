@@ -54,17 +54,17 @@ Let's start with the dependency deepest down the stack we have: Blink. Most of t
 
 1. Determine the new Blink branch and revision that are going to be used.
 
-    Let us assume we are working on Crosswalk's development branch (`master`). We look at the proper row (linux-beta) in OmahaProxy, and determine its version number is **30.0.1599.66**. Moving right, we see that the _true branch_ column shows the branch number is **1599_59**. This means the Subversion branch in Blink's repository is `branches/chromium/1599` (not 1599_55, as explained above), which can also be accessed with [ViewVC](http://src.chromium.org/viewvc/blink/branches/chromium/1599/).
+    Let us assume we are working on Crosswalk's development branch (`master`). We look at the proper row (linux-beta) in OmahaProxy, and determine its version number is **30.0.1599.66**. Moving right, we see that the _true branch_ column shows the branch number is **1599_59**. This means the Subversion branch in Blink's repository is `branches/chromium/1599` (not 1599_59, as explained above), which can also be accessed with [ViewVC](http://src.chromium.org/viewvc/blink/branches/chromium/1599/).
 
-    As mentioned above, the `DEPS` and `DEPS.git` files are not updated in the Subversion branches. You need to check the correct Subversion revision for Blink and Chromium in the _release_ `DEPS` file (ie. `/releases/30.0.1599.66/DEPS`). In this file, we can see the following snippet:
+    As mentioned above, the `DEPS` and `DEPS.git` files are not updated in the Subversion branches. You need to check the correct Subversion revision for Blink and Chromium in the *_release_* `DEPS` file (ie. [/releases/31.0.1650.12/DEPS](http://src.chromium.org/viewvc/chrome/releases/31.0.1650.12/DEPS?pathrev=226911)). In this file, we can see the following snippet:
     ```python
     # ...
     'src/third_party/WebKit':
-      Var("webkit_trunk")[:-6] + '/branches/chromium/1599@158213',
+      Var("webkit_trunk")[:-6] + '/branches/chromium/1650@158834',
     # ...
     ```
 
-    This means Blink needs to be at SVN revision **158213**.
+    This means Blink needs to be at SVN revision **158834**.
 
 1. Fetch the new Blink branch and create a new `upstream` branch.
 
@@ -102,6 +102,7 @@ Let's start with the dependency deepest down the stack we have: Blink. Most of t
 
     Your new commits will have to be tested with Crosswalk (and Chromium) later, so you need to push them to your fork first.
     ```shell
+    git push my-fork master_history_28_0_1500_36
     git push my-fork upstream_30_0_1599_66
     git push -f my-fork master
     ```
@@ -170,6 +171,7 @@ The parts of the process that are similar to blink-crosswalk have shorter descri
 1. Push your new branches to your fork.
 
     ```shell
+    git push my-fork master_history_28_0_1500_36
     git push my-fork upstream_30_0_1599_66
     git push -f my-fork master
     ```
@@ -278,4 +280,6 @@ git push -f origin master
 
 This should not break anything for Crosswalk users, as the SHA1 hashes referenced in the Crosswalk repository are still present in the forks.
 
-Finally, create a **single commit** in Crosswalk that updates version numbers, adjusts the code and changes `DEPS.xwalk` and send a pull request. The try bots will then test it and, if everything goes well, Crosswalk will be updated for everyone to enjoy.
+Finally, create a **single commit** in Crosswalk that updates version numbers, adjusts the code and changes `DEPS.xwalk` and send a pull request. Don't forget to **update** `DEPS.xwalk` so it tracks the correct blink-crosswalk and chromium-crosswalk (git@github.com:crosswalk-project/{blink,chromium}-crosswalk.git) back again.
+
+The try bots will then test it and, if everything goes well, Crosswalk will be updated for everyone to enjoy.
