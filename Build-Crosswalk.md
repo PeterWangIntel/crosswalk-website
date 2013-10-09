@@ -23,7 +23,7 @@ First, you need to create a source directory:
 Execute the following command to gclient auto-generate `.gclient` file.
 
     gclient config --name=src/xwalk \
-                   git://github.com/crosswalk-project/crosswalk.git
+                   ssh://git@github.com/crosswalk-project/crosswalk.git
 
 At the same level of `.gclient` file, execute
 
