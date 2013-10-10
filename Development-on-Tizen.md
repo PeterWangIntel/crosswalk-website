@@ -97,7 +97,7 @@ export GYP_GENERATORS='make'
 -Denable_xi21_mt=1 \
 -Dtizen_mobile=1
 ```
- * you can do it in chroot. Note you need -Dtarget_arch=ia32 in addition.
+ * you can do it in chroot. Note you need -Dtarget_arch=ia32 -Dpython_ver=2.7 in addition.
 ```
 $ export GYP_GENERATORS='make'
 $ ./src/xwalk/gyp_xwalk src/xwalk/xwalk.gyp \
@@ -113,7 +113,8 @@ $ ./src/xwalk/gyp_xwalk src/xwalk/xwalk.gyp \
 -Duse_system_nspr=1 \
 -Denable_xi21_mt=1 \
 -Dtizen_mobile=1 \
--Dtarget_arch=ia32
+-Dtarget_arch=ia32 \
+-Dpython_ver=2.7
 ```
 * Build it!
 ```
