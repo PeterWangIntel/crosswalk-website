@@ -1,4 +1,4 @@
-## Runtime
+### Runtime
 
 * Create and install packaged applications (.apk on Android, .xpk on Tizen)
 * Initial manifest parsing
@@ -12,7 +12,7 @@
 * Viewport meta tag handling across all Crosswalk configurations
 * W3C App URI API support
 
-## Crosswalk on Android
+### Crosswalk on Android
 
 * First release of Crosswalk Runtime library APK 
 * Run a simple web application without manifest support
@@ -23,14 +23,14 @@
 * Initial web app APK template
 * Android API for debugging over USB
 
-## Crosswalk on Tizen
+### Crosswalk on Tizen
 
-* First release of Crosswalk RPM for Tizen 
+* First release of Crosswalk RPM for Tizen with Aura support
 * First release of extension system - developers can create their own API extensions and install them as separate packages
 * Support for Tizen HW keys (menu&back)
 * Basic virtual keyboard support 
 
-## Extensions System
+### Extensions System
 
 * Tizen only - Android support coming in Crosswalk 2
 * Run extensions in separated extension process, also support running them in-process
