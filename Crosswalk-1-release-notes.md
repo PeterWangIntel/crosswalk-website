@@ -21,6 +21,7 @@
 * Sample web applications to demonstrate HTML5 features and performance
 * Hook up the runtime API’s on Android
 * Initial web app APK template
+* Android API for debugging over USB
 
 ## Crosswalk on Tizen
 
