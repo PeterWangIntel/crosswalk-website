@@ -29,8 +29,9 @@
 * Support for Tizen HW keys (menu&back)
 * Basic virtual keyboard support 
 
-## Extensions System (Tizen only - Android support coming in Crosswalk 2)
+## Extensions System
 
+* Tizen only - Android support coming in Crosswalk 2
 * Run extensions in separated extension process, also support running them in-process
 * Support require() primitive in JS API extensions
 * Allows providing convenience and native functions when needed
