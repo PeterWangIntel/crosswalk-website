@@ -69,7 +69,12 @@
 * [CSS Text Decoration Level 3] (http://www.w3.org/TR/css-text-decor-3/)
 * [CSS Animations] (http://www.w3.org/TR/css3-animations/)
 * [CSS Fonts Level 3] (http://www.w3.org/TR/css3-webfonts/)
-* 
+* [CSS Transforms] (http://www.w3.org/TR/css3-transforms/)
+* [CSS Transitions] (http://www.w3.org/TR/css3-transitions/)
+* [Navigation Timing] (http://www.w3.org/TR/navigation-timing/)
+* [Resource Timing] (http://www.w3.org/TR/resource-timing/)
+* [Page Visibility] (http://www.w3.org/TR/page-visibility/)
+* [Web Workers] (http://www.w3.org/TR/workers/)
 		
 		
 		
