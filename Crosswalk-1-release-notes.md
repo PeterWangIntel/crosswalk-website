@@ -12,15 +12,6 @@
 * Viewport meta tag handling across all Crosswalk configurations
 * W3C App URI API support
 
-## Extension System
-
-* First release of extension system for Tizen - developers can create their own API extensions and install them as separate packages
-* Run extensions in separated extension process, also support running them in-process
-* Support require() primitive in JS API extensions
-* Allows providing convenience and native functions when needed
-* Basic support for dependency tracking, focusing on Tizen Device APIs case
-* Provide bindings for code running in renderer process and tools for generating bindings.
-
 ## Crosswalk on Android
 
 * First release of Crosswalk Runtime library APK 
@@ -34,8 +25,18 @@
 ## Crosswalk on Tizen
 
 * First release of Crosswalk RPM for Tizen 
+* First release of extension system - developers can create their own API extensions and install them as separate packages
 * Support for Tizen HW keys (menu&back)
 * Basic virtual keyboard support 
+
+## Extensions System (Tizen only - Android support coming in Crosswalk 2)
+
+* Run extensions in separated extension process, also support running them in-process
+* Support require() primitive in JS API extensions
+* Allows providing convenience and native functions when needed
+* Basic support for dependency tracking, focusing on Tizen Device APIs case
+* Provide bindings for code running in renderer process and tools for generating bindings.
+
 		
 		
 		
