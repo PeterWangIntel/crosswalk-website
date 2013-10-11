@@ -21,3 +21,37 @@
 * Basic support for dependency tracking, focusing on Tizen Device APIs case
 * Provide bindings for code running in renderer process and tools for generating bindings.
 
+## Crosswalk on Android
+
+* First release of Crosswalk Runtime library APK 
+* Run a simple web application without manifest support
+* Package HTML/JS/CSS files into web app APKs
+* Initial runtime infra to bridge capabilities from content to crosswalk
+* Sample web applications to demonstrate HTML5 features and performance
+* Hook up the runtime API’s on Android
+* Initial web app APK template
+
+## Crosswalk on Tizen
+
+* Initial manifest parsing based on what is in Chromium
+* Install an app via zip-file
+* Initial package installation supporting on Tizen 2.x. 
+* Web application (.xpk) could be installed to right place in Tizen 2.x using the command line
+* Launch the app via home screen icon
+* The successfully installed web application will have an icon on the home screen
+* Initial integration with the Tizen task manager
+* The installed web application can be launched from home screen. (Owner: Yongkang)
+* Basic Aura support. Web application could be launched in Tizen 2.1
+* Web application integrated with window manager and Tizen application lifecycle management
+* Support launching app in fullscreen mode (not requestFullscreen API)
+* Web application integrated with task manager. (Owner: Ilkka) 
+* Support for Tizen HW-keys (menu&back). (Owner: Ilkka)
+* Basic virtual keyboard support (basic). (Owner: Ilkka)
+		
+		
+		
+		
+		
+		
+		
+		
