@@ -1,16 +1,16 @@
 ## Runtime
 
-* Support packaged applications, zip’ed, using our own extension .xpk
+* Support packaged applications (.apk on Android, .xpk on Tizen)
 * Initial manifest parsing
 * Launch app in fullscreen mode
 * Persistent event page
-* Command line package installation on Tizen 2.x.
+* Command line package installation
 * Launch installed applications from home screen
 * API to query details about the manifest
 * API to retrieve the background page
-* Web application integrated with task manager; can be terminated and switched from/to using Tizen 2.x
+* Web application integrated with task manager
 * Viewport meta tag handling across all Crosswalk configurations
-* Configure what the / path of file:/// refers to (needed by Web Simulator)
+* W3C App URI API support
 
 ## Extension System
 
@@ -33,20 +33,9 @@
 
 ## Crosswalk on Tizen
 
-* Initial manifest parsing based on what is in Chromium
-* Install an app via zip-file
-* Initial package installation supporting on Tizen 2.x. 
-* Web application (.xpk) could be installed to right place in Tizen 2.x using the command line
-* Launch the app via home screen icon
-* The successfully installed web application will have an icon on the home screen
-* Initial integration with the Tizen task manager
-* The installed web application can be launched from home screen. (Owner: Yongkang)
-* Basic Aura support. Web application could be launched in Tizen 2.1
-* Web application integrated with window manager and Tizen application lifecycle management
-* Support launching app in fullscreen mode (not requestFullscreen API)
-* Web application integrated with task manager. (Owner: Ilkka) 
-* Support for Tizen HW-keys (menu&back). (Owner: Ilkka)
-* Basic virtual keyboard support (basic). (Owner: Ilkka)
+* First release of Crosswalk RPM for Tizen 
+* Support for Tizen HW keys (menu&back)
+* Basic virtual keyboard support 
 		
 		
 		
