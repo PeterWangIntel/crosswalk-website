@@ -17,9 +17,7 @@
 * First release of Crosswalk Runtime library APK 
 * Run a simple web application without manifest support
 * Package HTML/JS/CSS files into web app APKs
-* Initial runtime infra to bridge capabilities from content to crosswalk
 * Sample web applications to demonstrate HTML5 features and performance
-* Hook up the runtime API’s on Android
 * Initial web app APK template
 * Android API for debugging over USB
 
