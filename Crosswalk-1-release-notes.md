@@ -1,6 +1,6 @@
 ## Runtime
 
-* Support packaged applications (.apk on Android, .xpk on Tizen)
+* Create and install packaged applications (.apk on Android, .xpk on Tizen)
 * Initial manifest parsing
 * Launch app in fullscreen mode
 * Persistent event page
