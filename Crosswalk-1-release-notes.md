@@ -53,7 +53,23 @@
 * [WebSocket] (http://www.w3.org/TR/websockets/)
 * [HTML5 web Messaging] (http://www.w3.org/TR/webmessaging/)
 * [HTML5 Date and Time state of input element] (http://www.w3.org/TR/html5/forms.html#date-and-time-state-(type=datetime)) (_Android only_)
-*  
+*  [HTML5 telephone, email and URL state of input element] (http://www.w3.org/TR/html5/forms.html#telephone-state-(type=tel)) (_Android only_)
+* [Indexed DB] (https://dvcs.w3.org/hg/IndexedDB/raw-file/default/Overview.html)
+* [Web Storage] (http://www.w3.org/TR/webstorage/)
+* [File API] (http://dev.w3.org/2006/webapi/FileAPI/)
+* [File API: Directories and System] (http://dev.w3.org/2009/dap/file-system/file-dir-sys.html)
+* [File API: Writer] (http://dev.w3.org/2009/dap/file-system/file-writer.html)
+* [Web SQL] (http://www.w3.org/TR/webdatabase/)
+* [CSS Color Module Level 3] (http://www.w3.org/TR/css3-color/)
+* [Selectors Level 1] (http://www.w3.org/TR/selectors-api/)
+* [Selectors Level 2] (http://www.w3.org/TR/selectors-api2/)
+* [CSS Backgrounds and Borders Level 3] (http://www.w3.org/TR/css3-background/)
+* [CSS Multi-column Layout] (http://www.w3.org/TR/css3-multicol/)
+* [CSS Flexible Box Layout ] (http://www.w3.org/TR/css3-flexbox/)
+* [CSS Text Decoration Level 3] (http://www.w3.org/TR/css-text-decor-3/)
+* [CSS Animations] (http://www.w3.org/TR/css3-animations/)
+* [CSS Fonts Level 3] (http://www.w3.org/TR/css3-webfonts/)
+* 
 		
 		
 		
