@@ -41,7 +41,7 @@
 
 ### APIs
 
-* [AppURI] (http://www.w3.org/2012/sysapps/app-uri/)
+* [app: URI] (http://www.w3.org/2012/sysapps/app-uri/)
 * 
 		
 		
