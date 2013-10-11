@@ -32,7 +32,7 @@
 
 ### Extensions System
 
-* Tizen only - Android support coming in Crosswalk 2
+* _Tizen only - Android support coming in Crosswalk 2_
 * Run extensions in separated extension process, also support running them in-process
 * Support require() primitive in JS API extensions
 * Allows providing convenience and native functions when needed
@@ -42,7 +42,13 @@
 ### APIs
 
 * [app: URI] (http://www.w3.org/2012/sysapps/app-uri/)
-* 
+* [Fullscreen] (http://fullscreen.spec.whatwg.org/)
+* [Touch Events] (https://dvcs.w3.org/hg/webevents/raw-file/v1/touchevents.html)
+* [Typed Array 1.0] (http://www.khronos.org/registry/typedarray/specs/latest/)
+* [Media Queries Level 3] (http://w3c-test.org/csswg/mediaqueries3/)
+* [Scalable Vector Graphics (SVG) 1.1] (http://www.w3.org/TR/SVG11/)
+* [HTML Canvas 2D Context] (http://www.w3.org/TR/2dcontext/)
+
 		
 		
 		
