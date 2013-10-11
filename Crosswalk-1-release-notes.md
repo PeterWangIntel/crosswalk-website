@@ -14,7 +14,7 @@
 
 ## Extension System
 
-* First release of extension system
+* First release of extension system for Tizen - developers can create their own API extensions and install them as separate packages
 * Run extensions in separated extension process, also support running them in-process
 * Support require() primitive in JS API extensions
 * Allows providing convenience and native functions when needed
