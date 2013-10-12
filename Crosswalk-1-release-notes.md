@@ -10,7 +10,6 @@
 * API to retrieve the background page
 * Web application integrated with task manager
 * Viewport meta tag handling across all Crosswalk configurations
-* W3C App URI API support
 
 ### Crosswalk on Android
 
