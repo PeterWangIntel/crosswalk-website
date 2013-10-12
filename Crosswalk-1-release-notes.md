@@ -39,7 +39,7 @@
 
 ### APIs
 
-* [app: URI] (http://www.w3.org/2012/sysapps/app-uri/)
+* [app: URI] (http://www.w3.org/2012/sysapps/app-uri/) (_Tizen only_)
 * [Fullscreen] (http://fullscreen.spec.whatwg.org/)
 * [Touch Events] (https://dvcs.w3.org/hg/webevents/raw-file/v1/touchevents.html)
 * [Typed Array 1.0] (http://www.khronos.org/registry/typedarray/specs/latest/)
