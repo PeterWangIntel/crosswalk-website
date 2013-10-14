@@ -4,7 +4,7 @@ The Crosswalk project provides binaries for multiple operating systems and platf
 
 ## Beta Release
 
-Crosswalk 1.29.4.1 - **Beta Build**
+Crosswalk 1.29.4.2 - **Beta Build**
 
 **NOTE:**
 Beta builds are where Crosswalk is iteratively improved until released in the Stable 
@@ -16,10 +16,10 @@ See [Release Methodology](#wiki/Release-methodology) for a description of the Cr
 <table width=100%>
 <thead style='font-weight:bold'><tr><td>Platform</td><td>Latest Version</td><td>Instructions</td></tr></thead>
 <tbody>
-<tr><td>Android</td><td><a href='https://download.01.org/crosswalk/releases/android/beta/crosswalk-1.29.4.1.zip'>crosswalk-1.29.4.1.zip</a></td>
+<tr><td>Android</td><td><a href='https://download.01.org/crosswalk/releases/android/beta/crosswalk-1.29.4.2.zip'>crosswalk-1.29.4.2.zip</a></td>
 <td><a href='#documentation/installing_crosswalk/android'>Installation</td></tr>
-<tr><td>Tizen</td><td><a href='https://download.01.org/crosswalk/releases/tizen/beta/crosswalk-1.29.4.1-0.i586.rpm'>crosswalk-1.29.4.1-0.i586.rpm</a></td><td><a href='#documentation/installing_crosswalk/tizen'>Installation</td></tr></tr>
-<tr><td>Tizen</td><td><a href='https://download.01.org/crosswalk/releases/tizen/beta/crosswalk-emulator-support-1.29.4.1-0.i586.rpm'>crosswalk-emulator-support-1.29.4.1-0.i586.rpm</a></td><td><a href='#documentation/installing_crosswalk/tizen'>Installation</td></tr></tr>
+<tr><td>Tizen</td><td><a href='https://download.01.org/crosswalk/releases/tizen/beta/crosswalk-1.29.4.2-0.i586.rpm'>crosswalk-1.29.4.2-0.i586.rpm</a></td><td><a href='#documentation/installing_crosswalk/tizen'>Installation</td></tr></tr>
+<tr><td>Tizen</td><td><a href='https://download.01.org/crosswalk/releases/tizen/beta/crosswalk-emulator-support-1.29.4.2-0.i586.rpm'>crosswalk-emulator-support-1.29.4.2-0.i586.rpm</a></td><td><a href='#documentation/installing_crosswalk/tizen'>Installation</td></tr></tr>
 <tr><td>Tizen</td><td><a href='https://download.01.org/crosswalk/releases/tizen/canary/tizen-extensions-crosswalk-0.3-0.i586.rpm'>tizen-extensions-crosswalk-0.3-0.i586.rpm</a></td><td><a href='#documentation/installing_crosswalk/tizen'>Installation</td></tr></tr>
 </tbody>
 </table>
@@ -39,7 +39,7 @@ Power, Time, System Settings, System Information, Download. See
 * Initial Extension System model defined and implemented. See [Crosswalk Extensions](#wiki/Crosswalk-extensions).
 
 ## Repository Information
-Version 1.29.4.1 of Crosswalk is based on the Chromium content module from
+Version 1.29.4.2 of Crosswalk is based on the Chromium content module from
 upstream version:
 ```
   29.0.1547.57 sha1 id: 38e877d7523268fcd04b39599ff86100e8214083
