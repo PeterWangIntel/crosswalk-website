@@ -1,4 +1,4 @@
-## APIs
+# APIs
 In addition to the W3C standard APIs available to web pages, Crosswalk provides additional APIs to further support building a native application experience using web platform technologies.
 
 This page is where those APIs will be listed and documented.

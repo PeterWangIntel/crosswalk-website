@@ -1,4 +1,4 @@
-## Building Crosswalk enabled Android applications
+# Building Crosswalk enabled Android applications
 
 This tutorial goes over the steps for setting up a Windows host environment to build Crosswalk enabled Android applications. 
 
@@ -13,7 +13,7 @@ emulator.
 * **Download the Crosswalk packages**
 * **Build a Crosswalk sample application**
 
-### Install Git Bash
+## Install Git Bash
 The Git Bash is provided within the Git SCM tools. In addition to Git Bash, those tools also provide tar, unzip, and gzip which 
 are also used on this page.
 
@@ -42,13 +42,13 @@ export PATH=${PATH}:${USERPROFILE}/apache-ant-1.9.2/bin
 **NOTE:** If you already have the Android SDK, Python27, Apache ANT, or the JDK installed on your system, adjust the above path 
 variables appropriately for your system configuration.
 
-#### Launching the Git Bash session
+### Launching the Git Bash session
 
 You can now open a Git Bash session by going to your Start Menu and typing in **git bash** and select Git Bash:
 
 <img src='wiki/assets/launch.png'><br>
 
-### Installing the Android SDK
+## Installing the Android SDK
 1. Download Android SDK:
 <a href='http://developer.android.com/sdk/index.html#download' target='_blank'>http://developer.android.com/sdk/index.html#download</a>
 1. Extract the contents into %USERPROFILE%\android
@@ -68,7 +68,7 @@ cd ${USERPROFILE}/android
     [x] Intel x86 Emulator Accelerator (HAXM)
 ```
 
-#### OPTIONAL: Emulator Setup
+### OPTIONAL: Emulator Setup
 If you do not have an x86 based Android device, you can use the hardware accelerated execution manager (HAXM) to provide 
 an emulated Android device on your host computer.
 
@@ -109,13 +109,13 @@ List of devices attached
 emulator-5554   device
 ```
 
-### Install Python
+## Install Python
 Install Python 2.7.x (don't install 3.x as some of the scripts do not support newer 3.x syntax)
 http://www.python.org/getit
 
 This tutorial assumes Python is installed into the default location **C:\Python27\**.
 
-### Install the Oracle JDK
+## Install the Oracle JDK
 Download the Oracle JDK:
 <a href='http://www.oracle.com/technetwork/java/javase/downloads/index.html' targe='_blank'>http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>
 
@@ -123,7 +123,7 @@ Make a note of the path where you install. If you accept the defaults, it will i
 
 The JDK's  **jre/bin** and **bin** directories were added to the Git Bash session's PATH file while installing the Git SCM tools.
 
-### Install ANT
+## Install ANT
 We will install ant within the Git Bash shell using the following commands, which will download the binary distribution and 
 decompress it to ${USERPROFILE}, and add it to the PATH.  You can do this in the Git Bash session by running:
 
@@ -134,7 +134,7 @@ unzip apache-ant-1.9.2-bin -x '*/manual/*'
 
 The Apache ANT **bin** directory was added to the Git Bash session's PATH file while installing the Git SCM tools.
 
-### Install the Crosswalk for Android packages
+## Install the Crosswalk for Android packages
 Now you can download the Crosswalk for Android package, decompress that package, and install it onto a 
 connected Android devices using **adb** command. You can do this in the Git Bash session by running:
 ```bash
@@ -149,7 +149,7 @@ At this point, if you go to your Android system settings, you should see XWalkRu
 
 <img src='wiki/assets/android-settings.png'><br>
 
-### Building a Crosswalk enabled Android application
+## Building a Crosswalk enabled Android application
 You are now ready to build a Crosswalk application!
 
 Download the **crosswalk-samples** source package, decompress it, and then build a Crosswalk enabled 

@@ -1,6 +1,6 @@
-## Running a Crosswalk Application
+# Running a Crosswalk Application
 
-### Running on Android
+## Running on Android
 Follow the steps for [Packaging on 
 Android](#documentation/building_an_application/packaging-for-android). 
 Once you have your APK, install it to your target device:
@@ -10,7 +10,7 @@ adb install -r ABC.apk
 The application will now appear in your application list and can be 
 launched by clicking on its icon.
 
-### Running on Tizen
+## Running on Tizen
 Launching Crosswalk applications on Tizen is currently a 
 developer manual process:
 

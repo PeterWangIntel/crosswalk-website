@@ -1,8 +1,8 @@
-## Downloads
+# Downloads
 
 The Crosswalk project provides binaries for multiple operating systems and platforms. See the links provided below for detailed per-operating system installation instructions.
 
-### Beta Release
+## Beta Release
 
 Crosswalk 1.29.4.1 - **Beta Build**
 

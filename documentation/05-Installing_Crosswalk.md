@@ -1,6 +1,6 @@
-## Installing Crosswalk
+# Installing Crosswalk
 
-### Android
+## Android
 
 You will need to install the Android SDK, including [adb](http://developer.android.com/tools/help/adb.html), and use it to connect your device to your development machine or use the Android emulator.
 
@@ -29,7 +29,7 @@ You are now ready to install Crosswalk applications on your Android
 system. If you go to your system Settings, you should see 
 **XWalkRuntimeLib** listed under the **Apps/Downloaded** list.
 
-### Tizen
+## Tizen
 These steps assume you have the [Tizen SDK](https://developer.tizen.org/downloads/tizen-sdk) installed and correctly configured on your system. 
 
 You can use the Tizen emulator as a target for running and developing Crosswalk applications on Tizen.

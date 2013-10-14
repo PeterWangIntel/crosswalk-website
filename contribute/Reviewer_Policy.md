@@ -1,4 +1,4 @@
-## Crosswalk Reviewer Policy
+# Crosswalk Reviewer Policy
 The Crosswalk project has a special status beyond being a contributor. Crosswalk Reviewers are permitted to review patches and may grant or deny approval for committing.
 
 ## Criteria for Reviewers

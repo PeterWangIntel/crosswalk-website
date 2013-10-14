@@ -1,6 +1,6 @@
-## Building Crosswalk
+# Building Crosswalk
 
-### Environment
+## Environment
 Please setup the build environment by following the instructions in Chromium's wiki:
  * [Setting up the environment for Windows](http://www.chromium.org/developers/how-tos/build-instructions-windows#TOC-Build-environment).
  * [Setting up the environment for Linux](http://code.google.com/p/chromium/wiki/LinuxBuildInstructionsPrerequisites).
@@ -8,13 +8,13 @@ Please setup the build environment by following the instructions in Chromium's w
 
 Additionally, make sure you have properly transferred your public SSH key(s) to GitHub. See this [help page](https://help.github.com/categories/56/articles) for more information.
 
-### Get the code
-#### Before starting: Android
+## Get the code
+### Before starting: Android
 If you are building Crosswalk for Android, you should first set the `XWALK_OS_ANDROID` environment variable:
 
     export XWALK_OS_ANDROID=1
 
-#### Run `gclient`
+### Run `gclient`
 Crosswalk uses `gclient` to manage the code and dependencies. To get `gclient` tool, you should install [depot_tools](http://www.chromium.org/developers/how-tos/install-depot-tools).
 
 First, you need to create a source directory:
@@ -33,7 +33,7 @@ At the same level of `.gclient` file, execute
 
 to fetch all codes.
 
-### Build Instructions
+## Build Instructions
 We recommend to use `ninja` as build tool. Please refer to [Ninja Build](http://code.google.com/p/chromium/wiki/NinjaBuild) to setup the environment.
 
 We use `gyp` to generate Crosswalk projects, go to `src` directory, execute
@@ -54,7 +54,7 @@ Optionally, to build the tests, execute:
     ninja -C out/Release xwalk_unittest
     ninja -C out/Release xwalk_browsertest
 
-#### Build Instructions for Android
+### Build Instructions for Android
 Setup environment for Android build for IA platform(Change x86 to arm for ARM build)
 
     . xwalk/build/android/envsetup.sh --target-arch=x86
@@ -76,7 +76,7 @@ To build a sample web app APK, execute:
    
     ninja -C out/Release xwalk_app_template_apk
 
-#### Building an RPM package for Tizen
+### Building an RPM package for Tizen
 Creating an RPM involves some additional work due to the way `gbs` works: it expects a single git repository with all files for it to run `git archive`. Crosswalk, on the other hand, contains several independent git and Subversion repositories in the same directory tree.
 
 First of all, you need to create a separate, flat directory tree with all the files used by the project.
@@ -113,6 +113,6 @@ After that, `gbs` can be run as usual:
 
 By default, the generated RPM files should be in `~/GBS-ROOT/local/repos/<repository name>/i586/RPMS`.
 
-#### CAUTION!
+### CAUTION!
 * don't link symbolic your GBS-ROOT. It guides you hellgate.
 * the GBS root has to be on the same partition as the /

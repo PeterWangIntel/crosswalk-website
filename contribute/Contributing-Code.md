@@ -1,4 +1,4 @@
-## Contributing Code
+# Contributing Code
 This page outlines the process for contributing code to Crosswalk. For information on obtaining the source and building Crosswalk, see the [Building Crosswalk](#contribute/building_crosswalk) page.
 
 ## Overview
