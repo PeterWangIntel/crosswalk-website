@@ -46,6 +46,7 @@ url = http://download.tizen.org/releases/2.1/tizen-2.1_20130517.6/
 
 ## Build XWalk inside chroot.
 * You need to bake rpm once, because gbs creates chroot environment.
+ * If you don't want to run rpm (because it takes a lot of time), refer to Tips section.
 * If you bake rpm once and you don't change spec file, just build inside chroot. Don't waste time to bake rpm again.
 
 ### Build
@@ -134,3 +135,17 @@ $ make -j6 -C src BUILDTYPE=Release xwalk
 
 ## Debug
 * Refer to [[Remote-debugging-xwalk-on-Tizen-2.1]]
+
+### Tips
+## install dependent packages without running gbs fully.
+* You can update your chroot using dummy project that has the same spec file.
+```
+> mkdir gbsdummy
+> cd gbsdummy
+> cp -r [xwalk dir]/packaging ./
+> git init
+> git add *
+> git commit -a -m init
+> gbs build -A i586
+```
+* above command fails but your chroot is updated. \o/
