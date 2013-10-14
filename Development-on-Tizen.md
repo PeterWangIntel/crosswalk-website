@@ -136,7 +136,7 @@ $ make -j6 -C src BUILDTYPE=Release xwalk
 ## Debug
 * Refer to [[Remote-debugging-xwalk-on-Tizen-2.1]]
 
-### Tips
+# Tips
 ## install dependent packages without running gbs fully.
 * You can update your chroot using dummy project that has the same spec file.
 ```
