@@ -6,8 +6,6 @@
 * Persistent event page
 * Command line package installation
 * Launch installed applications from home screen
-* API to query details about the manifest
-* API to retrieve the background page
 * Web application integrated with task manager
 * Viewport meta tag handling across all Crosswalk configurations
 
