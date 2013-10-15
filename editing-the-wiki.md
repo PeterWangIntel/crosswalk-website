@@ -125,4 +125,9 @@ git push origin master
 You can verify your content is correct by viewing the pages at http://github.com/crosswalk-project/crosswalk-website/wiki.
 
 
-Content will be merged to the live website during the next release/update cycle of Crosswalk.
+Content will be merged to the live website during the next release/update cycle of Crosswalk. If you have ssh access to push changes 
+to the staging servers, you can use the update-wiki.sh script:
+```sh
+./update-wiki.sh
+```
+
