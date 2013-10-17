@@ -17,5 +17,5 @@ The list below calls out the dates of upcoming milestones:
 
 ## Milestone 4: December 13, 2013
 
-## Milestone 5: Januray 31, 2014
+## Milestone 5: January 31, 2014
 
