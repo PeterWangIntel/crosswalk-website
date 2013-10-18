@@ -117,7 +117,7 @@ $ ./src/xwalk/gyp_xwalk src/xwalk/xwalk.gyp \
 -Duse_system_nspr=1 \
 -Denable_xi21_mt=1 \
 -Dtizen_mobile=1 \
--Duse_openssl=1
+-Duse_openssl=1 \
 -Dtarget_arch=ia32
 ```
 * Build it!
