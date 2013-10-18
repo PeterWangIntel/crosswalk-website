@@ -32,25 +32,3 @@ The "event page" and Web Manifest integration to be specified. Pointers to relev
 ==== Package Format ====
 
 Status: exploring
-
-=== Tasks (low priority) ===
-
-==== Multiple window support (Hongbo) ==== 
-
-Status: exploring
-
-Closely related to the Application Lifecycle and Events proposal. see the strawman proposal for [[Application Windowing|http://anssiko.github.io/runtime/app-windowing.html]].
-
-Managing multiple windows is an important use case in non-mobile contexts. Hongbo Min [[started discussion|http://lists.w3.org/Archives/Public/public-sysapps/2013Apr/0205.html]], related to [[issue #98|https://github.com/sysapps/runtime/issues/98]] and [[issue #100|https://github.com/sysapps/runtime/issues/100]]. We should revisit these issues and try get the spec better address non-mobile use cases.
-
-Related to multiple window support, we need to investigate how to prevent race conditions (see [[issue #100|https://github.com/sysapps/runtime/issues/100]]).
-
-Should investigate if <code>window.open()</code> will address all requirements for creating new windows. See also <code>chrome.app.window</code> which provides a more expressive API. See also Mozilla's [[extensions to window.open()|https://developer.mozilla.org/en-US/docs/Web/API/window.open#Features_requiring_privileges]] that require special privileges.
-
-==== Privileged Applications extensions (Anssi) ====
-
-APIs that are not web-facing should be split into their own specification. Anssi [[proposed on the public-sysapps|http://lists.w3.org/Archives/Public/public-sysapps/2013Jun/0005.html]] to split ApplicationManagement interface and other parts of the Runtime spec relevant to privileged applications only into their own spec. Related to [[issue #4|https://github.com/sysapps/runtime/issues/4]] and [[issue #92|https://github.com/sysapps/runtime/issues/92]].
-
-==== Design principles (Anssi) ====
-
-We need to clarify design principles, scope, use cases, and make sure they align with the high-level goals. Anssi [[started discussion on public-sysapps|http://lists.w3.org/Archives/Public/public-sysapps/2013May/0142.html]], see also the Application Lifecycle and Events proposal. Related to [[issue #43|https://github.com/sysapps/runtime/issues/43]], [[issue #95|https://github.com/sysapps/runtime/issues/95]], and [[issue #97|https://github.com/sysapps/runtime/issues/97]].
