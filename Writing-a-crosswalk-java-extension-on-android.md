@@ -5,9 +5,9 @@
 class MyExtension extends XWalkExtensionClient {
   public MyExtension(String name, String jsApi, XWalkExtensionContextClient context) {
   }
-  public void onMessage() {
+  public void onMessage(int instanceId, String message) {
   }
-  public String onSyncMessage(String message) {
+  public String onSyncMessage(int instanceId, String message) {
   }
   ...
 }
@@ -61,12 +61,12 @@ public class MyExtension extends XWalkExtensionClient {
     }
 
     @Override
-    public void onMessage(String message) {
-        postMessage("From java:" + message);
+    public void onMessage(int instanceId, String message) {
+        postMessage(instanceId, "From java:" + message);
     }
 
     @Override
-    public String onSyncMessage(String message) {
+    public String onSyncMessage(int instanceId, String message) {
         return "From java sync:" + message;
     }
 }
