@@ -94,7 +94,7 @@ This section will introduce the process and usages that Crosswalk runtime how to
 ### Application information storage
 It is a SQLite database, will save applications' information in it.
  * The data base file named: ```applications.db```, and placed under CrossWalk data directory, which is ```$HOME/.config/xwalk``` in Linux, ```%LocalAppData%\xwalk``` in Windows, and ```/opt/usr/apps/``` in Tizen Mobile OS.
- * The preferences file is JSON format, and will save such info in it for each application:
+ * The database backend is SQLite, and will save such info in it for each application:
    - Installed time, it's the time for when the application is installed, it's saved as a double number type.
    - Manifest, it will save all the contains of application's manifest file
    - Install path, where to place the application resources.
