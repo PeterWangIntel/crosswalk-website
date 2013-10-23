@@ -140,5 +140,18 @@ $ xwalk application_ID
  * Check the application resources path saved in database, if the directory is not exist, exit the steps.
  * Start to launch an application normally.
 
+### List installed applications
+ * Crosswalk runtime can list all installed applications from command line, like this:
+```sh
+$ xwalk --list-apps
+[1023/151523:INFO:xwalk_browser_main_parts.cc(272)] Application ID                       Application Name
+[1023/151523:INFO:xwalk_browser_main_parts.cc(273)] -----------------------------------------------------
+[1023/151523:INFO:xwalk_browser_main_parts.cc(276)] cefebchicgfeafgeemhbknlehlaildhj     Numeroo
+[1023/151523:INFO:xwalk_browser_main_parts.cc(276)] jhnafkobpahgnkbhiijoeijbchlfnjeh     Calculator
+[1023/151523:INFO:xwalk_browser_main_parts.cc(276)] oaebeffdeaajdminlhgehcgmahiflini     Memory Match for Older Kids
+[1023/151523:INFO:xwalk_browser_main_parts.cc(277)] -----------------------------------------------------
+```
+Applications ID and name will be displayed in standard IO stream.
+
 # Tips
  * NOTE: The behavior explained before requires building from trunk, and is expected to ship in next release.
