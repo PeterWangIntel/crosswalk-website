@@ -92,8 +92,8 @@ A XPK package will be generated at the present directory.
 ## XPK package management
 This section will introduce the process and usages that Crosswalk runtime how to manage the xpk package, like install, uninstall.
 ### Application information storage
-It is a JSON file database, will save applications' information in it.
- * The data base file named: ```applications_db```, and placed under CrossWalk data directory, which is ```$HOME/.config/xwalk``` in Linux, ```%LocalAppData%\xwalk``` in Windows, and ```/opt/usr/apps/``` in Tizen Mobile OS.
+It is a SQLite database, will save applications' information in it.
+ * The data base file named: ```applications.db```, and placed under CrossWalk data directory, which is ```$HOME/.config/xwalk``` in Linux, ```%LocalAppData%\xwalk``` in Windows, and ```/opt/usr/apps/``` in Tizen Mobile OS.
  * The preferences file is JSON format, and will save such info in it for each application:
    - Installed time, it's the time for when the application is installed, it's saved as a double number type.
    - Manifest, it will save all the contains of application's manifest file
