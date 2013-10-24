@@ -138,6 +138,8 @@ Usage: make_apk.py [options]
 
 Options:
   -h, --help            show this help message and exit
+  --manifest=MANIFEST   The manifest file with the detail of the app.Such as:
+                        --manifest=/path/to/your/manifest/file
   --package=PACKAGE     The package name. Such as:
                         --package=com.example.YourPackage
   --name=NAME           The apk name. Such as: --name=YourApplicationName
@@ -150,21 +152,33 @@ Options:
                         package local web app as apk. Such as: --app-
                         root=/root/path/of/the/web/app
   --app-local-path=APP_LOCAL_PATH
-                        The reletive path of entry file based on |app_root|.
+                        The relative path of entry file based on |app_root|.
                         This flag should work with "--app-root" together. Such
-                        as: --app-local-path=/reletive/path/of/entry/file
+                        as: --app-local-path=/relative/path/of/entry/file
   --keystore-path=KEYSTORE_PATH
-                        The path of the developer keystore, Such as:
+                        The path of the developer keystore. Such as:
                         --keystore-path=/path/to/your/developer/keystore
   --keystore-alias=KEYSTORE_ALIAS
-                        The alias name of keystore, Such as: --keystore-
+                        The alias name of keystore. Such as: --keystore-
                         alias=alias_name
   --keystore-passcode=KEYSTORE_PASSCODE
-                        The passcode of keystore, Such as: --keystore-
+                        The passcode of keystore. Such as: --keystore-
                         passcode=code
   --enable-remote-debugging
                         Enable remote debugging.
   -f, --fullscreen      Make application fullscreen.
+  --extensions=EXTENSIONS
+                        The path list for external extensions separated by os
+                        separator.On Linux and Mac, the separator is ":". On
+                        Windows, it is ";".Such as:
+                        --extensions="/path/to/extension1:/path/to/extension2"
+  --mode=MODE           The packaging mode of the application. "shared" means
+                        the application shares the Xwalk with other
+                        applications; "embedded" means the application owns
+                        XWalk Runtime itself. Set the default mode as
+                        "shared".Such as: --mode=shared
+  --xpk=XPK             The path of the XPK file. Such as:
+                        --xpk=/path/to/xpk/file
 ```
 
 To package a local web app: Below is an example of how to package a local web app. We assume that the files for the app are in /home/abc/dist and the main entry point HTML file is /home/abc/dist/src/index.html:
