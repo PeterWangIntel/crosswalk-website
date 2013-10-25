@@ -26,7 +26,7 @@ The document will introduce that how the Crosswalk runtime will manage the appli
 
 ### Difference to CRX
 
-TODO - explain the difference with why changes are needed
+TODO - explain the difference with CRX why changes are needed
 
 ### XPK package generator (Bash shell version)
 XPK package is very similar as CRX Format, the reference link is: [CRX Format](http://developer.chrome.com/extensions/crx.html), and here is a generator shell adapted from the example:
