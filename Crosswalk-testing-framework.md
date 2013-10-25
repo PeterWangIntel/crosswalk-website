@@ -45,7 +45,7 @@ The instrumentation tests for Android port has been enabled for runtime core but
 ```
 * Run all testing cases
 ```
-    build/android/run_instrumentation_tests.py --release --test-apk XWalkCoreTest --test_data xwalkview:xwalk/test/data/device_files/  --verbose -I
+    python build/android/test_runner.py --release --test-apk=XWalkCoreTest --test_data xwalkview:xwalk/test/data/device_files/  --verbose -I
 ```
 
 ## Code Reviewing and Trybots
