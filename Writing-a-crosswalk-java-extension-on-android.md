@@ -21,7 +21,7 @@ class MyExtension extends XWalkExtensionClient {
        "permissions": "optional property - Android permissions used in this extension, like CAMERA. Its value is a list."
      }
 ```
-See details about [Android permissions]. Note that it's not supported now.
+See details about [Android permissions]. Note that it's not supported now but will be ready soon.
 (http://developer.android.com/reference/android/Manifest.permission.html).
 * So for each extension, put three files '*.jar, *.js and *.json' into one directory. Note that the name of these 3 files should be the same as the name of the directory.
 * Package them with the option '--extensions=/path/to/extension' of make_apk.py. 
