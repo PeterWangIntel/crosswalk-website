@@ -33,6 +33,33 @@ At the same level of `.gclient` file, execute
 
 to fetch all codes.
 
+### Get beta version
+Execute the following command to gclient auto-generate `.gclient` file.
+
+    gclient config --name=src/xwalk \
+                   git://github.com/crosswalk-project/crosswalk.git
+
+Change .gclient not to manage repo in local.
+```
+> vi .gclient
+Change
+- "managed"     : True,
++ "managed"     : False,
+```
+
+Change xwalk branch to crosswalk-1
+```
+> cd src/xwalk
+> git checkout -b beta origin/crosswalk-1
+> git branch -D master
+> git branch -m beta master
+```
+
+At the same level of `.gclient` file, execute
+
+    gclient sync
+
+
 ## Build Instructions
 We recommend to use `ninja` as build tool. Please refer to [Ninja Build](http://code.google.com/p/chromium/wiki/NinjaBuild) to setup the environment.
 
