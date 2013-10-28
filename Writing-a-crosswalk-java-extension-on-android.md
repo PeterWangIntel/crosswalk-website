@@ -46,7 +46,7 @@ exports.echoSync = function(msg) {
   return extension.internal.sendSyncMessage(msg);
 };
 ```
-* Implementing the inherited Java class, called MyExtension.java. Compile and package it as 'myextension.jar'. It needs 'android.jar' from Android SDK and 'xwalk_app_runtime_client_java.jar' from xwalk_app_template.tar.gz.
+* Implementing the inherited Java class, called MyExtension.java. Compile and package it as 'myextension.jar'. It needs 'android.jar' from Android SDK and 'xwalk_app_runtime_client_java.jar' from xwalk_app_template.tar.gz. So add them in your classpath when doing Java compilation.
 ```
 package com.example.extension;
 
