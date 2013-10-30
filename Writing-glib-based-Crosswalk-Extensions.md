@@ -134,7 +134,7 @@ int32_t XW_Initialize(XW_Extension extension, XW_GetInterface get_interface) {
 }
 ```
 
-An simple HTML to verify that our delayed_echo extension indeed
+A simple HTML to verify that our delayed_echo extension indeed
 does what it implies.
 
 
