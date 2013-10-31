@@ -39,6 +39,10 @@ We use `gyp` to generate Crosswalk projects, go to `src` directory, execute
     export GYP_GENERATORS='ninja'
     python xwalk/gyp_xwalk
 
+**NOTE**: it is possible also to enable [Aura UI framework](http://www.chromium.org/developers/design-documents/aura) for Tizen 3.0 build; in that case execute:
+
+    python xwalk/gyp_xwalk -Duse_aura=1 -Duse_gconf=0 -Duse_xi2_mt=2
+
 at this point you have built the projects with gyp and are ready for the actual compilation. To build the launcher now execute:
 
     ninja -C out/Release xwalk
