@@ -4,7 +4,7 @@ The `OWNERS` files are a way of specifying a set of reviewers whose review is re
 
 When contributing code, for each file modified in a pull request, a "LGTM" review is required from someone listed in the OWNERS file in that directory, or in the OWNERS file in a parent / higher-level directory of that file. That means that the approver must type "lgtm" (case insensitive) into a comment on the pull request.
 
-An example:
+### Examples 
 
 You want to change code in `xwalk/extensions/browser/xwalk_extension_service.h`.
 
