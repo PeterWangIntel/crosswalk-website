@@ -44,4 +44,4 @@ There is a mailing list in Crosswalk dedicated to maintainence of the OWNERS fil
 
 To actually make the change, the change must get positive support from at least other two OWNERS. If there is negative feedback on the change, the OWNERS of the parent directory have the final word (up to the `xwalk/OWNERS`).
 
-The email and approval of other OWNERS ensure that guidelines are being followed and serve as notification for other OWNERS. After approval, a patch with the pull request should be created, and if it's a new OWNER, he/she should merge the pull request to ensure repository permissions are working.
+The email and approval of other OWNERS ensure that guidelines are being followed and serve as notification for other OWNERS. After 7 days with at least two supporters and without negative feedback, a patch with the pull request should be created, and if it's a new OWNER, he/she should merge the pull request to ensure repository permissions are working.
