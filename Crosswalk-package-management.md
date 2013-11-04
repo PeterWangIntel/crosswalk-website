@@ -26,7 +26,9 @@ The document will introduce that how the Crosswalk runtime will manage the appli
 
 ### Difference to CRX
 
-TODO - explain the difference with CRX why changes are needed
+* The XPK package magic string is "CrWk", but "Cr24" in CRX format. This magic string identify the package is a XPK package.
+
+* The "version number" is invalid in XPK format, but CRX has.
 
 ### XPK package generator (Bash shell version)
 XPK package is very similar as CRX Format, the reference link is: [CRX Format](http://developer.chrome.com/extensions/crx.html), and here is a generator shell adapted from the example:
