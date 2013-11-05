@@ -26,6 +26,7 @@ If you any question on how to use Crosswalk you can ask on IRC. On freenode.net,
 * [Development Tasks](wiki/Development-Tasks)
 * [Standardization Tasks](wiki/Standardization-Tasks)
 * [[Crosswalk on Android]]
+* [[Development on Tizen]]
 * [Remote debugging xwalk on Tizen 2.1] (wiki/Remote-debugging-xwalk-on-Tizen-2.1)
 
 ## Crosswalk's infrastructure
