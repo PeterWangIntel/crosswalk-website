@@ -11,7 +11,7 @@ emulator](https://developer.tizen.org/help/index.jsp?topic=%2Forg.tizen.gettings
 
 Make sure the tizen-extension-crosswalk RPM is installed on the Target 
 device, as described on [Installing Crosswalk on 
-Tizen](#documentation/installing_crosswalk/tizen).
+Tizen](#documentation/getting_started/installing_crosswalk/tizen).
 
 The following steps use the helper script **tizen-extension-crosswalk** 
 to load the Tizen extension API into Crosswalk during load time.

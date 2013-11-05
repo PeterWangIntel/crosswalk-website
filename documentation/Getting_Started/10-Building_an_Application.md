@@ -1,7 +1,7 @@
 # Building a Crosswalk Application
 An application package is a compressed archive containing all of your application resources and a manifest file.
 
-There are several sample applications which can be used as a seed for your project. These are described in [Building an Application](#documentation/building_an_application). The steps described below can be used to package those applications and deploy them into an Android or Tizen device.
+There are several sample applications which can be used as a seed for your project. These are described in [Building an Application](#documentation/getting_started/building_an_application). The steps described below can be used to package those applications and deploy them into an Android or Tizen device.
 
 ### Manifest File
 The following is a minimal example for a manifest file, which should be named manifest.json and reside in your application's top level directory:
@@ -51,7 +51,7 @@ The apk file is output to the same directory as the make_apk.py script, with a f
 For information on installing and running the application on Android, 
 see 
  [Running on 
-Android](#documentation/running_an_application/running-on-android).
+Android](#documentation/getting_started/running_an_application/running-on-android).
 
 ## Packaging for Tizen
 There is currently no application packager for Tizen. To run your 
@@ -59,4 +59,4 @@ application in the Tizen environment, you can launch xwalk manually,
 directing it to load your application via the command line. See the 
 steps in
  [Running on 
-Tizen](#documentation/running_an_application/running-on-tizen).
+Tizen](#documentation/getting_started/running_an_application/running-on-tizen).

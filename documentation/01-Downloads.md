@@ -17,10 +17,10 @@ See [Release Methodology](#wiki/Release-methodology) for a description of the Cr
 <thead style='font-weight:bold'><tr><td>Platform</td><td>Latest Version</td><td>Instructions</td></tr></thead>
 <tbody>
 <tr><td>Android</td><td><a href='https://download.01.org/crosswalk/releases/android/beta/crosswalk-1.29.4.2.zip'>crosswalk-1.29.4.2.zip</a></td>
-<td><a href='#documentation/installing_crosswalk/android'>Installation</td></tr>
-<tr><td>Tizen</td><td><a href='https://download.01.org/crosswalk/releases/tizen/beta/crosswalk-1.29.4.2-0.i586.rpm'>crosswalk-1.29.4.2-0.i586.rpm</a></td><td><a href='#documentation/installing_crosswalk/tizen'>Installation</td></tr></tr>
-<tr><td>Tizen</td><td><a href='https://download.01.org/crosswalk/releases/tizen/beta/crosswalk-emulator-support-1.29.4.2-0.i586.rpm'>crosswalk-emulator-support-1.29.4.2-0.i586.rpm</a></td><td><a href='#documentation/installing_crosswalk/tizen'>Installation</td></tr></tr>
-<tr><td>Tizen</td><td><a href='https://download.01.org/crosswalk/releases/tizen/canary/tizen-extensions-crosswalk-0.3-0.i586.rpm'>tizen-extensions-crosswalk-0.3-0.i586.rpm</a></td><td><a href='#documentation/installing_crosswalk/tizen'>Installation</td></tr></tr>
+<td><a href='#documentation/getting_started/installing_crosswalk/android'>Installation</td></tr>
+<tr><td>Tizen</td><td><a href='https://download.01.org/crosswalk/releases/tizen/beta/crosswalk-1.29.4.2-0.i586.rpm'>crosswalk-1.29.4.2-0.i586.rpm</a></td><td><a href='#documentation/getting_started/installing_crosswalk/tizen'>Installation</td></tr></tr>
+<tr><td>Tizen</td><td><a href='https://download.01.org/crosswalk/releases/tizen/beta/crosswalk-emulator-support-1.29.4.2-0.i586.rpm'>crosswalk-emulator-support-1.29.4.2-0.i586.rpm</a></td><td><a href='#documentation/getting_started/installing_crosswalk/tizen'>Installation</td></tr></tr>
+<tr><td>Tizen</td><td><a href='https://download.01.org/crosswalk/releases/tizen/canary/tizen-extensions-crosswalk-0.3-0.i586.rpm'>tizen-extensions-crosswalk-0.3-0.i586.rpm</a></td><td><a href='#documentation/getting_started/installing_crosswalk/tizen'>Installation</td></tr></tr>
 </tbody>
 </table>
 [More releases...](https://download.01.org/crosswalk/releases/)

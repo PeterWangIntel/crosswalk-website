@@ -40,11 +40,11 @@ You should see a native app window that renders the `www.google.com` page. Refer
 
 #### On Android
 
-See [Installing Crosswalk](#documentation/installing_crosswalk/android).
+See [Installing Crosswalk](#documentation/getting_started/installing_crosswalk/android).
 
 #### On Tizen
 
-See [Installing Crosswalk](#documentation/installing_crosswalk/tizen).
+See [Installing Crosswalk](#documentation/getting_started/installing_crosswalk/tizen).
 
 ### Package Your Web App  
 Given a web app written in HTML5 and Javascript with an `index.html` 

@@ -134,7 +134,7 @@ $ make -j6 -C src BUILDTYPE=Release xwalk
 * You can run xwalk on device using `sdb shell`. Refer to following section.
 
 ## Run
-* Refer to "Tizen" in [[05-Installing_Crosswalk]]
+* Refer to [Installing Crosswalk](#documentation/getting_started/installing_crosswalk/tizen)
 
 ## Debug
 * Refer to [[Remote-debugging-xwalk-on-Tizen-2.1]]

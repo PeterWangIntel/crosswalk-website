@@ -2,7 +2,7 @@
 
 ## Running on Android
 Follow the steps for [Packaging on 
-Android](#documentation/building_an_application/packaging-for-android). 
+Android](#documentation/getting_started/building_an_application/packaging-for-android). 
 Once you have your APK, install it to your target device:
 ```sh
 adb install -r ABC.apk
