@@ -22,23 +22,11 @@ In collaboration with Web platform team and Visualization team
  * pinch zoom hang-up [XWALK-111](https://crosswalk-project.org/jira/browse/XWALK-111), BadDrawable bug [XWALK-12](https://crosswalk-project.org/jira/browse/XWALK-12).
 * Upstream aura content_shell is not well maintained. aura content_shell is important to Crosswalk Tizen. We will improve it.
 
-### Cross Process Buffer Sharing/zero copy texture upload
-* Chromium dev works in progress on Android. see map-image switch.
-* Visualization team works in progress on Intel GPU.
- * We have been part of these discussions and Kenneth connected to their team PM at the BlinkON conference and since then we have initiated talks with Google regarding zero-copying.
- * Info on this work from Kaylan:
-```
-Chromium has everything in place to properly support zero-copy with its multi-process architecture.  It's not possible to enable this at the moment due to driver security model and it depends on the RenderNodes support to be released with next kernel, 3.13. Finland Visualization team is currently studying possible alternative options.
-```
-
 ## Ozone
 (by Visualization team)
 Written by Kenneth and Alexis by help from Kalyan.
 ### Ozone-Wayland + Chromium Browser
 At OSTS last year, we talked a lot with Tiago Vignatti about Wayland and Chromium, and this year he started to look into how we could add support for Wayland to Chromium.  Google announced Ozone as an abstraction beneath Aura window system for low level input and graphics. We, now have Ozone-Wayland project which enables support for Wayland with Chromium/Cross-Walk.
-
-### Ozone-KMS + Chrome-OS
-Google is working on KMS support for Ozone platform. Recently, Google has made a public announcement about this. Kalyan Kondapally was already at that point evaluating support for Ozone-Wayland/KMS with Chrome-OS. He is currently discussing it internally and with the Ozone team. Ideally, we want to support KMS effort instead of Chrome-OS + Ozone-Wayland.
 
 * Discussion in Graphics-Dev: https://groups.google.com/a/chromium.org/forum/#!topic/graphics-dev/7ct9q0HtVJ0
 * Ozone-KMS design document: https://docs.google.com/a/chromium.org/document/d/1P99c6ygzVWPP2f2m2wtWS3XRnsBYy6Po3ydNfwtsgMU/edit?usp=sharing
