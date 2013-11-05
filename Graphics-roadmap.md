@@ -24,6 +24,10 @@ In collaboration with Web platform team and Visualization team
  * pinch zoom hang-up [XWALK-111](https://crosswalk-project.org/jira/browse/XWALK-111), BadDrawable bug [XWALK-12](https://crosswalk-project.org/jira/browse/XWALK-12).
 * Upstream aura content_shell is not well maintained. aura content_shell is important to Crosswalk Tizen. We will improve it.
 
+### Zero-copy texture
+* Chromium Android works in progress. See map-image switcher
+* [relevant discussion](https://groups.google.com/a/chromium.org/forum/?fromgroups#!topic/graphics-dev/LFqMLipr2ok)
+
 # References
 ## more roadmap in Intel
 * [Chromium Graphics Infrastructure by Intel](https://docs.google.com/a/intel.com/document/d/1yVCLQO7CaH5qW14fjPADhwFUMONMw1Y3yPIN9h-Xb64/edit#heading=h.r7tvqxgsb10w)
