@@ -22,15 +22,6 @@ In collaboration with Web platform team and Visualization team
  * pinch zoom hang-up [XWALK-111](https://crosswalk-project.org/jira/browse/XWALK-111), BadDrawable bug [XWALK-12](https://crosswalk-project.org/jira/browse/XWALK-12).
 * Upstream aura content_shell is not well maintained. aura content_shell is important to Crosswalk Tizen. We will improve it.
 
-## Ozone
-(by Visualization team)
-Written by Kenneth and Alexis by help from Kalyan.
-### Ozone-Wayland + Chromium Browser
-At OSTS last year, we talked a lot with Tiago Vignatti about Wayland and Chromium, and this year he started to look into how we could add support for Wayland to Chromium.  Google announced Ozone as an abstraction beneath Aura window system for low level input and graphics. We, now have Ozone-Wayland project which enables support for Wayland with Chromium/Cross-Walk.
-
-* Discussion in Graphics-Dev: https://groups.google.com/a/chromium.org/forum/#!topic/graphics-dev/7ct9q0HtVJ0
-* Ozone-KMS design document: https://docs.google.com/a/chromium.org/document/d/1P99c6ygzVWPP2f2m2wtWS3XRnsBYy6Po3ydNfwtsgMU/edit?usp=sharing
-
 # References
 ## more roadmap in Intel
 * [Chromium Graphics Infrastructure by Intel](https://docs.google.com/a/intel.com/document/d/1yVCLQO7CaH5qW14fjPADhwFUMONMw1Y3yPIN9h-Xb64/edit#heading=h.r7tvqxgsb10w)
