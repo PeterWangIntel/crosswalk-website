@@ -16,6 +16,8 @@ In collaboration with Web platform team and Visualization team
 * Chromium will turn on Ubercompositor on Android in M33~34 (Dec 16th, 2013 ~ Feb 17th, 2014).
  * [crbug.com/208551](crbug.com/208551)
  * Now we don't have any specific plan, but will try to turn on it on Linux aura and fix bugs.
+* Samsung recently provided numbers on battery savings on using the Ubercompositor (one compositor for compositing UI components of the browser as well as browser content) and report around 10% savings.
+ * [reference](https://groups.google.com/a/chromium.org/forum/#!topic/graphics-dev/uQRh5hvEOmo)
 
 ### Linux aura content_shell improvement
 * We have several issues related to linux aura on Tizen. 
