@@ -8,9 +8,13 @@ Before starting a new implementation a developer should send a mail to this mail
 <strong>Email body:</strong>
 
 <strong>Summary:</strong> what this implementation is about, what it does, why it's needed  
+
 <strong>Affected component:</strong>  
+
 <strong>Related feature:</strong> <em>(Jira ID)</em>
+
 <strong>Target Release:</strong> <em>(Crosswalk N)</em>
+
 <strong>Implementation details:</strong> depending on the complexity, this can be a short walkthrough in the email body, one-liner for simple implementations, link to Google Docs design if present (but not required - we prefer that the discussion is started before extensive design is done)
 </pre>
 
