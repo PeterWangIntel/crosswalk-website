@@ -6,6 +6,7 @@ Before starting a new implementation a developer should send a mail to this mail
 <strong>Email subject:</strong> Intent to Implement <em>(summary)</em>
 
 <strong>Email body:</strong>
+
 <strong>Summary:</strong> what this implementation is about, what it does, why it's needed  
 <strong>Affected component:</strong>  
 <strong>Related feature:</strong> <em>(Jira ID)</em>
