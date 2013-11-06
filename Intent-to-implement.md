@@ -7,7 +7,7 @@ Before starting a new implementation a developer should send a mail to this mail
 
 <strong>Email body:</strong>
 
-<strong>Summary:</strong> what this implementation is about, what it does, why it's needed  
+<strong>Description:</strong> what this implementation is about, what it does, why it's needed  
 <strong>Affected component:</strong>  
 <strong>Related feature:</strong> <em>(Jira ID)</em>
 <strong>Target Release:</strong> <em>(Crosswalk N)</em>
