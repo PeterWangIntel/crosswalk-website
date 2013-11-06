@@ -14,7 +14,7 @@ out of the wiki and planted in the higher level documentation under either [Docu
 * [Crosswalk Extensions](wiki/Crosswalk-Extensions)
 * [Remote Debugging on Android] (wiki/Remote-Debugging-on-Android)
 * [Crosswalk 1 release notes] (wiki/Crosswalk-1-release-notes)
-
+* [Intent to Implement]
 If you any question on how to use Crosswalk you can ask on IRC. On freenode.net, we hang out on the #crosswalk channel.
 
 ## For Developers
