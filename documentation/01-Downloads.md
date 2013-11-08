@@ -22,7 +22,7 @@ Information on the [Release Channels](#wiki/Release-methodology).
 <tr><td>Android</td><td><a href='https://download.01.org/crosswalk/releases/android-x86/beta/crosswalk-2.31.27.0.zip'>crosswalk-2.31.27.0.zip</a></td>
 <td><a href='#documentation/getting_started/installing_crosswalk/android'>Installation</td></tr>
 <tr><td>Tizen x86</td><td><a href='https://download.01.org/crosswalk/releases/tizen/beta/crosswalk-2.31.27.0-0.i586.rpm'>crosswalk-2.31.27.0-0.i586.rpm</a></td><td><a href='#documentation/getting_started/installing_crosswalk/tizen'>Installation</td></tr></tr>
-<tr><td>Tizen x86 Emulator</td><td><a href='https://download.01.org/crosswalk/releases/tizen/beta/crosswalk-emulator-support-1.29.4.7-0.i586.rpm'>crosswalk-emulator-support-1.29.4.7-0.i586.rpm</a></td><td><a href='#documentation/getting_started/installing_crosswalk/tizen'>Installation</td></tr></tr>
+<tr><td>Tizen x86 Emulator</td><td><a href='https://download.01.org/crosswalk/releases/tizen/beta/crosswalk-emulator-support-2.31.27.0-0.i586.rpm'>crosswalk-emulator-support-2.31.27.0-0.i586.rpm</a></td><td><a href='#documentation/getting_started/installing_crosswalk/tizen'>Installation</td></tr></tr>
 </tbody>
 </table>
 [More releases...](https://download.01.org/crosswalk/releases/)
