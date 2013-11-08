@@ -38,7 +38,7 @@ You can use the Tizen emulator as a target for running and developing Crosswalk 
 1. Download the Crosswalk binary for Tizen from the URL in [Downloads](#documentation/downloads/files).
 ```sh
 wget https://download.01.org/crosswalk/releases/tizen/stable/crosswalk-1.29.4.7-0.i586.rpm
-wget https://download.01.org/crosswalk/releases/tizen/beta/crosswalk-emulator-support-1.29.4.7-0.i586.rpm
+wget https://download.01.org/crosswalk/releases/tizen/stable/crosswalk-emulator-support-1.29.4.7-0.i586.rpm
 wget https://download.01.org/crosswalk/releases/tizen/canary/tizen-extensions-crosswalk-0.11-0.i586.rpm
 ```
 1. With the Tizen emulator started or a Tizen device connected to the computer, log into the device as root by default:
