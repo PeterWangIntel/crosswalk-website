@@ -54,11 +54,14 @@ In collaboration with Web platform team and Visualization team
 * [Multithreaded Rasterization](http://www.chromium.org/developers/design-documents/impl-side-painting)
 * [Chromium Graphics](http://www.chromium.org/developers/design-documents/chromium-graphics)
 
-# Developer
-## WRT team
+# People
+## PM
+
+## Developer
+### WRT team
 * Mikhail [@pozdnyakov](https://github.com/pozdnyakov)
 * DS [@ds-hwang](https://github.com/ds-hwang)
  * [DS's informal wiki about chromium graphics](https://github.com/ds-hwang/wiki/wiki)
 
-## Visualization team
+### Visualization team
 * Kalyan [@kalyankondapally](https://github.com/kalyankondapally)
