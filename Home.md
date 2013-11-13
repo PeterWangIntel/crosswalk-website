@@ -31,6 +31,7 @@ If you any question on how to use Crosswalk you can ask on IRC. On freenode.net,
 * [[Development on Tizen]]
 * [Remote debugging xwalk on Tizen 2.1] (wiki/Remote-debugging-xwalk-on-Tizen-2.1)
 * [[Graphics Roadmap]]
+* [[Rebasing our forks]]
 
 ## Crosswalk's infrastructure
 * [Testing Framework](wiki/Crosswalk-testing-framework) 
