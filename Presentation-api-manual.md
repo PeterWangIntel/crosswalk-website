@@ -9,8 +9,7 @@ compatible wireless display.
 * [navigator.presentation.displayAvailable Property](Presentation-api-manual#navigatorpresentationdisplayavailable-property)
 * [navigator.presentation.displayavailablechange Event](Presentation-api-manual#navigatorpresentationdisplayavailablechange-event)
 
-Sample Code
-------------
+### Sample Code
 The controller page is used to open another page on the secondary page:
 ```
 <html>
@@ -103,7 +102,6 @@ context of the incumbent script.
  The presentation browsing context is closed if the secondary display becomes unavailable, so
 that the app has no need to close it by 'window.close'.
 
-Sample Demos
-------------------
+### Demos
 * Image Gallery
 * HexGL
