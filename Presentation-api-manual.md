@@ -5,9 +5,9 @@ W3C spec draft at http://webscreens.github.io/presentation-api/.
 Currently, Presentation API on Crosswalk is only for Android 4.2+ with Miracast
 compatible wireless display.
 
-* navigator.presentation.requestShow Method
-* navigator.presentation.displayAvailable Property
-* navigator.presentation.displayavailablechange Event
+* [navigator.presentation.requestShow Method](Presentation-api-manual#navigatorpresentationrequestshow-method)
+* [navigator.presentation.displayAvailable Property](Presentation-api-manual#navigatorpresentationdisplayavailable-property
+* [navigator.presentation.displayavailablechange Event](Presentation-api-manual#navigatorpresentationdisplayavailablechange-event)
 
 ### JavaScript API Manual
 * ##### navigator.presentation.requestShow Method
