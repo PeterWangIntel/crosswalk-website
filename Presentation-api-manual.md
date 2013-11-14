@@ -34,7 +34,7 @@ context of the incumbent script.
   * If there is still another secondary display, the content will be switched to it automatically.
   * If there is no secondary display, the content will be disposed.
 
-* **navigator.presentation.displayavailablechange** Event
+* ##### navigator.presentation.displayavailablechange Event
 
  When the first secondary display is arrived and last secondary display is removed, `displayavailablechange` event will be triggered, and the property of 'navigator.presentation.displayAvailable' is set to true/false.
 
