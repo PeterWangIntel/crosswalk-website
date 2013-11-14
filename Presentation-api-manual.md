@@ -6,7 +6,7 @@ Currently, Presentation API on Crosswalk is only for Android 4.2+ with Miracast
 compatible wireless display.
 
 * [navigator.presentation.requestShow Method](Presentation-api-manual#navigatorpresentationrequestshow-method)
-* [navigator.presentation.displayAvailable Property](Presentation-api-manual#navigatorpresentationdisplayavailable-property
+* [navigator.presentation.displayAvailable Property](Presentation-api-manual#navigatorpresentationdisplayavailable-property)
 * [navigator.presentation.displayavailablechange Event](Presentation-api-manual#navigatorpresentationdisplayavailablechange-event)
 
 ### JavaScript API Manual
