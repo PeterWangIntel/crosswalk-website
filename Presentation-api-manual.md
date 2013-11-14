@@ -12,7 +12,7 @@ compatible wireless display.
 ### JavaScript API Manual
 * ##### navigator.presentation.requestShow Method
 
- `requestShow` is intended to request show a HTML page specified by url on the secondary display from the current browsing context. When the page is loaded successfully, the successCallback will be invoked with the 'window' object of the HTML page opened. The page navigation follows the legacy behavior of `window.open()` and thus allows navigating to URLs that are not at the same origin as the browsing
+ `requestShow` is intended to request show a HTML page specified by `url` on the secondary display from the current browsing context. When the page is loaded successfully, the successCallback will be invoked with the 'window' object of the HTML page opened. The page navigation follows the legacy behavior of `window.open()` and thus allows navigating to URLs that are not at the same origin as the browsing
 context of the incumbent script.
 
  The communication between the opener window and presentation window follows [HTML5 web messaging](http://www.w3.org/TR/webmessaging/). You can call `postMessage` to post a message and listen `onmessage` to handle the message from other side. 
