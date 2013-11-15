@@ -1,4 +1,4 @@
-# Crosswalk Milestone Dates
+# Crosswalk Release Dates
 
 As described in the [Release Methodology](#wiki/release-methodology) 
 page, Crosswalk follows a six week release cadence. The dates below call out when a release enters into the stabilization track and is scheduled to be promoted to Beta.
