@@ -43,7 +43,8 @@ page, Crosswalk follows a six week release cadence. The dates below call out whe
 <tr><td>Team:</td><td>Finland</td></tr>
 </table></div>
 
-**NOTE**: The upstream Chromium BETA branch point is scheduled for either December 16th or Jaunary 6th. If it does not occur on December 16th, there will not be a Crosswalk rebase to and Crosswalk-4 will be based on Chromium 32.
+**NOTE**: The upstream Chromium Beta branch point is scheduled for either December 16th or Jaunary 6th. If it 
+does not occur on December 16th then Crosswalk-4 will be based on Chromium 32.
 
 
 ## Crosswalk 5 - March 24, 2014
