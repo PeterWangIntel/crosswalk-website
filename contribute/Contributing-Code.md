@@ -41,5 +41,8 @@ you or can't fix themselves the problem.
 ## Respond to reviewers
 A Crosswalk reviewer must approve your patch before Crosswalk can accept it into the source control repository. A reviewer will typically either approve your patch (by responding with an LGTM in the pull request) or request revisions to your patch. In rare cases a patch may be permanently rejected, meaning that the reviewer believes the feature should never be committed to the tree. The review process can consist of multiple iterations between you and the reviewer as you submit revised patches.
 
+## Obtaining Commit Privileges
+By default contributors do not have push rights to Crosswalk repositories. After contributing few patches (~5-10) you may ask an OWNER to nominate you for push access. This privilege is granted with some expectation of responsibility: committers are people who care about the Crosswalk project and want to help them meet their goals. A committer is not just someone who can make changes, but someone who has demonstrated his or her ability to collaborate with the team, get the most knowledgeable people to review code, contribute high-quality code, and follow through to fix issues (in code or tests).
+
 ## Obtaining Review Privileges
 Our [Reviewer policy](#contribute/Reviewer_Policy) provides details on obtaining review privileges.
