@@ -31,32 +31,34 @@ At the same level of `.gclient` file, execute
 
 to fetch all codes.
 
-### Get beta version
-Execute the following command to gclient auto-generate `.gclient` file.
+### Tracking a different Crosswalk branch
+If you want to track a Crosswalk branch other than `master` (a beta or stable branch, for example), there are two different approaches you can use.
+
+#### From scratch
+In case you have not cloned Crosswalk's source code yet, just pass a different URL to the `gclient config` call above. To track the _crosswalk-2_ branch, for example:
 
     gclient config --name=src/xwalk \
-                   git://github.com/crosswalk-project/crosswalk.git
+                   git://github.com/crosswalk-project/crosswalk.git@origin/crosswalk-2
 
-Change .gclient not to manage repo in local.
-```
-> vi .gclient
-Change
-- "managed"     : True,
-+ "managed"     : False,
+#### Changing an existing checkout
+If you have already cloned Crosswalk and want to change the branch being tracked, you need to check out a new git branch and then edit your `.gclient` file.
+
+For example, let us assume you want to track the _crosswalk-2_ branch. First of all, check out a new branch in your Crosswalk repository:
+
+    cd /path/to/src/xwalk
+    git checkout -b crosswalk-2 origin/crosswalk-2
+
+Next, edit your `.gclient` file (generated above) and change the `url` entry. It should look like this:
+
+```python
+  # ...
+  "url": "git://github.com/crosswalk-project/crosswalk.git@origin/crosswalk-2",
+  # ...
 ```
 
-Change xwalk branch to crosswalk-1
-```
-> cd src/xwalk
-> git checkout -b beta origin/crosswalk-1
-> git branch -D master
-> git branch -m beta master
-```
-
-At the same level of `.gclient` file, execute
+After that, just sync your code again:
 
     gclient sync
-
 
 ## Build Instructions
 We recommend to use `ninja` as build tool. Please refer to [Ninja Build](http://code.google.com/p/chromium/wiki/NinjaBuild) to setup the environment.
