@@ -140,6 +140,6 @@ After that, `gbs` can be run as usual:
 
 By default, the generated RPM files should be in `~/GBS-ROOT/local/repos/<repository name>/i586/RPMS`.
 
-### CAUTION!
-* don't link symbolic your GBS-ROOT. It guides you hellgate.
-* the GBS root has to be on the same partition as the /
+#### Troubleshooting
+* The directory you use as the GBS root must be an actual directory: symbolic links can cause problems.
+* The GBS root directory must be on the same partition as your root directory (`/`).
