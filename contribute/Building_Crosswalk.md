@@ -61,7 +61,7 @@ After that, just sync your code again:
     gclient sync
 
 ## Build Instructions
-We recommend to use `ninja` as build tool. Please refer to [Ninja Build](http://code.google.com/p/chromium/wiki/NinjaBuild) to setup the environment.
+`ninja` is the recommended by build for building Crosswalk in most platforms. Its [website](http://code.google.com/p/chromium/wiki/NinjaBuild) contains more usage instructions.
 
 We use `gyp` to generate Crosswalk projects, go to `src` directory, execute
 
