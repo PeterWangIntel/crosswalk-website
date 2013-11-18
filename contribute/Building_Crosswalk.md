@@ -103,42 +103,22 @@ To build a sample web app APK, execute:
    
     ninja -C out/Release xwalk_app_template_apk
 
-### Building an RPM package for Tizen
-Creating an RPM involves some additional work due to the way `gbs` works: it expects a single git repository with all files for it to run `git archive`. Crosswalk, on the other hand, contains several independent git and Subversion repositories in the same directory tree.
+### Build Instructions for Tizen
+If you are unfamiliar with the RPM packaging process on Tizen, be sure to take a look at the [GBS documentation](https://source.tizen.org/documentation/reference/git-build-system) in Tizen's website.
 
-First of all, you need to create a separate, flat directory tree with all the files used by the project.
+Crosswalk's layout is a bit unusual, as it actually contains several independent git and Subversion repositories in the same directory tree. We employ some tricks to make it work with GBS, but it should all be transparent to users -- the only actual caveat is that GBS will build _everything_ that is in your source tree regardless of whether it has been committed or not; that is, it always acts as if the `--include-all` parameter has been passed to `gbs build`.
 
-    export XWALK_PREFIX=/root/of/xwalk/tree
-    cd $XWALK_PREFIX
-    
-    gclient recurse --no-progress -j 1 \
-                    --gclientfile .gclient \
-                    $PWD/src/xwalk/packaging/generate-flat-tree.sh
-    gclient recurse --no-progress -j 1 \
-                    --gclientfile .gclient-xwalk \
-                    $PWD/src/xwalk/packaging/generate-flat-tree.sh
+That said, building an RPM for Tizen (after properly setting up your Tizen repositories) should be a matter of calling `gbs build`:
 
-`XWALK_PREFIX` should point to the directory that **contains** the `src/` directory. The calls to `gclient recurse` create a tarball called `flat-xwalk-tree.tar` in your top-level `$XWALK_PREFIX` directory.
-
-After that, you should create a new git repository using the contents of the generated tarball.
-
-    mkdir tizen-package-root
-    cd tizen-package-root
-    
-    tar -xf $XWALK_PREFIX/flat-xwalk-tree.tar
-    cp -R $XWALK_PREFIX/src/xwalk/packaging .
-    
-    git init
-    git add .
-    git commit
-
-What the commands above do are create a new git tree containing all the source files used by Crosswalk, put the `packaging/` directory in it and commit.
-
-After that, `gbs` can be run as usual:
-
+    cd /path/to/src/xwalk
     gbs build -A i586
 
 By default, the generated RPM files should be in `~/GBS-ROOT/local/repos/<repository name>/i586/RPMS`.
+
+#### Incremental builds
+By default, each time you call `gbs build` the Tizen build directory will be erased and the build will start from scratch. To avoid that, you can set a different build directory in the Tizen chroot, outside `/home/abuild/rpmbuild`:
+
+    gbs build -A i586 --define 'BUILDDIR_NAME /tmp/crosswalk-builddir'
 
 #### Troubleshooting
 * The directory you use as the GBS root must be an actual directory: symbolic links can cause problems.
