@@ -82,7 +82,7 @@ Optionally, to build the tests, execute:
     ninja -C out/Release xwalk_browsertest
 
 ### Build Instructions for Android
-Setup environment for Android build for IA platform(Change x86 to arm for ARM build)
+First of all, set up the Android build environment. If you are targeting ARM, pass `arm` instead of `x86` below:
 
     . xwalk/build/android/envsetup.sh --target-arch=x86
 
