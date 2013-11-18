@@ -6,8 +6,6 @@ Please setup the build environment by following the instructions in Chromium's w
  * [Setting up the environment for Linux](http://code.google.com/p/chromium/wiki/LinuxBuildInstructionsPrerequisites).
  * [Setting up the environment for Android](http://code.google.com/p/chromium/wiki/AndroidBuildInstructions#Install_prerequisites).
 
-Additionally, make sure you have properly transferred your public SSH key(s) to GitHub. See this [help page](https://help.github.com/categories/56/articles) for more information.
-
 ## Get the code
 ### Before starting: Android
 If you are building Crosswalk for Android, you should first set the `XWALK_OS_ANDROID` environment variable:
