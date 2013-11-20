@@ -97,10 +97,27 @@ context of the incumbent script.
 
 * ##### navigator.presentation.displayavailablechange Event
 
- When the first secondary display is arrived and last secondary display is removed, `displayavailablechange` event will be triggered, and the property of 'navigator.presentation.displayAvailable' is set to true/false.
+ When the first secondary display is arrived and last secondary display is removed, `displayavailablechange` event will be triggered, and the property of `navigator.presentation.displayAvailable` is set to true/false.
 
  The presentation browsing context is closed if the secondary display becomes unavailable, so
-that the app has no need to close it by 'window.close'.
+that the app has no need to close it by `window.close`.
+
+### How to setup wireless display?
+#### Requirements
+ * Android 4.2 or newer device with Miracast enabled
+ * A TV or a display with HDMI port
+ * Wireless display adapter, e.g. Netgear PTV3000, Intel WiDi® adapter
+How to Setup Wireless Display:
+
+Plugin the wireless display adapter to display's HDMI port
+Open 'Setting' app and select 'Display' entry on Android device
+Turn on 'Wireless display' to connect the available wireless display
+Use Simulated Secondary Display
+
+If you have no such wireless display adapter, but are willing to play it on your device, you could use the simulated secondary display:
+
+Open 'Setting' app and select 'Developer Options' entry
+Find 'Simulate Secondary Display' to select a display
 
 ### Demos
 * Image Gallery
