@@ -24,7 +24,7 @@ A typical application structure contains the manifest.json file in the root dire
 ```
 /home/abc/dist/src/manifest.json
 /home/abc/dist/src/index.html
-/home/abc/dist/src/appliactions.js
+/home/abc/dist/src/application.js
 /home/abc/dist/src/assets/images.jpg
 ```
 ## Packaging for Android
