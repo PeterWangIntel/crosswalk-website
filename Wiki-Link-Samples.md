@@ -1,7 +1,7 @@
 The wiki system supports a myriad of ways to specify URLs. You can probably come up with some additional forms, however these are the ones we've tested. Edit the page to see the markdown syntax.
 
 ## Supported Link types
-The following work on GitHub and https://crosswalk-project.org/#wiki:
+The following work on GitHub and https://crosswalk-project.org/#wiki :
 
 * Fully Qualified: [website](https://crosswalk-project.org/)
 * Page anchor: [anchor on another page](Home#for-developers)
