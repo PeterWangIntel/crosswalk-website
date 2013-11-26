@@ -6,7 +6,6 @@ The following work on GitHub and https://crosswalk-project.org/#wiki :
 * Fully Qualified: [website](https://crosswalk-project.org/)
 * Page anchor: [anchor on another page](Home#for-developers)
 * Local anchor (provide local page name): [anchor on this page](wiki-link-samples#deprecated-link-types)
-* Local anchor (provide anchor tag): <a href='#deprecated-link-types'>anchor on this page</a>
 * crosswalk-project documentation: [documentation](https://crosswalk-project.org/#documentation)
 * crosswalk-project wiki: [wiki](https://crosswalk-project.org/#wiki/wiki-link-samples)
 * crosswalk-project contribute: [contribute](https://crosswalk-project.org/#contribute)
@@ -23,3 +22,5 @@ These forms should be avoided as of December 1, 2013:
 * wiki entry, incorrect path: [incorrect path pointing to this page](wiki/wiki-link-samples)
 * Local anchor, no page: [anchor on this page](#deprecated-link-types)
 
+## NO SUPPORT
+* Local anchor (provided via HTML anchor tag): <a href='#deprecated-link-types'>anchor on this page</a>
