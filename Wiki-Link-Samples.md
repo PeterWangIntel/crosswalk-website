@@ -7,9 +7,9 @@ The following work on GitHub and https://crosswalk-project.org/#wiki:
 * Page anchor: [anchor on another page](Home#for-developers)
 * Local anchor (provide local page name): [anchor on this page](wiki-link-samples#deprecated-link-types)
 * Local anchor (provide anchor tag): <a href='#deprecated-link-types'>anchor on this page</a>
-* crosswalk-project documentation: [documentation](https://crosswalk-project/#documentation)
-* crosswalk-project wiki: [wiki](https://crosswalk-project/#wiki/wiki-link-samples)
-* crosswalk-project contribute: [contribute](https://crosswalk-project/#contribute)
+* crosswalk-project documentation: [documentation](https://crosswalk-project.org/#documentation)
+* crosswalk-project wiki: [wiki](https://crosswalk-project.org/#wiki/wiki-link-samples)
+* crosswalk-project contribute: [contribute](https://crosswalk-project.org/#contribute)
 * wiki entry, no path: [reference to this page](wiki-link-samples)
 * wiki entry, no path or name: [[wiki-link-samples]]
 
