@@ -20,7 +20,9 @@ These forms should be avoided as of December 1, 2013:
 * crosswalk-project wiki: [wiki](#wiki/wiki-link-samples)
 * crosswalk-project contribute: [contribute](#contribute)
 * wiki entry, incorrect path: [incorrect path pointing to this page](wiki/wiki-link-samples)
-* Local anchor, no page: [anchor on this page](#deprecated-link-types)
 
 ## NO SUPPORT
+The following do not work correctly in GitHub at all, and so are no longer supported.
+
 * Local anchor (provided via HTML anchor tag): <a href='#deprecated-link-types'>anchor on this page</a>
+* Local anchor, no page: [anchor on this page](#deprecated-link-types)
