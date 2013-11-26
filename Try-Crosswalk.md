@@ -4,7 +4,7 @@ binary._
 
 ## Downloads
 
-For official binaries, see [Downloads](#documentation/downloads). If you 
+For official binaries, see [Downloads](http://crosswalk-project.org/#documentation/downloads). If you 
 would like a binary for an operating system not provided, you will need 
 to build Crosswalk yourself.
 
