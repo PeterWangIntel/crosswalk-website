@@ -5,7 +5,7 @@ The following work on GitHub and https://crosswalk-project.org/#wiki:
 
 * Fully Qualified: [website](https://crosswalk-project.org/)
 * Page anchor: [anchor on another page](Home#for-developers)
-* Local anchor: [anchor on this page](#supported-link-types)
+* Local anchor: [anchor on this page](#deprecated-link-types)
 * crosswalk-project documentation: [documentation](https://crosswalk-project/#documentation)
 * crosswalk-project wiki: [wiki](https://crosswalk-project/#wiki/wiki-link-samples)
 * crosswalk-project contribute: [contribute](https://crosswalk-project/#contribute)
