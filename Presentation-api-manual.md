@@ -84,6 +84,7 @@ context of the incumbent script.
  * No available secondary display found (**NotFoundError**)
  * A presentation is already showed on secondary display (**InvalidAccessError**)
  * The platform doesn't support Miracast protocol (**NotSupportedError**)
+ * An invalid url parameter is passed (**InvalidParameterError**)
 
 > **Note**: Since there is no straightforward interaction on the secondary display. When designing the contents showed on the secondary display, the following things should be taken into considerations:
   * UI layout for big screen.
