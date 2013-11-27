@@ -1,20 +1,8 @@
 ## Logistics
-The [Crosswalk wiki](http://crosswalk-project.org/#wiki) is 
-attached to the 
-[crosswalk-website](http://github.com/crosswalk-project/crosswalk-website) 
-project and accessible via the 
-[crosswalk-website.wiki.git](http://github.com/crosswalk-project/crosswalk-website.wiki.git) 
-repository.
-
 To edit content you need to have commit access to the crosswalk-website project.
 
-The Crossalk Wiki is inteneded to be viewed through the 
-http://crosswalk-project.org/#wiki site, and not through the GitHub Wiki 
-viewer. As such, some links may not work when viewing the wiki via 
-GitHub.
-
-The wiki content hosted under the **contribute/** directory populates the [Contribute](#contribute) portion of the 
-Crosswalk website. Similarly, the **documentation/** directory populates [Documentation](#documentation).
+The Crosswalk Wiki is inteneded to be viewed through 
+http://crosswalk-project.org/#wiki. Please view your content on the live website after editing to ensure that the content is styled correctly.
 
 ### Wiki and Website references in content
 
