@@ -10,7 +10,7 @@ See [[wiki-link-samples]].
 ## Linking to main site content
 If you would like to direct link to pages on crosswalk-project.org, use the following syntax for the URL:
 
-https://crosswalk-project.org/#{documentation,contribute,wiki}[/page([/sub-page[/anchor]]|/anchor])
+```https://crosswalk-project.org/#{documentation,contribute,wiki}[/page([/sub-page[/anchor]]|/anchor])```
 
 For example:
 Link to this section: https://crosswalk-project.org/#wiki/editing-the-wiki/linking-to-main-site-content
