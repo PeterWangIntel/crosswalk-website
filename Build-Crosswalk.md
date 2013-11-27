@@ -60,7 +60,7 @@ Setup environment for Android build for IA platform(Change x86 to arm for ARM bu
 Generate Crosswalk projects, execute
 
      export GYP_GENERATORS='ninja'
-     xwalk_android_gyp
+     ./xwalk/gyp_xwalk
 
 To build xwalk core and runtime shell(for developer testing purpose, not used by public), execute:
 
@@ -73,6 +73,13 @@ To build xwalk runtime library APK, execute:
 To build a sample web app APK, execute:
    
     ninja -C out/Release xwalk_app_template_apk
+
+Run test runtime shell
+```
+adb install -r out/Release/apks/XWalkRuntimeLib.apk 
+adb install -r out/Release/apks/XWalkRuntimeClientShell.apk
+adb shell am start -n org.xwalk.runtime.client.shell/org.xwalk.runtime.client.shell.XWalkRuntimeClientShellActivity
+```
 
 #### Building an RPM package for Tizen
 Creating an RPM involves some additional work due to the way `gbs` works: it expects a single git repository with all files for it to run `git archive`. Crosswalk, on the other hand, contains several independent git and Subversion repositories in the same directory tree.
