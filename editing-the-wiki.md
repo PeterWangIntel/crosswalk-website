@@ -1,4 +1,4 @@
-This page is out of date.
+This page is out of date. Work continues to make it less-so.
 
 ## Logistics
 The [Crosswalk wiki](http://crosswalk-project.org/#wiki) is 
