@@ -1,3 +1,5 @@
+This page is out of date.
+
 ## Logistics
 The [Crosswalk wiki](http://crosswalk-project.org/#wiki) is 
 attached to the 
