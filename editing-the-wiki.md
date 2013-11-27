@@ -5,7 +5,7 @@ The Crosswalk Wiki is inteneded to be viewed through
 http://crosswalk-project.org/#wiki. Please view your content on the live website after editing to ensure that the content is styled correctly.
 
 ## Using links
-See [[wiki-links-samples]].
+See [[wiki-link-samples]].
 
 ### Wiki and Website references in content
 
