@@ -4,6 +4,9 @@ To edit content you need to have commit access to the crosswalk-website project.
 The Crosswalk Wiki is inteneded to be viewed through 
 http://crosswalk-project.org/#wiki. Please view your content on the live website after editing to ensure that the content is styled correctly.
 
+## Using links
+See [[wiki-links-samples]].
+
 ### Wiki and Website references in content
 
 Direct links to the Crosswalk website pages should be entered as follows: #SECTION/PAGE/ANCHOR
