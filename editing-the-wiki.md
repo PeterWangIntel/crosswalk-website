@@ -7,23 +7,13 @@ http://crosswalk-project.org/#wiki. Please view your content on the live website
 ## Using links
 See [[wiki-link-samples]].
 
-### Wiki and Website references in content
+## Linking to main site content
+If you would like to direct link to pages on crosswalk-project.org, use the following syntax for the URL:
 
-Direct links to the Crosswalk website pages should be entered as follows: #SECTION/PAGE/ANCHOR
+https://crosswalk-project.org/#{documentation,contribute,wiki}[/page([/sub-page[/anchor]]|/anchor])
 
-#### SECTION
-The section is either [#wiki](#wiki), [#documentation](#documentation), or [#contribute](#contribute).
-
-#### PAGE
-The page is the wiki page itself, for example "editing-the-wiki" (for this page). The syntax to reference this page, 
-since it is presented in the wiki portion of the website, is: [#wiki/editing-the-wiki](#wiki/editing-the-wiki).
-
-#### ANCHOR
-If you want to link to a particular section of a page, you can provide one final path element--the anchor name. To 
-link straight to this section the syntax is: [#wiki/editing-the-wiki/ANCHOR](#wiki/editing-the-wiki/ANCHOR).
-
-NOTE: The ANCHOR syntax is not recognized by Gollum or the GitHub wiki system itself--it is coded into the 
-http://crosswalk-project.org website itself.
+For example:
+Link to this section: https://crosswalk-project.org/#wiki/editing-the-wiki/linking-to-main-site-content
 
 ## Workflow
 The most efficient workflow for editing content is to do so with a local install of Gollum running in a local instance of the website.
