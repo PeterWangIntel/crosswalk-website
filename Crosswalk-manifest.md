@@ -45,3 +45,25 @@ or using the main document:
   }
 }
 ```
+
+Here is the complete manifest file which contains all fields Crosswalk has already been supported:
+```
+{
+  // Required
+  "name": "app name",
+  "version": "1.0.0",
+  "app": {
+    "main":{
+      "scripts": ["main.js"]
+    },
+    "launch":{
+      "local_path": "index.html"
+    }
+  }
+  // recommended
+  "description": "a sample description",
+  "icons": {
+    "128": "icon128.png"
+  }
+}
+```
