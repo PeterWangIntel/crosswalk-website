@@ -45,7 +45,7 @@ or using the main document:
   }
 }
 ```
-
+## Full manifest file
 Here is the complete manifest file which contains all fields Crosswalk has already been supported:
 ```
 {
