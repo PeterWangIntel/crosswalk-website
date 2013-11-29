@@ -4,4 +4,4 @@ This page is intended to document what Androids versions Web APIs(SysApps) can w
 
 | Category | API | Supported on Android versions |
 -------------|--------------------|------------------
-| Presentation | navigator.presentation | >=Android 4.2 |
+| Presentation | navigator.presentation | >= Android 4.2 |
