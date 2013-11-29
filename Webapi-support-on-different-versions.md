@@ -1,4 +1,4 @@
-This page is intended to document what Androids versions Web APIs(SysApps) can work on.
+This page is intended to document what Android versions Web APIs(SysApps) can work on.
 
 # Details
 
