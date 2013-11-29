@@ -51,20 +51,20 @@ Here is the instruction of how to run Crosswalk tests by testkit-lite.
 # Quality Indicators
 
 Crosswalk dashboard
-* Crosswalk Dashboard 
+ * Crosswalk Dashboard 
 
 Crosswalk test reports
-* Canary Test Report
-* Beta Test Report
-* Stable test report 
+ * Canary Test Report
+ * Beta Test Report
+ * Stable test report 
 
 Crosswalk feature list
-* Crosswalk Features 
+ * Crosswalk Features 
 
 Crosswalk open bugs
-* Bugs on Canary
-* Bugs on Beta
-* Bugs on Stable 
+ * Bugs on Canary
+ * Bugs on Beta
+ * Bugs on Stable 
 
 # Bug Report & Bug Scrub
 
@@ -82,5 +82,5 @@ Crosswalk open bugs
 
 # Related Links
 
-Tizen Compliance Test: https://source.tizen.org/compliance/compliance-tests
-Crosswalk binary downloads: https://crosswalk-project.org/#documentation/downloads 
+* Tizen Compliance Test: https://source.tizen.org/compliance/compliance-tests
+* Crosswalk binary downloads: https://crosswalk-project.org/#documentation/downloads 
