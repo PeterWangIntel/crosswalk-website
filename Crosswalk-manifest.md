@@ -15,6 +15,7 @@ Currently the required manifest fields are:
 * **icons**: The "icons" field represent which icons should be used for the application. The "128" size icon should be valid in manifest file.
 
 **Note**
+
 If both "launch" and "main" are specified then "main" will be used.
 
 ## Minimal manifest file
