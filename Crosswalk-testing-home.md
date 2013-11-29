@@ -51,20 +51,20 @@ Here is the instruction of how to run Crosswalk tests by testkit-lite.
 # Quality Indicators
 
 Crosswalk dashboard
- * Crosswalk Dashboard 
+ * [Crosswalk Dashboard](https://crosswalk-project.org/jira/secure/Dashboard.jspa?selectPageId=10303)
 
 Crosswalk test reports
- * Canary Test Report
- * Beta Test Report
+ * [Canary Test Report](https://lists.crosswalk-project.org/pipermail/crosswalk-dev/)
+ * [Beta Test Report](https://lists.crosswalk-project.org/pipermail/crosswalk-dev/)
  * Stable test report 
 
 Crosswalk feature list
- * Crosswalk Features 
+ * [Crosswalk Features](https://crosswalk-project.org/jira/issues/?filter=10004)
 
 Crosswalk open bugs
- * Bugs on Canary
- * Bugs on Beta
- * Bugs on Stable 
+ * [Bugs on Canary](https://crosswalk-project.org/jira/issues/?filter=10001)
+ * [Bugs on Beta](https://crosswalk-project.org/jira/issues/?filter=10002)
+ * [Bugs on Stable](https://crosswalk-project.org/jira/issues/?filter=10003)
 
 # Bug Report & Bug Scrub
 
