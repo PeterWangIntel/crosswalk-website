@@ -69,16 +69,16 @@ Crosswalk open bugs
 # Bug Report & Bug Scrub
 
 * Bug Report
- * Issue tracking for Crosswalk using JIRA. 
+ * Issue tracking for Crosswalk using [JIRA](https://crosswalk-project.org/jira/). 
 * Bug Triage
- * Bug Triage Process 
+ * [Bug Triage Process](http://otcqa.sh.intel.com/wiki/Crosswalk_Bug_Triage_Process)
 * Bug Scrub
  * Purpose:
     * Review new bugs field correctness, such as severity, component, assignee, and set bug priority.
     * Make a decision for branch release blocker 
  * IRC: irc://irc.freenode.net, #crosswalk
  * Time: 14:00 ~ 15:00, CST (Beijing Time), 06:00 ~ 07:00 GMT+0
- * History log: Email Archives 
+ * History log: [Email Archives](https://lists.crosswalk-project.org/pipermail/crosswalk-dev/) 
 
 # Related Links
 
