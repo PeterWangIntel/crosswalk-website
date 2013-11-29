@@ -15,9 +15,6 @@ Currently the required manifest fields are:
 
 If both "launch" and "main" are specified then "main" will be used.
 
-The optional manifest fields are:
-* **manifest_version**: One integer specifying the version of the manifest file format your package requires.
-
 ## Minimal manifest file
 Developer can add a typical application manifest like below to declare application meta data:
 ```
