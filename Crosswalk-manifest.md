@@ -14,6 +14,7 @@ Currently the required manifest fields are:
   * **main**:  Indicate a main document (AKA event page) will be used as the app entry. It should contains "source" to specify the main document’s local path or a "scripts" array to specify JavaScript files local path for auto-generated main document. If both "source" and "scripts" are specified then "source" will be used.
 * **icons**: The "icons" field represent which icons should be used for the application. The "128" size icon should be valid in manifest file.
 
+**Note**
 If both "launch" and "main" are specified then "main" will be used.
 
 ## Minimal manifest file
