@@ -74,8 +74,8 @@ Crosswalk open bugs
  * Bug Triage Process 
 * Bug Scrub
  * Purpose:
-  * Review new bugs field correctness, such as severity, component, assignee, and set bug priority.
-  * Make a decision for branch release blocker 
+    * Review new bugs field correctness, such as severity, component, assignee, and set bug priority.
+    * Make a decision for branch release blocker 
  * IRC: irc://irc.freenode.net, #crosswalk
  * Time: 14:00 ~ 15:00, CST (Beijing Time), 06:00 ~ 07:00 GMT+0
  * History log: Email Archives 
