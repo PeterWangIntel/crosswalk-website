@@ -16,6 +16,7 @@ out of the wiki and planted in the higher level documentation under either [Docu
 * [Crosswalk 1 release notes] (wiki/Crosswalk-1-release-notes)
 * [Intent to Implement] (wiki/intent-to-implement)
 * [Presentation API Documentation] (wiki/presentation-api-manual)
+* [Web API support on different Android versions](wiki/webapi-support-on-different-versions)
 
 If you any question on how to use Crosswalk you can ask on IRC. On freenode.net, we hang out on the #crosswalk channel.
 
