@@ -29,3 +29,58 @@ QA team conducts testing with different frequencies and test scope on Crosswalk 
  * Web API Test: W3C Web API, Supplementary API and Extension API, which are strictly based on open specifications or Crosswalk specific specification. Spec-based tests have full coverage for interface and statement described in specification. Most W3C Web API tests are leveraged from Tizen Compliance Tests
  * Behavior: A Web application that includes the combined behavior tests, composing by a set of scenarios tests which could be performed by end user directly in one Web application.
  * Sample Web Application: Validate web runtime model by sample web applications. The test involves full-function web applications to test Web runtime features from W3C part and Crosswalk specific part cross different OS and platforms. 
+
+# Test Execution Plan
+
+Test execution plan and test cadence for Crosswalk branching (Canary, Beta, Stable) release. 
+
+# Test Contribution
+
+QA team is committed to evaluate the quality of Crosswalk features reliable and interoperable on web platforms. With this intention, we prioritize Crosswalk testing as a way to perform the latest standard W3C Web API tests always.
+
+In past two years, we submitted comprehensive spec test suites, such as HTML5 Web audio and video, file API, CSS3 to the W3C. We’ll continue to create conformance tests to W3C web spec test suites, so that implementations for new features are interoperable from the beginning. And we are also working with web-platform-tests team with boarder contributors to share and improve spec test methodology, test maintenance and test automation infrastructure in community.
+
+We've always played a key participant role and major organizer in Test the Web Forward events. Besides over thousands tests has been submitted and passed review during the past events, we are the key presenters of delivering the training sessions in Beijing, Shanghai and Shenzhen, PRC events.
+
+# Running Tests
+
+Before running tests on test device, you might need some time to set up the test environment by using the testkit-lite tool.
+
+Here is the instruction of how to run Crosswalk tests by testkit-lite. 
+
+# Quality Indicators
+
+Crosswalk dashboard
+* Crosswalk Dashboard 
+
+Crosswalk test reports
+* Canary Test Report
+* Beta Test Report
+* Stable test report 
+
+Crosswalk feature list
+* Crosswalk Features 
+
+Crosswalk open bugs
+* Bugs on Canary
+* Bugs on Beta
+* Bugs on Stable 
+
+# Bug Report & Bug Scrub
+
+* Bug Report
+ * Issue tracking for Crosswalk using JIRA. 
+* Bug Triage
+ * Bug Triage Process 
+* Bug Scrub
+ * Purpose:
+  * Review new bugs field correctness, such as severity, component, assignee, and set bug priority.
+  * Make a decision for branch release blocker 
+ * IRC: irc://irc.freenode.net, #crosswalk
+ * Time: 14:00 ~ 15:00, CST (Beijing Time), 06:00 ~ 07:00 GMT+0
+ * History log: Email Archives 
+
+# Related Links
+
+Tizen Compliance Test: https://source.tizen.org/compliance/compliance-tests
+Crosswalk binary downloads: https://crosswalk-project.org/#documentation/downloads 
