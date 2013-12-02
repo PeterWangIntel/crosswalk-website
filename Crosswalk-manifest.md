@@ -23,7 +23,6 @@ Developer can add a typical application manifest like below to declare applicati
 ```
 {
   "name": "Calculator",
-  "manifest_version": 1,
   "version": "1.1.3.1",
   "app": {
     "launch":{
@@ -36,7 +35,6 @@ or using the main document:
 ```
 {
   "name": "Calculator",
-  "manifest_version": 1,
   "version": "1.1.3.1",
   "app": {
     "main":{
