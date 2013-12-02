@@ -11,4 +11,4 @@ This page is intended to document what Android versions Web APIs(SysApps) can wo
 | DeviceCapabilities Storage | xwalk.experimental.system.getStorageInfo() | >= Android 4.0 |
 
 Notes:
-Even if a device is installed with Android 4.2, it doesn't mean all new features in Android 4.2 are already supported on some devices. For example, Presentation API can't work on ZTE Geek Phone(Android 4.2.2). 
+Even if a device is installed with Android 4.2, it doesn't mean all new features in Android 4.2 are already supported. For example, Presentation API can't work on ZTE Geek Phone(Android 4.2.2). 
