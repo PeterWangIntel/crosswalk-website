@@ -32,4 +32,6 @@ See [[wiki-link-samples]].
 4. Visit that page in your browser to ensure that your edits look correct when formatted for the live site.
 
 # Editing content from Documentation and Contribute
-The content under 'documentation' and 'contribute' typically goes through more validation and styling enforcement than the wiki content. As such, it is managed in the crosswalk-website.git project itself. Edits to that portion of the website go through a review process prior to landing on the live site.
+The content under '[documentation](https://crosswalk-project.org/#documentation)' and '[contribute](https://crosswalk-project.org/#contribute)' goes through more validation and styling enforcement than the [wiki](https://crosswalk-project.org/#wiki) content. As such, that content is managed in the crosswalk-website.git project itself. 
+
+Edits to that portion of the website go through a review process prior to landing on the live site.
