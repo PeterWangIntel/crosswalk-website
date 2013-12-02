@@ -1,12 +1,9 @@
 # Editing the Wiki
-To edit content you need to have commit access to the crosswalk-website project.
+To edit content need commit access to the crosswalk-website project.
 
-The Crosswalk Wiki is intended to be viewed through 
-http://crosswalk-project.org/#wiki. 
+Please view your content on the [live website](https://crosswalk-project.org/#wiki/history) after editing to ensure that the content is styled correctly.
 
-Please view your content on the live website after editing to ensure that the content is styled correctly.
-
-# Linking to site content
+## Linking to site content
 If you would like to direct link from wiki content to pages on crosswalk-project.org, use the following syntax for the URL:
 
 ```
@@ -20,18 +17,18 @@ For example, to link to the "Workflow" section on this page, you would use the f
 ```
 which would look like this: [Editing Workflow](https://crosswalk-project.org/#wiki/editing-the-wiki/workflow)
 
-# Additional link syntax
-See [[wiki-link-samples]].
+## Additional link syntax
+For information on the various type of links you can use in your pages, see [[wiki-link-samples]].
 
-# Workflow
-1. create, edit, or delete a page on GitHub.
+## Workflow
+1. create, edit, or delete a page on GitHub. Recommendation is to use the 'Markdown' mode for new content.
 2. Note the URL for the page on GitHub, for example this page is:
 
    https://github.com/crosswalk-project/crosswalk-website/wiki/editing-the-wiki
 3. Replace 'https://github.com/crosswalk-project/crosswalk-website/wiki' with 'https://crosswalk-project.org/#wiki'
 4. Visit that page in your browser to ensure that your edits look correct when formatted for the live site.
 
-# Editing other content
+## Editing other content
 The content under '[documentation](https://crosswalk-project.org/#documentation)' and '[contribute](https://crosswalk-project.org/#contribute)' goes through more validation and styling enforcement than the [wiki](https://crosswalk-project.org/#wiki) content. As such, that content is managed in the crosswalk-website.git project itself. 
 
 Edits to that portion of the website go through a review process prior to landing on the live site.
