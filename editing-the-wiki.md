@@ -6,16 +6,38 @@ Please view your content on the [live website](https://crosswalk-project.org/#wi
 ## Linking to site content
 If you would like to direct link from wiki content to pages on crosswalk-project.org, use the following syntax for the URL:
 
-```
+```pre
 https://crosswalk-project.org/#{documentation,contribute,wiki}[/page([/sub-page[/anchor]]|/anchor])
 ```
 
 For example, to link to the "Workflow" section on this page, you would use the following
 
-```
+```pre
 [Editing Workflow](https://crosswalk-project.org/#wiki/editing-the-wiki/workflow)
 ```
 which would look like this: [Editing Workflow](https://crosswalk-project.org/#wiki/editing-the-wiki/workflow)
+
+## Adding an image
+To add a image hosted the wiki, you first need to add the file into the wiki. You need to do that via the command line:
+
+```bash
+git clone ssh://git@github.com/crosswalk-project/crosswalk-website.wiki.git wiki
+cd wiki
+ls assets
+```
+You will see several files in the assets/ directory. This is where you copy your file. Let's say it is called "android-webgl.png". Add that file to git, commit that change, then push back to GitHub:
+```bash
+git add assets/android-webgl.png
+git commit -s -a -m 'Added android-webgl.png for "developing-on-windows" page'
+git push origin master
+```
+To reference the image from your page:
+```html
+<img src='assets/android-webgl.png' alt='WebGL Sample Application on Android'>
+```
+Which, when viewed from the wiki should look like this:
+
+<img src='assets/android-webgl.png' alt='WebGL Sample Application on Android'>
 
 ## Additional link syntax
 For information on the various type of links you can use in your pages, see [[wiki-link-samples]].
