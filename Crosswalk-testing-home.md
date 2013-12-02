@@ -34,6 +34,8 @@ QA team conducts testing with different frequencies and test scope on Crosswalk 
 
 Test execution plan and test cadence for Crosswalk branching (Canary, Beta, Stable) release. 
 
+<img src='assets/testcadence.png' alt='Test Cadence'>
+
 ## Test Contribution
 
 QA team is committed to evaluate the quality of Crosswalk features reliable and interoperable on web platforms. With this intention, we prioritize Crosswalk testing as a way to perform the latest standard W3C Web API tests always.
