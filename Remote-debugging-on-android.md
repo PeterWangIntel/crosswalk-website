@@ -30,7 +30,7 @@ shell@android$ cat /proc/net/unix |grep devtools_remote
 00000000: 00000002 00000000 00010000 0001 01 1102698 @com.abc.app_devtools_remote
 00000000: 00000002 00000000 00010000 0001 01 1092981 @org.xwalk.core.xwview.shell_devtools_remote
 ```
-If you don't see the string combined with the package name and '_devtools_remote', then you probably have to enable remote debugging for the web app.
+If you don't see the string combined with the package name and ```'_devtools_remote'```, then you probably have to enable remote debugging for the web app.
 
 ## Reference
 * https://developers.google.com/chrome-developer-tools/docs/remote-debugging
