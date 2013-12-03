@@ -34,6 +34,9 @@ If you any question on how to use Crosswalk you can ask on IRC. On freenode.net,
 * [[Graphics Roadmap]]
 * [[Rebasing our forks]]
 
+## For QA
+* [[Crosswalk testing home]]
+
 ## Crosswalk's infrastructure
 * [Testing Framework](wiki/Crosswalk-testing-framework) 
 * [Website](https://github.com/crosswalk-project/crosswalk-website/blob/master/README.md)
