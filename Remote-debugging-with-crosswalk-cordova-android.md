@@ -4,7 +4,7 @@ If you haven't created your app, please refer to [Create Hello World App](Create
 
 The remote debugging features is disabled by default in your Cordova app. To enable it, please call
     
-    XWalkView.enableRemoteDebugging()
+    XWalkView.enableRemoteDebugging();
 
 in the main activity explicitly. 
 
