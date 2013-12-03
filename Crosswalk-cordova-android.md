@@ -20,7 +20,7 @@ Setup the Development Environment
 ---
 
 Since Crosswalk-based Cordova Android embeds Crosswalk, firstly you need to setup the dependency. 
- * [Setup Development Environment](Setup-Development-Environment-Of-Crosswalk-Cordova-Android).
+ * [Setup Development Environment](Setup-Development-Environment-Of-Crosswalk-Cordova-Android)
 
 Creating & Running Apps
 ---
