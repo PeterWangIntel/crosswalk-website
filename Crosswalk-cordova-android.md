@@ -31,7 +31,7 @@ You could use the command-line tool and Android Developer Tool to create and man
 Remote Debugging
 ---
 
-Thanks to the remote debugging capability of Crosswalk, you are able to remote debug your Cordova Apps via Chrome Developer Tools.
+Thanks to the remote debugging capability of Crosswalk, you are able to debug your Cordova Apps remotely via Chrome Developer Tools.
  * [Remote Debug Cordova App](Remote-Debugging-With-Crosswalk-Cordova-Android)
 
 Adding Plugins
