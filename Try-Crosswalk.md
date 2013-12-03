@@ -40,8 +40,7 @@ You should see a native app window that renders the `www.google.com` page. Refer
 
 #### On Android
 
-See [Installing Crosswalk](#documentation/getting_started/installing_crosswalk/android).
-Note that running Crosswalk depends on GPU acceleration but there are lots of graphics issues in Android emulator. So don't suggest to run Crosswalk on Android on Android emulators.
+See [Installing Crosswalk](#documentation/getting_started/installing_crosswalk/android). If you are running Android within the x86 emulator, be aware that depending on the capabilities of your host platform's graphics card, you may experience rendering and graphical issues.
 
 #### On Tizen
 
