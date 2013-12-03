@@ -19,8 +19,8 @@ For arm:
 
 Extract it:
 
-    $ unzip crosswalk-3.32.42.0.zip
-    $ cd crosswalk-3.32.42.0/
+    $ unzip crosswalk-3.32.47.0.zip
+    $ cd crosswalk-3.32.47.0/
     $ tar zxvf xwalk_core_library.tar.gz
 
 ##### Build (Optional)
