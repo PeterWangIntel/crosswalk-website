@@ -64,7 +64,8 @@ Here is the complete manifest file which contains all fields Crosswalk has alrea
   "version": "1.0.0",
   "app": {
     "main":{
-      "scripts": ["main.js"]
+      "scripts": ["main.js"],
+      "source": "main.html"
     },
     "launch":{
       "local_path": "index.html"
