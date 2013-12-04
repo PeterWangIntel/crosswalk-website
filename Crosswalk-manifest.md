@@ -43,6 +43,18 @@ or using the main document:
   }
 }
 ```
+and
+```
+{
+  "name": "Calculator",
+  "version": "1.1.3.1",
+  "app": {
+    "main":{
+      "source": "main.html"
+    }
+  }
+}
+```
 ## Full manifest file
 Here is the complete manifest file which contains all fields Crosswalk has already been supported:
 ```
