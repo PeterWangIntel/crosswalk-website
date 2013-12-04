@@ -70,7 +70,7 @@ Here is the complete manifest file which contains all fields Crosswalk has alrea
     "launch":{
       "local_path": "index.html"
     }
-  }
+  },
   // recommended
   "description": "a sample description",
   "icons": {
