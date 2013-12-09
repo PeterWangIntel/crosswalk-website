@@ -27,7 +27,7 @@ work_dir=.
 repos = repo.mobile_public_2.1
 
 [repo.mobile_public_2.1]
-url = http://download.tizen.org/releases/2.1/tizen-2.1_20130517.6/
+url = http://download.tizen.org/releases/2.1/latest/
 ```
 
 * If you are curious what happen, refer to [Creating a Tizen Platform Image from Scratch through Local Build](https://source.tizen.org/documentation/developer-guide/creating-tizen-platform-image-scratch-through-local-build)
@@ -71,7 +71,7 @@ Patch3:         %{name}-1.29-revert-nss-commits.patch
  * patch manually
 ```
 > cd [your source]
-> patch -p1 <xwalk dir>/package/%{name}-1.29-do-not-look-for-gtk2-when-using-aura.patch
+> patch -p1 < <xwalk dir>/package/%{name}-1.29-do-not-look-for-gtk2-when-using-aura.patch
 # do all patches (some patch need -p2, not -p1)
 ```
 * go inside chroot
@@ -101,6 +101,7 @@ export GYP_GENERATORS='make'
 -Duse_openssl=1
 ```
  * you can do it in chroot. Note you need -Dtarget_arch=ia32 in addition.
+ * DON'T COPY & PASTE FROM HERE. IT MAYBE STALE. USE your crosswalk.spec in your repository
 ```
 $ export GYP_GENERATORS='make'
 $ ./src/xwalk/gyp_xwalk src/xwalk/xwalk.gyp \
