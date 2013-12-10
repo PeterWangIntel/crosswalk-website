@@ -72,7 +72,9 @@ Patch3:         %{name}-1.29-revert-nss-commits.patch
 ```
 > cd [your source]
 # List patches
-> cat packaging/crosswalk.spec | grep "Patch.*:" | perl -pe 's/Patch.*:\s*/patch -p0 < src\/xwalk\/package\/$1/' | perl -pe 's/%{name}/crosswalk/'
+> cat packaging/crosswalk.spec | grep "Patch.*:" \
+  | perl -pe 's/Patch.*:\s*/patch -p0 < src\/xwalk\/package\/$1/' \
+  | perl -pe 's/%{name}/crosswalk/'
 # Call each line manually (some patches might need -p0 changed to -p1 or similar)
 > patch -p0 < src/xwalk/package/crosswalk-do-not-look-for-gtk2-when-using-aura.patch
 ```
