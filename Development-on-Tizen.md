@@ -1,4 +1,4 @@
-# Set up your Tizen environment
+# Setting up your Tizen environment
 ## Setting up access to Tizen Gerrit
 * When using GBS, it will download many resources from a server, so you need to set up Gerrit access for doing so.
 * Follow [Setting up Development Environment](https://source.tizen.org/documentation/developer-guide/environment-setup)
