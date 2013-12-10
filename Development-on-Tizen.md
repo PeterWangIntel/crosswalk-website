@@ -2,7 +2,7 @@
 ## Setting up Gerrit Access
 * When using GBS, it will download many resources from a server, so you need to set up Gerrit access for doing so.
 * Follow [Setting up Development Environment](https://source.tizen.org/documentation/developer-guide/environment-setup)
-* If you are an Intel blue batch, follow the following: [Using git at intel](https://opensource.intel.com/linux-wiki/Using_git)
+* If you are an Intel Blue Badge employee, follow the following: [Using GIT at intel](https://opensource.intel.com/linux-wiki/Using_git)
 
 ## Install development tools
 * On host, you must have gbs and mic installed.
