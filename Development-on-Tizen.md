@@ -56,11 +56,11 @@ url = http://download.tizen.org/releases/2.1/latest/
 > cd /home/<yourID>/GBS-ROOT/local/BUILD-ROOTS/scratch.i586.0/home/abuild/
 > mkdir workspace
 > cd -
-# mount your source
-> sudo mount --bind <your source path> /home/<yourID>/GBS-ROOT/local/BUILD-ROOTS/scratch.i586.0/home/abuild/workspace
-# e.g. <your source path> is /home/<yourID>/chromium if your xwalk is in /home/<yourID>/chromium/src/xwalk
+# Mount your source directory.
+> sudo mount --bind <source_path> ~/GBS-ROOT/local/BUILD-ROOTS/scratch.i586.0/home/abuild/workspace
+# where <source _path> is ~/repo/xwalk if xwalk is in ~repo/xwalk/src/xwalk
 ```
-* manually patch patches
+* Manually patching patches
  * spec includes as follows
 ```
 in crosswalk.spec
@@ -76,7 +76,7 @@ Patch3:         %{name}-1.29-revert-nss-commits.patch
 ```
 * Enter chroot environment
 ```
-> sudo gbs chroot /home/<yourID>/GBS-ROOT/local/BUILD-ROOTS/scratch.i586.0
+> sudo gbs chroot ~/GBS-ROOT/local/BUILD-ROOTS/scratch.i586.0
 $ cd ~/workspace   # this is your mounting point
 ```
 * Prepare GYP build
@@ -110,7 +110,7 @@ $ ./src/xwalk/gyp_xwalk src/xwalk/xwalk.gyp \
 -Dtizen_mobile=1 
 -Dtarget_arch=ia32
 ```
-* Build it!
+* Start the actual build
 ```
 $ make -j9 -C src BUILDTYPE=Release xwalk
 ```
