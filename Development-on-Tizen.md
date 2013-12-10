@@ -1,20 +1,20 @@
 # Set up your Tizen environment
 ## Setting up Gerrit Access
-* When using gbs, gbs download many resources from server. So you need to set up Gerrit Access.
+* When using GBS, it will download many resources from a server, so you need to set up Gerrit access for doing so.
 * Follow [Setting up Development Environment](https://source.tizen.org/documentation/developer-guide/environment-setup)
-* If you are Intel guy, follow Intel proxy setting: [Using git at intel](https://opensource.intel.com/linux-wiki/Using_git)
+* If you are an Intel blue batch, follow the following: [Using git at intel](https://opensource.intel.com/linux-wiki/Using_git)
 
 ## Install development tools
-* On host, you must have gbs and mic.
+* On host, you must have gbs and mic installed.
  * There are some steps until you can install on Ubuntu by `sudo apt-get install gbs mic`
 * Until `sudo apt-get install gbs mic`, follow [Installing development tools](https://source.tizen.org/documentation/developer-guide/installing-development-tools)
 
-## Set up gbs environment
-* What is gbs?
- * gbs can bake xwalk rpm.
- * When gbs runs, gbs creates chroot environment to build i586 target
- * gbs automatically downloads all dependencies from tizen server
-* Make .gbs.conf
+## Setting up GBS environment
+* What is GBS?
+ * GBS can create (called 'bake') xwalk rpm.
+ * When it runs, GBS creates a chroot environment to build the i586 target
+ * GBS automatically downloads all dependencies from the Tizen server
+* Create your own .gbs.conf
 `> vi ~/.gbs.conf`
  * For example, my .gbs.conf
 ```
@@ -32,22 +32,22 @@ url = http://download.tizen.org/releases/2.1/latest/
 
 * If you are curious what happen, refer to [Creating a Tizen Platform Image from Scratch through Local Build](https://source.tizen.org/documentation/developer-guide/creating-tizen-platform-image-scratch-through-local-build)
 
-# Build xwalk
+# Building Crosswalk
 ## Preface
 * We will work in both HOST and CHROOT.
 * I distinguish each as follows:
  * In HOST `> command`
  * In CHROOT `$ command`
 
-## Bake rpm
+## Baking the RPM
 * Refer to "Building an RPM package for Tizen" in [[Build-Crosswalk]]
-* If you bake rpm once, chroot environment is created. You can build xwalk inside chroot! Refer to next section.
-* If you change your spec file, we need to bake rpm to renew chroot environment.
+* If you bake the RPM once, a chroot environment is created. You can now build xwalk inside chroot. Refer to next section.
+* If you change your spec file, you need to rebake the RPM to recreate the chroot environment.
 
 ## Build XWalk inside chroot.
-* You need to bake rpm once, because gbs creates chroot environment.
- * If you don't want to run rpm (because it takes a lot of time), refer to Tips section. [[Development-on-Tizen#tips]]
-* If you bake rpm once and you don't change spec file, just build inside chroot. Don't waste time to bake rpm again.
+* You need to bake the RPM at least once, as GBS creates the chroot environment.
+ * If you want to bypass that (as it takes a lot of time), check out the trick in the Tips section. [[Development-on-Tizen#tips]]
+* If you bake rpm once and you don't change the spec file, just build inside chroot. Do not waste time to bake the RPM yet again.
 
 ### Build
 * mount your source to chroot
