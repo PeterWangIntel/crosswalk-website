@@ -117,5 +117,4 @@ that the app has no need to close it by `window.close`.
  * Find `Simulate Secondary Display` to select a display
 
 ### Demos
-* Image Gallery
-* HexGL
+* [Image Gallery](https://github.com/crosswalk-project/crosswalk-demos/tree/master/Gallery) - View your photos on the wireless display
