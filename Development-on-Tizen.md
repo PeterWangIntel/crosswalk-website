@@ -145,18 +145,18 @@ export HOME=/home/app
 # Start debugging with gdb
 gdb --args /usr/lib/xwalk/xwalk http://www.google.com
 ```
-* Refer to [[Remote-debugging-xwalk-on-Tizen-2.1]]
+* Remote debugging is possible, please refer to [[Remote-debugging-xwalk-on-Tizen-2.1]]
 
 # Tips and Tricks
-## install dependent packages without running gbs fully.
-* You can update your chroot using dummy project that has the same spec file.
+## install dependency packages without fully running GBS.
+* You can update your chroot using a dummy project that has the same spec file.
 ```
 > mkdir gbsdummy
 > cd gbsdummy
-> cp -r [xwalk dir]/packaging ./
+> cp -r <source_path>/packaging ./
 > git init
 > git add *
 > git commit -a -m init
 > gbs build -A i586
 ```
-* above command will fail but your chroot is updated. \o/
+* The above command *will* fail, but your chroot is updated. \o/
