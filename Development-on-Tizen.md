@@ -120,13 +120,13 @@ $ ./src/xwalk/gyp_xwalk src/xwalk/xwalk.gyp \
 $ make -j9 -C src BUILDTYPE=Release xwalk
 ```
 
-### Deploy
+### Deploying
 * Copy binary onto device
 ```
 > sdb root on
 > sdb push out/Release/xwalk /usr/lib/xwalk/xwalk
 ```
-* You can run xwalk on device using `sdb shell`. Refer to following section.
+* You can run xwalk on the device using `sdb shell`. Refer to the following section.
 
 ## Run
 * Refer to [Installing Crosswalk](#documentation/getting_started/installing_crosswalk/tizen)
@@ -148,7 +148,7 @@ gdb --args /usr/lib/xwalk/xwalk http://www.google.com
 * Remote debugging is possible, please refer to [[Remote-debugging-xwalk-on-Tizen-2.1]]
 
 # Tips and Tricks
-## install dependency packages without fully running GBS.
+## Install dependency packages without fully running GBS.
 * You can update your chroot using a dummy project that has the same spec file.
 ```
 > mkdir gbsdummy
