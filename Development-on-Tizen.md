@@ -61,18 +61,20 @@ url = http://download.tizen.org/releases/2.1/latest/
 # where <source _path> is ~/repo/xwalk if xwalk is in ~repo/xwalk/src/xwalk
 ```
 * Manually patching patches
- * spec includes as follows
+ * The spec file includes patches like
 ```
-in crosswalk.spec
 Patch1:         %{name}-1.29-do-not-look-for-gtk2-when-using-aura.patch
 Patch2:         %{name}-1.29-look-for-pvr-libGLESv2.so.patch
 Patch3:         %{name}-1.29-revert-nss-commits.patch
+...
 ```
- * patch manually
+ * Apply the patches manually
 ```
 > cd [your source]
-> patch -p1 < <xwalk dir>/package/%{name}-1.29-do-not-look-for-gtk2-when-using-aura.patch
-# Apply all patches (some patches might need -p2, not -p1)
+# List patches
+> cat packaging/crosswalk.spec | grep "Patch.*:" | perl -pe 's/Patch.*:\s*/patch -p0 < src\/xwalk\/package\/$1/' | perl -pe 's/%{name}/crosswalk/'
+# Call each line manually (some patches might need -p0 changed to -p1 or similar)
+> patch -p0 < src/xwalk/package/crosswalk-do-not-look-for-gtk2-when-using-aura.patch
 ```
 * Enter chroot environment
 ```
