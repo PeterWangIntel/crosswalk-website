@@ -58,7 +58,7 @@ url = http://download.tizen.org/releases/2.1/latest/
 > cd -
 # Mount your source directory.
 > sudo mount --bind <source_path> ~/GBS-ROOT/local/BUILD-ROOTS/scratch.i586.0/home/abuild/workspace
-# where <source _path> is ~/repo/xwalk if xwalk is in ~repo/xwalk/src/xwalk
+# where <source_path> is ~/repo/xwalk if xwalk is in ~repo/xwalk/src/xwalk
 ```
 * Manually patching patches
  * The spec file includes patches like
@@ -70,7 +70,7 @@ Patch3:         %{name}-1.29-revert-nss-commits.patch
 ```
  * Apply the patches manually
 ```
-> cd [your source]
+> cd <source_path>
 # List patches
 > cat packaging/crosswalk.spec | grep "Patch.*:" \
   | perl -pe 's/Patch.*:\s*/patch -p0 < src\/xwalk\/package\/$1/' \
