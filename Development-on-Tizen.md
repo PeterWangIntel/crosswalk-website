@@ -131,7 +131,20 @@ $ make -j9 -C src BUILDTYPE=Release xwalk
 ## Run
 * Refer to [Installing Crosswalk](#documentation/getting_started/installing_crosswalk/tizen)
 
-## Debug
+## Debugging
+* For debugging on the device, we must turn off the smack label.
+```
+sdb root on
+sdb shell
+# As 'chsmack /usr/lib/xwalk/xwalk' says '_' we use that.
+echo "_" /proc/self/attr/current
+# Change to app instead of developer (as that is required for pipes to work)
+su - app
+# Set HOME properly up
+export HOME=/home/app
+# Start debugging
+gdb --args /usr/lib/xwalk/xwalk http://www.google.com
+```
 * Refer to [[Remote-debugging-xwalk-on-Tizen-2.1]]
 
 # Tips and Tricks
