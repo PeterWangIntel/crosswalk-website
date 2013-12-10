@@ -53,7 +53,7 @@ url = http://download.tizen.org/releases/2.1/latest/
 * mount your source to chroot
 ```
 # make directory of mounting point
-> cd /home/<yourID>/GBS-ROOT/local/BUILD-ROOTS/scratch.i586.0/home/abuild/
+> cd ~/GBS-ROOT/local/BUILD-ROOTS/scratch.i586.0/home/abuild/
 > mkdir workspace
 > cd -
 # Mount your source directory.
