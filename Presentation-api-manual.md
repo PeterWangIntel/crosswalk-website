@@ -1,4 +1,4 @@
-> Currently, Presentation API on Crosswalk is only for Android 4.2+ with Miracast compatible wireless display. The Presentation API first landed in Crosswalk 3.32.49.0.
+> Currently, Presentation API on Crosswalk is only for Android 4.2+ with Miracast compatible wireless display support. The Presentation API was firstly landed in Crosswalk 3.32.49.0.
 
 Presentation API allows web app to stream web contents (aka. presentation) to the secondary display
 connected to the Android device via Miracast compatible  wireless display. See
