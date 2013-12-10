@@ -1,9 +1,8 @@
-Presentation API allows web app to stream web contents (aka. presentation) to the secondary display
-connected to system via Miracast wireless display, HDMI port or Airplay. See
-W3C spec draft at http://webscreens.github.io/presentation-api/.
+> Currently, Presentation API on Crosswalk is only for Android 4.2+ with Miracast compatible wireless display. The Presentation API first landed in Crosswalk 3.32.49.0.
 
-Currently, Presentation API on Crosswalk is only for Android 4.2+ with Miracast
-compatible wireless display.
+Presentation API allows web app to stream web contents (aka. presentation) to the secondary display
+connected to system via Miracast wireless display. See
+W3C spec draft at http://webscreens.github.io/presentation-api/.
 
 * [navigator.presentation.requestShow Method](Presentation-api-manual#navigatorpresentationrequestshow-method)
 * [navigator.presentation.displayAvailable Property](Presentation-api-manual#navigatorpresentationdisplayavailable-property)
