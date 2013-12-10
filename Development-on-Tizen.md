@@ -107,7 +107,7 @@ $ ./src/xwalk/gyp_xwalk src/xwalk/xwalk.gyp \
 -Duse_system_nspr=1 \
 -Denable_xi21_mt=1 \
 -Duse_xi2_mt=0 \ 
--Dtizen_mobile=1 
+-Dtizen_mobile=1 \
 -Dtarget_arch=ia32
 ```
 * Start the actual build
