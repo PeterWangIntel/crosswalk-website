@@ -72,39 +72,28 @@ Patch3:         %{name}-1.29-revert-nss-commits.patch
 ```
 > cd [your source]
 > patch -p1 < <xwalk dir>/package/%{name}-1.29-do-not-look-for-gtk2-when-using-aura.patch
-# do all patches (some patch need -p2, not -p1)
+# Apply all patches (some patches might need -p2, not -p1)
 ```
-* go inside chroot
+* Enter chroot environment
 ```
 > sudo gbs chroot /home/<yourID>/GBS-ROOT/local/BUILD-ROOTS/scratch.i586.0
 $ cd ~/workspace   # this is your mounting point
 ```
-* gyp
- * your spec file includes as follows
+* Prepare GYP build
+ * The spec file (packaging/crosswalk.spec) includes the build command with associated flags.
 ```
-in crosswalk.spec
+The line starts like this:
 export GYP_GENERATORS='make'
 ./src/xwalk/gyp_xwalk src/xwalk/xwalk.gyp \
--Ddisable_nacl=1 \
--Dpython_ver=2.7 \
--Duse_aura=1 \
--Duse_cups=0 \
--Duse_gconf=0 \
--Duse_kerberos=0 \
--Duse_system_bzip2=1 \
--Duse_system_icu=1 \
--Duse_system_libexif=1 \
--Duse_system_libxml=1 \
--Duse_system_nspr=1 \
--Denable_xi21_mt=1 \
--Dtizen_mobile=1 \
--Duse_openssl=1
+...
+
 ```
- * you can do it in chroot. Note you need -Dtarget_arch=ia32 in addition.
- * DON'T COPY & PASTE FROM HERE. IT MAYBE STALE. USE your crosswalk.spec in your repository
+ * You can call this directly in chroot. Note you need to append -Dtarget_arch=ia32 for it to work.
+ * THE BELOW MIGHT BE STALE: AVOID COPYING. Please verify that the below fits with crosswalk.spec
 ```
 $ export GYP_GENERATORS='make'
 $ ./src/xwalk/gyp_xwalk src/xwalk/xwalk.gyp \
+--no-parallel \
 -Ddisable_nacl=1 \
 -Dpython_ver=2.7 \
 -Duse_aura=1 \
@@ -117,17 +106,17 @@ $ ./src/xwalk/gyp_xwalk src/xwalk/xwalk.gyp \
 -Duse_system_libxml=1 \
 -Duse_system_nspr=1 \
 -Denable_xi21_mt=1 \
--Dtizen_mobile=1 \
--Duse_openssl=1 \
+-Duse_xi2_mt=0 \ 
+-Dtizen_mobile=1 
 -Dtarget_arch=ia32
 ```
 * Build it!
 ```
-$ make -j6 -C src BUILDTYPE=Release xwalk
+$ make -j9 -C src BUILDTYPE=Release xwalk
 ```
 
 ### Deploy
-* Copy binary into device
+* Copy binary onto device
 ```
 > sdb root on
 > sdb push out/Release/xwalk /usr/lib/xwalk/xwalk
@@ -140,7 +129,7 @@ $ make -j6 -C src BUILDTYPE=Release xwalk
 ## Debug
 * Refer to [[Remote-debugging-xwalk-on-Tizen-2.1]]
 
-# Tips
+# Tips and Tricks
 ## install dependent packages without running gbs fully.
 * You can update your chroot using dummy project that has the same spec file.
 ```
@@ -152,4 +141,4 @@ $ make -j6 -C src BUILDTYPE=Release xwalk
 > git commit -a -m init
 > gbs build -A i586
 ```
-* above command fails but your chroot is updated. \o/
+* above command will fail but your chroot is updated. \o/
