@@ -1,7 +1,7 @@
 > Currently, Presentation API on Crosswalk is only for Android 4.2+ with Miracast compatible wireless display. The Presentation API first landed in Crosswalk 3.32.49.0.
 
 Presentation API allows web app to stream web contents (aka. presentation) to the secondary display
-connected to system via Miracast wireless display. See
+connected to the Android device via Miracast compatible  wireless display. See
 W3C spec draft at http://webscreens.github.io/presentation-api/.
 
 * [navigator.presentation.requestShow Method](Presentation-api-manual#navigatorpresentationrequestshow-method)
@@ -9,7 +9,7 @@ W3C spec draft at http://webscreens.github.io/presentation-api/.
 * [navigator.presentation.displayavailablechange Event](Presentation-api-manual#navigatorpresentationdisplayavailablechange-event)
 
 ### Sample Code
-The controller page is used to open another page on the secondary page:
+The controller page is used to open another HTML page on the secondary display:
 ```
 <html>
 <head>
@@ -72,12 +72,9 @@ window.addEventListener("message", function(event) {
 ### JavaScript API Manual
 * ##### navigator.presentation.requestShow Method
 
- `requestShow` is intended to request show a HTML page specified by `url` on the secondary display from the current browsing context. When the page is loaded successfully, the successCallback will be invoked with the 'window' object of the HTML page opened. The page navigation follows the legacy behavior of `window.open()` and thus allows navigating to URLs that are not at the same origin as the browsing
-context of the incumbent script.
+ `requestShow` sends a request to the user agent for presentation show. If an available secondary display is ready for use, a new presentation window for a HTML page specified by `url` will be opened on the secondary display from the current browsing context. Once the page is finished to load, the `successCallback` will be invoked and accepts the `window` object of the new page as the input parameter. Thus, the communication between the opener window and presentation window follows the approach of [HTML5 Web Messaging](http://www.w3.org/TR/webmessaging/). You could call `postMessage` to post a message and listen `onmessage` to handle the message from other side. 
 
- The communication between the opener window and presentation window follows [HTML5 web messaging](http://www.w3.org/TR/webmessaging/). You can call `postMessage` to post a message and listen `onmessage` to handle the message from other side. 
-
- If one of the following conditions is satisfied, `requestShow` will fail and the
+ If one of the following conditions happens, `requestShow` will fail and the
 `errorCallback` gets called with an `DOMError`:
 
  * No available secondary display found (**NotFoundError**)
@@ -116,8 +113,8 @@ Use Simulated Secondary Display
 
 If you have no such wireless display adapter, but are willing to play it on your device, you could use the simulated secondary display:
 
-Open 'Setting' app and select 'Developer Options' entry
-Find 'Simulate Secondary Display' to select a display
+Open `Setting` app and select `Developer Options` entry
+Find `Simulate Secondary Display` to select a display
 
 ### Demos
 * Image Gallery
