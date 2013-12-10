@@ -134,15 +134,15 @@ $ make -j9 -C src BUILDTYPE=Release xwalk
 ## Debugging
 * For debugging on the device, we must turn off the smack label.
 ```
+# Turn on root support and launch the shell on the device
 sdb root on
 sdb shell
-# As 'chsmack /usr/lib/xwalk/xwalk' says '_' we use that.
+# Turn the smack label off. As 'chsmack /usr/lib/xwalk/xwalk' says '_', we use that.
 echo "_" /proc/self/attr/current
-# Change to app instead of developer (as that is required for pipes to work)
+# Change to app instead of developer (as that is required for pipes to work) and set HOME correctly.
 su - app
-# Set HOME properly up
 export HOME=/home/app
-# Start debugging
+# Start debugging with gdb
 gdb --args /usr/lib/xwalk/xwalk http://www.google.com
 ```
 * Refer to [[Remote-debugging-xwalk-on-Tizen-2.1]]
