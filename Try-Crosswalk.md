@@ -184,12 +184,12 @@ Options:
 To package a local web app: Below is an example of how to package a local web app. We assume that the files for the app are in /home/abc/dist and the main entry point HTML file is /home/abc/dist/src/index.html:
 
     host$ python make_apk.py --package=com.abc.app --name=ABC \
-      --app-root=/home/abc/dist --app-local-path=src/index.html --mode=embedded
+      --app-root=/home/abc/dist --app-local-path=src/index.html
 
 Package a host web app, e.g. a web page on a remote web site. Below is one example to package a host web app:
 
     host$ python make_apk.py --package=com.example.app --name=Test1 \
-      --app-url=http://www.intel.com --mode=embedded
+      --app-url=http://www.intel.com
 
 In both cases, the apk file is output to the same directory as the <em>make_apk.py</em> script, with a filename &lt;name&gt.apk, where &lt;name&gt; is the name you set with the <code>--name</code> flag.
 
