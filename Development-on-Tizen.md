@@ -93,7 +93,7 @@ export GYP_GENERATORS='make'
 
 ```
  * You can call this directly in chroot. Note you need to append -Dtarget_arch=ia32 for it to work.
- * THE BELOW MIGHT BE STALE: AVOID COPYING. Please verify that the below fits with crosswalk.spec
+ * THE BELOW MIGHT BE STALE (Updated Dec 11th, 2013): AVOID COPYING. Please verify that the below fits with crosswalk.spec
 ```
 $ export GYP_GENERATORS='make'
 $ ./src/xwalk/gyp_xwalk src/xwalk/xwalk.gyp \
