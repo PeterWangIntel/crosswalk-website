@@ -226,7 +226,7 @@ Package a host web app(remote web site for example):
 Below is one example to package a host web app:
 
     host$ python make_apk.py --package=com.example.app --name=Test1 \
-      --app-url=http://www.intel.com --mode=[embedded|shared]
+      --app-url=https://www.crosswalk-project.org --mode=[embedded|shared]
 
 The Android APK will be generated as well like packaging local web apps.
 
