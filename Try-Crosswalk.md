@@ -129,7 +129,7 @@ This facility contains utilities and dependencies for packaging a web app into a
 
 <em>make_apk.py</em> is the key script for packaging a web app as an Android APK.
 
-Note: To make it work, you should ensure that the <code>android</code> command from the Android SDK, <code>java</code> from <em>Oracle JDK(version 1.6)</em> and <em> ant </em> are included in your PATH. Python is also needed.
+Note: To make it work, you should ensure that the <code>android</code> command from the Android SDK, <code>java</code> from <em>Oracle JDK(version 1.6)</em> and <code> ant </code> are included in your PATH. Python is also needed.
 
 Here is the help information for the <em>make_apk.py</em> script:
 
@@ -205,14 +205,13 @@ Options:
 ```
 Importance: Crosswalk provides the embedded mode and the shared mode in the APK packaging tool as described in [Crosswalk on Android](Crosswalk-on-Android).
 
-Package a local web app(resources of a web app are stored in local disk):
-
+#####Package a local web app(resources of a web app are stored in local disk)
 Assume that resources of a web app are located under the directory /home/foobar/dist and the entry HTML file is /home/foobar/dist/index.html. Package the web app with the embedded mode:
 
     host$ python make_apk.py --package=com.foo.bar --name=FooBar \
       --app-root=/home/foobar/dist --app-local-path=index.html --mode=embedded
 
-An Android APK file called 'FooBar_x86.apk' will be generated if running with the packaging tool for X86 version. If the packaging tool is for ARM architecture, the APK file called 'FooBar-arm.apk' will be generated. Crosswalk will combine X86 and ARM into one packaging tool in future.
+An Android APK file called 'FooBar_x86.apk' will be generated if running with the packaging tool for X86 version. If the packaging tool is for ARM architecture, the APK file called 'FooBar_arm.apk' will be generated. Crosswalk will combine X86 and ARM into one packaging tool in future.
 
 For the shared mode, do it like below:
 
@@ -221,8 +220,7 @@ For the shared mode, do it like below:
 
 An Android APK file called 'FooBar.apk' will be generated. It's architecture-independent which means it can work on IA and ARM devices.
 
-Package a host web app(remote web site for example):
-
+##### Package a host web app(remote web site for example)
 Below is one example to package a host web app:
 
     host$ python make_apk.py --package=com.foo.bar --name=Test1 \
@@ -230,8 +228,7 @@ Below is one example to package a host web app:
 
 The Android APK will be generated as well like packaging local web apps.
 
-Install generated APks on Android devices:
-
+##### Install generated APKs on Android devices
 For the embedded mode, install FooBar_x86.apk on an Android IA device (users can install FooBar_arm.apk on an Android ARM device as well) like below:
 
     host$ adb install -r FooBar_x86.apk
