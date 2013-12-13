@@ -205,7 +205,8 @@ Options:
 ```
 Importance: Crosswalk provides the embedded mode and the shared mode in the APK packaging tool as described in [Crosswalk on Android](Crosswalk-on-Android).
 
-Package a local web app(all files of a web app are stored in local disk): 
+Package a local web app(all files of a web app are stored in local disk)
+
 Assume that the files for one web app are located under the directory /home/abc/dist and the main entry point HTML file is /home/abc/dist/index.html:
 
     host$ python make_apk.py --package=com.abc.app --name=ABC \
@@ -229,9 +230,11 @@ Below is one example to package a host web app:
 
 The Android APK will be generated as well like packaging local web apps.
 
-Install the generated APK for the embedded mode on an Android IA device (users can install ABC-arm.apk on an Android ARM device as well):
+Install generated APks on Android devices
 
-    host$ adb install -r ABC-x86.apk
+For the embedded mode, install ABC_x86.apk on an Android IA device (users can install ABC_arm.apk on an Android ARM device as well) like below:
+
+    host$ adb install -r ABC_x86.apk
 
 For the shared mode, make sure XWalkRuntimeLib.apk(architecture dependent) has been installed on the Android device firstly. And install the web app APK like below: 
 
