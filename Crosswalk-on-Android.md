@@ -25,7 +25,7 @@ Runtime library APK: Crosswalk Runtime -> Crosswalk Runtime Core -> Content API 
   * Provide the whole runtime as a 'library'.
   * Isolate them for clear understanding and tracking.
  * Web App APK
-  * APK wrapper by calling runtime Java API
+  * Java wrapper by calling runtime Java API
   * HTML/JavaScript/CSS files
   * Generated from APK template
   * Runtime is shared by each web application via library sharing( for the shared mode). Besides, runtime also can be bundled with web app APK( for the embedded mode).
