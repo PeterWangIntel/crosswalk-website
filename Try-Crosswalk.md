@@ -116,16 +116,16 @@ The following options are supported:
      --help                  Print this message
 ```
 
-#### For Android APK
+#### For Android APK Packaging
 
-The Android APK maker is included with the xwalk-android download. It can work on Linux, Windows and Mac OSX. For setting up the environment for Windows, please see the section 'Windows environment setup'.
+The Android APK packaging tool is included with the xwalk-android download. It can work on Linux, Windows and Mac OSX. For setting up the environment for Windows, please see the section 'Windows environment setup'.
 
 To package a web application, unpack the tarball xwalk_app_template.tar.gz which can be gotten from crosswalk-*-[x86, arm].zip:
 
     host$ tar xzvf xwalk_app_template.tar.gz
     host$ cd xwalk_app_template
 
-This template contains utilities and dependencies for packaging an application into an Android installable APK file.
+This template contains utilities and dependencies for packaging an application into an Android APK file.
 
 <em>make_apk.py</em> is the key script for packaging a web app as an APK.
 
@@ -203,18 +203,22 @@ Options:
                         is unspecified, all of available platform apks will be
                         generated.
 ```
+Crosswalk provides the embedded mode and the shared mode in the APK packaging tool as described [Crosswalk on Android](Crosswalk-on-Android).
+Package a local web app: 
 
-To package a local web app: Below is an example of how to package a local web app. We assume that the files for the app are in /home/abc/dist and the main entry point HTML file is /home/abc/dist/src/index.html:
+Assume that the files for one web app are located under the directory /home/abc/dist and the main entry point HTML file is /home/abc/dist/index.html:
 
     host$ python make_apk.py --package=com.abc.app --name=ABC \
-      --app-root=/home/abc/dist --app-local-path=src/index.html
+      --app-root=/home/abc/dist --app-local-path=index.html --mode=shared
 
-Package a host web app, e.g. a web page on a remote web site. Below is one example to package a host web app:
+Package a host web app(remote web site for example):
+
+Below is one example to package a host web app:
 
     host$ python make_apk.py --package=com.example.app --name=Test1 \
-      --app-url=http://www.intel.com
+      --app-url=http://www.intel.com --mode=shared
 
-In both cases, the apk file is output to the same directory as the <em>make_apk.py</em> script, with a filename &lt;name&gt.apk, where &lt;name&gt; is the name you set with the <code>--name</code> flag.
+In both cases, the apk file is output to the same directory as the <em>make_apk.py</em> script, with a filename &lt;name&gt;.apk, where &lt;name&gt; is the name you set with the <code>--name</code> flag.
 
 Install the APK on your device:
 
