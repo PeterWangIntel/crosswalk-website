@@ -203,26 +203,41 @@ Options:
                         is unspecified, all of available platform apks will be
                         generated.
 ```
-Crosswalk provides the embedded mode and the shared mode in the APK packaging tool as described [Crosswalk on Android](Crosswalk-on-Android).
-Package a local web app: 
+Important: Crosswalk provides the embedded mode and the shared mode in the APK packaging tool as described in [Crosswalk on Android](Crosswalk-on-Android).
+
+Package a local web app(all files of a web app are store in a local disk): 
 
 Assume that the files for one web app are located under the directory /home/abc/dist and the main entry point HTML file is /home/abc/dist/index.html:
 
     host$ python make_apk.py --package=com.abc.app --name=ABC \
+      --app-root=/home/abc/dist --app-local-path=index.html --mode=embedded
+
+An Android APK file called 'ABC-x86.apk' will be generated if running with the packaging tool for X86 version. If the packaging tool is for ARM architecture, the APK file called 'ABC-arm.apk' will be generated. We'll combine X86 and ARM into one tool soon.
+
+For the shared mode, do it like below:
+
+    host$ python make_apk.py --package=com.abc.app --name=ABC \
       --app-root=/home/abc/dist --app-local-path=index.html --mode=shared
+
+An Android APK file called 'ABC.apk' will be generated. It's architecture-independent.
 
 Package a host web app(remote web site for example):
 
 Below is one example to package a host web app:
 
     host$ python make_apk.py --package=com.example.app --name=Test1 \
-      --app-url=http://www.intel.com --mode=shared
+      --app-url=http://www.intel.com --mode=[embedded|shared]
 
-In both cases, the apk file is output to the same directory as the <em>make_apk.py</em> script, with a filename &lt;name&gt;.apk, where &lt;name&gt; is the name you set with the <code>--name</code> flag.
+The Android APK will be generated as well like packaging local web apps.
 
-Install the APK on your device:
+Install an APK for the embedded mode on an Android X86 device ( you can install ABC-arm.apk on an Android ARM device as well):
 
-    host$ adb install -r ABC.apk Test1.apk
+    host$ adb install -r ABC-x86.apk
+
+For the shared mode, make sure XWalkRuntimeLib.apk(architecture dependent) has been installed on the Android device firstly. And install the web app APK like below: 
+
+    host$ adb install -r ABC.apk
+
 ##### Windows environment setup
 1. Install the Android SDK. Make sure to add “%SDK_PATH%\platform-tools” and “%SDK_PATH%\platform-tools\tools” into the "PATH" environment variable.
 
