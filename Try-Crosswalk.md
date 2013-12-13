@@ -230,7 +230,7 @@ Below is one example to package a host web app:
 
 The Android APK will be generated as well like packaging local web apps.
 
-Install an APK for the embedded mode on an Android IA device ( you can install ABC-arm.apk on an Android ARM device as well):
+Install the generated APK for the embedded mode on an Android IA device (users can install ABC-arm.apk on an Android ARM device as well):
 
     host$ adb install -r ABC-x86.apk
 
