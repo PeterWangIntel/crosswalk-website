@@ -118,18 +118,18 @@ The following options are supported:
 
 #### For Android APK Packaging
 
-The Android APK packaging tool is included with the xwalk-android download. It can work on Linux, Windows and Mac OSX. For setting up the environment for Windows, please see the section 'Windows environment setup'.
+The Android APK packaging tool is included with the crosswalk for Android release. It can work on Linux, Windows and Mac OSX. Below are instructions for Linux(Mac OSX). For setting up the environment for Windows, please see the section 'Windows environment setup'.
 
-To package a web application, unpack the tarball xwalk_app_template.tar.gz which can be gotten from crosswalk-*-[x86, arm].zip:
+To package a web application, first unpack the tarball xwalk_app_template.tar.gz which is zipped in crosswalk-(version number)-[x86, arm].zip:
 
     host$ tar xzvf xwalk_app_template.tar.gz
     host$ cd xwalk_app_template
 
-This template contains utilities and dependencies for packaging a web app into an Android APK.
+This facility contains utilities and dependencies for packaging a web app into an Android APK.
 
-<em>make_apk.py</em> is the key script for packaging a web app as an APK.
+<em>make_apk.py</em> is the key script for packaging a web app as an Android APK.
 
-Note: To make it work, you should ensure that the <code>android</code> command from the Android SDK and <code>java</code> from <em>Oracle JDK(version 1.6)</em> are included in your PATH. It is located in <em>&lt;Android SDK location&gt;/tools/android</em>.
+Note: To make it work, you should ensure that the <code>android</code> command from the Android SDK, <code>java</code> from <em>Oracle JDK(version 1.6)</em> and <em> ant </em> are included in your PATH. Python is also needed.
 
 Here is the help information for the <em>make_apk.py</em> script:
 
@@ -205,40 +205,40 @@ Options:
 ```
 Importance: Crosswalk provides the embedded mode and the shared mode in the APK packaging tool as described in [Crosswalk on Android](Crosswalk-on-Android).
 
-Package a local web app(all files of a web app are stored in local disk)
+Package a local web app(resources of a web app are stored in local disk)
 
-Assume that the files for one web app are located under the directory /home/abc/dist and the main entry point HTML file is /home/abc/dist/index.html:
+Assume that resources of a web app are located under the directory /home/abc/dist and the main entry point HTML file is /home/abc/dist/index.html:
 
-    host$ python make_apk.py --package=com.abc.app --name=ABC \
-      --app-root=/home/abc/dist --app-local-path=index.html --mode=embedded
+    host$ python make_apk.py --package=com.foo.bar --name=FooBar \
+      --app-root=/home/foobar/dist --app-local-path=index.html --mode=embedded
 
-An Android APK file called 'ABC-x86.apk' will be generated if running with the packaging tool for X86 version. If the packaging tool is for ARM architecture, the APK file called 'ABC-arm.apk' will be generated. Crosswalk will combine X86 and ARM into one packaging tool in future.
+An Android APK file called 'FooBar-x86.apk' will be generated if running with the packaging tool for X86 version. If the packaging tool is for ARM architecture, the APK file called 'FooBar-arm.apk' will be generated. Crosswalk will combine X86 and ARM into one packaging tool in future.
 
 For the shared mode, do it like below:
 
-    host$ python make_apk.py --package=com.abc.app --name=ABC \
-      --app-root=/home/abc/dist --app-local-path=index.html --mode=shared
+    host$ python make_apk.py --package=com.foo.bar --name=FooBar \
+      --app-root=/home/foobar/dist --app-local-path=index.html --mode=shared
 
-An Android APK file called 'ABC.apk' will be generated. It's architecture-independent which means it can work on IA and ARM devices.
+An Android APK file called 'FooBar.apk' will be generated. It's architecture-independent which means it can work on IA and ARM devices.
 
 Package a host web app(remote web site for example):
 
 Below is one example to package a host web app:
 
-    host$ python make_apk.py --package=com.example.app --name=Test1 \
+    host$ python make_apk.py --package=com.foo.bar --name=Test1 \
       --app-url=https://www.crosswalk-project.org --mode=[embedded|shared]
 
 The Android APK will be generated as well like packaging local web apps.
 
 Install generated APks on Android devices
 
-For the embedded mode, install ABC_x86.apk on an Android IA device (users can install ABC_arm.apk on an Android ARM device as well) like below:
+For the embedded mode, install FooBar_x86.apk on an Android IA device (users can install FooBar_arm.apk on an Android ARM device as well) like below:
 
-    host$ adb install -r ABC_x86.apk
+    host$ adb install -r FooBar_x86.apk
 
 For the shared mode, make sure XWalkRuntimeLib.apk(architecture dependent) has been installed on the Android device firstly. And install the web app APK like below: 
 
-    host$ adb install -r ABC.apk
+    host$ adb install -r FooBar.apk
 
 ##### Windows environment setup
 1. Install the Android SDK. Make sure to add “%SDK_PATH%\platform-tools” and “%SDK_PATH%\platform-tools\tools” into the "PATH" environment variable.
