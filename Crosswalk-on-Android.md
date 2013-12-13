@@ -4,6 +4,13 @@ Crosswalk on Android can support packaging with XDK and Cordova and SysApps.
  * PhoneGap
  * SysApps
 
+## Packaging modes
+| | Embedded mode | Shared mode |
+-------------|--------------------|------------------
+| General introduction | All are packaged together, including crosswalk runtime and web app. It’s intuitive and preferred by users.  | Crosswalk runtime is a web engine with rich features so it’s somewhat big(binary >16M). Shared mode provides one shared binary and a wrapper to call the shared binary. Each web app APK is small because it only includes the resources of web app. Note that the share mode only means sharing crosswalk binary between web apps but not running instances. |
+| Advantages | | |
+| Disadvantages | | |
+| Release targets | | |
 ## Architecture and Components
 Web App APK: HTML/JS/CSS + Android manifest, resources + Java wrapper(calling crosswalk runtime)  
 Runtime library APK: Crosswalk Runtime -> Crosswalk Runtime Core -> Content API -> Blink  
