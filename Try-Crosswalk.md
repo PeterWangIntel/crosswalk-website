@@ -205,14 +205,14 @@ Options:
 ```
 Importance: Crosswalk provides the embedded mode and the shared mode in the APK packaging tool as described in [Crosswalk on Android](Crosswalk-on-Android).
 
-Package a local web app(resources of a web app are stored in local disk)
+Package a local web app(resources of a web app are stored in local disk):
 
-Assume that resources of a web app are located under the directory /home/abc/dist and the main entry point HTML file is /home/abc/dist/index.html:
+Assume that resources of a web app are located under the directory /home/abc/dist and the main entry HTML file is /home/abc/dist/index.html:
 
     host$ python make_apk.py --package=com.foo.bar --name=FooBar \
       --app-root=/home/foobar/dist --app-local-path=index.html --mode=embedded
 
-An Android APK file called 'FooBar-x86.apk' will be generated if running with the packaging tool for X86 version. If the packaging tool is for ARM architecture, the APK file called 'FooBar-arm.apk' will be generated. Crosswalk will combine X86 and ARM into one packaging tool in future.
+An Android APK file called 'FooBar_x86.apk' will be generated if running with the packaging tool for X86 version. If the packaging tool is for ARM architecture, the APK file called 'FooBar-arm.apk' will be generated. Crosswalk will combine X86 and ARM into one packaging tool in future.
 
 For the shared mode, do it like below:
 
@@ -230,7 +230,7 @@ Below is one example to package a host web app:
 
 The Android APK will be generated as well like packaging local web apps.
 
-Install generated APks on Android devices
+Install generated APks on Android devices:
 
 For the embedded mode, install FooBar_x86.apk on an Android IA device (users can install FooBar_arm.apk on an Android ARM device as well) like below:
 
