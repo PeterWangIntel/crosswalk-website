@@ -207,7 +207,7 @@ Importance: Crosswalk provides the embedded mode and the shared mode in the APK 
 
 Package a local web app(resources of a web app are stored in local disk):
 
-Assume that resources of a web app are located under the directory /home/abc/dist and the main entry HTML file is /home/abc/dist/index.html:
+Assume that resources of a web app are located under the directory /home/foobar/dist and the main entry HTML file is /home/foobar/dist/index.html:
 
     host$ python make_apk.py --package=com.foo.bar --name=FooBar \
       --app-root=/home/foobar/dist --app-local-path=index.html --mode=embedded
