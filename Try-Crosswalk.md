@@ -120,16 +120,16 @@ The following options are supported:
 
 The Android APK maker is included with the xwalk-android download. It can work on Linux, Windows and Mac OSX. For setting up the environment for Windows, please see the section 'Windows environment setup'.
 
-To package your own web app, unpack the Crosswalk app template tarball. This is located inside the xwalk-android directory:
+To package a web application, unpack the tarball xwalk_app_template.tar.gz which can be gotten from crosswalk-*-[x86, arm].zip:
 
     host$ tar xzvf xwalk_app_template.tar.gz
     host$ cd xwalk_app_template
 
-This template contains utilities and dependencies for packaging an application into an APK file, so it can be installed on an Android device.
+This template contains utilities and dependencies for packaging an application into an Android installable APK file.
 
 <em>make_apk.py</em> is the key script for packaging a web app as an APK.
 
-Note: For this script to work, you should ensure that the <code>android</code> command from the Android SDK is on your path. It is located in <em>&lt;Android SDK location&gt;/tools/android</em>.
+Note: To make it work, you should ensure that the <code>android</code> command from the Android SDK and <code>java</code> from <em>Oracle JDK(version 1.6)</em> are included in your PATH. It is located in <em>&lt;Android SDK location&gt;/tools/android</em>.
 
 Here is the help information for the <em>make_apk.py</em> script:
 
@@ -138,13 +138,24 @@ Usage: make_apk.py [options]
 
 Options:
   -h, --help            show this help message and exit
+  -v, --version         The version of this python tool.
   --manifest=MANIFEST   The manifest file with the detail of the app.Such as:
                         --manifest=/path/to/your/manifest/file
   --package=PACKAGE     The package name. Such as:
                         --package=com.example.YourPackage
   --name=NAME           The apk name. Such as: --name=YourApplicationName
+  --app-version=APP_VERSION
+                        The version number of the app. Such as: --app-
+                        version=TheVersionNumber
+  --description=DESCRIPTION
+                        The application description. Such
+                        as:--description=YourApplicationDescription
   --icon=ICON           The path of icon. Such as:
                         --icon=/path/to/your/customized/icon
+  --permissions=PERMISSIONS
+                        The permission list. Such as:
+                        --permissions="geolocation"For more permissions, such
+                        as:--permissions="geolocation:permission2"
   --app-url=APP_URL     The url of application. This flag allows to package
                         website as apk. Such as: --app-
                         url=http://www.intel.com
@@ -179,6 +190,18 @@ Options:
                         "shared".Such as: --mode=shared
   --xpk=XPK             The path of the XPK file. Such as:
                         --xpk=/path/to/xpk/file
+  --orientation=ORIENTATION
+                        The orientation of the web app's display on the
+                        device. Such as: --orientation=landscape. The default
+                        value is "unspecified"The value options are the same
+                        as those on the Android:
+                        http://developer.android.com/guide/topics/manifest
+                        /activity-element.html#screen
+  --arch=ARCH           The architecture of the platform, that web app
+                        targets. Such as: --arch=x86. "x86" means the x86
+                        platform; "arm" means the ARM platform. If this option
+                        is unspecified, all of available platform apks will be
+                        generated.
 ```
 
 To package a local web app: Below is an example of how to package a local web app. We assume that the files for the app are in /home/abc/dist and the main entry point HTML file is /home/abc/dist/src/index.html:
