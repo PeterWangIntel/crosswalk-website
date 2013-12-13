@@ -5,7 +5,7 @@ Crosswalk on Android can support packaging with XDK and Cordova and SysApps.
  * SysApps
 
 ## Packaging modes
-Crosswalk on Android provides a packaging tool and Java wrapper layer which can bundle web applications into Android web app APKs. The Java wrapper layer can call Crosswalk runtime. Since Crosswalk runtime is a full-featured web engine mostly written in C/C++ and its size is somewhat big(> 16M), here two alternatives are provided to decide whether to bundle Crosswalk runtime with web apps. Currently two packaging modes are designed for users:
+Crosswalk on Android provides a packaging tool and Java wrapper layer which can bundle web applications into Android web app APKs. The Java wrapper layer can call Crosswalk runtime. Since Crosswalk runtime is a full-featured web engine mostly written in C/C++ and its size is somewhat big(> 16M), two alternatives are provided to bundle Crosswalk runtime with web apps. Currently the two modes are designed for users:
 
 | | Embedded mode | Shared mode |
 -------------|--------------------|------------------
