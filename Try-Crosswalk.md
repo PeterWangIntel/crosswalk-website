@@ -181,7 +181,7 @@ Options:
   --extensions=EXTENSIONS
                         The path list for external extensions separated by os
                         separator.On Linux and Mac, the separator is ":". On
-                        Windows, it is ";".Such as:
+                        Windows, it is ";". Such as:
                         --extensions="/path/to/extension1:/path/to/extension2"
   --mode=MODE           The packaging mode of the application. "shared" means
                         the application shares the Xwalk with other
@@ -205,21 +205,21 @@ Options:
 ```
 Important: Crosswalk provides the embedded mode and the shared mode in the APK packaging tool as described in [Crosswalk on Android](Crosswalk-on-Android).
 
-Package a local web app(all files of a web app are store in a local disk): 
+Package a local web app(all files of a web app are stored in local disk): 
 
 Assume that the files for one web app are located under the directory /home/abc/dist and the main entry point HTML file is /home/abc/dist/index.html:
 
     host$ python make_apk.py --package=com.abc.app --name=ABC \
       --app-root=/home/abc/dist --app-local-path=index.html --mode=embedded
 
-An Android APK file called 'ABC-x86.apk' will be generated if running with the packaging tool for X86 version. If the packaging tool is for ARM architecture, the APK file called 'ABC-arm.apk' will be generated. We'll combine X86 and ARM into one tool soon.
+An Android APK file called 'ABC-x86.apk' will be generated if running with the packaging tool for X86 version. If the packaging tool is for ARM architecture, the APK file called 'ABC-arm.apk' will be generated. Crosswalk will combine X86 and ARM into one packaging tool in future.
 
 For the shared mode, do it like below:
 
     host$ python make_apk.py --package=com.abc.app --name=ABC \
       --app-root=/home/abc/dist --app-local-path=index.html --mode=shared
 
-An Android APK file called 'ABC.apk' will be generated. It's architecture-independent.
+An Android APK file called 'ABC.apk' will be generated. It's architecture-independent which means it can work on IA and ARM devices.
 
 Package a host web app(remote web site for example):
 
@@ -230,7 +230,7 @@ Below is one example to package a host web app:
 
 The Android APK will be generated as well like packaging local web apps.
 
-Install an APK for the embedded mode on an Android X86 device ( you can install ABC-arm.apk on an Android ARM device as well):
+Install an APK for the embedded mode on an Android IA device ( you can install ABC-arm.apk on an Android ARM device as well):
 
     host$ adb install -r ABC-x86.apk
 
