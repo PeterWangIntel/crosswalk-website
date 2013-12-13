@@ -125,7 +125,7 @@ To package a web application, unpack the tarball xwalk_app_template.tar.gz which
     host$ tar xzvf xwalk_app_template.tar.gz
     host$ cd xwalk_app_template
 
-This template contains utilities and dependencies for packaging an application into an Android APK file.
+This template contains utilities and dependencies for packaging a web app into an Android APK.
 
 <em>make_apk.py</em> is the key script for packaging a web app as an APK.
 
@@ -203,10 +203,9 @@ Options:
                         is unspecified, all of available platform apks will be
                         generated.
 ```
-Important: Crosswalk provides the embedded mode and the shared mode in the APK packaging tool as described in [Crosswalk on Android](Crosswalk-on-Android).
+Importance: Crosswalk provides the embedded mode and the shared mode in the APK packaging tool as described in [Crosswalk on Android](Crosswalk-on-Android).
 
 Package a local web app(all files of a web app are stored in local disk): 
-
 Assume that the files for one web app are located under the directory /home/abc/dist and the main entry point HTML file is /home/abc/dist/index.html:
 
     host$ python make_apk.py --package=com.abc.app --name=ABC \
