@@ -34,7 +34,7 @@ Runtime library APK: Crosswalk Runtime -> Crosswalk Runtime Core -> Content API 
   * API extension infrastructure
   * App life cycle, SysApps, Intel API, System Info, UI controls,windowing
   * Misc other features
-  * Generate the runtime as a 'library' APK for Android
+  * Generate the runtime as a 'library' APK for Android for shared mode. Or it could be bundled with App APK wrapper for the embedded mode.
  * Runtime Core
   * An abstraction layer to provide Java classes to runtime and hide the internals of Content and Blink
   * Java classes only internally used by Runtime
