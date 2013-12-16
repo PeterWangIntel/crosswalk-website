@@ -39,6 +39,7 @@ Runtime library APK: Crosswalk Runtime -> Crosswalk Runtime Core -> Content API 
   * An abstraction layer to provide Java classes to runtime and hide the internals of Content and Blink
   * Java classes only internally used by Runtime
   * Mainly customize and implement Content API by meeting requirements of runtime
+  * The layer used by cordova container integration.
  * Blink and Content
   * Provide HTML5 API, such as WebGL, WebRTC, WebAudio
   * Parallel JavaScript, WiDi, etc.
