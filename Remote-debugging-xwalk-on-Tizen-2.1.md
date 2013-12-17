@@ -41,7 +41,7 @@ sdb push src/out/Debug/libffmpegsumo.so /home/developer/xwalk/
 
 5. Start gdb server on device
 ```
-sdb shell gdbserver a:5678 /home/developer/xwalk/xwalk --fullscreen --ignore-gpu-blacklist --use-gl=egl --allow-file-access-from-files http://www.google.com
+sdb shell gdbserver host:5678 /home/developer/xwalk/xwalk --fullscreen --ignore-gpu-blacklist --use-gl=egl --allow-file-access-from-files http://www.google.com
 ```
 
 6. Start gdb from chroot and attach it to remote server
