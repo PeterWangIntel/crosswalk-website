@@ -13,4 +13,4 @@ This page is intended to document what Android versions Web APIs(SysApps) can wo
 | Messaging| xwalk.experimental.messaging | >= Android 4.0 |
 
 Notes:
-Even if a device is installed with Android 4.2, it doesn't mean all new features in Android 4.2 are already supported. For example, Presentation API introduced from Android 4.2 can't work on ZTE Geek Phone(Android 4.2.2). 
+Even if a device is installed with Android 4.2, it doesn't mean all new features in Android 4.2 are already supported. For example, Presentation API introduced from Android 4.2 can't work on ZTE Geek Phone(Android 4.2.2) because hardware doesn't support it. 
