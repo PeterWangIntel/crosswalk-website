@@ -139,69 +139,96 @@ Usage: make_apk.py [options]
 Options:
   -h, --help            show this help message and exit
   -v, --version         The version of this python tool.
-  --manifest=MANIFEST   The manifest file with the detail of the app.Such as:
-                        --manifest=/path/to/your/manifest/file
-  --package=PACKAGE     The package name. Such as:
-                        --package=com.example.YourPackage
-  --name=NAME           The apk name. Such as: --name=YourApplicationName
-  --app-version=APP_VERSION
-                        The version number of the app. Such as: --app-
-                        version=TheVersionNumber
-  --description=DESCRIPTION
-                        The application description. Such
-                        as:--description=YourApplicationDescription
-  --icon=ICON           The path of icon. Such as:
-                        --icon=/path/to/your/customized/icon
-  --permissions=PERMISSIONS
-                        The permission list. Such as:
-                        --permissions="geolocation"For more permissions, such
-                        as:--permissions="geolocation:permission2"
-  --app-url=APP_URL     The url of application. This flag allows to package
-                        website as apk. Such as: --app-
-                        url=http://www.intel.com
-  --app-root=APP_ROOT   The root path of the web app. This flag allows to
-                        package local web app as apk. Such as: --app-
-                        root=/root/path/of/the/web/app
-  --app-local-path=APP_LOCAL_PATH
-                        The relative path of entry file based on |app_root|.
-                        This flag should work with "--app-root" together. Such
-                        as: --app-local-path=/relative/path/of/entry/file
-  --keystore-path=KEYSTORE_PATH
-                        The path of the developer keystore. Such as:
-                        --keystore-path=/path/to/your/developer/keystore
-  --keystore-alias=KEYSTORE_ALIAS
-                        The alias name of keystore. Such as: --keystore-
-                        alias=alias_name
-  --keystore-passcode=KEYSTORE_PASSCODE
-                        The passcode of keystore. Such as: --keystore-
-                        passcode=code
-  --enable-remote-debugging
-                        Enable remote debugging.
-  -f, --fullscreen      Make application fullscreen.
-  --extensions=EXTENSIONS
-                        The path list for external extensions separated by os
-                        separator.On Linux and Mac, the separator is ":". On
-                        Windows, it is ";". Such as:
-                        --extensions="/path/to/extension1:/path/to/extension2"
-  --mode=MODE           The packaging mode of the application. "shared" means
-                        the application shares the Xwalk with other
-                        applications; "embedded" means the application owns
-                        XWalk Runtime itself. Set the default mode as
-                        "shared".Such as: --mode=shared
-  --xpk=XPK             The path of the XPK file. Such as:
+  --mode=MODE           The packaging mode of the web application. The value
+                        'shared' means that the runtime is shared across
+                        multiple application instances and that the runtime
+                        needs to be distributed separately. The value
+                        'embedded' means that the runtime is embedded into the
+                        application itself and distributed along with it.Set
+                        the default mode as 'embedded'. For example:
+                        --mode=embedded
+  --arch=ARCH           The target architecture of the embedded runtime.
+                        Supported values are 'x86' and 'arm'. Note, if
+                        undefined, APKs for all possible architestures will be
+                        generated.
+
+  Application Source Options:
+    This packaging tool supports 3 kinds of web application source: 1) XPK
+    package; 2) manifest.json; 3) various command line options, for
+    example, '--app-url' for website, '--app-root' and '--app-local-path'
+    for local web application.
+
+    --xpk=XPK           The path of the XPK package. For example,
                         --xpk=/path/to/xpk/file
-  --orientation=ORIENTATION
+    --manifest=MANIFEST
+                        The manifest file with the detail description of the
+                        application. For example,
+                        --manifest=/path/to/your/manifest/file
+    --app-url=APP_URL   The url of application. This flag allows to package
+                        website as apk. For example, --app-
+                        url=http://www.intel.com
+    --app-root=APP_ROOT
+                        The root path of the web app. This flag allows to
+                        package local web app as apk. For example, --app-
+                        root=/root/path/of/the/web/app
+    --app-local-path=APP_LOCAL_PATH
+                        The relative path of entry file based on the value
+                        from 'app_root'. This flag should work with '--app-
+                        root' together. For example, --app-local-
+                        path=/relative/path/of/entry/file
+
+  Mandatory arguments:
+    They are used for describing the APK information through command line
+    options.
+
+    --name=NAME         The apk name. For example, --name=YourApplicationName
+    --package=PACKAGE   The package name. For example,
+                        --package=com.example.YourPackage
+
+  Optional arguments:
+    They are used for various settings for applications through command
+    line options.
+
+    --app-version=APP_VERSION
+                        The version name of the application. For example,
+                        --app-version=1.0.0
+    --description=DESCRIPTION
+                        The description of the application. For example,
+                        --description=YourApplicationDescription
+    --enable-remote-debugging
+                        Enable remote debugging.
+    --extensions=EXTENSIONS
+                        The list of external extension paths splitted by OS
+                        separators. The separators are ':' , ';' and ':' on
+                        Linux, Windows and Mac OS respectively. For example,
+                        --extensions=/path/to/extension1:/path/to/extension2.
+    -f, --fullscreen    Make application fullscreen.
+    --icon=ICON         The path of application icon. Such as:
+                        --icon=/path/to/your/customized/icon
+    --orientation=ORIENTATION
                         The orientation of the web app's display on the
-                        device. Such as: --orientation=landscape. The default
-                        value is "unspecified"The value options are the same
-                        as those on the Android:
+                        device. For example, --orientation=landscape. The
+                        default value is 'unspecified'. The permitted values
+                        are from Android:
                         http://developer.android.com/guide/topics/manifest
                         /activity-element.html#screen
-  --arch=ARCH           The architecture of the platform, that web app
-                        targets. Such as: --arch=x86. "x86" means the x86
-                        platform; "arm" means the ARM platform. If this option
-                        is unspecified, all of available platform apks will be
-                        generated.
+    --permissions=PERMISSIONS
+                        The list of permissions to be used by web application.
+                        For example, --permissions='geolocation:webgl'
+
+  Keystore Options:
+    The keystore is a signature from web developer, it's used when
+    developer wants to distribute the applications.
+
+    --keystore-path=KEYSTORE_PATH
+                        The path to the developer keystore. For example,
+                        --keystore-path=/path/to/your/developer/keystore
+    --keystore-alias=KEYSTORE_ALIAS
+                        The alias name of keystore. For example, --keystore-
+                        alias=name
+    --keystore-passcode=KEYSTORE_PASSCODE
+                        The passcode of keystore. For example, --keystore-
+                        passcode=code
 ```
 Importance: Crosswalk provides the embedded mode and the shared mode in the APK packaging tool as described in [Crosswalk on Android](Crosswalk-on-Android).
 
