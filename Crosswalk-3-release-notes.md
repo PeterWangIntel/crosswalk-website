@@ -103,9 +103,9 @@
 </li>
 </ul>
 
-Bug fixes
 
-<h2>        Bug
+
+<h2>        Bug fixes
 </h2>
 <ul>
 <li>[<a href='https://crosswalk-project.org/jira/browse/XWALK-12'>XWALK-12</a>] -         [REG]Crosswalk issues during the behavior testing on Tizen
