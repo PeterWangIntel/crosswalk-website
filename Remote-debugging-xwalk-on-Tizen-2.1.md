@@ -32,9 +32,9 @@ sdb push src/out/Debug/libffmpegsumo.so /home/developer/xwalk/
 ```
 sdb shell gdbserver host:5678 /home/developer/xwalk/xwalk http://www.google.com --no-sandbox --single-process
 ```
-* Note: --single-process is used to debug gpu and render process also. It means we debug code a bit different from product code.
+ * Note: --single-process is used to debug gpu and render process also. It means we debug code a bit different from product code.
 
-6. Start gdb from chroot and attach it to remote server
+6. Start gdb from _CHROOT_ and attach it to remote server
 ```
 gdb src/out/Debug/xwalk
 (gdb) target remote localhost:1234
@@ -42,7 +42,7 @@ gdb src/out/Debug/xwalk
 
 7. If gdb cannot find symbols, you have to set solib-search-path.
 ```
-(gdb) set solib-search-path /home/abuild/rpmbuild/BUILD/crosswalk-1.29.1.0/src/out/Debug/lib.target/.
+(gdb) set solib-search-path /home/abuild/[xwalk dir]/src/out/Debug/lib.target/.
 ```
 
 Happy debugging.
