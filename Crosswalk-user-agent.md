@@ -1,3 +1,5 @@
+This page is intended to describe what's user agent string for Crosswalk.
+You can try to get user agent string with http://whatsmyuseragent.com/.
 ### User agent for Crosswalk on Android 
 The user agent string for Crosswalk will include the string inherited from Chromium on Android and one additional string, e.g. 'Crosswalk'.
 For example, below is the user agent if running Crosswalk on a ZTE Geek phone:
