@@ -3,23 +3,12 @@ Prerequisites:
 * gdb is installed under chroot and gdbserver installed to device.
 * root mode is enabled with sdb (`sdb root on`)
 
-1. Build debug version of xwalk under chroot environment. E.g., from the crosswalk-1.29.1.0 dir, run:
+1. Build debug version of xwalk under chroot environment.
+* See [[Development-on-Tizen]]
+* You need to add -Dcomponent=shared_library, because unfortunately ld inside chroot can not handle more than 2GB binary.
 ```
-export GYP_GENERATORS='make'
 ./src/xwalk/gyp_xwalk src/xwalk/xwalk.gyp \
--Ddisable_nacl=1 \
--Duse_aura=1 \
--Duse_cups=0 \
--Duse_gconf=0 \
--Duse_kerberos=0 \
--Duse_system_bzip2=1 \
--Duse_system_icu=1 \
--Duse_system_libexif=1 \
--Duse_system_libxml=1 \
--Duse_system_nspr=1 \
--Denable_xi21_mt=1 \
--Dtizen_mobile=1 \
--Dtarget_arch=ia32 \
+...
 -Dcomponent=shared_library
 make -C src BUILDTYPE=Debug xwalk
 ```
