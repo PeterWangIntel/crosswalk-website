@@ -19,7 +19,7 @@ export XWALK_OS_ANDROID=1
 . xwalk/build/android/envsetup.sh --target-arch=x86 
 
 # Run test
-build/android/run_instrumentation_tests.py --test-apk XWalkCoreTest --verbose -I -f testExtensionEcho
+python build/android/test_runner.py instrumentation --release --test-apk=XWalkCoreTest -v --num_retries=0 --test_data xwalkview:xwalk/test/data/device_files/
 ```
 ## Debug Native Code with "adb_gdb*"
 * On Device, launch the App
