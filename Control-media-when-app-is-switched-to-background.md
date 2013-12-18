@@ -7,29 +7,30 @@ More detailed information, please see w3c spec. http://www.w3.org/TR/page-visibi
 When application is switched to background or back to the front, it will trigger visibilitychange event, web developers can register this event handler, and do the pause/play operation in handler function.
 
 The following is the simple demo:
-` <html>
-<body onload="load()">
-<audio id="audio_id" controls loop> 
-<source src="demo-audio.mp3"/>
-<source src="demo-audio.ogg"/>
-Browser can't support Audio tag.
-</audio>
-<script>
-var audioElement =  document.getElementById("audio_id");
-
-function onVisibilityChanged(event) {
-    var hidden = event.target.webkitHidden;
-    if (hidden)
+`   
+ 
+    <html>
+    <body onload="load()">
+    <audio id="audio_id" controls loop> 
+    <source src="demo-audio.mp3"/>
+    <source src="demo-audio.ogg"/>
+    Browser can't support Audio tag.
+    </audio>
+    <script>
+    var audioElement =  document.getElementById("audio_id");
+    function onVisibilityChanged(event) {
+      var hidden = event.target.webkitHidden;
+      if (hidden)
         audioElement.pause();
-    else
+      else
         audioElement.play();
-}
-
-function load() {
-    audioElement.play();
-    audioElement.loop = true;
-    document.addEventListener("webkitvisibilitychange", onVisibilityChanged, false);
-}
-</script>
-</body>
-</html> `
+    }
+    function load() {
+      audioElement.play();
+      audioElement.loop = true;
+      document.addEventListener("webkitvisibilitychange", onVisibilityChanged, false);
+    }
+    </script>
+    </body>
+    </html>
+`
