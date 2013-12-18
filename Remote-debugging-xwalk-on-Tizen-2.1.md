@@ -4,8 +4,8 @@ Prerequisites:
 * root mode is enabled with sdb (`sdb root on`)
 
 1. Build debug version of xwalk under chroot environment.
-* See [[Development-on-Tizen]]
-* You need to add -Dcomponent=shared_library, because unfortunately ld inside chroot can not handle more than 2GB binary.
+ * See [[Development-on-Tizen]]
+ * You need to add -Dcomponent=shared_library, because unfortunately ld inside chroot can not handle more than 2GB binary.
 ```
 ./src/xwalk/gyp_xwalk src/xwalk/xwalk.gyp \
 ...
