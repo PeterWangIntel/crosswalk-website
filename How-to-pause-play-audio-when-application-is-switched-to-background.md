@@ -34,7 +34,11 @@ The following is a simple demo:
 
     function onLoad() {
       audioElement.play();
-      document.addEventListener("webkitvisibilitychange", onVisibilityChange, false);
+      document.addEventListener(
+        "webkitvisibilitychange",
+        onVisibilityChange,
+        false
+      );
     }
 
     document.addEventListener("DOMContentLoaded", onLoad);
