@@ -1,6 +1,8 @@
 Prerequisites:
 * Tizen 2.1 chroot environment with crosswalk sources.
 * gdb is installed under chroot and gdbserver installed to device.
+ * For gdb, add "BuildRequires:  gdb" to your crosswalk.spec to install gdb in your chroot.
+ * For gdbserver, download and install gdbserver rpm: http://download.tizen.org/releases/2.1/latest/repos/tizen-base/ia32/packages/i586/
 * root mode is enabled with sdb (`sdb root on`)
 
 1. Build debug version of xwalk under chroot environment.
