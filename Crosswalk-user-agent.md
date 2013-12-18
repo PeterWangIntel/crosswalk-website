@@ -9,3 +9,4 @@ Mozilla/5.0 (Linux; Android 4.2.2; ZTE 975 Build/JDQ39) AppleWebKit/537.36 (KHTM
  Chrome/32.0.1700.14 Mobile Crosswalk/3.32.53.0 Mobile Safari/537.36
 ```
 ### User agent for Crosswalk on Tizen
+to be described.
