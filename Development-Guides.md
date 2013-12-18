@@ -1,1 +1,1 @@
-* [Controlling media when application is switched to background]
+* [Control media when application is switched to background](wiki/Control-media)
