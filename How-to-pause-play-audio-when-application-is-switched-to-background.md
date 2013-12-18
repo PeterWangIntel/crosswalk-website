@@ -48,4 +48,4 @@ The following is a simple demo:
 
 **Note: in Crosswalk, `visibilitychange` events are prefixed with "webkit", so your listeners should be attached to `webkitvisibilitychange` events**
 
-`visibilitychange` events are supported by almost all popular browsers and web runtimes. For more detailed information, see the w3c specification: http://www.w3.org/TR/page-visibility/.
+`visibilitychange` events are supported by almost all popular browsers and web runtimes. For more detailed information, see the W3C specification: http://www.w3.org/TR/page-visibility/.
