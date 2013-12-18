@@ -19,7 +19,7 @@
 
 ### Extensions framework
 
-* Android support (except permissions for external extensions). See ]documentation https://github.com/crosswalk-project/crosswalk-website/wiki/Writing-a-Crosswalk-Java-Extension-on-Android]
+* Android support (except permissions for external extensions). See [documentation] (https://github.com/crosswalk-project/crosswalk-website/wiki/Writing-a-Crosswalk-Java-Extension-on-Android)
 
 * Improved robustness: better browser and unit tests coverage, fixed race conditions and tons of internal fixes.
 * Improved internal extensions execution model: now external extensions run in the main thread.
