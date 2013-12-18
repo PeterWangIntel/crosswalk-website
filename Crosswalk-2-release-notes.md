@@ -25,3 +25,5 @@
 * Only load Extensions on demand, exactly on the first time they are used on a frame.
 * Extensions writers can make use of JS helpers and small libraries by using the "requireNative()" function and the v8tools module.
 * Create one Extension Process per Render Process. Now each WebApp will have its own pair of Renderer+Extensions Processes.
+
+[Release notes in Jira] (https://crosswalk-project.org/jira/secure/ReleaseNote.jspa?projectId=10001&version=10009)
