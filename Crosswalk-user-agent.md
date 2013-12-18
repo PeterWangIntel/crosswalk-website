@@ -10,6 +10,7 @@ Mozilla/5.0 (Linux; Android 4.2.2; ZTE 975 Build/JDQ39) AppleWebKit/537.36 (KHTM
 ```
 ### User agent for Crosswalk on Tizen
 The user agent string for Crosswalk will include the string inherited from Chromium on Linux and one additional string, e.g. 'Crosswalk'.
+
 For example, below is the user agent string if running Crosswalk on Tizen OS:
 ```
 Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko)
