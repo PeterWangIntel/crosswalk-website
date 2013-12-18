@@ -1,1 +1,1 @@
-* [Control media when application is switched to background](Control-media-when-app-is-switched-to-background)
+* [How to pause/play audio when application is switched to background](How-to-pause-play-audio-when-application-is-switched-to-background)
