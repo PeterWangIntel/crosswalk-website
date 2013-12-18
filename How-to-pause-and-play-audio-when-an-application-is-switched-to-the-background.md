@@ -2,7 +2,7 @@ The default behavior of Crosswalk is for audio elements to continue playing when
 
 However, this may cause problems for some applications, especially games. For these applications, the user expectation is that media pauses when the application is switched to the background.
 
-Developers can meet this expectation in Crosswalk (and other browsers) by using `visibilitychange` events. These events are triggered whenever an application is switched to the background or foreground. A developer can control media playback in the application by listening for `visibilitychange` events, then calling play and pause operations in the event handlers.
+Developers can meet this expectation in Crosswalk (and other browsers) by using `visibilitychange` events. These events are triggered whenever an application is switched to the background or foreground. A developer can control media playback in the application by listening for `visibilitychange` events and calling play and pause operations in the event handler.
 
 The following is a simple demo:
 
