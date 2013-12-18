@@ -22,7 +22,7 @@ class MyExtension extends XWalkExtensionClient {
      }
 ```
 See details about [Android permissions]. 
-(http://developer.android.com/reference/android/Manifest.permission.html).
+(http://developer.android.com/reference/android/Manifest.permission.html). Permissions are supported since Crosswalk-3.
 * So for each extension, put three files '*.jar, *.js and *.json' into one directory. Note that the name of these 3 files should be the same as the name of the directory.
 * Package them with the option '--extensions=/path/to/extension' of make_apk.py. 
 * The packaging tool supports to package multiple extensions for one web app. For each extension, follow the first 4 steps and package them by adding all paths in the option '--extensions' with the path separator. For example, --extensions='/path/to/extension1:/path/to/extension2' on Linux and Mac.
