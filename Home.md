@@ -21,7 +21,7 @@ out of the wiki and planted in the higher level documentation under either [Docu
 * [User agent in Crosswalk](wiki/crosswalk-user-agent)
 * [Development Guides](wiki/Development-Guides)
 
-If you any question on how to use Crosswalk you can ask on IRC. On freenode.net, we hang out on the #crosswalk channel.
+If you have any question on how to use Crosswalk you can ask on IRC. On freenode.net, we hang out on the #crosswalk channel.
 
 ## For Developers
 * [Build Crosswalk](wiki/Build-Crosswalk)
