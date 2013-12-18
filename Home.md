@@ -14,7 +14,7 @@ out of the wiki and planted in the higher level documentation under either [Docu
 * [Crosswalk Extensions](wiki/Crosswalk-Extensions)
 * [Remote Debugging on Android] (wiki/Remote-Debugging-on-Android)
 * [Crosswalk 1 release notes] (wiki/Crosswalk-1-release-notes)
-* [Crosswalk 1 release notes] (wiki/Crosswalk-3-release-notes)
+* [Crosswalk 3 release notes] (wiki/Crosswalk-3-release-notes)
 * [Intent to Implement] (wiki/intent-to-implement)
 * [Presentation API Documentation] (wiki/presentation-api-manual)
 * [Web API support on different Android versions](wiki/webapi-support-on-different-versions)
