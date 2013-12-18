@@ -19,6 +19,7 @@ out of the wiki and planted in the higher level documentation under either [Docu
 * [Web API support on different Android versions](wiki/webapi-support-on-different-versions)
 * [Crosswalk-based Cordova Android](wiki/crosswalk-cordova-android) 
 * [User agent in Crosswalk](wiki/crosswalk-user-agent)
+* [Development Guides](wiki/Development-Guides)
 
 If you any question on how to use Crosswalk you can ask on IRC. On freenode.net, we hang out on the #crosswalk channel.
 
