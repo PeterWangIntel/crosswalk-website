@@ -73,10 +73,11 @@ Patch3:         %{name}-1.29-revert-nss-commits.patch
 > cd <source_path>
 # List patches
 > cat packaging/crosswalk.spec | grep "Patch.*:" \
-  | perl -pe 's/Patch.*:\s*/patch -p0 < packaging\/$1/' \
+  | perl -pe 's/Patch.*:\s*/patch -p0 < src\/xwalk\/packaging\/$1/' \
   | perl -pe 's/%{name}/crosswalk/'
+> cd ../..
 # Call each line manually (some patches might need -p0 changed to -p1 or similar)
-> patch -p0 < packaging/crosswalk-do-not-look-for-gtk2-when-using-aura.patch
+> patch -p0 < src/xwalk/packaging/crosswalk-do-not-look-for-gtk2-when-using-aura.patch
 ```
 * Enter chroot environment
 ```
@@ -124,7 +125,9 @@ $ make -j9 -C src BUILDTYPE=Release xwalk
 * Copy binary onto device
 ```
 > sdb root on
-> sdb push out/Release/xwalk /usr/lib/xwalk/xwalk
+# If you didn't touch resource bundles (like modified a .js file) you can just copy
+# the xwalk binary for successive changes.
+> sdb push out/Release/xwalk/* /usr/lib/xwalk/
 ```
 * You can run xwalk on the device using `sdb shell`. Refer to the following section.
 
