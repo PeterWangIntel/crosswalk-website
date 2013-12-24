@@ -13,7 +13,7 @@ Crosswalk on Android provides a packaging tool and Java wrapper layer which can 
 | Advantages | It's very important that web app APKs have no other dependencies. All needed are bundled together. | a) It’s small because web app APKs don't pack the crosswalk runtime, but a thin Java wrapper layer. b) Architecture independent. One web app APK can work for both IA and ARM architectures. |
 | Disadvantages | a) Web app APKs are big >16M even for a small web app. b) Architecture dependent. Each web app needs at least two APKs, one is for IA architecture and another is for ARM architecture.| Web app APKs depend on a Crosswalk runtime library APK(XWalkRuntimeLib.apk). |
 | Release targets | xwalk_app_template.tar.gz  | XWalkRuntimeLib.apk, xwalk_app_template.tar.gz |
-| Support version | >= crosswalk 3 | >= crosswalk 1 |
+| Support version | >= Crosswalk 3 | >= Crosswalk 1 |
 
 ## Architecture and Components
 Web App APK: HTML/JS/CSS + Android manifest, resources + Java wrapper(calling crosswalk runtime)  
