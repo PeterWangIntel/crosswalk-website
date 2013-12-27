@@ -46,7 +46,7 @@ url = http://download.tizen.org/releases/2.1/latest/
 
 ## Build XWalk inside chroot.
 * You need to bake the RPM at least once, as GBS creates the chroot environment.
- * If you want to bypass that (as it takes a lot of time), check out the trick in the Tips section. [[Development-on-Tizen#tips]]
+ * If you want to bypass that (as it takes a lot of time), check out the trick in the Tips section. [[Development-on-Tizen#tips-and-tricks]]
 * If you bake rpm once and you don't change the spec file, just build inside chroot. Do not waste time to bake the RPM yet again.
 
 ### Build
@@ -58,7 +58,7 @@ url = http://download.tizen.org/releases/2.1/latest/
 > cd -
 # Mount your source directory.
 > sudo mount --bind <source_path> ~/GBS-ROOT/local/BUILD-ROOTS/scratch.i586.0/home/abuild/workspace
-# where <source_path> is ~/repo/xwalk if xwalk is in ~repo/xwalk/src/xwalk
+# where <source_path> is ~/repo/xwalk if xwalk is in ~/repo/xwalk/src/xwalk
 ```
 * Manually patching patches
  * The spec file includes patches like
@@ -93,12 +93,11 @@ export GYP_GENERATORS='make'
 ...
 
 ```
- * You can call this directly in chroot. Note you need to append -Dtarget_arch=ia32 for it to work.
+ * You can call this directly in chroot. Note you need to append -Dtarget_arch=ia32 for it to work. Remove --no-parallel to make sub-processes to speed up.
  * THE BELOW MIGHT BE STALE (Updated Dec 11th, 2013): AVOID COPYING. Please verify that the below fits with crosswalk.spec
 ```
 $ export GYP_GENERATORS='make'
 $ ./src/xwalk/gyp_xwalk src/xwalk/xwalk.gyp \
---no-parallel \
 -Ddisable_nacl=1 \
 -Dpython_ver=2.7 \
 -Duse_aura=1 \
