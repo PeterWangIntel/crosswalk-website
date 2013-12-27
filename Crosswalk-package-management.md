@@ -93,7 +93,7 @@ $ python path_to/xwalk/tools/make_xpk.py xpk_package_directory_path private_key_
 ```
 A XPK package will be generated at the present directory.
 * The ```make_xpk.py``` is required an additional Python plugin [Pycrypto](https://www.dlitz.net/software/pycrypto/)
-* When generating the XPK package, please make sure there's a manifest file, named ```manifest.json```, placed at the package root directory, with this [format](https://github.com/crosswalk-project/crosswalk-website/wiki/Crosswalk-manifest#crosswalk-manifest-format)
+* When generating the XPK package, please make sure there's a manifest file, named ```manifest.json```, placed at the package root directory, with this [format](https://crosswalk-project.org/#wiki/Crosswalk-manifest)
 
 ## XPK package management
 This section will introduce the process and usages that Crosswalk runtime how to manage the xpk package, like install, uninstall.
