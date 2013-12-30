@@ -18,7 +18,7 @@
 ### Tizen Runtime
 
 * Rotation support
-
+* Runtime flags to enable/disable experimental features
 
 ### Extensions framework
 
