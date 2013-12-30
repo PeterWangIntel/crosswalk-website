@@ -3,6 +3,7 @@
 ### Common
 
 * Non-persistent "main" document
+* Basic application event API support
 
 ### Android Runtime
 
@@ -14,6 +15,7 @@
 * Support manifest.json when running web apps
 * onTitleChanged callback added in XWalkViewTestBase
 * Back key bahavior for XWalkView
+* Enable the embedded mode by default for packaging tool
 
 ### Tizen Runtime
 
