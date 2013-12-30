@@ -2,7 +2,7 @@
 
 * Non-persistent "main" document
 
-### Android
+### Android Runtime
 
 * Support for 'mailto:' scheme 
 * Support for 'geo:0,0?q=' scheme
@@ -13,7 +13,7 @@
 * onTitleChanged callback added in XWalkViewTestBase
 * Back key bahavior for XWalkView
 
-### Tizen
+### Tizen Runtime
 
 * Rotation support
 
@@ -32,7 +32,7 @@
 * HTML5 Audio/Video
 * [Page Visibility API] (http://www.w3.org/TR/page-visibility/)
 
-### Android
+### Android API
 
 * Phonegap: Accelerometer
 * Phonegap: Camera
@@ -52,7 +52,7 @@
 * Phonegap: Storage
 * Presentation API for WiDi Support
 
-### Tizen
+### Tizen API
 
 * Tizen Message Port API
 * Tizen Notification API
