@@ -1,21 +1,21 @@
-### Runtime 
+## Runtime 
 
 * Non-persistent "main" document
 
-
 ### Android
 
-* Presentation API for WiDi Support
 * Support for 'mailto:' scheme 
 * Support for 'geo:0,0?q=' scheme
 * Support for 'content://' scheme
 * Cookie support
 * Enable HTTP authentication
+* Support manifest.json when running web apps
+* onTitleChanged callback added in XWalkViewTestBase
+* Back key bahavior for XWalkView
 
 ### Tizen
 
 * Rotation support
-* Message Port API
 
 
 ### Extensions framework
@@ -23,15 +23,39 @@
 * Extension Process Crash Handling
 * Android permission support
 
+## API
 
+* [Device Capabilities API] (http://www.w3.org/2012/sysapps/device-capabilities/)
+* [DeviceOrientation event API] (http://www.w3.org/TR/orientation-event/)
+* [Raw Sockets] (http://www.w3.org/TR/raw-sockets/)
+* [Media Capture and Streams] (http://www.w3.org/TR/mediacapture-streams/)
+* HTML5 Audio/Video
+* [Page Visibility API] (http://www.w3.org/TR/page-visibility/)
 
-### API
+### Android
 
-* Device Capabilities API http://www.w3.org/2012/sysapps/device-capabilities/
-* DeviceOrientation event API http://www.w3.org/TR/orientation-event/
-* Raw Sockets http://www.w3.org/TR/raw-sockets/
-* Media Capture and Streams http://www.w3.org/TR/mediacapture-streams/
+* Phonegap: Accelerometer
+* Phonegap: Camera
+* Phonegap: Capture
+* Phonegap: Compass
+* Phonegap: Connection
+* Phonegap: Contacts
+* Phonegap: Device
+* Phonegap: Events
+* Phonegap: File
+* Phonegap: Geolocation
+* Phonegap: Globalization
+* Phonegap: InAppBrowser
+* Phonegap: Media
+* Phonegap: Notification
+* Phonegap: Splashscreen
+* Phonegap: Storage
+* Presentation API for WiDi Support
 
+### Tizen
 
+* Tizen Message Port API
+* Tizen Notification API
+* Tizen Filesystem API
 
 [Release notes in Jira] (https://crosswalk-project.org/jira/secure/ReleaseNote.jspa?projectId=10001&version=10009)
