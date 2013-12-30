@@ -4,6 +4,7 @@
 
 * Non-persistent "main" document
 * Basic application event API support
+* [Manifest format] (https://crosswalk-project.org/#wiki/Crosswalk-manifest)
 
 ### Android Runtime
 
