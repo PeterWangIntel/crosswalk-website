@@ -52,10 +52,11 @@
 * Phonegap: Storage
 * Presentation API for WiDi Support
 
-### Tizen API
+### Tizen Device API
 
-* Tizen Message Port API
-* Tizen Notification API
-* Tizen Filesystem API
+* Message Port API
+* Notification API
+* Filesystem API
+* Bookmark API
 
 [Release notes in Jira] (https://crosswalk-project.org/jira/secure/ReleaseNote.jspa?projectId=10001&version=10009)
