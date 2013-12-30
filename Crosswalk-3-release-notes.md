@@ -1,5 +1,7 @@
 ## Runtime 
 
+### Common
+
 * Non-persistent "main" document
 
 ### Android Runtime
@@ -24,6 +26,8 @@
 * Android permission support
 
 ## API
+
+### Common
 
 * [Device Capabilities API] (http://www.w3.org/2012/sysapps/device-capabilities/)
 * [DeviceOrientation event API] (http://www.w3.org/TR/orientation-event/)
