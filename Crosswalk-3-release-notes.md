@@ -66,4 +66,4 @@
 * Filesystem API
 * Bookmark API
 
-[Release notes in Jira] (https://crosswalk-project.org/jira/secure/ReleaseNote.jspa?projectId=10001&version=10009)
+[Release notes in Jira] (https://crosswalk-project.org/jira/secure/ReleaseNote.jspa?projectId=10001&version=10012)
