@@ -7,6 +7,7 @@
 
 ### Android Runtime
 
+* Embedded mode enabled by default
 * Support for 'mailto:' scheme 
 * Support for 'geo:0,0?q=' scheme
 * Support for 'content://' scheme
@@ -15,7 +16,6 @@
 * Support manifest.json when running web apps
 * onTitleChanged callback added in XWalkViewTestBase
 * Back key bahavior for XWalkView
-* Enable the embedded mode by default for packaging tool
 
 ### Tizen Runtime
 
