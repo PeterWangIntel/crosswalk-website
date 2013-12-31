@@ -15,7 +15,7 @@ Currently the required manifest fields are:
 **Note**
 
 * If both "launch" and "main" are specified then "main" will be used.
-* For Android port, only support "app.launch.local_path".
+* For Android port, only support to launch the application from "app.launch.local_path".
 
 ## Minimal manifest file
 Developer can add a typical application manifest like below to declare application meta data:
