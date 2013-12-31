@@ -4,8 +4,6 @@ Crosswalk currently follows the manifest format used by [Chromium packaged appli
 
 However, many of the features are not yet supported in Crosswalk
 
-As of crosswalk-1.28.1.0, crosswalk does not support background event page in this release.
-
 Currently the required manifest fields are:
 * **name**: A short, plain text string that identifies the application. No i18n for this field support yet. 
 * **version**: One to four dot-separated integers identifying the version of this extension. A couple of rules apply to the integers: they must be between 0 and 65535, inclusive, and non-zero integers can't start with 0. 
@@ -16,7 +14,8 @@ Currently the required manifest fields are:
 
 **Note**
 
-If both "launch" and "main" are specified then "main" will be used.
+* If both "launch" and "main" are specified then "main" will be used.
+* For Android port, only support "app.launch.local_path".
 
 ## Minimal manifest file
 Developer can add a typical application manifest like below to declare application meta data:
