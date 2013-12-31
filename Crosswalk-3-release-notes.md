@@ -58,6 +58,7 @@
 * Phonegap: Splashscreen
 * Phonegap: Storage
 * Presentation API for WiDi Support
+* Contacts Manager API
 
 ### Tizen Device API
 
