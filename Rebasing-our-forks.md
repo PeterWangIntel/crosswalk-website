@@ -258,10 +258,6 @@ git push origin upstream_30_0_1599_66
 git push -f origin master
 ```
 
-Next, clone the private `build-infrastructure.git` repository or ask someone to update `XWALK_CHROMIUM_VERSION` in `masters/master.tryserver.wrt/master.cfg` and `masters/master.wrt/master.cfg` there.
-
-After that, restart the build and try bot masters. If the new commits to blink-crosswalk and chromium-crosswalk are not picked up automatically by the build bots, force-build the content bots.
-
 ## Push your changes
 Once everything is working, you can push your blink-crosswalk and chromium-crosswalk changes to crosswalk-project if you haven't done so yet.
 
