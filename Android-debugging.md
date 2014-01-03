@@ -54,3 +54,13 @@ add Java code of xwalk, base, content, ui... to project
 #In xwview-shell-command-line, write content as follow and push it to device
 XWalk --wait-for-java-debugger
 ```
+
+## Enable Event Tracing on XWalkCoreShell
+1. Launch XWalkCoreShell on Android device
+2. Start and stop tracing recoding by running the commands on host machine:
+```
+ adb shell am broadcast -a org.xwalk.core.xwview.shell.GPU_PROFILER_START -e file /sdcard/Download/trace.txt
+ adb shell am broadcast -a org.xwalk.core.xwview.shell.GPU_PROFILER_STOP
+```
+3. Run `adb pull /sdcard/Download/trace.txt` to download the `trace.txt` to host machine
+4. Open `about:tracing` in Chrome browser on host machine and load the `trace.txt`
