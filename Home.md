@@ -22,6 +22,7 @@ out of the wiki and planted in the higher level documentation under either [Docu
 * [Crosswalk-based Cordova Android](wiki/crosswalk-cordova-android) 
 * [User agent in Crosswalk](wiki/crosswalk-user-agent)
 * [Development Guides](wiki/Development-Guides)
+* [Package management] (wiki/Crosswalk-package-management)
 
 If you have any question on how to use Crosswalk you can ask on IRC. On freenode.net, we hang out on the #crosswalk channel.
 
