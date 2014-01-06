@@ -19,4 +19,4 @@ The following table is for the installation URL for each plugin. All plugins cou
 | [Media](http://cordova.apache.org/docs/en/3.3.0/cordova_media_media.md.html#Media) | https://git-wip-us.apache.org/repos/asf/cordova-plugin-media.git#r0.2.6 | |
 | [Notification](http://cordova.apache.org/docs/en/3.3.0/cordova_notification_notification.md.html#Notification) | https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git#r0.2.4 and https://git-wip-us.apache.org/repos/asf/cordova-plugin-vibration.git#r0.3.5 | |
 | [Splashscreen](http://cordova.apache.org/docs/en/3.3.0/cordova_splashscreen_splashscreen.md.html#Splashscreen) | https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git#r0.2.5 | |
-| [Storage](http://cordova.apache.org/docs/en/3.3.0/cordova_storage_storage.md.html#Storage) | N/A | |
+| [Storage](http://cordova.apache.org/docs/en/3.3.0/cordova_storage_storage.md.html#Storage) | N/A | No plugin is needed. |
