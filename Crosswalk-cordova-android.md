@@ -2,7 +2,7 @@ Crosswalk-based Cordova Android
 ==
 Crosswalk-based Cordova Android is derived from [Cordova Android](https://github.com/apache/cordova-android) and embeds [Crosswalk](https://github.com/crosswalk-project/crosswalk) as the HTML5 runtime. It supports Android 4.0+.
 
-Crosswalk-based Cordova Android aims to be compatible to Cordova Android as much as possible. Basically, you could refer to [Cordova Android Platform Guide](http://cordova.apache.org/docs/en/3.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide).
+Crosswalk-based Cordova Android aims to be compatible to Cordova Android as much as possible. Basically, you could refer to [Cordova Android Platform Guide](http://cordova.apache.org/docs/en/3.3.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide).
 
 Requires
 ---
@@ -12,7 +12,7 @@ Requires
 - Android SDK [http://developer.android.com](http://developer.android.com)
 - Python 2.6 or greater
 
-Please refer to **Requirements and Support** and **Install the SDK** in [Cordova Android Platform Guide](http://cordova.apache.org/docs/en/3.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide) to install JDK, Ant and Android SDK.
+Please refer to **Requirements and Support** and **Install the SDK** in [Cordova Android Platform Guide](http://cordova.apache.org/docs/en/3.3.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide) to install JDK, Ant and Android SDK.
 
 And please install Python 2.6 or greater for your system.
 
@@ -39,4 +39,4 @@ Adding Plugins
 
 You could use the `plugman` command-line tool to add Cordova plugins as needed.
  * [Add Plugins into Your App](Add-Plugins-With-Crosswalk-Cordova-Android)
- * [Plugins Supported by Crosswalk-Cordova-Android 3.0.0](Plugins-List-@-3.0.0-Supported-by-Crosswalk-Cordova-Android)
+ * [Plugins Supported by Crosswalk-Cordova-Android 3.3.0](Plugins-List-@-3.3.0-Supported-by-Crosswalk-Cordova-Android)
