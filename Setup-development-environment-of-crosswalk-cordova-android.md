@@ -11,16 +11,16 @@ You can either download the binary from crosswalk website or build from the sour
 To download XWalkCoreLibrary, please navigate to [crosswalk/releases](https://download.01.org/crosswalk/releases/). Choose the Android package with specific architecture you would like to build your app.
 For example, for x86:
 
-    $ wget https://download.01.org/crosswalk/releases/android-x86/canary/crosswalk-3.32.47.0.zip
+    $ wget https://download.01.org/crosswalk/releases/android-x86/canary/crosswalk-4.32.64.0-x86.zip
 
 For arm: 
 
-    $ wget https://download.01.org/crosswalk/releases/android-arm/canary/crosswalk-3.32.47.0.zip
+    $ wget https://download.01.org/crosswalk/releases/android-arm/canary/crosswalk-4.32.64.0-arm.zip
 
 Extract it:
 
-    $ unzip crosswalk-3.32.47.0.zip
-    $ cd crosswalk-3.32.47.0/
+    $ unzip crosswalk-4.32.64.0-x86.zip
+    $ cd crosswalk-4.32.64.0-x86/
     $ tar zxvf xwalk_core_library.tar.gz
 
 ##### Build (Optional)
@@ -33,6 +33,6 @@ Build XWalkCoreLibrary project by command:
 The output is located at: `/path/to/crosswalk/src/out/Release/xwalk_core_library`
 
 ##### Import
-Import XWalkCoreLibrary by copying it to `framework` folder of crosswalk-cordova-android:
+Import XWalkCoreLibrary by linking it to `framework` folder of crosswalk-cordova-android:
 
-    $ cp -r /path/to/xwalk_core_library /path/to/crosswalk-cordova-android/framework
+    $ ln -s /path/to/xwalk_core_library /path/to/crosswalk-cordova-android/framework
