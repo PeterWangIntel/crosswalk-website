@@ -1,9 +1,9 @@
 If you haven't setup the development environment yet, please refer to [Setup Development Environment](Setup-Development-Environment-Of-Crosswalk-Cordova-Android)
 
 ### Create, Build and Run a Sample App with Command-line Tool:
-Create a sample app, for example:
+Create a sample app, for example. Please note the `--shared` switch is required to let Crosswalk-based Cordova app build correctly:
 
-    $ /path/to/crosswalk-cordova-android/bin/create HelloWorld com.example.helloworld HelloWorld
+    $ /path/to/crosswalk-cordova-android/bin/create HelloWorld com.example.helloworld HelloWorld --shared
 
 A new project is created in folder `HelloWorld`. The example HTML, JS and CSS files are located in `/path/to/HelloWorld/assets/www` (You may replace them with yours later).
 
@@ -15,7 +15,7 @@ Then build and run the sample app:
 
 You will see the 'APACHE CORDOVA' page with a blinking 'DEVICE IS READY' tag.
 
-Please refer to [Android Command-line Tools](http://cordova.apache.org/docs/en/3.0.0/guide_platforms_android_tools.md.html#Android%20Command-line%20Tools) for more command-line commands.
+Please refer to [Android Command-line Tools](http://cordova.apache.org/docs/en/3.3.0/guide_platforms_android_tools.md.html#Android%20Command-line%20Tools) for more command-line commands.
 
 ### Importing a Crosswalk-based Cordova Android Project into Eclipse
 
