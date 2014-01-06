@@ -55,7 +55,7 @@ and
 }
 ```
 ## Full manifest file
-Here is the complete manifest file which contains all fields Crosswalk (beta-1, beta-2, beta-3, canary) has already been supported:
+Here is the complete manifest file which contains all fields Crosswalk (Crosswalk 1, Crosswalk 2, Crosswalk 3, canary) has already been supported:
 ```
 {
   // Required
