@@ -1,5 +1,6 @@
 # Editing the Wiki
-To edit content need commit access to the crosswalk-website project.
+To edit content need commit access to the crosswalk-website project. If you are interested in contributing or editing content in the Wiki, please file an issue in Crosswalk's [Jira](https://crosswalk-project.org/jira) providing your GitHub user name and contact information. Due to how
+GitHub manages wiki content, we may not be able to grant edit access to all requests.
 
 Please view your content on the [live website](https://crosswalk-project.org/#wiki/history) after editing to ensure that the content is styled correctly.
 
