@@ -1,12 +1,12 @@
-## Runtime 
+### Runtime 
 
-### Common
+#### Common
 
 * Non-persistent "main" document
 * Basic application event API support
 * [Manifest format] (https://crosswalk-project.org/#wiki/Crosswalk-manifest)
 
-### Android Runtime
+#### Android Runtime
 
 * Embedded mode enabled by default
 * Support for 'mailto:' scheme 
@@ -18,19 +18,19 @@
 * onTitleChanged callback added in XWalkViewTestBase
 * Back key bahavior for XWalkView
 
-### Tizen Runtime
+#### Tizen Runtime
 
 * Rotation support
 * Runtime flags to enable/disable experimental features
 
-### Extensions framework
+#### Extensions framework
 
 * Extension Process Crash Handling
 * Android permission support
 
-## API
+### API
 
-### Common
+#### Common
 
 * [Device Capabilities API] (http://www.w3.org/2012/sysapps/device-capabilities/)
 * [DeviceOrientation event API] (http://www.w3.org/TR/orientation-event/)
@@ -39,7 +39,7 @@
 * HTML5 Audio/Video
 * [Page Visibility API] (http://www.w3.org/TR/page-visibility/)
 
-### Android API
+#### Android API
 
 * Phonegap: Accelerometer
 * Phonegap: Camera
@@ -60,7 +60,7 @@
 * Presentation API for WiDi Support
 * Contacts Manager API
 
-### Tizen Device API
+#### Tizen Device API
 
 * Message Port API
 * Notification API
