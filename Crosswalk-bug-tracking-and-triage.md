@@ -14,7 +14,7 @@
 * Closed: Features are rejected by planner or features are verified by QA. For some features that can not verified by QA, they should be closed by triage team.
 * Reopened: Features are not properly implemented and reopened by QA 
 
-## Bug Components 
+## [Bug Components](https://crosswalk-project.org/jira/browse/XWALK#selectedTab=com.atlassian.jira.plugin.system.project%3Acomponents-panel) 
 
 * API Extension Infrastructure: Caio Marcelo de Oliveira Filho	
 * Cordova API: Ningxin Hu
