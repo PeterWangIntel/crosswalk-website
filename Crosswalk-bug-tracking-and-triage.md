@@ -11,7 +11,7 @@
 * Proposed: Features are proposed and reported. Every one can propose new features
 * Accepted: Features are reviewed and approved by planner
 * Resolved: Features are implemented by engineering teams
-* Closed: Features are rejected by planner or features are verified by QA. For some features that can not verified by QA, they should be closed by triage team.
+* Closed: Features are rejected by planner or features are verified by QA. For some features that can not be verified by QA, they should be closed by triage team.
 * Reopened: Features are not properly implemented and reopened by QA 
 
 ## [Bug Components](https://crosswalk-project.org/jira/browse/XWALK#selectedTab=com.atlassian.jira.plugin.system.project%3Acomponents-panel) 
