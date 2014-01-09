@@ -13,3 +13,20 @@
 * Resolved: Features are implemented by engineering teams
 * Closed: Features are rejected by planner or features are verified by QA. For some features that can not verified by QA, they should be closed by triage team.
 * Reopened: Features are not properly implemented and reopened by QA 
+
+## Bug Components 
+
+* API Extension Infrastructure: Caio Marcelo de Oliveira Filho	
+* Cordova API: Ningxin Hu
+* Crosswalk Infrastructure: James Ketrenos	
+* Crosswalk on Android: Yongsheng Zhu
+* Crosswalk on Tizen: Sakari Poussa
+* Crosswalk Runtime Model: Kenneth Christiansen	
+* Crosswalk Tool Integration: Ningxin Hu	
+* Documentation: Balestrieri, Francesco	
+* Other Web API: Sakari Poussa	
+* Power and Performance: Xiaodan	
+* Tizen device API: Caio Marcelo de Oliveira Filho	
+* W3C API: Anssi Kostiainen	
+* Web App: Max Waterman	
+* Website: James Ketrenos
