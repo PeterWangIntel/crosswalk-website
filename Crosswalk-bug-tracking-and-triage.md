@@ -8,6 +8,8 @@
 
 ## Feature Workflow 
 
+![Feature Workflow](https://crosswalk-project.org/jira/plugins/servlet/workflow/thumbnail/getThumbnail?workflowName=XWALK+feature+workflow1&stepId=1&width=full&height=full)
+
 * Proposed: Features are proposed and reported. Every one can propose new features
 * Accepted: Features are reviewed and approved by planner
 * Resolved: Features are implemented by engineering teams
