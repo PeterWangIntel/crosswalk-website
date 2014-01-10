@@ -1,5 +1,7 @@
 ## Bug Workflow 
 
+![Bug Workflow](https://crosswalk-project.org/jira/plugins/servlet/workflow/thumbnail/getThumbnail?workflowName=XWALK+bug+workflow2&stepId=2&width=full&height=full)
+
 * New: The issue is newly reported or the resolved issue could be reopened by any user if still reproduced
 * Triaged: The issue is triaged and ready for the default assigner to start work on it
 * In Progress: The issue is being accepted and actively worked on at the moment by assigner
