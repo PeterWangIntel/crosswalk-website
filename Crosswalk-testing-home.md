@@ -48,8 +48,6 @@ We've always played a key participant role and major organizer in [Test the Web 
 
 Before running tests on test device, you might need some time to set up the test environment by using the [testkit-lite](https://github.com/testkit/testkit-lite) tool.
 
-[Here](http://otcqa.sh.intel.com/wiki/Crosswalk_Run_Tests_by_Testkit-lite) is the instruction of how to run Crosswalk tests by testkit-lite. 
-
 ## Quality Indicators
 
 Crosswalk dashboard
@@ -73,7 +71,7 @@ Crosswalk open bugs
 * Bug Report
  * Issue tracking for Crosswalk using [JIRA](https://crosswalk-project.org/jira/). 
 * Bug Triage
- * [Bug Triage Process](http://otcqa.sh.intel.com/wiki/Crosswalk_Bug_Triage_Process)
+ * [Bug Triage Process](Crosswalk-bug-tracking-and-triage)
 * Bug Scrub
  * Purpose:
     * Review new bugs field correctness, such as severity, component, assignee, and set bug priority.
