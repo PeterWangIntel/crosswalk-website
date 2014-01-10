@@ -30,3 +30,25 @@
 * W3C API: Anssi Kostiainen	
 * Web App: Max Waterman	
 * Website: James Ketrenos
+
+## Bug Fields 
+ 
+### Bug Priority Definition
+
+Priority field describes the importance and order in which a bug should be fixed. It helps developers to prioritize their work. The priority got to be set as "Undecided" when reporting a new bug. Do NOT set bug priority in bug reporting. Bug priority would be set by bug triage team for each product.
+
+* P1 --- Resolution of this defect takes precedence over other defects and most other development activities. This level is used to focus maximum team resources to resolve a defect in the shortest possible timeframe. The timeframe to resolve P1 priority defects is always immediate.
+* P2 --- Resolution of the defect has precedence over resolving other defects with lesser classifications of priority. P2 priority defects are intended to be resolved by the next planned external release of the software.
+* P3 --- Resolution of the defect has precedence over resolving other defects with lesser classifications of priority. P3 priority defects must have a planned timeframe for a verified resolution.
+* P4 --- Resolution of the defect has the least urgency to resolve. P4 priority defects may or may not have documented plans to resolve. 
+
+The priority of dependency bugs should be consistent with current bug.
+
+### Bug Severity Definition
+
+Severity field describes the impact of a bug. QA/bug reporter should review and adjust the bug severity from the whole product perspective.
+
+* Critical --- Crashes, loss of data, negative impact to other components, memory leak etc
+* Major --- Major loss of functionality
+* Normal --- Regular issue, some loss of functionality under certain circumstance
+* Minor --- Minor loss of functionality, or issues with easy workaround available 
