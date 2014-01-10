@@ -1,3 +1,5 @@
+Issue tracking for Crosswalk using [JIRA](https://crosswalk-project.org/jira/). 
+
 ## Bug Workflow 
 
 ![Bug Workflow](assets/bug_workflow.png)
