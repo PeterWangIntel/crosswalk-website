@@ -53,9 +53,9 @@ Severity field describes the impact of a bug. QA/bug reporter should review and 
 * Normal --- Regular issue, some loss of functionality under certain circumstance
 * Minor --- Minor loss of functionality, or issues with easy workaround available 
 
-### Bug Triage Process
+## Bug Triage Process
 
-### Bug Triage Definition
+## Bug Triage Definition
 
 Bug Triage is a process to:
 
@@ -66,7 +66,7 @@ Bug Triage is a process to:
 * Isolate bugs to components with 90% confidence
 * Isolate bugs to packages with 60% confidence if supporting packages 
 
-### Bug Triage Team 
+## Bug Triage Team 
 A team work on bug triage is expected to be comprised of PM, QA rep(s), dev rep(s) as mandatory team members, and distro rep(s) in some cases based on expertise mapping.
 * Bug triage team roll up the bug list to bug scrub meeting.
 * PM host weekly bug triage meeting to resolve controversial bugs.
