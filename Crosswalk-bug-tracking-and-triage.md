@@ -1,6 +1,6 @@
 ## Bug Workflow 
 
-![Bug Workflow](https://crosswalk-project.org/jira/plugins/servlet/workflow/thumbnail/getThumbnail?workflowName=XWALK+bug+workflow2&stepId=2&width=full&height=full)
+![Bug Workflow](assets/bug_workflow.png)
 
 * New: The issue is newly reported or the resolved issue could be reopened by any user if still reproduced
 * Triaged: The issue is triaged and ready for the default assigner to start work on it
@@ -10,7 +10,7 @@
 
 ## Feature Workflow 
 
-![Feature Workflow](https://crosswalk-project.org/jira/plugins/servlet/workflow/thumbnail/getThumbnail?workflowName=XWALK+feature+workflow1&stepId=1&width=full&height=full)
+![Feature Workflow](assets/feature_workflow.png)
 
 * Proposed: Features are proposed and reported. Every one can propose new features
 * Accepted: Features are reviewed and approved by planner
@@ -58,6 +58,7 @@ Severity field describes the impact of a bug. QA/bug reporter should review and 
 * Minor --- Minor loss of functionality, or issues with easy workaround available 
 
 ## Bug Triage Process
+![Feature Workflow](assets/bug_triage_process.png)
 
 ## Bug Triage Definition
 
