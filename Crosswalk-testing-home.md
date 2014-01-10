@@ -71,7 +71,7 @@ Crosswalk open bugs
 * Bug Report
  * Issue tracking for Crosswalk using [JIRA](https://crosswalk-project.org/jira/). 
 * Bug Triage
- * [Bug Triage Process](Crosswalk-bug-tracking-and-triage)
+ * [Bug tracking and triage process](Crosswalk-bug-tracking-and-triage)
 * Bug Scrub
  * Purpose:
     * Review new bugs field correctness, such as severity, component, assignee, and set bug priority.
