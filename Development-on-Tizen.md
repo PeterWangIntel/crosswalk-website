@@ -85,6 +85,7 @@ Patch3:         %{name}-1.29-revert-nss-commits.patch
 $ cd ~/workspace   # this is your mounting point
 ```
 * Prepare GYP build
+ * If you want to use ninja, see [[Development-on-Tizen#tips-and-tricks]]
  * The spec file (packaging/crosswalk.spec) includes the build command with associated flags.
 ```
 The line starts like this:
@@ -162,3 +163,56 @@ gdb --args /usr/lib/xwalk/xwalk http://www.google.com
 > gbs build -A i586
 ```
 * The above command *will* fail, but your chroot is updated. \o/
+
+## Compile using 'ninja', instead of 'make'
+* There are two big benefits
+ * super fast (>1.5 times)
+ * You can assign the output directory.
+* Prepare GYP build
+ * Make sure you can access 'depot_tools' in chroot.
+  * copy 'depot_tools' in your ```<source_path>```.
+```
+ > cp -r <depot_tools_path> <source_path>
+```
+ * Set env
+```
+$ cd ~/workspace/src
+$ export PATH=$PATH:/home/abuild/workspace/depot_tools
+$ export GYP_GENERATORS='ninja'
+```
+ * THE BELOW MIGHT BE STALE (Updated Jan 15th, 2014): AVOID COPYING. Please verify that the below fits with crosswalk.spec
+ * NOTE: execute `gyp_xwalk` in `src` directory.
+```
+$ xwalk/gyp_xwalk xwalk/xwalk.gyp \
+-Ddisable_nacl=1 \
+-Dpython_ver=2.7 \
+-Duse_aura=1 \
+-Duse_cups=0 \
+-Duse_gconf=0 \
+-Duse_kerberos=0 \
+-Duse_system_bzip2=1 \
+-Duse_system_icu=1 \
+-Duse_system_libexif=1 \
+-Duse_system_libxml=1 \
+-Duse_system_nspr=1 \
+-Denable_xi21_mt=1 \
+-Duse_xi2_mt=0 \
+-Dtizen_mobile=1 \
+-Duse_openssl=1 \
+-Dtarget_arch=ia32
+```
+* Start the actual build
+```
+$ ninja -C out/Release -j9 xwalk
+```
+* How to change the output directory
+ * define GYP_GENERATOR_FLAGS before executing 'gyp_xwalk'. for example,
+```
+$ export PATH=$PATH:/home/abuild/workspace/xwalk/depot_tools
+$ export GYP_GENERATORS='ninja'
+$ export GYP_GENERATOR_FLAGS="output_dir=out_i586"
+$ xwalk/gyp_xwalk xwalk/xwalk.gyp \
+... # definition list
+-Dtarget_arch=ia32
+$ ninja -C out_i586/Release -j9 xwalk
+```
