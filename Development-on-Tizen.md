@@ -166,8 +166,8 @@ gdb --args /usr/lib/xwalk/xwalk http://www.google.com
 
 ## Compile using 'ninja', instead of 'make'
 * There are two big benefits
- * super fast (>1.5 times)
- * You can assign the output directory.
+ * Super fast (>1.5 times)
+ * You can change the output directory.
 * Temp: Patch icu. 
  * This explanation will be removed after applying upstream and rebasing Crosswalk to upstream.
  * WIP in upstream: https://codereview.chromium.org/104793004/
