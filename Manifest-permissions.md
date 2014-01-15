@@ -1,6 +1,6 @@
 Here is the Crosswalk permission API and supported Crosswalk version information:
 
-|Permission API in Crosswalk|Permission Name in Manifest|Supported for Crosswalk on Android since |Supported for Crosswalk on Tizen since |
+|Permission API in Crosswalk|Permission Name in Manifest|Support for Crosswalk on Android since |Support for Crosswalk on Tizen since |
 -------------|--------------|--------------|--------------
 |Task Scheduler|Alarm|Not Supported||
 |Contacts Manager|Contacts|Crosswalk 3||
