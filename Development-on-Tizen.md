@@ -168,6 +168,15 @@ gdb --args /usr/lib/xwalk/xwalk http://www.google.com
 * There are two big benefits
  * super fast (>1.5 times)
  * You can assign the output directory.
+* Temp: Patch icu. 
+ * This explanation will be removed after applying upstream and rebasing Crosswalk to upstream.
+ * WIP in upstream: https://codereview.chromium.org/104793004/
+ * Download https://dl.dropboxusercontent.com/u/5222557/icu_component_build.patch
+ * Apply the patch
+```
+> cd <source_path>/src/third_party/icu
+> patch -p0 < icu_component_build.patch
+```
 * Prepare GYP build
  * Make sure you can access 'depot_tools' in chroot.
   * copy 'depot_tools' in your ```<source_path>```.
