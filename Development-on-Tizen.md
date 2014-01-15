@@ -225,3 +225,8 @@ $ xwalk/gyp_xwalk xwalk/xwalk.gyp \
 -Dtarget_arch=ia32
 $ ninja -C out_i586/Release -j9 xwalk
 ```
+* How to build xwalk with separated shared libraries. (a.k.a component build)
+ * define component before executing `gyp_xwalk`.
+```
+$ export GYP_DEFINES='component=shared_library'
+```
