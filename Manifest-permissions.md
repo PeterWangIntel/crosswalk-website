@@ -3,8 +3,8 @@ Here is the Crosswalk permission API and supported Crosswalk version information
 |Permission API in Crosswalk|Permission Name in Manifest|Support for Crosswalk on Android since |Support for Crosswalk on Tizen since |
 -------------|--------------|--------------|--------------
 |Task Scheduler|Alarm|Not Supported||
-|Contacts Manager|Contacts|Crosswalk 3||
-|Messaging|Messaging|Crosswalk 3||
+|Contacts Manager|Contacts|Crosswalk 4||
+|Messaging|Messaging|Crosswalk 4||
 |Telephony|Telephony|Not Supported||
 |Raw Sockets|RawSockets|Not Supported||
 |Bluetooth|Bluetooth|Not Supported||
@@ -24,9 +24,9 @@ Here is the Crosswalk permission API and supported Crosswalk version information
 |Proximity Events|Proximity|Not Supported||
 |Vibration|Vibration|Not Supported||
 |Network Service Discovery|NetworkServiceDiscovery|Not Supported||
-|Geolocation|Geolocation|Crosswalk 3||
+|Geolocation|Geolocation|Crosswalk 4||
 |Orientation/Acceleration|DeviceOrientation|Not Supported||
 |Screen Orientation|ScreenOrientation|Not Supported||
-|Fullscreen|Fullscreen|Crosswalk 3||
+|Fullscreen|Fullscreen|Crosswalk 4||
 |Gamepad|Gamepad|Not Supported||
-|Presentation API|Presentation|Crosswalk 3||
+|Presentation API|Presentation|Crosswalk 4||
