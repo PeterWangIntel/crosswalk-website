@@ -55,6 +55,7 @@ Crosswalk dashboard
 
 Crosswalk test reports
  * [Canary Test Report](https://lists.crosswalk-project.org/pipermail/crosswalk-dev/)
+ * [Canary Nightly Automation Test Report](https://lists.crosswalk-project.org/pipermail/crosswalk-autotest/)
  * [Beta Test Report](https://lists.crosswalk-project.org/pipermail/crosswalk-dev/)
  * Stable test report 
 
