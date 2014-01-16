@@ -12,6 +12,8 @@ Currently the required manifest fields are:
   * **main**:  Indicate a main document (AKA event page) will be used as the app entry. It should contains "source" to specify the main document’s local path or a "scripts" array to specify JavaScript files local path for auto-generated main document. If both "source" and "scripts" are specified then "source" will be used.
 * **icons**: The "icons" field represent which icons should be used for the application. The "128" size icon should be valid in manifest file. If it's not given, the Crosswalk default logo icon will be used.
 * **permissions**: This field defines which web features are used for the application. See the [permissions](https://crosswalk-project.org/#wiki/manifest-permissions) support in Crosswalk.
+* **content_security_policy**: The "content_security_policy" field represent the [CSP](http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html) policy which the packaged web application should be enforced. It will be disabled when it's not given.
+
 **Note**
 
 * If both "launch" and "main" are specified then "main" will be used.
@@ -55,7 +57,7 @@ and
 }
 ```
 ## Full manifest file
-Here is the complete manifest file which contains all fields Crosswalk (Crosswalk 1, Crosswalk 2, Crosswalk 3, canary) has already been supported:
+Here is the complete manifest file which contains all fields Crosswalk (Crosswalk 1, Crosswalk 2, Crosswalk 3) has already been supported:
 ```
 {
   // Required
@@ -71,6 +73,30 @@ Here is the complete manifest file which contains all fields Crosswalk (Crosswal
     }
   },
   // recommended
+  "description": "a sample description",
+  "icons": {
+    "128": "icon128.png"
+  }
+}
+```
+
+Supported by canary:
+```
+{
+  // Required
+  "name": "app name",
+  "version": "1.0.0",
+  "app": {
+    "main":{
+      "scripts": ["main.js"],
+      "source": "main.html"
+    },
+    "launch":{
+      "local_path": "index.html"
+    }
+  },
+  // recommended
+  "content_security_policy": "script-src 'self'",
   "description": "a sample description",
   "icons": {
     "128": "icon128.png"
