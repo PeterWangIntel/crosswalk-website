@@ -108,18 +108,18 @@ Supported by canary:
  Field | Platform | Canary | Crosswalk 1 | Crosswalk 2 | Crosswalk 3 
 --- | --- | --- | --- | --- | ---
 name | Tizen | Yes | Yes | Yes | Yes
- | Android | | | |
+ | Android | Yes | No | Yes | Yes
 version | Tizen | Yes | Yes | Yes | Yes
- | Android | | | |
+ | Android | Yes | No | Yes | Yes
 app.launch.local_path | Tizen | Yes | Yes | Yes | Yes
- | Android | | | |
+ | Android | Yes | No | Yes | Yes
 app.main.source | Tizen | Yes | Yes | Yes | Yes
- | Android | | | |
+ | Android | N/A | N/A | N/A | N/A
 app.main.scripts | Tizen | Yes | Yes | Yes | Yes
- | Android | | | |
+ | Android | N/A| N/A | N/A |
 description | Tizen | Yes | Yes | Yes | Yes
- | Android | | | |
+ | Android | Yes | N/A | Yes | Yes
 icons | Tizen | Yes | Yes | Yes | Yes
- | Android | | | |
+ | Android | Yes | N/A | Yes | Yes
 content_security_policy | Tizen | Yes | N/A | N/A | N/A
- | Android | | | |
+ | Android | N/A | N/A | N/A | N/A 
