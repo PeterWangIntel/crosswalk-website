@@ -116,7 +116,7 @@ app.launch.local_path | Tizen | Yes | Yes | Yes | Yes
 app.main.source | Tizen | Yes | Yes | Yes | Yes
  | Android | N/A | N/A | N/A | N/A
 app.main.scripts | Tizen | Yes | Yes | Yes | Yes
- | Android | N/A| N/A | N/A |
+ | Android | N/A | N/A | N/A | N/A
 description | Tizen | Yes | Yes | Yes | Yes
  | Android | Yes | N/A | Yes | Yes
 icons | Tizen | Yes | Yes | Yes | Yes
