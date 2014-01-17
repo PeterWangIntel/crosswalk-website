@@ -103,3 +103,15 @@ Supported by canary:
   }
 }
 ```
+
+## Manifest fields supporting status
+ Field | Platform | Canary | Crosswalk 1 | Crosswalk 2 | Crosswalk 3 
+--- | --- | --- | --- | --- | ---
+name | Tizen | Yes | Yes | Yes | Yes
+version | Tizen | Yes | Yes | Yes | Yes
+app.launch.local_path | Tizen | Yes | Yes | Yes | Yes
+app.main.source | Tizen | Yes | Yes | Yes | Yes
+app.main.scripts | Tizen | Yes | Yes | Yes | Yes
+description | Tizen | Yes | Yes | Yes | Yes
+icons | Tizen | Yes | Yes | Yes | Yes
+content_security_policy | Tizen | Yes | N/A | N/A | N/A
