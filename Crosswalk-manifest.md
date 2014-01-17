@@ -123,3 +123,5 @@ icons | Tizen | Yes | Yes | Yes | Yes
  | Android | Yes | N/A | Yes | Yes
 content_security_policy | Tizen | Yes | N/A | N/A | N/A
  | Android | N/A | N/A | N/A | N/A 
+permissions | Tizen | |  |  | 
+ | Android |  |  |  |  
