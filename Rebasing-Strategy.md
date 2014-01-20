@@ -5,7 +5,7 @@ Before the first public release, chromium-crosswalk will always track the beta c
 
 The update will happen every week and every six weeks a major version will hit the beta channel which will be the time a potential rebase work will happen as we need to rebase our patches on top of Chromium.
 
-Every DEPS major roll (the 6 weeks one) will be announced on the dev mailing list so that people will be aware of the upcoming changes. How often Crosswalk will be released is yet to be determined; right now we aim towards a 1.0 release.
+Every DEPS major roll (the 6 weeks one) will be announced on the dev mailing list so that people will be aware of the upcoming changes. Crosswalk is released more or less every 12 weeks.
 
 ## Releasing Crosswalk
 * Branch the Crosswalk source code into a release branch inside the Crosswalk repository (e.g. v1.0)
