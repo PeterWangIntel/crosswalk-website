@@ -1,4 +1,4 @@
-Crosswalk uses forked versions of Chromium repositories (for example Blink and Chromium) which allows the project to land few differentiations factors from upstream. To achieve that crosswalk uses the same process as Chromium : a DEPS file will be used to point to the right branch and revision in the Crosswalk downstream repo (or forks) of Chromium (https://github.com/crosswalk-project/chromium-crosswalk or https://github.com/crosswalk-project/blink-crosswalk).
+Crosswalk uses forked versions of Chromium repositories (for example Blink and Chromium) which allows the project to land few differentiations factors from upstream. To achieve that Crosswalk uses the same process as Chromium : a DEPS file will be used to point to the right branch and revision in the Crosswalk downstream repo (or forks) of Chromium (https://github.com/crosswalk-project/chromium-crosswalk or https://github.com/crosswalk-project/blink-crosswalk).
 
 Crosswalk rebasing is owned by the releasing team (alexis.menard@intel.com and raphael.kubo.da.costa@intel.com) who are responsible of our downstream repositories (blink-crosswalk, chromium-crosswalk and others when we need). 
 
