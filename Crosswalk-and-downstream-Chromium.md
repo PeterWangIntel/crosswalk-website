@@ -44,15 +44,15 @@ chromium repositories and bumping the DEPS in the branches of Crosswalk itself.
 
 We should minimize this kind of change. Crosswalk should aim to be compilable and “runnable” (even with fewer features) with unmodified Chromium/Blink repositories.
 
-It might be the case that certain changes are unavoidable. Owner of our chromium branches will give early attention to these changes and will chase after the authors to get these changes rebased in a timely manner during the first days of the merge window. If they fail to answer and the changes to make it work are not trivial, the chromium branches update may be discarded for this given version of Crosswalk (and it’s a big failure).
+It might be the case that certain changes are unavoidable. The release team will give early attention to these changes and will chase after the authors to get these changes rebased in a timely manner during the first days of the merge window. If they fail to answer and the changes to make it work are not trivial, the chromium branches update may be discarded for this given version of Crosswalk (and it’s a big failure).
 
 **Do the branches need to be re-reviewed?**
 
-The original authors and the owner of the chromium branches should be enough to validate a change -- if further review is necessary they can make this call. Note that we’re talking about rebased changes, not the original PR adding a new patch, this one should follow the usual review process.
+The original authors and the release team should be enough to validate a change -- if further review is necessary they can make this call. Note that we’re talking about rebased changes, not the original PR adding a new patch, this one should follow the usual review process.
 
 **In case of changes that can’t be upstreamed, the developers have to deal with them in every update. Isn’t it too much work?**
 
-Yes, but this is already true today, so the amount of work will not change, only the person responsible to do it -- which now will be the original developers / maintainers of the feature. The best practice here will be to make sure that change is done in a way that’s not very disruptive to the Chromium codebase. Sometimes for achieving the same functionality in two ways, one that need constant change in every Chromium update, and other that requires less changing.
+Yes, only the person responsible to do it -- which now will be the original developers / maintainers of the feature. The best practice here will be to make sure that change is done in a way that’s not very disruptive to the Chromium codebase. Sometimes for achieving the same functionality in two ways, one that need constant change in every Chromium update, and other that requires less changing.
 
 Should features that come from our Chromium branches be marked as “experimental” / “tech preview”?
 Not necessarily, it’s a case by case basis, if we feel confident that our implementation is good, stable then it should be considered as stable and we should commit to maintain it for our users. 
@@ -65,7 +65,7 @@ There are two very direct ways to reduce the risk of a feature regression: ensur
 
 **Is this new approach encouraging us NOT to make changes to Chromium/Blink?**
 
-Quite the opposite! The practice so far has been to avoid changes to our branches by default. With the new approach there will be a structured way of accepting those changes even before they reach upstream. It also provides an incentive to later upstream (or at least improve) the changes: because the author will be responsible for the changes.
+Quite the opposite! The approach here is a structured way of accepting those changes even before they reach upstream. It also provides an incentive to later upstream (or at least improve) the changes: because the author will be responsible for the changes.
 
 **Is this new approach encouraging us to ALWAYS implement new functionality by making changes to Chromium/Blink?**
 
@@ -75,12 +75,12 @@ The cost of keeping a change to our Chromium branches that we don’t expect to 
 
 **What if the author is not working on that feature anymore?**
 
-While we do refer to an “author” everywhere in this document, he/she does not always need to be always the same person who originally created a patch. It is fine to change the maintainer of a certain feature, and the new person is responsible for updating the topic branch. The owner will keep track of each patch/feature we have in our forks and make sure a list of authors is kept up-to-date. It’s the responsibility of the original author to inform any change.
+While we do refer to an “author” everywhere in this document, he/she does not always need to be always the same person who originally created a patch. It is fine to change the maintainer of a certain feature, and the new person is responsible for updating the topic branch. The releasing team will keep track of each patch/feature we have in our forks and make sure a list of authors is kept up-to-date. It’s the responsibility of the original author to inform any change.
 
-**Is only one Owner enough?**
+**Is only two Owner enough?**
 
-At least one person will be allocated full time to work on it. A backup person will be assigned in case help is needed (like vacations or sick leave). As for review work, more people can be assigned to help, the same way we have multiple owners for certain directories in Crosswalk.
+At least two person are allocated to work on it. As for review work, more people can be assigned to help, the same way we have multiple owners for certain directories in Crosswalk.
 
 **How will we handle the existing patches?**
 
-For the very small patches, the owner will adopt them. For larger changes, the original developers will be contacted to make a new pull request on top of a fresh next branch.
+For the very small patches, the release team will adopt them. For larger changes, the original developers will be contacted to make a new pull request on top of a fresh next branch.
