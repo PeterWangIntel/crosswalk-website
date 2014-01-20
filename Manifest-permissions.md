@@ -6,11 +6,11 @@ Here is the Crosswalk permission API and supported Crosswalk version information
 |Contacts Manager|Contacts|Crosswalk 4||
 |Messaging|Messaging|Crosswalk 4||
 |Telephony|Telephony|Not Supported||
-|Raw Sockets|RawSockets|Not Supported||
+|Raw Sockets|RawSockets|Crosswalk 4||
 |Bluetooth|Bluetooth|Not Supported||
 |Browser|Browser|Not Supported||
 |Calendar|Calendar|Not Supported||
-|Device Capabilities|DeviceCapabilities|Not Supported||
+|Device Capabilities|DeviceCapabilities|Crosswalk 4||
 |Idle|Idle|Not Supported||
 |Media Storage|MediaStorage|Not Supported||
 |Network Interface|NetworkInterface|Not Supported||
