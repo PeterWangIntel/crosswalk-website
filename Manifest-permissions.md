@@ -1,5 +1,4 @@
-Here is the Crosswalk permission API and supported Crosswalk version information:
-
+Below is the support of permission for Crosswalk API on Android and Tizen. The permission names are used in manifest.json.
 |Permission API in Crosswalk|Permission Name in Manifest|Support for Crosswalk on Android since |Support for Crosswalk on Tizen since |
 -------------|--------------|--------------|--------------
 |Task Scheduler|Alarm|Not Supported||
