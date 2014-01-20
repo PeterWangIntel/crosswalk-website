@@ -1,63 +1,77 @@
 ## Overall strategy
-Crosswalk will adopt the same process as Chromium. A DEPS file will be used to point to the right branch and revision in the Crosswalk downstream repo (aka fork) of Chromium (https://github.com/crosswalk-project/chromium-crosswalk).
+Crosswalk uses forked versions of Chromium repositories (for example Blink and Chromium) which allows the project to land few differentiations factors from upstream. To achieve that crosswalk uses the same process as Chromium : a DEPS file will be used to point to the right branch and revision in the Crosswalk downstream repo (or forks) of Chromium (https://github.com/crosswalk-project/chromium-crosswalk or https://github.com/crosswalk-project/blink-crosswalk).
 
-Before the first public release, chromium-crosswalk will always track the beta channel of Chromium. It is the responsibility of the Crosswalk team to update chromium-crosswalk to reflect the updates of the beta channel in chromium. The site http://omahaproxy.appspot.com/ is a good pointer to track the correct revisions.
+Crosswalk rebasing is owned by the releasing team (alexis.menard@intel.com and raphael.kubo.da.costa@intel.com) who are responsible of our downstream repositories (blink-crosswalk, chromium-crosswalk and others when we need). 
 
-The update will happen every week and every six weeks a major version will hit the beta channel which will be the time a potential rebase work will happen as we need to rebase our patches on top of Chromium.
+The releasing team is responsible for updating the branches, and is also the team that can make the final call about whether something should be merged or not into those downstream branches. In the long run, the team is the contact point for best practices when making changes to our Chromium branches, as well to upstreaming those changes when applicable.
 
-Every DEPS major roll (the 6 weeks one) will be announced on the dev mailing list so that people will be aware of the upcoming changes. Crosswalk is released more or less every 12 weeks.
+## Developing the changes in our downstream repositories
+Changes to our Chromium repositories are submitted as Pull Requests. The branch used for this PR is recommended to be kept alive by the original author. These are referred to as topic branches.
 
-## Releasing Crosswalk
-* Branch the Crosswalk source code into a release branch inside the Crosswalk repository (e.g. v1.0)
-* Make sure that the DEPS file in that newly created Crosswalk branch stay attach to the same major version that was used in trunk and wait the beta channel used up until branching time to be promoted stable. Trunk can then move freely forward and rebase/update on a new major revision.
-* Roll the QA work in that branch; bug fixing and testing.
+Future changes related to that original change are recommended to be made on top of the original topic branch. That will make the updating work easier.
 
-## Rebasing process
-When Crosswalk trunk branches for release, chromium-crosswalk does the same.
-Every week for trunk, we should:
-* Branch current chromium-crosswalk trunk to a unique named branch. This new created branch will not evolve anymore, it's just for history recovery since rebase will force-update trunk.
-* Do rebase for chromium-crosswalk trunk branch. Rebase it to latest upstream beta and force update chromium-crosswalk trunk branch.
-* Update DEPS in Crosswalk trunk to integrate the new rebased chromium.
+## Rebasing the changes in our downstream repositories
+When it is time to perform the next update, the releasing team of our Chromium branches will first upload the new version to a branch called “next” and ensure it is correctly compiling. At this point, it only contains Chromium commits from upstream, without any of the changes of ours that we had in master. After a fixed time to allow topic branches to get updated to this new version, there’s a round of merging of those branches again. With that tree, Crosswalk is updated to compile.
 
-A major upgrade every six weeks, and patch update for others. Chromium is versioned major.minor.build.patch
+Topic branches that don’t apply cleanly (or with trivial changes) will be discarded. They can be updated later and merged again in the development cycle. The burden of updating the topic branches is to their authors. If they failed to do it in a timely manner (in the first weeks of the canary cycle) they will be discarded for the next release.
 
-Every week for release, we should:
-* Branch current chromium-crosswalk release to a unique named branch. Similar to what we need to do for trunk.
-* Do rebase for chromium-crosswalk release branch. Rebase it to latest upstream branch and force update chromium-crosswalk release branch. (upstream branch means for example, rebase from 28.0.1500.50 to 28.0.1500.80)
-* Update DEPS in Crosswalk release branch to integrate the new rebased chromium.
+## Schedule of a canary cycle of Crosswalk
 
-## Release Criteria
-After the branching no new features will be added in release branches, only bug fixes and security fixes will go in both in Crosswalk and chromium-crosswalk. This will reduce potential regressions.
+The development cycle (also called canary cycle) would change to work this way:
 
-A few days after branching we will release as-is the branch as part of the beta offer even with major bugs opened so we can get early feedback.
+**Week 1:** On Monday the new branch “next” tracking the new version of Chromium is created. During this week updated versions of the existing topic branches will be merged. Smoke testing happens on the side via dedicated buildbots to test main platforms (Linux, Android, Tizen). Avoid merging new topic branches, this week is dedicated to ensure that all previous features are merged and we will face no regressions in master.
 
-Final releases will happen only if no major bugs are open on that given release branch.
+**Week 2:** The rebase lands in the master of Crosswalk, which will then start being tested by QA. This means that we may face regressions in master if the topic branches were not merged in the previous week. Existing topic branches may be applied.
 
-## Updating releases
-It is the responsibility of the Crosswalk team and the release management to update each stable branches of chromium-crosswalk tracked by Crosswalk releases so that old Crosswalk releases receive security and bug fixes from upstream chromium.
+**Week 3-5:** Development happens on Crosswalk master. New topic branches and existing topic branches may be applied.
 
-Fixes in Crosswalk will be landed in trunk always and backported in appropriate release branches.
+**Week 6:** We avoid merging new features to Crosswalk master to stabilize for the next beta branch. Also avoid merging any topic branches.
 
-Fixes in our custom patches in Chromium will always be backported in the current “trunk” (the tracked beta channel) and backported to appropriate release branches.
+Updating the DEPS.xwalk file in Crosswalk master is still up to the development team.
 
-Bug fixes and security fixes aimed for a Crosswalk release but inside Chromium or Blink will be landed upstream and we will wait Google to backport them in the stable channel we’re tracking.
+## Updates of our Chromium branches for stable and beta Crosswalk
 
-## QA activities
-Up until July and the first release it’s safe for the QA to focus on trunk and provide feedback about it.
+Beta and Stable versions of Crosswalk track a given branch of Chromium upstream (which corresponds to a given Chromium version). These upstream branches are receiving updates until they are discarded (when a new Chromium stable is released). Crosswalk must keep in sync with these branches in order to get bug and security fixes. 
 
-When we will create the first 1.0 release branch of Crosswalk, QA should focus on the release branch to make sure the quality is good while doing a soft testing on trunk.
+In the proposed workflow it will be the responsibility of the new owner to update the branches. Differently than the upstream major version update, those fix updates could be merged in the our branches instead of requiring a rebase.
 
-In the future ideally we want to make sure QA is focusing more on upcoming release branches.
+To summarize the owner will make sure that the stable and beta versions of Crosswalk always track the latest and greatest from given upstream version by updating the branches in our 
+chromium repositories and bumping the DEPS in the branches of Crosswalk itself.
 
-## What goes inside chromium-crosswalk?
-We try to aim upstream as first. If this option is not possible then chromium-crosswalk is the place to land the patch. It will be carefully reviewed and will land there. We need to remember that any patch in there as a high cost of maintenance.
+## Questions and Answers
 
-## What to do if we are blocked on new features in Chromium or Blink?
-In really rare cases our work depends on something we landed upstream in Chromium or Blink and that is required to move forward in Crosswalk without paying the high cost of maintaining changes in chromium-crosswalk. In the meantime we will allow crosswalk-trunk to track another channel than beta.
+**What if a change is needed to get Crosswalk in a compilable state?**
+We should minimize this kind of change. Crosswalk should aim to be compilable and “runnable” (even with fewer features) with unmodified Chromium/Blink repositories.
 
-This should be communicated to the mailing list and agreed with the community.
+It might be the case that certain changes are unavoidable. Owner of our chromium branches will give early attention to these changes and will chase after the authors to get these changes rebased in a timely manner during the first days of the merge window. If they fail to answer and the changes to make it work are not trivial, the chromium branches update may be discarded for this given version of Crosswalk (and it’s a big failure).
 
-## Resources
-Before the first release, it will be fine to rely on two persons for updating chromium-crosswalk and rolling the DEPS inside Crosswalk repository. This is a few hours work for one engineer once a week. They can alternate.
+**Do the branches need to be re-reviewed?**
+The original authors and the owner of the chromium branches should be enough to validate a change -- if further review is necessary they can make this call. Note that we’re talking about rebased changes, not the original PR adding a new patch, this one should follow the usual review process.
 
-After the first release we that it will start to be a dedicated role for a person. Managing the releases branches, backporting, and roll should be done by a given person dedicated doing so.
+**In case of changes that can’t be upstreamed, the developers have to deal with them in every update. Isn’t it too much work?**
+Yes, but this is already true today, so the amount of work will not change, only the person responsible to do it -- which now will be the original developers / maintainers of the feature. The best practice here will be to make sure that change is done in a way that’s not very disruptive to the Chromium codebase. Sometimes for achieving the same functionality in two ways, one that need constant change in every Chromium update, and other that requires less changing.
+
+Should features that come from our Chromium branches be marked as “experimental” / “tech preview”?
+Not necessarily, it’s a case by case basis, if we feel confident that our implementation is good, stable then it should be considered as stable and we should commit to maintain it for our users. 
+
+**Wouldn’t this approach increase the risk of losing a feature because it wasn’t merged in the updated version?**
+This risk exists today, but is hidden in the “update Crosswalk version”. However, keeping up with recent Chromium versions is a feature of Crosswalk as well, so the new approach says that by default, we prioritize having a recent version of the web engine than any other feature (the benefits of newer Chromium is higher than a given feature).
+
+There are two very direct ways to reduce the risk of a feature regression: ensure that the changes reach upstream; or ensuring that the feature is implemented in a way that doesn’t cause many conflicts (textual and functional) to upstream code.
+
+**Is this new approach encouraging us NOT to make changes to Chromium/Blink?**
+Quite the opposite! The practice so far has been to avoid changes to our branches by default. With the new approach there will be a structured way of accepting those changes even before they reach upstream. It also provides an incentive to later upstream (or at least improve) the changes: because the author will be responsible for the changes.
+
+**Is this new approach encouraging us to ALWAYS implement new functionality by making changes to Chromium/Blink?**
+No. The idea is to have a clear mechanism for handling changes that need to be done in Chromium/Blink. The usual tradeoffs for choosing where a functionality should be implemented are still the same, see a summary here https://lists.crosswalk-project.org/pipermail/crosswalk-dev/2013-December/000624.html.
+
+The cost of keeping a change to our Chromium branches that we don’t expect to upstream anytime soon also remains the same, but is now in the developer’s hands: one needs to make sure the code topic branch is updated and works in every cycle. The ideal scenario of the new approach is that features can debut in our branch, but end up reaching upstream so we don’t need to always maintain them locally.
+
+**What if the author is not working on that feature anymore?**
+While we do refer to an “author” everywhere in this document, he/she does not always need to be always the same person who originally created a patch. It is fine to change the maintainer of a certain feature, and the new person is responsible for updating the topic branch. The owner will keep track of each patch/feature we have in our forks and make sure a list of authors is kept up-to-date. It’s the responsibility of the original author to inform any change.
+
+**Is only one Owner enough?**
+At least one person will be allocated full time to work on it. A backup person will be assigned in case help is needed (like vacations or sick leave). As for review work, more people can be assigned to help, the same way we have multiple owners for certain directories in Crosswalk.
+
+**How will we handle the existing patches?**
+For the very small patches, the owner will adopt them. For larger changes, the original developers will be contacted to make a new pull request on top of a fresh next branch.
