@@ -89,15 +89,15 @@ For the very small patches, the release team will adopt them. For larger changes
 
 The example below represents one of our Chromium branches. This first picture shows what the tree would look like during the regular “Canary cycle” for our version. During that time the focus of work is the master branch, which is based on the upstream-30 version.  There are three features on top of that, indicated by the topic branches feature-x, feature-y and feature-z, all merged into our master branch.
 
-DIAG1
+![Initial State](https://raw.github.com/crosswalk-project/crosswalk/master/wiki/images/rebase-initial-state.png)
 
 All the feature branches are encouraged to be on top of the commit we choose to use as base for this version. This is chosen by the person responsible for updating the chromium tree, and it was the next branch of the previous (not shown) iteration. Here we show the branches in isolation:
 
-DIAG2
+![feature-x-30](https://raw.github.com/crosswalk-project/crosswalk/master/wiki/images/rebase-feature-x-30.png)
 
-DIAG3
+![feature-y-30](https://raw.github.com/crosswalk-project/crosswalk/master/wiki/images/rebase-feature-y-30.png)
 
-DIAG4
+![feature-z-30](https://raw.github.com/crosswalk-project/crosswalk/master/wiki/images/rebase-feature-z-30.png)
 
 Note that one of the patches of Feature Y is a candidate for upstreaming. We’ll see how that affects the topic branch later.
 
@@ -105,20 +105,20 @@ Also note that a fix was needed for feature Z after it was merged. Looking back 
 
 When it’s time for a new update of our branches, a point is chosen from the upstream repositories and a next branch is created. In this example the point is the upstream-31 branch, that contains, among other changes, the Feature X (that was upstreamed) and a change that we had in the Feature Y branch.
 
-DIAG5
+![Upstream 31](https://raw.github.com/crosswalk-project/crosswalk/master/wiki/images/rebase-upstream-31.png)
 
 Since Feature X is already part of upstream, we don’t need to maintain a topic branch for it anymore. 
 
 Also, the updated version of feature-y topic branch, called here feature-y-31 branch doesn’t need to contain the change that was upstreamed anymore. This is common, sometimes not an entire feature can be upstreamed, but parts of it can. For example, adding certain generic hooks into Chromium so we can implement a certain functionality. The hooks themselves may make sense for upstream.
 
-DIAG6
+![feature-y-31](https://raw.github.com/crosswalk-project/crosswalk/master/wiki/images/rebase-feature-y-31.png)
 
 Developers can take the opportunity to clean up the topic branches. The feature-z contained the original commit and a fix that was added after the merge. For the new merge, the developer can squash the two changes together, since it is just a fix to the original code, not a different logical change.
 
-DIAG7
+![feature-z-31](https://raw.github.com/crosswalk-project/crosswalk/master/wiki/images/rebase-feature-z-31.png)
 
 So the next branch will look like the following:
 
-DIAG8
+![rebase-next](https://raw.github.com/crosswalk-project/crosswalk/master/wiki/images/rebase-next.png)
 
 Once tested, this will become the new master and used for development during the Canary cycle. The Crosswalk master itself will have its DEPS file updated accordingly.
