@@ -9,12 +9,12 @@ In collaboration with Web platform team and Visualization team
  * Eager to contribute to Scrolling performance issue that is the biggest blocker of impl-side painting on linux aura. : crbug.com/231915
 
 * Chromium will turn on Impl-side painting on CrOS in M32 (Nov 4th, 2013).
- * see [crbug.com/178317](crbug.com/178317), [http://www.chromium.org/developers/calendar](http://www.chromium.org/developers/calendar)
- * Scrolling performance is the biggest blocker of it. I want to contribute on it. [crbug.com/231915](crbug.com/231915)
+ * see [crbug.com/178317](http://crbug.com/178317), [http://www.chromium.org/developers/calendar](http://www.chromium.org/developers/calendar)
+ * Scrolling performance is the biggest blocker of it. I want to contribute on it. [crbug.com/231915](http://crbug.com/231915)
 
 ### Ubercompositor
 * Chromium will turn on Ubercompositor on Android in M33~34 (Dec 16th, 2013 ~ Feb 17th, 2014).
- * [crbug.com/208551](crbug.com/208551)
+ * [crbug.com/208551](http://crbug.com/208551)
  * Now we don't have any specific plan, but will try to turn on it on Linux aura and fix bugs.
 * Samsung recently provided numbers on battery savings on using the Ubercompositor (one compositor for compositing UI components of the browser as well as browser content) and report around 10% savings.
  * [reference](https://groups.google.com/a/chromium.org/forum/#!topic/graphics-dev/uQRh5hvEOmo)
