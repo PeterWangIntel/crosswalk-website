@@ -8,4 +8,4 @@ Subpages should be added here to compare the current API's.
 
 [Runtime and Security Model for Web Applications](Runtime-and-Security-Model-for-Web-Applications)
 
-[Manifest](Manifest)
+[Manifest](Crosswalk-manifest)
