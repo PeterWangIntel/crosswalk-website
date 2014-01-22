@@ -1,4 +1,4 @@
-As described in our [Release Methodology](Release-methodology) page, Crosswalk follows a release process similar to Chromium's. Part of our [Rebasing Strategy](Rebasing-Strategy) involves rebasing our forks of the Blink and Chromium repositories on top of a certain upstream release.
+As described in our [Release Methodology](Release-methodology) page, Crosswalk follows a release process similar to Chromium's. Part of the release of Crosswalk it involves rebasing our forks of our downstream (Blink, Chromium,...) repositories on top of a certain upstream release.
 
 This article shows how perform these rebases and what pitfalls to look out for, as well as how to update Crosswalk itself once the forks have been rebased.
 
