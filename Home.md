@@ -29,7 +29,7 @@ If you have any question on how to use Crosswalk you can ask on IRC. On freenode
 ## For Developers
 * [Build Crosswalk](wiki/Build-Crosswalk)
 * [Contributing Code](#contribute/contributing-code)
-* [Rebasing Strategy](wiki/Rebasing-Strategy)
+* [Rebasing Strategy](wiki/Crosswalk-and-downstream-Chromium)
 * [Development Mailing List (only about development of Crosswalk itself)](https://lists.crosswalk-project.org/mailman/listinfo/crosswalk-dev)
 * [Crosswalk Reviewer Policy](#contribute/reviewer_policy)
 * [Development Tasks](wiki/Development-Tasks)
