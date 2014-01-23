@@ -8,6 +8,10 @@ ninja -C out/Debug xwalk_core_shell_apk
 ```
 adb install -r out/Debug/apks/XWalkCoreShell.apk
 ```
+## Load URL with adb
+```
+adb shell am broadcast -a org.xwalk.core.xwview.shell.launch -e url <url>
+```
 ## Test
 ```
 # Build and install test suite
