@@ -20,8 +20,10 @@ Issue tracking for Crosswalk using [JIRA](https://crosswalk-project.org/jira/).
 * Closed: Features are verified and no critical issues are identified, or they are rejected by the planning team. For some features that can not be verified by QA, they should be closed by triage team.
 * Reopened: Features are not properly implemented and reopened by QA 
 
-Cross-platform features have a top-level feature in Jira, and platform-specific features assigned to the relevant components. For example, a W3C API "cool API" to be supported on Android and Tizen will have a top level feature "Cool API" assigned to the W3C API component, and will be blocked by two features, "[Android]
+Cross-platform features have a top-level feature in Jira, and platform-specific features assigned to the relevant components. For example (see picture below), a W3C API "cool API" to be supported on Android and Tizen will have a top level feature "Cool API" assigned to the W3C API component, and will be blocked by two features, "[Android]
 Cool API" in the "Crosswalk on Android" component, and "[Tizen] Cool API" in the "Crosswalk on Tizen" component.
+
+![test](https://raw2.github.com/crosswalk-project/crosswalk/master/wiki/images/feature-diagram.png)
 
 ## [Bug Components](https://crosswalk-project.org/jira/browse/XWALK#selectedTab=com.atlassian.jira.plugin.system.project%3Acomponents-panel) 
 
