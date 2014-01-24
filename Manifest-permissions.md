@@ -26,7 +26,7 @@ Below is the support of permission for Crosswalk API on Android and Tizen. The p
 |Network Service Discovery|NetworkServiceDiscovery|Not Supported||
 |Geolocation|Geolocation|Crosswalk 4||
 |Orientation/Acceleration|DeviceOrientation|Not Supported||
-|Screen Orientation|ScreenOrientation|Not Supported||
+|Screen Orientation|ScreenOrientation|Crosswalk 4||
 |Fullscreen|Fullscreen|Crosswalk 4||
 |Gamepad|Gamepad|Not Supported||
 |Presentation API|Presentation|Crosswalk 4||
