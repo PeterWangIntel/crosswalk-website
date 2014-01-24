@@ -148,8 +148,14 @@ $ xwalk application_ID
 
 ### List installed applications
  * Crosswalk runtime can list all installed applications from command line, like this:
+
 ```sh
 $ xwalk --list-apps
+```
+
+The result should like this:
+
+```
 [1023/151523:INFO:xwalk_browser_main_parts.cc(272)] Application ID                       Application Name
 [1023/151523:INFO:xwalk_browser_main_parts.cc(273)] -----------------------------------------------------
 [1023/151523:INFO:xwalk_browser_main_parts.cc(276)] cefebchicgfeafgeemhbknlehlaildhj     Numeroo
