@@ -79,18 +79,23 @@ sig_len_hex=$(byte_swap $(printf '%08x\n' $(ls -l "$sig" | awk '{print $5}')))
 ) > "$xpk"
 echo "Wrote $xpk"
 ```
+
 You can save the shell script content into a file, e.g "xpk_generator", then:
+
 ```sh
 $ chmod u+x xpk_generator
 $ ./xpk_generator xpk_package_directory_path private_key_file
 ```
+
 It will generate a xpk file in current directory. If there's no private key file, it'll generate one for this application, and please use the same private key file for this application next time, otherwise, the package will be recognized as a different one.
 
 ### XPK package generator (Python version)
 * There is a new Python version XPK package generation tool named ```make_xpk.py``` in ```xwalk/tools``` directory, it has the same usage as "xpk_generator" shell script. Like this:
+
 ```sh
 $ python path_to/xwalk/tools/make_xpk.py xpk_package_directory_path private_key_file
 ```
+
 A XPK package will be generated at the present directory.
 * The ```make_xpk.py``` is required an additional Python plugin [Pycrypto](https://www.dlitz.net/software/pycrypto/)
 * When generating the XPK package, please make sure there's a manifest file, named ```manifest.json```, placed at the package root directory, with this [format](https://crosswalk-project.org/#wiki/Crosswalk-manifest)
@@ -108,9 +113,11 @@ It is a SQLite database, will save applications' information in it.
 
 ### Install
  * Start install function when the switch "--install" is enabled in the command line, and with the application package url follow it.
+
 ```sh
 $ xwalk --install path/to/target.xpk
 ```
+
  * Prepare the XPK package
    - If the package path is invalid, exit the steps.
  * Verify the application package
@@ -129,18 +136,22 @@ $ xwalk --install path/to/target.xpk
 
 ### Uninstall
  * Start the uninstall functionality with the swith "--uninstall" in command line, and using the application ID as its argument. Like this:
+
 ```sh
 $ xwalk --uninstall application_ID
 ```
+
  * Query the record using application ID in appliation information database, when it's invalid, exit the steps.
  * Remove the application information in database, if any errors, exit the steps.
  * Remove the application resources.
 
 ### Launch
  * An application will be launched when using ```xwalk``` command with its id followed.
+
 ```sh
 $ xwalk application_ID
 ```
+
  * Check if the application information is valid in database. If no, exit the steps.
  * Read the application's manifest from application information database and parse it. If any errors, exit the steps.
  * Check the application resources path saved in database, if the directory is not exist, exit the steps.
