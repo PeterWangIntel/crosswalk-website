@@ -22,7 +22,7 @@ Below is the support of permission for Crosswalk API on Android and Tizen. The p
 |Network Information|NetworkInformation|Not Supported||
 |Ambient Light Events|AmbientLight|Not Supported||
 |Proximity Events|Proximity|Not Supported||
-|Vibration|Vibration|Not Supported||
+|Vibration|Vibration|Crosswalk 5||
 |Network Service Discovery|NetworkServiceDiscovery|Not Supported||
 |Geolocation|Geolocation|Crosswalk 4||
 |Orientation/Acceleration|DeviceOrientation|Not Supported||
