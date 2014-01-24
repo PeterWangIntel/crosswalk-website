@@ -42,7 +42,7 @@ If you have any question on how to use Crosswalk you can ask on IRC. On freenode
 
 ## For QA
 * [[Crosswalk testing home]]
-* [[Crosswalk bug tracking and triage]]
+* [[Crosswalk bug and feature tracking and triage]]
 
 ## Crosswalk's infrastructure
 * [Testing Framework](wiki/Crosswalk-testing-framework) 
