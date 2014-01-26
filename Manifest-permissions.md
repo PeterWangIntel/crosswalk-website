@@ -16,7 +16,7 @@ Below is the support of permission for Crosswalk API on Android and Tizen. The p
 |Network Interface|NetworkInterface|Not Supported||
 |Secure Element|SecureElement|Not Supported||
 |System Settings|SystemSettings|Not Supported||
-|Battery Status|MediaCapture|Not Supported||
+|Battery Status|Battery|Not Supported||
 |Media Capture and Streams (getUserMedia)|MediaStream|Not Supported||
 |MediaStream Recording|MediaRecording|Not Supported||
 |Network Information|NetworkInformation|Not Supported||
