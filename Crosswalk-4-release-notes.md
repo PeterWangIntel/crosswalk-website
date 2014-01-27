@@ -1,4 +1,62 @@
-Release Notes - Crosswalk - Version v4 canary
+## Runtime
+
+#### Common
+
+#### Android
+
+* Support app:// scheme for web apps
+
+#### Tizen
+
+* "Run As Service" - Allow to run Crosswalk as a central daemon process with additional render/extension process for each running applications
+* [XWALK-1] - Runtime model event system
+* [XWALK-113] - Extension Process SMACK support in Crosswalk for Tizen 2.x
+* [XWALK-115] - Run a “wgt” package from Tizen samples
+* [XWALK-360] - Support for Tizen legacy application packages
+* [XWALK-380] - .wgt Archive
+* [XWALK-381] - config.xml Parsing
+* [XWALK-403] - Initial Crosswalk support for Tizen IVI
+
+    * [XWALK-309] - [Feature] App.runtime APIs 
+    * [XWALK-343] - Cordova-xwalk-android rebase to 3.3.0
+    * [XWALK-388] - app: URI
+    * [XWALK-463] - [Feature] Web app update from local
+    * [XWALK-518] - Basic application runtime events
+    * [XWALK-519] - Register system events information into database during installation.
+    * [XWALK-545] - Document the embedded mode for Android port
+    * [XWALK-546] - Update the user guide in crosswalk-project.org for the embedded mode
+    * [XWALK-547] - Port crosswalk-demos into the embedded mode
+    * [XWALK-558] - Runtime APIs
+    * [XWALK-578] - WebGL 1.0
+    * [XWALK-595] - Add crosswalk in user agent
+    * [XWALK-596] - Initial application runtime onLaunch event support
+    * [XWALK-605] - [Extensions] Make extension namespace read-only
+    * [XWALK-630] - [Feature]Crosswalk CSP supporting
+    * [XWALK-631] - [Tizen] Enable WebRTC on Crosswalk
+    * [XWALK-650] - Implement application runtime onSuspend event API.
+    * [XWALK-651] - Bridge crosswalk manifest permission to Android Manifest in packaging tool.
+    * [XWALK-656] - Cross-Origin Resource Sharing
+    * [XWALK-657] - iframe
+    * [XWALK-658] - Server Sent Events
+    * [XWALK-676] - Navigation Timing 
+    * [XWALK-677] - Resource Timing
+    * [XWALK-678] - User Timing
+    * [XWALK-681] - High Resolution Time
+    * [XWALK-694] - Suppport 16 Cordova 3.3.0 compatible APIs
+    * [XWALK-705] - [Android] Implement runtime flags for features
+    * [XWALK-723] - Implement application runtime onInstalled event API.
+    * [XWALK-728] - [android] Speech Recognition API
+    * [XWALK-773] - HTML5 fullscreen API support
+    * [XWALK-774] - 'Move to SD' doesn't work on Crosswalk on Android
+
+### API
+    * [XWALK-300] - WebAudio
+    * [XWALK-450] - WebRTC API
+
+    * [XWALK-162] - [Android] screen.orientation should be supported on Android
+
+    * [XWALK-79] - Screen orientation API
+
 
 ** Bug
     * [XWALK-132] - [Tizen] Portrait indicator is used when Crosswalk is in landscape mode
@@ -43,53 +101,6 @@ Release Notes - Crosswalk - Version v4 canary
     * [XWALK-909] - packaging tool don't work with minimal manifest on wiki
 
 ** Feature
-    * [XWALK-1] - Runtime model event system
-    * [XWALK-79] - Screen orientation API
-    * [XWALK-87] - "Run As Service" mode in Tizen
-    * [XWALK-113] - Extension Process SMACK support in Crosswalk for Tizen 2.x
-    * [XWALK-115] - Run a “wgt” package from Tizen samples
-    * [XWALK-162] - [Android] screen.orientation should be supported on Android
-    * [XWALK-174] - [Android] Support app:// scheme for Android web apps
-    * [XWALK-183] - [Android] Test cases for runtime client APIs
-    * [XWALK-199] - [Android] Allow customization Android permissions for packaging tool
-    * [XWALK-300] - WebAudio
-    * [XWALK-309] - [Feature] App.runtime APIs 
-    * [XWALK-343] - Cordova-xwalk-android rebase to 3.3.0
-    * [XWALK-360] - Support for Tizen legacy application packages
-    * [XWALK-380] - .wgt Archive
-    * [XWALK-381] - config.xml Parsing
-    * [XWALK-388] - app: URI
-    * [XWALK-403] - Initial Crosswalk support for Tizen IVI
-    * [XWALK-450] - WebRTC API
-    * [XWALK-463] - [Feature] Web app update from local
-    * [XWALK-518] - Basic application runtime events
-    * [XWALK-519] - Register system events information into database during installation.
-    * [XWALK-545] - Document the embedded mode for Android port
-    * [XWALK-546] - Update the user guide in crosswalk-project.org for the embedded mode
-    * [XWALK-547] - Port crosswalk-demos into the embedded mode
-    * [XWALK-548] - Implement the audio policy for crosswalk on Android.
-    * [XWALK-558] - Runtime APIs
-    * [XWALK-578] - WebGL 1.0
-    * [XWALK-595] - Add crosswalk in user agent
-    * [XWALK-596] - Initial application runtime onLaunch event support
-    * [XWALK-605] - [Extensions] Make extension namespace read-only
-    * [XWALK-630] - [Feature]Crosswalk CSP supporting
-    * [XWALK-631] - [Tizen] Enable WebRTC on Crosswalk
-    * [XWALK-650] - Implement application runtime onSuspend event API.
-    * [XWALK-651] - Bridge crosswalk manifest permission to Android Manifest in packaging tool.
-    * [XWALK-656] - Cross-Origin Resource Sharing
-    * [XWALK-657] - iframe
-    * [XWALK-658] - Server Sent Events
-    * [XWALK-676] - Navigation Timing 
-    * [XWALK-677] - Resource Timing
-    * [XWALK-678] - User Timing
-    * [XWALK-681] - High Resolution Time
-    * [XWALK-694] - Suppport 16 Cordova 3.3.0 compatible APIs
-    * [XWALK-705] - [Android] Implement runtime flags for features
-    * [XWALK-723] - Implement application runtime onInstalled event API.
-    * [XWALK-728] - [android] Speech Recognition API
-    * [XWALK-773] - HTML5 fullscreen API support
-    * [XWALK-774] - 'Move to SD' doesn't work on Crosswalk on Android
 
 
 
@@ -116,4 +127,4 @@ Release Notes - Crosswalk - Version v4 canary
     * [XWALK-707] - Fix ownership at Chromium Content API embedding classes: ContentBrowserClient, MainParts, BrowserContext
     * [XWALK-709] - Upstream crosswalk support into Cordova Step 1 - platform engine architecture in Cordova Android
     * [XWALK-824] - [tizen] HTML5 fullscreen API
-    * [XWALK-825] - [android] HTML5 fullscreen API
+    * [XWALK-825] - [android] HTML5 ful
