@@ -2,6 +2,8 @@
 
 #### Common
 
+* Support App.runtime APIs (onLaunched, onRestarted)
+
 #### Android
 
 * Support app:// scheme for web apps
@@ -9,23 +11,13 @@
 #### Tizen
 
 * "Run As Service" - Allow to run Crosswalk as a central daemon process with additional render/extension process for each running applications
-* [XWALK-1] - Runtime model event system
-* [XWALK-113] - Extension Process SMACK support in Crosswalk for Tizen 2.x
-* [XWALK-115] - Run a “wgt” package from Tizen samples
-* [XWALK-360] - Support for Tizen legacy application packages
-* [XWALK-380] - .wgt Archive
-* [XWALK-381] - config.xml Parsing
-* [XWALK-403] - Initial Crosswalk support for Tizen IVI
+* Extension Process SMACK support for Tizen 2.x
+* Support for Tizen legacy application packages (wgt)
+* Initial support for Tizen IVI
+* Update an already installed web application with xwalk --update
 
-    * [XWALK-309] - [Feature] App.runtime APIs 
     * [XWALK-343] - Cordova-xwalk-android rebase to 3.3.0
     * [XWALK-388] - app: URI
-    * [XWALK-463] - [Feature] Web app update from local
-    * [XWALK-518] - Basic application runtime events
-    * [XWALK-519] - Register system events information into database during installation.
-    * [XWALK-545] - Document the embedded mode for Android port
-    * [XWALK-546] - Update the user guide in crosswalk-project.org for the embedded mode
-    * [XWALK-547] - Port crosswalk-demos into the embedded mode
     * [XWALK-558] - Runtime APIs
     * [XWALK-578] - WebGL 1.0
     * [XWALK-595] - Add crosswalk in user agent
