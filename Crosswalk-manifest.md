@@ -48,7 +48,7 @@ This is an example of the minimal amount of metadata required in a manifest:
 }
 ```
 
-However, note that there is currently [a Crosswalk packaging script bug](https://crosswalk-project.org/jira/browse/XWALK-909) which means you will also have to add an **icons** field. So the minimal *usable* manifest looks like this:
+However, note that there is currently [a Crosswalk packaging script bug](https://crosswalk-project.org/jira/browse/XWALK-909) which means you will also have to add an **icons** field to package your application for Android. So the minimal *usable* Crosswalk Android manifest looks like this:
 
 ```
 {
