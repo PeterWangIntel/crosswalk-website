@@ -21,7 +21,7 @@ Currently the required manifest fields are:
 
 ## Minimal manifest file
 Developer can add a typical application manifest like below to declare application meta data:
-```
+``` javascript
 {
   "name": "Calculator",
   "version": "1.1.3.1",
@@ -33,7 +33,7 @@ Developer can add a typical application manifest like below to declare applicati
 }
 ```
 or using the main document:
-```
+``` javascript
 {
   "name": "Calculator",
   "version": "1.1.3.1",
@@ -45,7 +45,7 @@ or using the main document:
 }
 ```
 and
-```
+``` javascript
 {
   "name": "Calculator",
   "version": "1.1.3.1",
@@ -58,7 +58,7 @@ and
 ```
 ## Full manifest file
 Here is the complete manifest file which contains all fields Crosswalk (Crosswalk 1, Crosswalk 2, Crosswalk 3) has already been supported:
-```
+``` javascript
 {
   // Required
   "name": "app name",
@@ -80,8 +80,8 @@ Here is the complete manifest file which contains all fields Crosswalk (Crosswal
 }
 ```
 
-Supported by canary:
-```
+Supported in Crosswalk 4, canary:
+``` javascript
 {
   // Required
   "name": "app name",
@@ -105,23 +105,23 @@ Supported by canary:
 ```
 
 ## Manifest fields supporting status
- Field | Platform | Canary | Crosswalk 1 | Crosswalk 2 | Crosswalk 3 
---- | --- | --- | --- | --- | ---
-name | Tizen | Yes | Yes | Yes | Yes
- | Android | Yes | N/A | Yes | Yes
-version | Tizen | Yes | Yes | Yes | Yes
- | Android | Yes | N/A | Yes | Yes
-app.launch.local_path | Tizen | Yes | Yes | Yes | Yes
- | Android | Yes | N/A | Yes | Yes
-app.main.source | Tizen | Yes | Yes | Yes | Yes
- | Android | N/A | N/A | N/A | N/A
-app.main.scripts | Tizen | Yes | Yes | Yes | Yes
- | Android | N/A | N/A | N/A | N/A
-description | Tizen | Yes | Yes | Yes | Yes
- | Android | Yes | N/A | Yes | Yes
+ Field | Platform | Canary | Crosswalk 1 | Crosswalk 2 | Crosswalk 3 | Crosswalk 4
+--- | --- | --- | --- | --- | --- | ---
+name | Tizen | Yes | Yes | Yes | Yes | Yes
+ | Android | Yes | N/A | Yes | Yes |
+version | Tizen | Yes | Yes | Yes | Yes | Yes
+ | Android | Yes | N/A | Yes | Yes |
+app.launch.local_path | Tizen | Yes | Yes | Yes | Yes | Yes
+ | Android | Yes | N/A | Yes | Yes |
+app.main.source | Tizen | Yes | Yes | Yes | Yes | Yes
+ | Android | N/A | N/A | N/A | N/A |
+app.main.scripts | Tizen | Yes | Yes | Yes | Yes | Yes
+ | Android | N/A | N/A | N/A | N/A |
+description | Tizen | Yes | Yes | Yes | Yes | Yes
+ | Android | Yes | N/A | Yes | Yes |
 icons | Tizen | Yes | Yes | Yes | Yes
- | Android | Yes | N/A | Yes | Yes
-content_security_policy | Tizen | Yes | N/A | N/A | N/A
- | Android | N/A | N/A | N/A | N/A 
-permissions | Tizen | |  |  | 
- | Android |  |  |  |  
+ | Android | Yes | N/A | Yes | Yes |
+content_security_policy | Tizen | Yes | N/A | N/A | N/A | Yes
+ | Android | N/A | N/A | N/A | N/A |
+permissions | Tizen | |  |  | |
+ | Android |  |  |  |  |
