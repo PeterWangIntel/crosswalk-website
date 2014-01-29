@@ -1,10 +1,10 @@
-# Crosswalk Manifest Format
+# Crosswalk manifest format
 
 Crosswalk currently follows the manifest format used by [Chromium packaged applications](http://developer.chrome.com/apps/manifest.html).
 
 However, many of the features are not yet supported in Crosswalk.
 
-Currently, the required manifest fields are:
+## Required fields
 
 * **name**: A plain text string that identifies the application. This field does not yet support internationalisation. 
 
@@ -24,6 +24,8 @@ Currently, the required manifest fields are:
   If both **source** and **scripts** are specified, **source** takes precedence.
 
 Note that if both **launch** and **main** are specified, **main** takes precedence.
+
+## Optional fields
 
 The following fields are *not* required by the manifest specification, but are available:
 
