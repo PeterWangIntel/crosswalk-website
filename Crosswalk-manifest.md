@@ -92,7 +92,7 @@ and an example using **main.source**:
 }
 ```
 
-## Full manifest file
+## Full manifest file (Crosswalk 1-3)
 
 Here is the complete manifest file which contains all fields supported by Crosswalk (Crosswalk 1, Crosswalk 2, Crosswalk 3):
 
@@ -116,7 +116,9 @@ Here is the complete manifest file which contains all fields supported by Crossw
 }
 ```
 
-The fields in this example are supported by Crosswalk 4:
+## Full manifest file (Crosswalk 4)
+
+This example shows additional fields supported by Crosswalk 4:
 
 ```
 {
