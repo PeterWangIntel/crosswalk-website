@@ -2,26 +2,41 @@
 
 Crosswalk currently follows the manifest format used by [Chromium packaged applications](http://developer.chrome.com/apps/manifest.html).
 
-However, many of the features are not yet supported in Crosswalk
+However, many of the features are not yet supported in Crosswalk.
 
-Currently the required manifest fields are:
-* **name**: A short, plain text string that identifies the application. No i18n for this field support yet. 
-* **version**: One to four dot-separated integers identifying the version of this extension. A couple of rules apply to the integers: they must be between 0 and 65535, inclusive, and non-zero integers can't start with 0. 
-* **app**: The "app" field will be used to specify the application’s entry, it must contains one of below objects:
-  * **launch**: Indicate a normal page will be used as the app entry. It should contains "local_path" to specify the entry page's local path of the application.
-  * **main**:  Indicate a main document (AKA event page) will be used as the app entry. It should contains "source" to specify the main document’s local path or a "scripts" array to specify JavaScript files local path for auto-generated main document. If both "source" and "scripts" are specified then "source" will be used.
-* **icons**: The "icons" field represent which icons should be used for the application. The "128" size icon should be valid in manifest file. If it's not given, the Crosswalk default logo icon will be used.
-* **permissions**: This field defines which web features are used for the application. See the [permissions](https://crosswalk-project.org/#wiki/manifest-permissions) support in Crosswalk.
-* **content_security_policy**: The "content_security_policy" field represent the [CSP](http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html) policy which the packaged web application should be enforced. It will be disabled when it's not given.
+Currently, the required manifest fields are:
 
-**Note**
+* **name**: A plain text string that identifies the application. This field does not yet support internationalisation. 
 
-* If both "launch" and "main" are specified then "main" will be used.
-* For Android port, only support to launch the application from "app.launch.local_path".
+* **version**: A string containing one to four dot-separated integers identifying the application version; for example: "2", "1.2", "1.3.0", "4.0.0.11". A couple of rules apply to the integers: they must be between 0 and 65535, inclusive; and you can't prefix any non-zero values with "0" (e.g. "01.1" is **invalid**).
+
+* **app**: Specifies the application entry point. It must contain one of the fields below:
+
+  * **launch**: Specifies a normal page to use as the app entry point. It must contain a **local_path** field which sets a path to an HTML page, relative to the application's root.
+
+    *Note: app.launch.local_path is the only supported entry point for applications on Crosswalk Android.*
+
+  * **main**: Specifies a main document (a.k.a. "event page") to use as the application entry point. This field should itself contain either:
+    * A **source** field, which sets the main document's local path.
+    * OR
+    * A **scripts** array to specify JavaScript files. These will be loaded into an automatically-generated main document.
+  
+  If both **source** and **scripts** are specified, **source** takes precedence.
+
+Note that if both **launch** and **main** are specified, **main** takes precedence.
+
+The following fields are *not* required by the manifest specification, but are available:
+
+* **description**: A text string describing the application.
+* **icons**: Specifies icon graphics files to use for the application. The "128" size icon should be set as a minimum. If it's not given, the Crosswalk default logo icon will be used.
+* **permissions** (Crosswalk 4 or later): This field defines which features are used by the application. See the [permissions](https://crosswalk-project.org/#wiki/manifest-permissions) support in Crosswalk.
+* **content_security_policy** (Crosswalk 4 or later): The "content_security_policy" field represent the [CSP](http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html) policy which should be enforced for the application. CSP be disabled if this field is not set.
 
 ## Minimal manifest file
-Developer can add a typical application manifest like below to declare application meta data:
-``` javascript
+
+This is an example of the minimal amount of metadata required in a manifest:
+
+```
 {
   "name": "Calculator",
   "version": "1.1.3.1",
@@ -32,8 +47,26 @@ Developer can add a typical application manifest like below to declare applicati
   }
 }
 ```
-or using the main document:
-``` javascript
+
+However, note that there is currently [a Crosswalk packaging script bug](https://crosswalk-project.org/jira/browse/XWALK-909) which means you will also have to add an **icons** field. So the minimal *usable* manifest looks like this:
+
+```
+{
+  "name": "Calculator",
+  "version": "1.1.3.1",
+  "app": {
+    "launch":{
+      "local_path": "calculator.html"
+    }
+  },
+  "icons": {
+    "128": "icon128.png"
+  }
+}
+```
+
+Another example, using **main.scripts** instead of a **launch** object:
+```
 {
   "name": "Calculator",
   "version": "1.1.3.1",
@@ -44,8 +77,10 @@ or using the main document:
   }
 }
 ```
-and
-``` javascript
+
+and an example using **main.source**:
+
+```
 {
   "name": "Calculator",
   "version": "1.1.3.1",
@@ -56,11 +91,13 @@ and
   }
 }
 ```
+
 ## Full manifest file
-Here is the complete manifest file which contains all fields Crosswalk (Crosswalk 1, Crosswalk 2, Crosswalk 3) has already been supported:
-``` javascript
+
+Here is the complete manifest file which contains all fields supported by Crosswalk (Crosswalk 1, Crosswalk 2, Crosswalk 3):
+
+```
 {
-  // Required
   "name": "app name",
   "version": "1.0.0",
   "app": {
@@ -72,7 +109,6 @@ Here is the complete manifest file which contains all fields Crosswalk (Crosswal
       "local_path": "index.html"
     }
   },
-  // recommended
   "description": "a sample description",
   "icons": {
     "128": "icon128.png"
@@ -80,8 +116,9 @@ Here is the complete manifest file which contains all fields Crosswalk (Crosswal
 }
 ```
 
-Supported in Crosswalk 4, canary:
-``` javascript
+The fields in this example are supported by Crosswalk 4:
+
+```
 {
   // Required
   "name": "app name",
@@ -95,7 +132,6 @@ Supported in Crosswalk 4, canary:
       "local_path": "index.html"
     }
   },
-  // recommended
   "content_security_policy": "script-src 'self'",
   "description": "a sample description",
   "icons": {
@@ -104,7 +140,8 @@ Supported in Crosswalk 4, canary:
 }
 ```
 
-## Manifest fields supporting status
+## Manifest fields support status
+
  Field | Platform | Canary | Crosswalk 1 | Crosswalk 2 | Crosswalk 3 | Crosswalk 4
 --- | --- | --- | --- | --- | --- | ---
 name | Tizen | Yes | Yes | Yes | Yes | Yes
