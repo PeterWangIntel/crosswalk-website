@@ -13,7 +13,7 @@
 * Extension Process SMACK support for Tizen 2.x
 * Support for Tizen legacy application packages (wgt)
 * Initial support for Tizen IVI
-* Update an already installed web application with xwalk --update
+* Update an already installed web application with xwalk --install
 * Support App.runtime APIs (onLaunched, onRestarted, on Suspend, onInstalled)
 * Extension namespace is read-only
 
