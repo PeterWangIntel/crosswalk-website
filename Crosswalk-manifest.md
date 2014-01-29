@@ -135,6 +135,11 @@ This example shows additional fields supported by Crosswalk 4:
     }
   },
   "content_security_policy": "script-src 'self'",
+  "permissions": [
+    "Contacts",
+    "Geolocation",
+    "Messaging"
+  ],
   "description": "a sample description",
   "icons": {
     "128": "icon128.png"
