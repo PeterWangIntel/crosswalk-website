@@ -122,7 +122,6 @@ This example shows additional fields supported by Crosswalk 4:
 
 ```
 {
-  // Required
   "name": "app name",
   "version": "1.0.0",
   "app": {
