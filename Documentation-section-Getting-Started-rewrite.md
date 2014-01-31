@@ -443,7 +443,7 @@ basically copy it to the device right now
 *******
 # Running an application (subpage)
 
-TODO
+see edit
 
 ## Android
 
