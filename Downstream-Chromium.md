@@ -12,6 +12,18 @@ When it is time to perform the next update, the release team of our Chromium bra
 
 Topic branches that don’t apply cleanly (or with trivial changes) will be discarded. They can be updated later and merged again in the development cycle. The burden of updating the topic branches is to their authors. If they failed to do it in a timely manner (in the first weeks of the canary cycle) they will be discarded for the next release.
 
+## Working on the next branch
+Before "next" is going to be merged into master we need to integrate the patches that didn't apply cleanly and we need to fix the potential problems due to the rebase. All the authors will be invited to submit new patches on top of "next" if they didn't apply cleanly or trivially.
+
+Working on the "next" branch is easy :
+
+- Make sure your `.gclient` has the Managed entry set to false.
+- Navigate to src/ and checkout the "next" branch : `git checkout -b next origin/next`
+- Navigate to src/third_party/WebKit and checkout the "next" branch : `git checkout -b next origin/next`
+- Return to the root of the repository and run `gclient sync` to fetch the new version (You may have some issues of gclient trying to rebase the chromium-crosswalk and blink-crosswalk which will fail, see [XWALK-921](https://crosswalk-project.org/jira/browse/XWALK-921). If this happens you can navigate to the directory  above and `git rebase --abort` as well as forcing a checkout `git reset --hard` origin/master)
+- Rebase your patch on top of next
+- Submit a PR targeting the "next" branch
+
 ## Schedule of a canary cycle of Crosswalk
 
 The development cycle (also called canary cycle) works like this:
