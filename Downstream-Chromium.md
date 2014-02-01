@@ -13,7 +13,7 @@ When it is time to perform the next update, the release team of our Chromium bra
 Topic branches that don’t apply cleanly (or with trivial changes) will be discarded. They can be updated later and merged again in the development cycle. The burden of updating the topic branches is to their authors. If they failed to do it in a timely manner (in the first weeks of the canary cycle) they will be discarded for the next release.
 
 ## Working on the next branch
-Before "next" is going to be merged into master we need to integrate the patches that didn't apply cleanly and we need to fix the potential problems due to the rebase. All the authors will be invited to submit new patches on top of "next" if they didn't apply cleanly or trivially.
+Before "next" is going to be merged into master we need to integrate the patches that didn't apply cleanly and we need to fix the potential problems due to the rebase. All the authors will be invited to submit new patches on top of "next" if their patches didn't apply cleanly or trivially.
 
 Working on the "next" branch is easy :
 
