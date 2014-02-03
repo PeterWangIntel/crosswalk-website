@@ -279,6 +279,7 @@ After you pushed to the next branch you can call for help and patches that could
 
 When the quality of next is acceptable you can merge it back into master.
 
+```shell
 # Assuming origin points to git@github.com:crosswalk-project/{blink,chromium}-crosswalk.git and you are in next branch
 cd /path/to/chromium-crosswalk/third_party/WebKit
 git push -f origin next
