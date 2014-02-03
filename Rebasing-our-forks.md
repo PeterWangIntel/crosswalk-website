@@ -23,12 +23,11 @@ Finally, spend some time getting to know git better. Do not follow the instructi
 ## Branch names in blink-crosswalk and chromium-crosswalk
 When creating new branches or updating existing ones, it is important to pay attention to Crosswalk's branch naming conventions for the forks. They apply to both blink-crosswalk and chromium-crosswalk.
 
-The most basic distinction is between the `master_*` and `upstream_*` branches:
+The most basic distinction is between the `master_*` branches:
 * `master`, as usual in a git-based workflow, is the current development branch and the one everyone works on at the moment.
-* When rebasing to track a different release, the previous `master` branch should be backed up and preserved as `master_history_<release_number>`. For example, `master_history_28_0_1500_36` corresponds to all the commits we made to chromium-crosswalk (or blink-crosswalk) while we were tracking Chromium's 28.0.1500.36 release.
-* An `upstream_<release_number>` branch contains a pristine copy of an upstream Chromium (or Blink) branch; for example, `upstream_28_0_1500_36` contains all upstream Chromium commits that were made up to the 28.0.1500.36 release. It is equivalent to a Chromium branch in chromium.org.
+* When rebasing to track a different release, the previous branch should be backed up and preserved as `crosswalk-<version>/<release_number>`. For example, `crosswalk-1/28.0.1500.36` corresponds to all the commits we made to chromium-crosswalk (or blink-crosswalk) while we were tracking Chromium's 28.0.1500.36 release.
 
-In other words, `master_history_<release_number>` simply contains a certain number of commits made by Crosswalk contributors on top of an `upstream_<release_number>` branch.
+In other words, `crosswalk-<version>/<release_number>` simply contains a certain number of commits made by Crosswalk contributors on top of an upstream branch.
 
 At least for now, we do not keep `lkgr` branches.
 
@@ -47,9 +46,9 @@ Let's start with the dependency deepest down the stack we have: Blink. Most of t
 
 1. Back up the existing `master` branch.
 
-    As mentioned above, since the `master` branch is going to have its history changed, it must be backed up into a history branch first. For example, if we are currently tracking Chromium release 28.0.1500.36, a branch called `master_history_28_0_1500_36` must be created.
+    As mentioned above, since the `master` branch is going to have its history changed, it must be backed up into a history branch first. For example, if we are currently tracking Chromium release 28.0.1500.36, a branch called `crosswalk-1/28.0.1500.36` must be created.
     ```shell
-    git branch master_history_28_0_1500_36 master
+    git branch crosswalk-1/28.0.1500.36 master
     ```
 
 1. Determine the new Blink branch and revision that are going to be used.
@@ -102,8 +101,7 @@ Let's start with the dependency deepest down the stack we have: Blink. Most of t
 
     Your new commits will have to be tested with Crosswalk (and Chromium) later, so you need to push them to your fork first.
     ```shell
-    git push my-fork master_history_28_0_1500_36
-    git push my-fork upstream_30_0_1599_66
+    git push my-fork crosswalk-1/28.0.1500.36
     git push -f my-fork master
     ```
 
@@ -125,7 +123,7 @@ The parts of the process that are similar to blink-crosswalk have shorter descri
 
     Assuming we are currently tracking Chromium release 28.0.1500.36:
     ```shell
-    git branch master_history_28_0_1500_36 master
+    git branch crosswalk-1/28.0.1500.36 master
     ```
 
 1. Determine the new Chromium branch and revision that are going to be used.
@@ -171,8 +169,7 @@ The parts of the process that are similar to blink-crosswalk have shorter descri
 1. Push your new branches to your fork.
 
     ```shell
-    git push my-fork master_history_28_0_1500_36
-    git push my-fork upstream_30_0_1599_66
+    git push my-fork crosswalk-1/28.0.1500.36
     git push -f my-fork master
     ```
 
@@ -250,11 +247,9 @@ Once that is done, push your new branches:
 ```shell
 # Assuming origin points to git@github.com:crosswalk-project/{blink,chromium}-crosswalk.git
 cd /path/to/chromium-crosswalk/third_party/WebKit
-git push origin upstream_30_0_1599_66
 git push -f origin master
 
 cd /path/to/chromium-crosswalk
-git push origin upstream_30_0_1599_66
 git push -f origin master
 ```
 
@@ -268,18 +263,27 @@ Once everything is working, you can push your blink-crosswalk and chromium-cross
 ```shell
 # Assuming origin points to git@github.com:crosswalk-project/{blink,chromium}-crosswalk.git
 cd /path/to/chromium-crosswalk/third_party/WebKit
-git push origin master_history_28_0_1500_36
-git push origin upstream_30_0_1599_66
-git push -f origin master
+git push origin crosswalk-1/28.0.1500.36
+git push -f origin next
 
 cd /path/to/chromium-crosswalk
-git push origin master_history_28_0_1500_36
-git push origin upstream_30_0_1599_66
-git push -f origin master
+git push origin crosswalk-1/28.0.1500.36
+git push -f origin next
 ```
 
 This should not break anything for Crosswalk users, as the SHA1 hashes referenced in the Crosswalk repository are still present in the forks.
 
 Finally, create a **single commit** in Crosswalk that updates version numbers, adjusts the code and changes `DEPS.xwalk` and send a pull request. Don't forget to **update** `DEPS.xwalk` so it tracks the correct blink-crosswalk and chromium-crosswalk (git@github.com:crosswalk-project/{blink,chromium}-crosswalk.git) back again.
 
+After you pushed to the next branch you can call for help and patches that couldn't be rebase trivially.
+
+When the quality of next is acceptable you can merge it back into master.
+
+# Assuming origin points to git@github.com:crosswalk-project/{blink,chromium}-crosswalk.git and you are in next branch
+cd /path/to/chromium-crosswalk/third_party/WebKit
+git push -f origin next
+
+cd /path/to/chromium-crosswalk
+git push -f origin next
+```
 The try bots will then test it and, if everything goes well, Crosswalk will be updated for everyone to enjoy.
