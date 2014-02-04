@@ -8,8 +8,7 @@ out of the wiki and planted in the higher level documentation under either [Docu
 
 ## For Application Developers
 
-The best resource for getting started with Crosswalk is [the *Getting started* pages on the Crosswalk website](#documentation/getting_started).
-
+* [Getting started with Crosswalk](#documentation/getting_started)
 * [Crosswalk Command Line Options](wiki/Crosswalk-Command-Line-Options)
 * [Experimental JS APIs](wiki/Experimental-APIs)
 * [Crosswalk Extensions](wiki/Crosswalk-Extensions)
