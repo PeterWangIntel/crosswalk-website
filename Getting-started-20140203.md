@@ -35,7 +35,9 @@ launching Crosswalk with your application are covered in the <a href="#running-a
 <p>You will need to install the Android SDK, including <a href="http://developer.android.com/tools/help/adb.html">adb</a>, and use it to connect your device to your development machine or use the Android emulator.</p>
 
 <ol><li>Install the <a href="http://developer.android.com/sdk/index.html">Android SDK</a>.</li>
-<li>Download the Crosswalk binary for Android from the URL in <a href="http://crosswalk-project.org/#documentation/downloads">Downloads</a>.
+
+<li>Download the Crosswalk binary for Android from a URL in [Downloads](http://crosswalk-project.org/#documentation/downloads).
+
 <pre>
 wget <a href="https://download.01.org/crosswalk/releases/android-x86/stable/crosswalk-*-x86.zip">https://download.01.org/crosswalk/releases/android-x86/stable/crosswalk-*-x86.zip</a>
 </pre></li>
