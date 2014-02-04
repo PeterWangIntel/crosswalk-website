@@ -15,13 +15,13 @@ You can find steps for installing Crosswalk onto the device or into the emulator
 Crosswalk applications are made up of your HTML5 files and a manifest
 file. When deploying your application, you would package those files
 into a single archive. During development you can skip that step. The
-steps for packaging your application are found on the [Building an application](#building-an-application)
+steps for packaging your application are found on the [Building an application](#building-a-crosswalk-application)
 page.
 
 ## Step 4 - Running your application
 The steps for pushing your application to the target device and
 launching Crosswalk with your application are covered in
-[Running an Application](#running-an-application).
+[Running an Application](#running-a-crosswalk-application).
 
 # Installing Crosswalk
 
@@ -94,12 +94,14 @@ Please note that installing this package on an actual device can cause performan
 xwalk http://www.google.com
 </pre>
 1. *Work in Progress* Installing Crosswalk will install an icon on the Tizen home screen.
+
 # Building a Crosswalk Application
 An application package is a compressed archive containing all of your application resources and a manifest file.
 
 There are several sample applications which can be used as a seed for your project. These are listed on the [Samples](#documentation/samples) page. The steps described below can be used to package those applications and deploy them into an Android or Tizen device.
 
 ### Manifest File
+
 The following is a minimal example for a manifest file, which should be named manifest.json and reside in your application's top level directory:
 
 ```
