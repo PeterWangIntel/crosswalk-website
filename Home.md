@@ -8,7 +8,8 @@ out of the wiki and planted in the higher level documentation under either [Docu
 
 ## For Application Developers
 
-* [Try Crosswalk](wiki/Try-Crosswalk)
+The best resource for getting started with Crosswalk is [the *Getting started* pages on the Crosswalk website](#documentation/getting_started).
+
 * [Crosswalk Command Line Options](wiki/Crosswalk-Command-Line-Options)
 * [Experimental JS APIs](wiki/Experimental-APIs)
 * [Crosswalk Extensions](wiki/Crosswalk-Extensions)
@@ -17,7 +18,6 @@ out of the wiki and planted in the higher level documentation under either [Docu
 * [Crosswalk 2 release notes] (wiki/Crosswalk-2-release-notes)
 * [Crosswalk 3 release notes] (wiki/Crosswalk-3-release-notes)
 * [Crosswalk 4 release notes] (wiki/Crosswalk-4-release-notes)
-* [Intent to Implement] (wiki/intent-to-implement)
 * [Presentation API Documentation] (wiki/presentation-api-manual)
 * [Web API support on different Android versions](wiki/webapi-support-on-different-versions)
 * [Crosswalk-based Cordova Android](wiki/crosswalk-cordova-android) 
@@ -30,6 +30,7 @@ If you have any question on how to use Crosswalk you can ask on IRC. On freenode
 ## For Developers
 * [Build Crosswalk](wiki/Build-Crosswalk)
 * [Contributing Code](#contribute/contributing-code)
+* [Intent to Implement] (wiki/intent-to-implement)
 * [Crosswalk and downstream Chromium](wiki/Downstream-Chromium)
 * [Development Mailing List (only about development of Crosswalk itself)](https://lists.crosswalk-project.org/mailman/listinfo/crosswalk-dev)
 * [Crosswalk Reviewer Policy](#contribute/reviewer_policy)
