@@ -30,7 +30,7 @@ launching Crosswalk with your application are covered in
 You will need to install the Android SDK, including [adb](http://developer.android.com/tools/help/adb.html), and use it to connect your device to your development machine or use the Android emulator.
 
 1. Install the [Android SDK](http://developer.android.com/sdk/index.html).
-1. Download the Crosswalk binary for Android from the URL in [Downloads](#documentation/downloads/files).
+1. Download the Crosswalk binary for Android from the URL in [Downloads](http://crosswalk-project.org/#documentation/downloads).
 <pre>
 wget https://download.01.org/crosswalk/releases/android-x86/stable/crosswalk-${XWALK-STABLE-ANDROID-X86}-x86.zip
 </pre>
@@ -38,7 +38,7 @@ wget https://download.01.org/crosswalk/releases/android-x86/stable/crosswalk-${X
 <pre>
 unzip crosswalk-${XWALK-STABLE-ANDROID-X86}-x86.zip
 </pre>
-1. Install the XWalkRuntimeLib package (This step is only necessary for the shared mode. See [what are the shared and embedded modes](#wiki/Crosswalk-on-Android/packaging-modes):
+1. Install the XWalkRuntimeLib package (This step is only necessary for the shared mode. See [what are the shared and embedded modes](http://crosswalk-project.org/#wiki/Crosswalk-on-Android/packaging-modes):
 <pre>
 adb install crosswalk-${XWALK-STABLE-ANDROID-X86}/apks/XWalkRuntimeLib.apk
 </pre>
@@ -60,7 +60,7 @@ These steps assume you have the [Tizen SDK](https://developer.tizen.org/download
 You can use the Tizen emulator as a target for running and developing Crosswalk applications on Tizen.
 
 1. Install the [Tizen SDK](http://developer.tizen.org/downloads/tizen-sdk).
-1. Download the Crosswalk binary for Tizen from the URL in [Downloads](#documentation/downloads/files).
+1. Download the Crosswalk binary for Tizen from the URL in [Downloads](http://crosswalk-project.org/#documentation/downloads).
 <pre>
 wget https://download.01.org/crosswalk/releases/tizen-mobile/stable/crosswalk-${XWALK-STABLE-TIZEN-X86}-0.i586.rpm
 wget https://download.01.org/crosswalk/releases/tizen-mobile/stable/crosswalk-emulator-support-${XWALK-STABLE-TIZEN-X86}-0.i586.rpm
