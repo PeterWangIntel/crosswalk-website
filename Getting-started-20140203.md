@@ -1,4 +1,4 @@
-*This is an archive page. The current "Getting started" docs are on [the Crosswalk website](http://crosswalk-project.org/#documentation/getting_started).*
+*This is an archive page of deprecated "Getting started" documentation, covering Crosswalk 1, 2 and 3. The current "Getting started" docs are on [the Crosswalk website](http://crosswalk-project.org/#documentation/getting_started).*
 
 # Getting Started
 This site is designed to help you get up and running with Crosswalk as quickly as possible.
