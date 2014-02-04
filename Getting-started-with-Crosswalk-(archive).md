@@ -2,7 +2,7 @@ This page gathers archive material for application developers, about using older
 
 The latest documentation for application developers, covering the current stable version of Crosswalk, is [in the "Getting started" section of the Crosswalk website](http://crosswalk-project.org/#documentation/getting_started).
 
-The dates shown below represent when the documentation was current on the Crosswalk website.
+The dates below represent when the documentation was current on the Crosswalk website.
 
 ## Crosswalk 1, 2 and 3 (2014-02-03)
 
