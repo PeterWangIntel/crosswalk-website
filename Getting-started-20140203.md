@@ -20,7 +20,7 @@
 <p>Crosswalk applications are made up of your HTML5 files and a manifest
 file. When deploying your application, you would package those files
 into a single archive. During development you can skip that step. The
-steps for packaging your application are found on the <a href="#building-an-application">Building an application</a> page.</p>
+steps for packaging your application are found on the <a href="#building-a-crosswalk-application">Building an application</a> page.</p>
 
 <h2>Step 4 - Running your application</h2>
 
@@ -108,7 +108,7 @@ xwalk <a href="http://www.google.com">http://www.google.com</a>
 </ol>
 
 <!-- page -->
-<h1>Building a Crosswalk Application<a name="building-an-application"></a></h1>
+<h1>Building a Crosswalk Application<a name="building-a-crosswalk-application"></a></h1>
 
 <p>An application package is a compressed archive containing all of your application resources and a manifest file.</p>
 
