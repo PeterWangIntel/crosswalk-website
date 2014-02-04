@@ -25,7 +25,7 @@ steps for packaging your application are found on the <a href="#building-an-appl
 <h2>Step 4 - Running your application</h2>
 
 <p>The steps for pushing your application to the target device and
-launching Crosswalk with your application are covered in the <a href="#running_an_application">Running an Application</a> section.</p>
+launching Crosswalk with your application are covered in the <a href="#running-an-application">Running an Application</a> section.</p>
 
 <!-- page -->
 <h1>Installing Crosswalk<a name="installing-crosswalk"></a></h1>
