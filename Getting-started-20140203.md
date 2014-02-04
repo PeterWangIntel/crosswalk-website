@@ -38,7 +38,7 @@ wget https://download.01.org/crosswalk/releases/android-x86/stable/crosswalk-${X
 <pre>
 unzip crosswalk-${XWALK-STABLE-ANDROID-X86}-x86.zip
 </pre>
-1. Install the XWalkRuntimeLib package (This step is only necessary for the shared mode. See [what are the shared and embedded modes](http://crosswalk-project.org/#wiki/Crosswalk-on-Android/packaging-modes):
+1. Install the XWalkRuntimeLib package (This step is only necessary for the shared mode. See [what are the shared and embedded modes](#wiki/Crosswalk-on-Android/packaging-modes):
 <pre>
 adb install crosswalk-${XWALK-STABLE-ANDROID-X86}/apks/XWalkRuntimeLib.apk
 </pre>
@@ -124,7 +124,7 @@ Note that the icons field is currently **required** if you intend to package you
 
 At a minimum, the `icons` property should reference a 128 pixel square graphic to use as the icon for the application.
 
-For more details on the manifest file, see the [Crosswalk Manifest](http://crosswalk-project.org/#wiki/Crosswalk-manifest) page.
+For more details on the manifest file, see the [Crosswalk Manifest](#wiki/Crosswalk-manifest) page.
 
 ## The Application Structure
 A typical application structure contains the manifest.json file in the root directory. The main entry point to the application is then referenced from that manifest file. In most applications this file is in the root directory as well.
@@ -149,8 +149,8 @@ Since Crosswalk-3, it introduces a new packaging mode - embedded mode. Such that
 
 The xwalk_app_template supports three kinds of web application source:
 
-* **[Crosswalk Manifest](http://crosswalk-project.org/#wiki/Crosswalk-manifest)**.
-* **[XPK package](http://crosswalk-project.org/#wiki/Crosswalk-package-management)**.
+* **[Crosswalk Manifest](#wiki/Crosswalk-manifest)**.
+* **[XPK package](#wiki/Crosswalk-package-management)**.
 * **Command line options**. For example, '--app-url' for website, '--app-root' and '--app-local-path' for local web application.
 
 **Note**: The manifest source and XPK source are preferred.
@@ -215,7 +215,7 @@ see [Running on Android](#running-on-android).
 
 To run Crosswalk packages on Tizen, web applications should be packaged using the XPK
 package format. To package your own web application, you should save the
-[xpk_generator](http://crosswalk-project.org/#wiki/crosswalk-package-management/xpk-package-generator-bash-shell-version)
+[xpk_generator](#wiki/crosswalk-package-management/xpk-package-generator-bash-shell-version)
 script to a local file, then call it like this:
 ```sh
 xpk_generator /home/foobar/dist myapp.pem
@@ -309,4 +309,4 @@ sdb shell "xwalk --install /tmp/FooBar.xpk"
 
 The new application icon should now be visible on the device's home screen.
 
-You can refer to [XPK package management](http://crosswalk-project.org/#wiki/Crosswalk-package-management/xpk-package-management) for more details about how to manage an XPK package in Crosswalk.
+You can refer to [XPK package management](#wiki/Crosswalk-package-management/xpk-package-management) for more details about how to manage an XPK package in Crosswalk.
