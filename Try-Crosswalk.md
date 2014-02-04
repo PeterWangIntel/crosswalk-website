@@ -1,4 +1,6 @@
-_If you are a C/C++ developer and want to develop your own runtime built 
+*This page is deprecated, and has been mostly superseded by the [Getting Started pages](#documentation/getting_started) on the Crosswalk website.*
+
+_Note: If you are a C/C++ developer and want to develop your own runtime built 
 with Crosswalk, reference [Crosswalk Build Instructions](Build-Crosswalk) for instructions on how to build your own 
 binary._
 
