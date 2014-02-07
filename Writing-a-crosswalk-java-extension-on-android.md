@@ -67,6 +67,10 @@ public class MyExtension extends XWalkExtensionClient {
 
     @Override
     public void onMessage(int instanceId, String message) {
+        // Post messages to JavaScript.
+        // The function 'broadcastMessage' could be used to post messages to all extension instances.
+        // Because a web page could be have many HTML documents(like frames), each document could have
+        // one extension instance.
         postMessage(instanceId, "From java:" + message);
     }
 
