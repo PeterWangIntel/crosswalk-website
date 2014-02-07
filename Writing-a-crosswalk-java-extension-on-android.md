@@ -15,10 +15,10 @@ class MyExtension extends XWalkExtensionClient {
 * Configure the extension in a json format which should be packaged in android asset, like:
 ```
     {
-       "name":  "mandatory property - the extension name.",
-       "class": "mandatory property - the Java class name.",
-       "jsapi": "mandatory property - the file name of JavaScript stub code.",
-       "permissions": "optional property - Android permissions used in this extension, like CAMERA. Its value is a list."
+       "name":  "mandatory field - the extension name.",
+       "class": "mandatory field - the Java class name.",
+       "jsapi": "mandatory field - the file name of JavaScript stub code.",
+       "permissions": "optional field - Android permissions used in this extension, like CAMERA. Its value is a list."
      }
 ```
 See details about [Android permissions](http://developer.android.com/reference/android/Manifest.permission.html). Permissions are supported since Crosswalk-3.
