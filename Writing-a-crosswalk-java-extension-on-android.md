@@ -47,6 +47,10 @@ exports.echoSync = function(msg) {
 };
 ```
 * Implementing the inherited Java class, called MyExtension.java. Compile and package it as 'myextension.jar'. It needs 'android.jar' from Android SDK and 'xwalk_app_runtime_client_java.jar' from xwalk_app_template.tar.gz. So add them in your classpath when doing Java compilation.
+
+
+
+The source code of class XWalkExtensionClient:
 ```
 package com.example.extension;
 
@@ -72,6 +76,12 @@ public class MyExtension extends XWalkExtensionClient {
     }
 }
 ```
+
+ The commands to compile and package it to myextension.jar:
+ ```
+  javac *.java -classpath /path/to/xwalk_app_template/libs/xwalk_app_runtime_java.jar:/path/to/androidsdk/platforms/android-[version-number]/android.jar
+  jar cvf myextension.jar MyExtension.class
+```
 * Configure the extension in myextension.json so that Crosswalk can load the above files.
 ```
   {
@@ -84,7 +94,7 @@ public class MyExtension extends XWalkExtensionClient {
 ```
 <html>
 <head>
-<title></title>
+<title>Test</title>
 </head>
 <body>
 <script>
