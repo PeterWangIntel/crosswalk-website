@@ -135,5 +135,5 @@ myextension/
 ```
  * Specify the extension directory when using 'make_apk.py'.
    ```
-   python make_apk.py --name=TestExtension --package=org.example.testextension -- extensions="/path/to/myextension/" ...
+python make_apk.py --name=TestExtension --package=org.example.testextension -- extensions="/path/to/myextension/" ...
    ```
