@@ -126,6 +126,7 @@ try {
 ```
 * Include the extension and package its files by Crosswalk packaging tool.
  * Put three files in one directory called 'myextension'.
+
 ```
 myextension/
   myextension.js
@@ -133,6 +134,6 @@ myextension/
   myextension.jar
 ```
  * Specify the extension directory when using 'make_apk.py'.
-```
-python make_apk.py --name=TestExtension --package=org.example.testextension --extensions="/path/to/myextension/" ...
-```
+   ```
+   python make_apk.py --name=TestExtension --package=org.example.testextension -- extensions="/path/to/myextension/" ...
+   ```
