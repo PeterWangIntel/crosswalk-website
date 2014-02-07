@@ -79,8 +79,8 @@ public class MyExtension extends XWalkExtensionClient {
 
  The commands to compile and package it to myextension.jar:
  ```
-  javac MyExtension.java -classpath /path/to/xwalk_app_template/libs/xwalk_app_runtime_java.jar:
-        /path/to/androidsdk/platforms/android-[version-number]/android.jar
+  javac MyExtension.java -classpath \
+   /path/to/xwalk_app_template/libs/xwalk_app_runtime_java.jar:/path/to/androidsdk/platforms/android-[version-number]/android.jar
   jar cvf myextension.jar MyExtension.class
 ```
 * Configure the extension in myextension.json so that Crosswalk can load the above files.
