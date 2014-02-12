@@ -23,10 +23,10 @@ buildroot = ~/GBS-ROOT/
 work_dir=.
 
 [profile.mobile_public]
-repos = repo.mobile_public_2.1
+repos = repo.mobile_public
 
-[repo.mobile_public_2.1]
-url = http://download.tizen.org/releases/2.1/latest/
+[repo.mobile_public]
+url =  https://download.tizen.org/snapshots/tizen/mobile/latest/
 ```
 
 * If you are curious what happen, refer to [Creating a Tizen Platform Image from Scratch through Local Build](https://source.tizen.org/documentation/developer-guide/creating-tizen-platform-image-scratch-through-local-build)
