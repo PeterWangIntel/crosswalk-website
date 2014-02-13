@@ -229,3 +229,70 @@ $ ninja -C out_i586/Release -j9 xwalk
 ```
 $ export GYP_DEFINES='component=shared_library'
 ```
+## Build on IVI
+Build Crosswalk on IVI is almost the same as on Tizen Mobile.  Please refer to above guide first, below is some specific setting for IVI building.
+
+* Baking the RPM.
+Refer to "Build Instructions for Tizen" in [BUILDING CROSSWALK](https://crosswalk-project.org/#contribute/building_crosswalk) in order to create a chroot environment.
+Should use the following URL for baking(set it in ~/.gbs.conf)
+```
+url = http://download.tizen.org/releases/daily/tizen/ivi/ivi/latest/
+```
+
+* Apply the patches manually.
+Follow the build spec under src/xwalk/packaging/crosswalk.spec, we need manually apply the patches for common Tizen and Wayland building, including patch #1, #7, #8 & #9. Patches under flag "%{tizen} < 3.0" doesn't need to apply.
+```
+Patch1:         %{name}-do-not-look-for-gtk2-when-using-aura.patch
+Patch7:         %{name}-tizen-audio-session-manager.patch
+Patch8:         %{name}-mesa-ozone-typedefs.patch
+Patch9:         Blink-Add-GCC-flag-Wno-narrowing-fix-64bits-build.patch
+```
+
+* Prepare the GYP build.
+```
+$ export GYP_GENERATORS='make'
+$ ./xwalk/gyp_xwalk xwalk/xwalk.gyp \
+--no-parallel \
+${GYP_EXTRA_FLAGS} \
+-Dchromeos=0 \
+-Ddisable_nacl=1 \
+-Dpython_ver=2.7 \
+-Duse_aura=1 \
+-Duse_cups=0 \
+-Duse_gconf=0 \
+-Duse_kerberos=0 \
+-Duse_system_bzip2=1 \
+-Duse_system_icu=1 \
+-Duse_system_libexif=1 \
+-Duse_system_libxml=1 \
+-Duse_system_nspr=1 \
+-Denable_xi21_mt=1 \
+-Duse_xi2_mt=0 \
+-Duse_ash=1 \
+-Duse_ozone=1 \
+-Dtarget_arch=ia32
+```
+
+**Note**:  Maybe  there is a link error during linking time. The attach patch can fix the issue.
+``` diff
+diff --git a/ui/views/widget/desktop_aura/desktop_root_window_host_ozone.cc b/ui/views/widget/desktop_aura/desktop_root_window_host_ozone.cc
+index b8877d3..2d7b257 100644
+--- a/ui/views/widget/desktop_aura/desktop_root_window_host_ozone.cc
++++ b/ui/views/widget/desktop_aura/desktop_root_window_host_ozone.cc
+@@ -3,6 +3,7 @@
+ // found in the LICENSE file.
+ 
+ #include "ui/aura/root_window_host.h"
++#include "ui/native_theme/native_theme.h"
+ #include "ui/views/widget/desktop_aura/desktop_root_window_host.h"
+ #include "ui/views/widget/desktop_aura/desktop_factory_ozone.h"
+ 
+@@ -17,4 +18,7 @@ DesktopRootWindowHost* DesktopRootWindowHost::Create(
+                                          desktop_native_widget_aura);
+ }
+ 
++ui::NativeTheme* DesktopRootWindowHost::GetNativeTheme(aura::Window* window) {
++  return ui::NativeTheme::instance();
++}
+ }  // namespace views
+```
