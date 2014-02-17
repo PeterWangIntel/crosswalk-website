@@ -153,20 +153,20 @@ This example shows additional fields supported by Crosswalk 4:
  Field | Platform | Canary | Crosswalk 1 | Crosswalk 2 | Crosswalk 3 | Crosswalk 4
 --- | --- | --- | --- | --- | --- | ---
 name | Tizen | Yes | Yes | Yes | Yes | Yes
- | Android | Yes | N/A | Yes | Yes |
+ | Android | Yes | N/A | Yes | Yes | Yes
 version | Tizen | Yes | Yes | Yes | Yes | Yes
- | Android | Yes | N/A | Yes | Yes |
+ | Android | Yes | N/A | Yes | Yes | Yes
 app.launch.local_path | Tizen | Yes | Yes | Yes | Yes | Yes
- | Android | Yes | N/A | Yes | Yes |
+ | Android | Yes | N/A | Yes | Yes | Yes
 app.main.source | Tizen | Yes | Yes | Yes | Yes | Yes
- | Android | N/A | N/A | N/A | N/A |
+ | Android | N/A | N/A | N/A | N/A | N/A
 app.main.scripts | Tizen | Yes | Yes | Yes | Yes | Yes
- | Android | N/A | N/A | N/A | N/A |
+ | Android | N/A | N/A | N/A | N/A | N/A
 description | Tizen | Yes | Yes | Yes | Yes | Yes
- | Android | Yes | N/A | Yes | Yes |
+ | Android | Yes | N/A | Yes | Yes | Yes
 icons | Tizen | Yes | Yes | Yes | Yes
- | Android | Yes | N/A | Yes | Yes |
+ | Android | Yes | N/A | Yes | Yes | Yes
 content_security_policy | Tizen | Yes | N/A | N/A | N/A | Yes
- | Android | N/A | N/A | N/A | N/A |
+ | Android | N/A | N/A | N/A | N/A | N/A
 permissions | Tizen | |  |  | |
- | Android |  |  |  |  |
+ | Android | N/A | N/A | N/A | N/A | Yes
