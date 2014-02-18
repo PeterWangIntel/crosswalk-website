@@ -50,23 +50,6 @@ This is an example of the minimal amount of metadata required in a manifest:
 }
 ```
 
-However, note that there is currently [a Crosswalk packaging script bug](https://crosswalk-project.org/jira/browse/XWALK-909) which means you will also have to add an **icons** field to package your application for Android. So the minimal *usable* Crosswalk Android manifest looks like this:
-
-```
-{
-  "name": "Calculator",
-  "version": "1.1.3.1",
-  "app": {
-    "launch":{
-      "local_path": "calculator.html"
-    }
-  },
-  "icons": {
-    "128": "icon128.png"
-  }
-}
-```
-
 Another example, using **main.scripts** instead of a **launch** object:
 ```
 {
