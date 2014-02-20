@@ -8,7 +8,6 @@ Crosswalk Extensions allow exposing new functionality to JavaScript environment 
 
 #### Development
 
-* [GitHub Issues](https://github.com/crosswalk-project/crosswalk/issues?labels=Extensions&state=open): extension related issues on GitHub.
 * [Message passing based extensions](Message-passing-extensions): original design document.
 * Archives of previous research
  * [NPRuntime based Web API Extension](NPRuntime-Based-WebAPI-Extension-Framework)
