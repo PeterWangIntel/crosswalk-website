@@ -38,7 +38,9 @@ See "Android target setup" in the wiki
 adb install -r out/Release/apks/XWalkRuntimeClientShell.apk 
 this fails, means XWalkRuntimeShell?
 
-## Helpful commands
+## Notes
+
+When installing to the emulator fails with `Failure [INSTALL_FAILED_CONTAINER_ERROR]`, increase emulator image storage size.
 
 available after having run `envsetup.sh`
 
