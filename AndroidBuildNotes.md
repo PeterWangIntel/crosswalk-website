@@ -30,6 +30,8 @@ Create `~/.gyp/include.gypi`, to set custom variables for the build.
   }
 }
 ```
+## Building
+The "common" (?) part before the Android-specific block might not be needed at all. Try skipping it for a fresh build.
 
 ## Before running the test shell -- environtment setup
 
