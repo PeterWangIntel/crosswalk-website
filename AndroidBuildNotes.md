@@ -49,6 +49,8 @@ adb shell am start -n org.xwalk.runtime.shell/org.xwalk.runtime.shell.XWalkRunti
 
 ## Notes
 
+Gclient sync with diagnostics: `gclient sync -v -D -j 1 --gclientfile=.gclient-xwalk`
+
 When installing to the emulator fails with `Failure [INSTALL_FAILED_CONTAINER_ERROR]`, increase emulator image storage size.
 
 available after having run `envsetup.sh`
