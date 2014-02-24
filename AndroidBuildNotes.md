@@ -38,6 +38,15 @@ See "Android target setup" in the wiki
 adb install -r out/Release/apks/XWalkRuntimeClientShell.apk 
 this fails, means XWalkRuntimeShell?
 
+## Running
+
+The commands on the original website are outdated as components have been renamed. Use this:
+```
+adb install -r out/Release/apks/XWalkRuntimeLib.apk 
+adb install -r out/Release/apks/XWalkRuntimeShell.apk
+adb shell am start -n org.xwalk.runtime.shell/org.xwalk.runtime.shell.XWalkRuntimeShellActivity
+```
+
 ## Notes
 
 When installing to the emulator fails with `Failure [INSTALL_FAILED_CONTAINER_ERROR]`, increase emulator image storage size.
