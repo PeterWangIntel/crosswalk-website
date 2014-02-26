@@ -21,7 +21,7 @@ Simplified build instructions for Android on Fedora Linux 19 (64bit). Work in pr
 }
 ```
 
-* `export XWALK_OS_ANDROID=1`
+* Elliot, please skip this step and see if anything breaks `export XWALK_OS_ANDROID=1`. If it does break, we should patch probably patch envsetup.sh (see below) to do that.
 
 ## Get the code
 
@@ -37,6 +37,30 @@ cd ~/git/crosswalk
 
 ## Build
 
-* 
+* Enter source directory `cd src`.
+
+* Run `. xwalk/build/android/envsetup.sh --target-arch=x86`. (Or pass "arm", untested)
+
+* Generate the project
+```
+export GYP_GENERATORS='ninja'
+xwalk_android_gyp
+./xwalk/gyp_xwalk
+```
+
+* To build xwalk core and runtime shell(for developer testing purpose, not used by public), execute:
+```
+ninja -C out/Release xwalk_core_shell_apk xwalk_runtime_shell_apk
+```
 
 ## Run
+
+* Run the SDK manager using `android` (from `src/third_party/android_tools/sdk/tools/`). Install  the Intel x86 Atom System Image, and create an AVD using that. Make sure you allocate enough internal storage and SD card storage, 1000MiB respectively has been found to work.
+
+* Start the AVD from the SDK Manager or command line.
+
+* Install the packages and launch
+```
+adb install -r out/Release/apks/XWalkRuntimeClientShell.apk
+adb shell am start -n org.xwalk.runtime.shell/org.xwalk.runtime.shell.XWalkRuntimeShellActivity
+```
