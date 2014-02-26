@@ -44,6 +44,7 @@ If you have any question on how to use Crosswalk you can ask on IRC. On freenode
 ## For QA
 * [[Crosswalk testing home]]
 * [[Crosswalk bug and feature tracking and triaging]]
+* [[Best Practice Guidelines of Submitting Crosswalk Bugs]]
 
 ## Crosswalk's infrastructure
 * [Testing Framework](wiki/Crosswalk-testing-framework) 
