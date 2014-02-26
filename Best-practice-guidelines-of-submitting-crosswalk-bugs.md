@@ -48,13 +48,13 @@ This section describes key focuses for opening a bug.
 
 ### Components
 
-Refer to https://crosswalk-project.org/#wiki/Crosswalk-bug-and-feature-tracking-and-triaging which redirects to https://crosswalk-project.org/jira/browse/XWALK#selectedTab=com.atlassian.jira.plugin.system.project%3Acomponents-panel
+Refer to [Crosswalk Components](https://crosswalk-project.org/jira/browse/XWALK#selectedTab=com.atlassian.jira.plugin.system.project%3Acomponents-panel)
 
 ### Priority
-Refer to https://crosswalk-project.org/#wiki/Crosswalk-bug-and-feature-tracking-and-triaging
+Refer to [Crosswalk bug and feature tracking and triaging] (https://crosswalk-project.org/#wiki/Crosswalk-bug-and-feature-tracking-and-triaging)
 
 ### Severity 
-Refer to https://crosswalk-project.org/#wiki/Crosswalk-bug-and-feature-tracking-and-triaging
+Refer to [Crosswalk bug and feature tracking and triaging] (https://crosswalk-project.org/#wiki/Crosswalk-bug-and-feature-tracking-and-triaging)
 
 ### OS 
 
