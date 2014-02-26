@@ -97,7 +97,7 @@ Version field indicates the version of software the bug will be fixed. Usually t
 
 For example operating system, software platform and/or hardware specifications (include as appropriate for the issue).
 
-=== Bug Description
+### Bug Description
 
   IMPACTED BUILDS AND CASES:
   
@@ -109,7 +109,8 @@ For example operating system, software platform and/or hardware specifications (
 
   REPRODUCE TEST STEPS:
   
-    * List the exact steps to reproduce the bug (bash commands, results after executing the commands etc., instead of only paraphrasing).
+    * List the exact steps to reproduce the bug (bash commands, 
+      results after executing the commands etc., instead of only paraphrasing).
     * Identify the simplest steps needed to reproduce the bug. This means we need to do more investigation to achieve this, and this is also the process to root cause the bugs. You need the make sure every step is required to reproduce the bug.
 
   EXPECTED RESULTS:
