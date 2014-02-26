@@ -164,7 +164,7 @@ For example operating system, software platform and/or hardware specifications (
 
   BUG SUMMARY:
   
-  Crosswalk doesn't support dom event objects
+    Crosswalk doesn't support dom event objects
 
   IMPACTED BUILDS AND CASES:
   
