@@ -1,9 +1,5 @@
 Issue tracking for Crosswalk using [JIRA](https://crosswalk-project.org/jira/). 
 
-## Bug Workflow 
-
-= The Best Practice Guidelines of Submitting Crosswalk Bugs =
-
 ## Introduction
 
 This document summarizes rules and best practices of writing bug reports, aiming
