@@ -29,7 +29,6 @@ to make it fail, so that the corresponding bug can be fixed as soon as possible.
 ## Short Checklist before Getting Started
 
 * Can you reproduce the bug? Try to reproduce the bug by using the latest version of the software to see whether it has been fixed.
-
 * Has someone else already reported the bug? If you encounter a problem or desire a new feature, there is a high probability that someone else already had this problem or idea. If so, an appropriate bug report may already exist. In this case, do not create a duplicate report. Try to search the bug in bug tracking system to see if it has been reported.    
 
 ## Quick Recommendations for Bug Reports
