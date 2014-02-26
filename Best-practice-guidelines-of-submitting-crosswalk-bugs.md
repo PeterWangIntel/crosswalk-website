@@ -6,7 +6,7 @@ This document summarizes rules and best practices of writing bug reports, aiming
 to serve as comprehensive guidelines that can guide engineers to write qualified
 bug reports, thus enhancing the bug fixing efficiency.
 
-''These are guidelines to make it easier for us to work on the bug report and reduce the effort, cost and time taken to actually fix it. However, if you have difficulty finding the information mentioned here, please *do* file a bug anyway since we can work with you to find out the missing information and fill it in later on.''
+> These are guidelines to make it easier for us to work on the bug report and reduce the effort, cost and time taken to actually fix it. However, if you have difficulty finding the information mentioned here, please *do* file a bug anyway since we can work with you to find out the missing information and fill it in later on.
 
 ## Background
 
