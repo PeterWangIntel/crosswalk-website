@@ -203,10 +203,10 @@ For example operating system, software platform and/or hardware specifications (
   
     Attach screenshots or attachments.
 
-### Bug Submission and Verification Workflow
+## Bug Submission and Verification Workflow
 [[File:File and verify bug workflow 20140103.png]]
 
-### Bug verification criteria for beta branch
+## Bug verification criteria for beta branch
 Branch point is important for QA to verify bugs on beta branch, e.g. branch crosswalk-4 beta build from canary 4.32.67.0:
 * All the fixes in canary 4.32.67.0 will be included in crosswalk-4 beta, no need to double verify fixed canary bugs before 4.32.67.0 on crosswalk-4 beta builds.
 * If the beta bugs were fixed later than canary 4.32.67.0, QA must double verify the bug on crosswalk-4 beta builds, file bugs with "[Beta]" tag if it's reproducible.
