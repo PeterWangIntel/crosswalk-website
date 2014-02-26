@@ -1,5 +1,3 @@
-Issue tracking for Crosswalk using [JIRA](https://crosswalk-project.org/jira/). 
-
 ## Introduction
 
 This document summarizes rules and best practices of writing bug reports, aiming
@@ -44,7 +42,7 @@ to make it fail, so that the corresponding bug can be fixed as soon as possible.
 
 ## Key Focuses for Opening a Bug 
 
-This section describes key focuses for opening a bug.
+This section describes key focuses for opening a bug. Issue tracking for Crosswalk using [JIRA](https://crosswalk-project.org/jira/). 
 
 ### Components
 
