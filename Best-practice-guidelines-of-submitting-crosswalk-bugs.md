@@ -205,7 +205,7 @@ For example operating system, software platform and/or hardware specifications (
     Attach screenshots or attachments.
 
 ## Bug Submission and Verification Workflow
-[[File:File and verify bug workflow 20140103.png]]
+<img src="assets/file_and_verify_bug_workflow.png" alt="Bug submission and verification workflow">
 
 ## Bug verification criteria for beta branch
 Branch point is important for QA to verify bugs on beta branch, e.g. branch crosswalk-4 beta build from canary 4.32.67.0:
