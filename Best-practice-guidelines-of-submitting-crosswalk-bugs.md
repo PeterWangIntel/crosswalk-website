@@ -109,8 +109,8 @@ For example operating system, software platform and/or hardware specifications (
 
   REPRODUCE TEST STEPS:
   
-    * List the exact steps to reproduce the bug (bash commands, results after executing the commands etc., instead of only paraphrasing).
-    * Identify the simplest steps needed to reproduce the bug. This means we need to do more investigation to achieve this, and this is also the process to root cause the bugs. You need the make sure every step is required to reproduce the bug.
+    List the exact steps to reproduce the bug (bash commands, results after executing the commands etc., instead of only paraphrasing).
+    Identify the simplest steps needed to reproduce the bug. This means we need to do more investigation to achieve this, and this is also the process to root cause the bugs. You need the make sure every step is required to reproduce the bug.
 
   EXPECTED RESULTS:
   
@@ -205,7 +205,7 @@ For example operating system, software platform and/or hardware specifications (
     Attach screenshots or attachments.
 
 ## Bug Submission and Verification Workflow
-[[File:File and verify bug workflow 20140103.png]]
+![Bug submission and verification workflow](assets/file_and_verify_bug_workflow.png)
 
 ## Bug verification criteria for beta branch
 Branch point is important for QA to verify bugs on beta branch, e.g. branch crosswalk-4 beta build from canary 4.32.67.0:
