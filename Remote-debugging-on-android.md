@@ -1,3 +1,18 @@
+## Requirements
+
+Before starting to debug your web application, make sure the right Google Chrome version is installed on the host machine, otherwise, **the remote debugging functionality may not work as expected**. The following is a table to indicate the corresponding Chrome version required by different Crosswalk version.
+* Version Mapping Table
+
+ | Crosswalk Version | Google Chrome Version |
+ --------------------|------------------------
+ | Crosswalk-1 | >= 29 |
+ | Crosswalk-2 | >= 31 |
+ | Crosswalk-3 | >= 32 |
+ | Crosswalk-4 | >= 32 |
+ | Crosswalk-5 | >= 34 |
+
+> You can also examine Chrome version from ```navigator.userAgent``` string in your web application.
+
 ## Remote debugging for web applications on Android
 Developers can use remote debugging to debug web applications on Android from Chrome Browser on Linux host machines.
  * Two ways to enable the remote debugging feature for a web application. You can either enable the remote debugging by default when packaging the web app or send Android intents to the web app if it's running.
