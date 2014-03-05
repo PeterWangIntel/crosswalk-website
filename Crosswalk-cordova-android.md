@@ -40,4 +40,5 @@ Adding Plugins
 You could use the `plugman` command-line tool to add Cordova plugins as needed.
  * [Add Plugins into Your App](Add-Plugins-With-Crosswalk-Cordova-Android)
  * [Plugins Supported by Crosswalk-Cordova-Android 3.3.0](Plugins-List-@-3.3.0-Supported-by-Crosswalk-Cordova-Android)
- * [AdMob plugin](AdMob-Plugin-on-Crosswalk)
+ * [Use AdMob plugin in Crosswalk](AdMob-Plugin-on-Crosswalk)
+ * [Use IAP plugin in Crosswalk ](IAP-Plugin-on-Crosswalk)
