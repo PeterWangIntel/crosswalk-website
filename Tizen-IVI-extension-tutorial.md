@@ -41,19 +41,19 @@ First, get hold of a Tizen IVI emulator image (there are no physical Tizen IVI d
 
 4.  Once configured, select *Next* to go to the component selection screen. Select the components you need:
 
-    [ ] Native App Development
-      [x] Toolchain
-      [x] Native IDE
-      [x] Command Line tools
-        [x] Toolchain
-        [x] Native IDE Core Resources
-        [x] Native Rootstrap
-    [x] Common Tools
-      [x] x86 Emulator
-    [ ] Platforms
-      [x] IVI 3.0
-        [x] x86 Platform Image
-        [x] Web IDE Core Resources for IVI profile
+        [ ] Native App Development
+          [x] Toolchain
+          [x] Native IDE
+          [x] Command Line tools
+            [x] Toolchain
+            [x] Native IDE Core Resources
+            [x] Native Rootstrap
+        [x] Common Tools
+          [x] x86 Emulator
+        [ ] Platforms
+          [x] IVI 3.0
+            [x] x86 Platform Image
+            [x] Web IDE Core Resources for IVI profile
 
     Even if you don't intend to use the Web IDE, the Emulator Manager will not run correctly without the *Web IDE Core Resources for IVI profile* component.
 
