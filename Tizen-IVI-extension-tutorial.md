@@ -278,6 +278,42 @@ Add a file at `extension/api.js` with this content:
 
 This JavaScript file is converted into a C header file at build-time; that header file is then referenced from the extension code. This is the simplest way to incorporate the JavaScript code into the C extension. See the next section for details of how the conversion happens.
 
+#### A note on the JavaScript API
+
+Note that the asynchronous part of this API is *not suitable* for a real production environment.
+
+At the moment, when you invoke the `echoAsync()` method, you set a single global message listener: a function which waits for the next response to be returned by the C part of the extension. However, this approach would not work correctly if the processing which occurred in the extension took some time, and the `echoAsync()` method were invoked during that processing time.
+
+For example, consider the following program:
+
+    var callback1 = function (response) {
+      console.log(response + ' world');
+    };
+
+    var callback2 = function (response) {
+      console.log(response + ' cruel world');
+    };
+
+    // 1
+    echo.echoAsync('hello', callback1);
+
+    // 2
+    echo.echoAsync('goodbye', callback2);
+
+When invocation 1 occurs, the message listener is set to `callback1`. If the extension takes several seconds to respond, invocation 2, which resets the message listener to `callback2`, may have already happened. Consequently, both responses will be handled by `callback2`. Which in turn means you'll see this on the console:
+
+    hello cruel world
+    goodbye cruel world
+
+instead of the anticipated:
+
+    hello world
+    goodbye cruel world
+
+The solution is to pass a token from the JavaScript API to the C API; then return the same token with the response from the C extension. The JavaScript API maintains a mapping from these tokens to the appropriate callbacks, so when responses are returned, the correct handler can be invoked. The usual way to implement this would be to pass JSON strings between the JavaScript and C pieces of the extension. However, this is a complicated process, and too complex for the scope of this tutorial.
+
+If you're interested in seeing a real world example of how this would be implemented, the [Crosswalk Tizen extensions](https://github.com/crosswalk-project/tizen-extensions-crosswalk) are a good place to start, e.g. [the application API JavaScript file](https://github.com/crosswalk-project/tizen-extensions-crosswalk/blob/master/application/application_api.js).
+
 ### C header file for the JavaScript API
 
 The header file, `extension/echo-extension.h`, is a generated file which looks like this:
