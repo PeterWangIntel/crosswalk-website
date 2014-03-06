@@ -148,9 +148,6 @@ The project name is **simple**. Set up the directories for the project from a co
     mkdir simple
     cd simple
 
-    # directory for metadata about the application
-    mkdir meta
-
     # directory for the HTML5 web app
     mkdir app
 
@@ -177,7 +174,7 @@ The application metadata consists of platform-specific files which aren't proper
 
 A manifest file for an application provides Crosswalk with metadata about that application: for example, which HTML file to load as the entry point, which icon to use for the application, and which permissions the application needs.
 
-For now, this file can be very simple. Create `meta/manifest.json` with this content:
+For now, this file can be very simple. Create `app/manifest.json` with this content:
 
     {
       "name": "simple_extension",
@@ -489,8 +486,8 @@ In the project directory, add a file called `makefile` with this content:
 	    ./js2c.sh extension/api.js extension/echo-extension.h
 
     libecho.so: prepare echo-extension.h
-	    $(CC) $(ECHO_CFLAGS) -shared -o build/extension/libecho.so \
-	      $(SYSROOT_FLAGS) -I$(XWALK_HEADERS) extension/echo-extension.c
+	    $(CC) $(ECHO_CFLAGS) -shared -o build/extension/libecho.so $(SYSROOT_FLAGS) \
+	      -I$(XWALK_HEADERS) extension/echo-extension.c
 
     prepare: check
 	    mkdir -p build/app
@@ -504,6 +501,8 @@ In the project directory, add a file called `makefile` with this content:
 
     clean:
 	    rm -Rf build
+
+    .PHONY: all prepare check clean
 
 (As with all makefiles, indent using tabs, rather than spaces.)
 
