@@ -17,6 +17,14 @@ You will see the 'APACHE CORDOVA' page with a blinking 'DEVICE IS READY' tag.
 
 Please refer to [Android Command-line Tools](http://cordova.apache.org/docs/en/3.3.0/guide_platforms_android_tools.md.html#Android%20Command-line%20Tools) for more command-line commands.
 
+### Set Permissions
+Some HTML5 APIs which access devices require developers to set appropriate permissions in `AndroidManifest.xml` to work correctly. For example, if your app calls [getUserMedia](http://dev.w3.org/2011/webrtc/editor/archives/20131225/getusermedia.html), it needs to add 
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+into `AndroidManifest.xml`. Please refer to [Android manifest permissions](http://developer.android.com/reference/android/Manifest.permission.html) for more details.
+
 ### Importing a Crosswalk-based Cordova Android Project into Eclipse
 
 1. Import Crosswalk-based Cordova Android and XWalkCoreLibrary library projects by File > Import... > Existing Android Code Into Workspace. Point to /path/to/crosswalk-cordova-android/framework and click Finish. **Notice**: if you see error messages as "[2014-02-24 08:58:56 - xwalk_core_library] R.java was modified manually! Reverting to generated version!", you may need to turn-off Project > Automatically Build as workaround. Please track the bug [XWALK-1036](https://crosswalk-project.org/jira/browse/XWALK-1036).
