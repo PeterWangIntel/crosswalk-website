@@ -79,9 +79,9 @@ Testkit, the test execution framework of test suite, is an open source and commo
 * Testkit Home: https://github.com/testkit
 
 ## Test Execution Architecture
-The crosswalk testing is using an automated testing execution framework that consists of two parts:
-1. Host: The **testkit-lite** runs on your desktop machine and manages test execution.
-1. Device: Individual test cases are executed on attached devices or on an emulator. **testkit-stub** is deployed on devices to provide communication between testkit-lite(Host) and test web-runner(Device).<br/>
+The crosswalk testing is using an automated testing execution framework that consists of two parts:<br/><br/>
+1. Host: The **testkit-lite** runs on your desktop machine and manages test execution.<br/>
+2. Device: Individual test cases are executed on attached devices or on an emulator. **testkit-stub** is deployed on devices to provide communication between testkit-lite(Host) and test web-runner(Device).<br/>
 * For the test cases depend on Web Service, a Local Web Server(**Tinyweb**) is set up on devices to support the testing. Test cases will be deployed on Local web server path, and executed from local Web Server side on device.<br/>
 * For the test cases do not depend on Web Service, they will be executed directly on device.
 
@@ -107,7 +107,7 @@ For Crosswalk Web testing for both automated and manual tests, please set up Cro
 ## How to Contribute tests to Crosswalk Test Suite
 Welcome to contribute new tests or bug fixings to existing tests, please follow the Test Developer Guides when contribute tests to Crosswalk Test Suite:
 * [Web Test Suite Developer Guide](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/doc)
-* [Behavior Test Tool Developer Guide](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/doc)<br/><br/>
+* [Behavior Test Tool Developer Guide](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/doc)
 * Please submit your changes [Crosswalk test suite repo](https://github.com/crosswalk-project/crosswalk-test-suite) and your change will be reviewed shortly!
 
 # Bug Tracking
