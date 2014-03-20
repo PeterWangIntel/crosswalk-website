@@ -99,15 +99,15 @@ Different with Tizen platform, the test.apk files are packed as **Embedded mode*
 ## How to Run Crosswalk Web Test Suite
 
 For Crosswalk Web testing for both automated and manual tests, please set up Crosswalk Test environment according to latest published User Guides.
-* [WebAPI Test Suite User_Guide](https://github.com/crosswalk-project/crosswalk-test-suite/blob/master/doc/WebAPI_Test_Suite_User_Guide_v1.0.pdf)
-* [Web Runtime Test Suite User Guide](https://github.com/crosswalk-project/crosswalk-test-suite/blob/master/doc/Web_Runtime_Test_Suite_User_Guide_v1.0.pdf)
-* [Behavior Test Tool User Guide](https://github.com/crosswalk-project/crosswalk-test-suite/blob/master/doc/Behavior_Test_Tool_User_Guide_v1.0.pdf)
-* [Cordova Test Suite User Guide](https://github.com/crosswalk-project/crosswalk-test-suite/blob/master/doc/Cordova_Test_Suite_User_Guide_v1.0.pdf)
+* [WebAPI Test Suite User_Guide](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/doc)
+* [Web Runtime Test Suite User Guide](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/doc)
+* [Behavior Test Tool User Guide](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/doc)
+* [Cordova Test Suite User Guide](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/doc)
 
 ## How to Contribute tests to Crosswalk Test Suite
 Welcome to contribute new tests or bug fixings to existing tests, please follow the Test Developer Guides when contribute tests to Crosswalk Test Suite:
-* [Web Test Suite Developer Guide](https://github.com/crosswalk-project/crosswalk-test-suite/blob/master/doc/WebAPI_Test_Suite_Developer_Guide_v1.0.docx)
-* [Behavior Test Tool Developer Guide](https://github.com/crosswalk-project/crosswalk-test-suite/blob/master/doc/Behavior_Test_Tool_Developer_Guide_v1.0.docx)<br/>
+* [Web Test Suite Developer Guide](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/doc)
+* [Behavior Test Tool Developer Guide](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/doc)<br/>
 Please submit your changes Crosswalk_Test_Suite repo and your change will be reviewed shortly!
 * [crosswalk-test-suite repository](https://github.com/crosswalk-project/crosswalk-test-suite)
 
