@@ -16,15 +16,17 @@ Crosswalk Test Suite covers:
 
 * Create one set of standard spec-based tests complying to API spec defined in [Crosswalk Web API features](https://crosswalk-project.org/jira/browse/XWALK-1195?filter#10004), leveraging existing W3C etc upstream standard tests
 * Integrate sample apps to evaluate the web API support capability of WRT from app perspective 
+
 ### Spec Based Web API Test
 
 Spec-based Web API test suite is a set of specification-based and independent tests following [Crosswalk Web API features](https://crosswalk-project.org/jira/browse/XWALK-1195?filter#10004). The test suite leverages and fills the gap of existing test cases created by standard organizations, for example, W3C and Khronos, who are the key Web API specification setters, and develop tests for Tizen new Web APIs. The test suite is automated extremely and independent of any Web runtime that complies with Tizen Web API specifications.<br/>
+
 To better present the test scope and coverage of Web API test cases, the level of specification coverage is defined as below:
 * <u>Attribute & Method Coverage</u> - cover each attribute or method at least once by using normal values to ensure the presence of all defined attributes and methods
 * <u>Parameter Coverage</u> - a superset of Attribute&Method coverage, which covers each parameter using minimum, maximum, normal, and error conditions of each range of values, parameter combination for the APIs with more than one parameter, and all return codes 
 * <u>Statement Coverage</u> - a superset of parameter coverage, which covers testable statement, including common usage, error code (exceptions), code examples, and etc testable descriptive statements in each specification document
 
-Attribute & Method Coverage <# Parameter Coverage <# Statement Coverage
+Attribute & Method Coverage <= Parameter Coverage <= Statement Coverage
 
 The Crosswalk Web API specifications includes various types of docs to define JavaScript(JS) interfaces, HTML elements, CSS properties or other Misc usages. The following table describes the implication of specification coverage level for different specification types:
 
