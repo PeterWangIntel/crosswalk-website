@@ -2,9 +2,9 @@
 
 Crosswalk Test Suite covers:
 * Web API tests<br/>
-_Standard APIs Tests_: Test for Crosswalk supported W3C/HTML5 APIs and other popular APIs that are used widely, e.g. WebGL and Typed Arrays (Khronos Specifications), FullScreen API (Mozilla Specification), and viewport MetaTag (Apple Specification).<br/>
-_Experimental API tests_: Tests for Crosswalk supported additional experimental or emerging standards APIs besides the Standard APIs. e.g. Presentation API, Rawsocket API, DeviceCapabilities API.<br/>
-_Tizen Extension API tests_: Tests for Crosswalk supported extension for the Tizen APIs<br/>
+**Standard APIs Tests**: Test for Crosswalk supported W3C/HTML5 APIs and other popular APIs that are used widely, e.g. WebGL and Typed Arrays (Khronos Specifications), FullScreen API (Mozilla Specification), and viewport MetaTag (Apple Specification).<br/>
+**Experimental API tests**: Tests for Crosswalk supported additional experimental or emerging standards APIs besides the Standard APIs. e.g. Presentation API, Rawsocket API, DeviceCapabilities API.<br/>
+**Tizen Extension API tests**: Tests for Crosswalk supported extension for the Tizen APIs<br/>
 * Web Runtime and feature tests
 * Behavior Tests
 * Crosswalk Based Cordova Tests
@@ -76,27 +76,27 @@ Crosswalk based Cordova Test includes:
 # Test Execution
 ## Test Execution Framework
 
-* Testkit, the test execution framework of test suite, is an open source and common test execution framework for Linux, supporting both native testing and web testing. Crosswalk test suite uses following tools of testkit for execution.
-** '''Testkit-lite''' is a command line test runner. It provides comprehensive options for testing in command line mode.
-** '''Testkit-stub''' is a stub which will be deployed on devices, and running with testkit-lite   
-** '''Tinyweb''' is a web server that runs on the device. It provides possible test resources (HTTP directory, CGI, WebSocket service) for web TCs.
+Testkit, the test execution framework of test suite, is an open source and common test execution framework for Linux, supporting both native testing and web testing. Crosswalk test suite uses following tools of testkit for execution.
+* **Testkit-lite** is a command line test runner. It provides comprehensive options for testing in command line mode.
+* **Testkit-stub** is a stub which will be deployed on devices, and running with testkit-lite   
+* **Tinyweb** is a web server that runs on the device. It provides possible test resources (HTTP directory, CGI, WebSocket service) for web TCs.
      
 * Testkit Home: https://github.com/testkit
 
 ## Test Execution Architecture
 The crosswalk testing is using an automated testing execution framework that consists of two parts:
-* Host: The '''testkit-lite''' runs on your desktop machine and manages test execution.
-* Device: Individual test cases are executed on attached devices or on an emulator. '''testkit-stub''' is deployed on devices to provide communication between testkit-lite(Host) and test web-runner(Device).
-** For the test cases depend on Web Service, a Local Web Server('''Tinyweb''') is set up on devices to support the testing. Test cases will be deployed on Local web server path, and executed from local Web Server side on device.
+* Host: The **testkit-lite** runs on your desktop machine and manages test execution.
+* Device: Individual test cases are executed on attached devices or on an emulator. **testkit-stub** is deployed on devices to provide communication between testkit-lite(Host) and test web-runner(Device).
+** For the test cases depend on Web Service, a Local Web Server(**Tinyweb**) is set up on devices to support the testing. Test cases will be deployed on Local web server path, and executed from local Web Server side on device.
 ** For the test cases do not depend on Web Service, they will be executed directly on device.
 
 ### Test Arcthitecture on Tizen
-On Tizen Tareget Device: The test cases are written in HTML, CSS and JavaScript and pack to .xpk, .wgt files to execute with test web-runner on the actual device target. <br/>
+On **Tizen Tareget Device**: The test cases are written in HTML, CSS and JavaScript and pack to .xpk, .wgt files to execute with test web-runner on the actual device target. <br/><br/>
 ![Test Architecture on Tizen](assets/Web_Test_Arc_Tizen.png)
 
 ### Test Architecture on Android
-On Android Target Device: The test cases are written in HTML, CSS and JavaScript and pack to .apk files to execute with test web-runner on the actual device target. <br/>
-Different with Tizen platform, the test.apk files are packed as Embedded mode package: pack the test web App together with the related libarys (crosswalk runtime, Java wrapper). The apk file could be stored and executed without depending other APKs<br/>
+On **Android Target Device**: The test cases are written in HTML, CSS and JavaScript and pack to .apk files to execute with test web-runner on the actual device target. <br/>
+Different with Tizen platform, the test.apk files are packed as **Embedded mode** package: pack the test web App together with the related libarys (crosswalk runtime, Java wrapper). The apk file could be stored and executed without depending other APKs<br/><br/>
 ![Test Architecture on Android](assets/Web_Test_Arc_android.png)
 
 # Documents
