@@ -44,10 +44,6 @@ In past two years, we submitted comprehensive spec test suites, such as HTML5 We
 
 We've always played a key participant role and major organizer in [Test the Web Forward](http://testthewebforward.org/sydney-2013.html) events. Besides over thousands tests has been submitted and passed review during the past events, we are the key presenters of delivering the training sessions in Beijing, Shanghai and Shenzhen, PRC events.
 
-## Running Tests
-
-Before running tests on test device, you might need some time to set up the test environment by using the [testkit-lite](https://github.com/testkit/testkit-lite) tool.
-
 ## Quality Indicators
 
 Crosswalk dashboard
