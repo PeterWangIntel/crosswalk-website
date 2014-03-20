@@ -14,12 +14,12 @@ Crosswalk Test Suite covers:
 
 ## Web API Tests
 
-* Create one set of standard spec-based tests complying to API spec defined in [Crosswalk Web API features](https://crosswalk-project.org/jira/browse/XWALK-1195?filter#10004), leveraging existing W3C etc upstream standard tests
+* Create one set of standard spec-based tests complying to API spec defined in [Crosswalk Web API features](https://crosswalk-project.org/jira/issues/?filter=10004), leveraging existing W3C etc upstream standard tests
 * Integrate sample apps to evaluate the web API support capability of WRT from app perspective 
 
 ### Spec Based Web API Test
 
-Spec-based Web API test suite is a set of specification-based and independent tests following [Crosswalk Web API features](https://crosswalk-project.org/jira/browse/XWALK-1195?filter#10004). The test suite leverages and fills the gap of existing test cases created by standard organizations, for example, W3C and Khronos, who are the key Web API specification setters, and develop tests for Tizen new Web APIs. The test suite is automated extremely and independent of any Web runtime that complies with Tizen Web API specifications.<br/>
+Spec-based Web API test suite is a set of specification-based and independent tests following [Crosswalk Web API features](https://crosswalk-project.org/jira/issues/?filter=10004). The test suite leverages and fills the gap of existing test cases created by standard organizations, for example, W3C and Khronos, who are the key Web API specification setters, and develop tests for Tizen new Web APIs. The test suite is automated extremely and independent of any Web runtime that complies with Tizen Web API specifications.<br/>
 
 To better present the test scope and coverage of Web API test cases, the level of specification coverage is defined as below:
 * <u>Attribute & Method Coverage</u> - cover each attribute or method at least once by using normal values to ensure the presence of all defined attributes and methods
