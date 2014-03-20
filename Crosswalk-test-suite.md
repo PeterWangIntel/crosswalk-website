@@ -89,13 +89,14 @@ The crosswalk testing is using an automated testing execution framework that con
 * Device: Individual test cases are executed on attached devices or on an emulator. '''testkit-stub''' is deployed on devices to provide communication between testkit-lite(Host) and test web-runner(Device).
 ** For the test cases depend on Web Service, a Local Web Server('''Tinyweb''') is set up on devices to support the testing. Test cases will be deployed on Local web server path, and executed from local Web Server side on device.
 ** For the test cases do not depend on Web Service, they will be executed directly on device.
+
 ### Test Arcthitecture on Tizen
-* On '''Tizen Tareget Device''': The test cases are written in HTML, CSS and JavaScript and pack to .xpk, .wgt files to execute with test web-runner on the actual device target. 
+On Tizen Tareget Device: The test cases are written in HTML, CSS and JavaScript and pack to .xpk, .wgt files to execute with test web-runner on the actual device target. <br/>
 ![Test Architecture on Tizen](assets/Web_Test_Arc_Tizen.png)
 
 ### Test Architecture on Android
-* On '''Android Target Device''': The test cases are written in HTML, CSS and JavaScript and pack to .apk files to execute with test web-runner on the actual device target. 
-* Different with Tizen platform, the test.apk files are packed as ''' Embedded mode''' package: pack the test web App together with the related libarys (crosswalk runtime, Java wrapper). The apk file could be stored and executed without depending other APKs
+On Android Target Device: The test cases are written in HTML, CSS and JavaScript and pack to .apk files to execute with test web-runner on the actual device target. <br/>
+Different with Tizen platform, the test.apk files are packed as Embedded mode package: pack the test web App together with the related libarys (crosswalk runtime, Java wrapper). The apk file could be stored and executed without depending other APKs<br/>
 ![Test Architecture on Android](assets/Web_Test_Arc_android.png)
 
 # Documents
