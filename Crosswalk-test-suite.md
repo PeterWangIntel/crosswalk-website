@@ -109,12 +109,11 @@ For Crosswalk Web testing for both automated and manual tests, please set up Cro
 * [Cordova Test Suite User Guide](https://github.com/crosswalk-project/crosswalk-test-suite/doc/Cordova_Test_Suite_User_Guide_v1.0.pdf)
 
 ## How to Contribute tests to Crosswalk Test Suite
-Welcome to contribute new tests or bug fixings to existing tests:
-* Please follow the Test Developer Guides when contribute tests to Crosswalk Test Suite
-** [Web Test Suite Developer Guide](https://github.com/crosswalk-project/crosswalk-test-suite/doc/WebAPI_Test_Suite_Developer_Guide_v1.0.docx)
-** [Behavior Test Tool Developer Guide](https://github.com/crosswalk-project/crosswalk-test-suite/doc/Behavior_Test_Tool_Developer_Guide_v1.0.docx)
-* Please submit your changes Crosswalk_Test_Suite repo and your change will be reviewed shortly!
-**[crosswalk-test-suite repository](https://github.com/crosswalk-project/crosswalk-test-suite)
+Welcome to contribute new tests or bug fixings to existing tests, please follow the Test Developer Guides when contribute tests to Crosswalk Test Suite:
+* [Web Test Suite Developer Guide](https://github.com/crosswalk-project/crosswalk-test-suite/doc/WebAPI_Test_Suite_Developer_Guide_v1.0.docx)
+* [Behavior Test Tool Developer Guide](https://github.com/crosswalk-project/crosswalk-test-suite/doc/Behavior_Test_Tool_Developer_Guide_v1.0.docx)
+Please submit your changes Crosswalk_Test_Suite repo and your change will be reviewed shortly!
+* [crosswalk-test-suite repository](https://github.com/crosswalk-project/crosswalk-test-suite)
 
 # Bug Tracking
 Test case bugs are tracked under Crosswalk JIRA: [Crosswalk Test Suite component](https://crosswalk-project.org/jira/browse/XWALK/component/10303)
