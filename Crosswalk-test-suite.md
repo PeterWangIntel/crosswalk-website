@@ -90,7 +90,7 @@ On **Tizen Tareget Device**: The test cases are written in HTML, CSS and JavaScr
 ![Test Architecture on Tizen](assets/Web_Test_Arc_Tizen.png)
 
 ### Test Architecture on Android
-On **Android Target Device**: The test cases are written in HTML, CSS and JavaScript and pack to .apk files to execute with test web-runner on the actual device target. <br/>
+On **Android Target Device**: The test cases are written in HTML, CSS and JavaScript and pack to .apk files to execute with test web-runner on the actual device target. <br/><br/>
 Different with Tizen platform, the test.apk files are packed as **Embedded mode** package: pack the test web App together with the related libarys (crosswalk runtime, Java wrapper). The apk file could be stored and executed without depending other APKs<br/><br/>
 ![Test Architecture on Android](assets/Web_Test_Arc_android.png)
 
