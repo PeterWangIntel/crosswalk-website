@@ -107,9 +107,8 @@ For Crosswalk Web testing for both automated and manual tests, please set up Cro
 ## How to Contribute tests to Crosswalk Test Suite
 Welcome to contribute new tests or bug fixings to existing tests, please follow the Test Developer Guides when contribute tests to Crosswalk Test Suite:
 * [Web Test Suite Developer Guide](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/doc)
-* [Behavior Test Tool Developer Guide](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/doc)<br/>
-Please submit your changes Crosswalk_Test_Suite repo and your change will be reviewed shortly!
-* [crosswalk-test-suite repository](https://github.com/crosswalk-project/crosswalk-test-suite)
+* [Behavior Test Tool Developer Guide](https://github.com/crosswalk-project/crosswalk-test-suite/tree/master/doc)<br/><br/>
+* Please submit your changes [Crosswalk_Test_Suite repo](https://github.com/crosswalk-project/crosswalk-test-suite) and your change will be reviewed shortly!
 
 # Bug Tracking
 Test case bugs are tracked under Crosswalk JIRA: [Crosswalk Test Suite component](https://crosswalk-project.org/jira/browse/XWALK/component/10303)
