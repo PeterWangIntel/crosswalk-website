@@ -2,9 +2,9 @@
 
 Crosswalk Test Suite covers:
 * Web API tests<br/>
-**Standard APIs Tests**: Test for Crosswalk supported W3C/HTML5 APIs and other popular APIs that are used widely, e.g. WebGL and Typed Arrays (Khronos Specifications), FullScreen API (Mozilla Specification), and viewport MetaTag (Apple Specification).<br/>
-**Experimental API tests**: Tests for Crosswalk supported additional experimental or emerging standards APIs besides the Standard APIs. e.g. Presentation API, Rawsocket API, DeviceCapabilities API.<br/>
-**Tizen Extension API tests**: Tests for Crosswalk supported extension for the Tizen APIs.<br/>
+<u>Standard APIs Tests</u>: Test for Crosswalk supported W3C/HTML5 APIs and other popular APIs that are used widely, e.g. WebGL and Typed Arrays (Khronos Specifications), FullScreen API (Mozilla Specification), and viewport MetaTag (Apple Specification).<br/>
+<u>Experimental API tests</u>: Tests for Crosswalk supported additional experimental or emerging standards APIs besides the Standard APIs. e.g. Presentation API, Rawsocket API, DeviceCapabilities API.<br/>
+<u>Tizen Extension API tests</u>: Tests for Crosswalk supported extension for the Tizen APIs.<br/>
 * Web Runtime and feature tests
 * Behavior Tests
 * Crosswalk Based Cordova Tests
