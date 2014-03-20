@@ -28,7 +28,11 @@ QA team conducts testing with different frequencies and test scope on Crosswalk 
  * Feature: Feature test for web runtime features defined in Crosswalk Runtime Model Specification. Furthermore, the feature test covers common features which implemented but not in roadmap requirements.
  * Web API Test: W3C Web API, Supplementary API and Extension API, which are strictly based on open specifications or Crosswalk specific specification. Spec-based tests have full coverage for interface and statement described in specification. Most W3C Web API tests are leveraged from [Tizen Compliance Tests](https://source.tizen.org/compliance/compliance-tests)
  * Behavior: A Web application that includes the combined behavior tests, composing by a set of scenarios tests which could be performed by end user directly in one Web application.
- * Sample Web Application: Validate web runtime model by sample web applications. The test involves full-function web applications to test Web runtime features from W3C part and Crosswalk specific part cross different OS and platforms. 
+ * Sample Web Application: Validate web runtime model by sample web applications. The test involves full-function web applications to test Web runtime features from W3C part and Crosswalk specific part cross different OS and platforms.
+
+## Test Suite
+
+Please refer to [Crosswalk test suite](Crosswalk-test-suite) page for more details.
 
 ## Test Execution Plan
 
