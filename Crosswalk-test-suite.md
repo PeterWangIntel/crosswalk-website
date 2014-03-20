@@ -14,11 +14,11 @@ _Tizen Extension API tests_: Tests for Crosswalk supported extension for the Tiz
 
 ## Web API Tests
 
-* Create one set of standard spec-based tests complying to API spec defined in [https://crosswalk-project.org/jira/browse/XWALK-1195?filter#10004 Crosswalk Web API features], leveraging existing W3C etc upstream standard tests
+* Create one set of standard spec-based tests complying to API spec defined in [Crosswalk Web API features](https://crosswalk-project.org/jira/browse/XWALK-1195?filter#10004), leveraging existing W3C etc upstream standard tests
 * Integrate sample apps to evaluate the web API support capability of WRT from app perspective 
 ### Spec Based Web API Test
 
-Spec-based Web API test suite is a set of specification-based and independent tests following [https://crosswalk-project.org/jira/browse/XWALK-1195?filter#10004 Crosswalk Web API features]. The test suite leverages and fills the gap of existing test cases created by standard organizations, for example, W3C and Khronos, who are the key Web API specification setters, and develop tests for Tizen new Web APIs. The test suite is automated extremely and independent of any Web runtime that complies with Tizen Web API specifications.
+Spec-based Web API test suite is a set of specification-based and independent tests following [Crosswalk Web API features](https://crosswalk-project.org/jira/browse/XWALK-1195?filter#10004). The test suite leverages and fills the gap of existing test cases created by standard organizations, for example, W3C and Khronos, who are the key Web API specification setters, and develop tests for Tizen new Web APIs. The test suite is automated extremely and independent of any Web runtime that complies with Tizen Web API specifications.<br/>
 To better present the test scope and coverage of Web API test cases, the level of specification coverage is defined as below:
 * <u>Attribute & Method Coverage</u> - cover each attribute or method at least once by using normal values to ensure the presence of all defined attributes and methods
 * <u>Parameter Coverage</u> - a superset of Attribute&Method coverage, which covers each parameter using minimum, maximum, normal, and error conditions of each range of values, parameter combination for the APIs with more than one parameter, and all return codes 
@@ -57,10 +57,10 @@ The Crosswalk Web API specifications includes various types of docs to define Ja
 
 ##  Crosswalk based Cordova Tests
 
-[https://github.com/apache/cordova-android Cordova Android] is an Android application library that allows for Cordova-based projects to be built for the Android Platform. Cordova based applications are, at the core, applications written with web technology: HTML, CSS and JavaScript. [https://crosswalk-project.org/#wiki/Crosswalk-cordova-android Crosswalk based Cordova Android] aims to be compatible to Cordova Android as much as possible.
+[Cordova Android](https://github.com/apache/cordova-android) is an Android application library that allows for Cordova-based projects to be built for the Android Platform. Cordova based applications are, at the core, applications written with web technology: HTML, CSS and JavaScript. [Crosswalk based Cordova Android](https://crosswalk-project.org/#wiki/Crosswalk-cordova-android) aims to be compatible to Cordova Android as much as possible.
 
 Crosswalk based Cordova Test includes:
-* Cordova Mobile Spec Test leverages test cases from [https://github.com/apache/cordova-mobile-spec Cordova Mobile Spec], a set of automated & manual tests that test Cordova core functionality.
+* Cordova Mobile Spec Test leverages test cases from [Cordova Mobile Spec](https://github.com/apache/cordova-mobile-spec), a set of automated & manual tests that test Cordova core functionality.
 * Web Runtime Test is to create spec-based tests complying to Cordova container related specifications and features.
 * Web API Test on Crosswalk based Cordova covers all Web API test suites of Crosswalk on Android.
 
@@ -103,21 +103,21 @@ The crosswalk testing is using an automated testing execution framework that con
 ## How to Run Crosswalk Web Test Suite
 
 For Crosswalk Web testing for both automated and manual tests, please set up Crosswalk Test environment according to latest published User Guides.
-* [https://github.com/crosswalk-project/crosswalk-test-suite/doc/WebAPI_Test_Suite_User_Guide_v1.0.pdf WebAPI Test Suite User_Guide]
-* [https://github.com/crosswalk-project/crosswalk-test-suite/doc/Web_Runtime_Test_Suite_User_Guide_v1.0.pdf Web Runtime Test Suite User Guide]
-* [https://github.com/crosswalk-project/crosswalk-test-suite/doc/Behavior_Test_Tool_User_Guide_v1.0.pdf Behavior Test Tool User Guide]
-* [https://github.com/crosswalk-project/crosswalk-test-suite/doc/Cordova_Test_Suite_User_Guide_v1.0.pdf Cordova Test Suite User Guide]
+* [WebAPI Test Suite User_Guide](https://github.com/crosswalk-project/crosswalk-test-suite/doc/WebAPI_Test_Suite_User_Guide_v1.0.pdf)
+* Web Runtime Test Suite User Guide](https://github.com/crosswalk-project/crosswalk-test-suite/doc/Web_Runtime_Test_Suite_User_Guide_v1.0.pdf)
+* [Behavior Test Tool User Guide](https://github.com/crosswalk-project/crosswalk-test-suite/doc/Behavior_Test_Tool_User_Guide_v1.0.pdf)
+* [Cordova Test Suite User Guide](https://github.com/crosswalk-project/crosswalk-test-suite/doc/Cordova_Test_Suite_User_Guide_v1.0.pdf)
 
 ## How to Contribute tests to Crosswalk Test Suite
 Welcome to contribute new tests or bug fixings to existing tests:
 * Please follow the Test Developer Guides when contribute tests to Crosswalk Test Suite
-** [https://github.com/crosswalk-project/crosswalk-test-suite/doc/WebAPI_Test_Suite_Developer_Guide_v1.0.docx Web Test Suite Developer Guide]
-** [https://github.com/crosswalk-project/crosswalk-test-suite/doc/Behavior_Test_Tool_Developer_Guide_v1.0.docx Behavior Test Tool Developer Guide]
+** [Web Test Suite Developer Guide](https://github.com/crosswalk-project/crosswalk-test-suite/doc/WebAPI_Test_Suite_Developer_Guide_v1.0.docx)
+** [Behavior Test Tool Developer Guide](https://github.com/crosswalk-project/crosswalk-test-suite/doc/Behavior_Test_Tool_Developer_Guide_v1.0.docx)
 * Please submit your changes Crosswalk_Test_Suite repo and your change will be reviewed shortly!
-**[https://github.com/crosswalk-project/crosswalk-test-suite crosswalk-test-suite repository]
+**[crosswalk-test-suite repository](https://github.com/crosswalk-project/crosswalk-test-suite)
 
 # Bug Tracking
-Test case bugs are tracked under Crosswalk JIRA --> [https://crosswalk-project.org/jira/browse/XWALK/component/10303 Crosswalk Test Suite component]
+Test case bugs are tracked under Crosswalk JIRA: [Crosswalk Test Suite component](https://crosswalk-project.org/jira/browse/XWALK/component/10303)
 
 # Support
-For any question or support required, please send email to [http://lists.crosswalk-project.org/ crosswalk mailing list]:
+For any question or support required, please send email to [crosswalk mailing list](http://lists.crosswalk-project.org/)
