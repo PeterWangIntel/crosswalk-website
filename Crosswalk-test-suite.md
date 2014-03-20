@@ -78,9 +78,9 @@ Testkit, the test execution framework of test suite, is an open source and commo
 * Testkit Home: https://github.com/testkit
 
 ## Test Execution Architecture
-The crosswalk testing is using an automated testing execution framework that consists of two parts:<br/><br/>
-+ Host: The **testkit-lite** runs on your desktop machine and manages test execution.<br/>
-+ Device: Individual test cases are executed on attached devices or on an emulator. **testkit-stub** is deployed on devices to provide communication between testkit-lite(Host) and test web-runner(Device).<br/>
+The crosswalk testing is using an automated testing execution framework that consists of two parts:<br/>
+1. Host: The **testkit-lite** runs on your desktop machine and manages test execution.<br/>
+2. Device: Individual test cases are executed on attached devices or on an emulator. **testkit-stub** is deployed on devices to provide communication between testkit-lite(Host) and test web-runner(Device).<br/>
 * For the test cases depend on Web Service, a Local Web Server(**Tinyweb**) is set up on devices to support the testing. Test cases will be deployed on Local web server path, and executed from local Web Server side on device.<br/>
 * For the test cases do not depend on Web Service, they will be executed directly on device.
 
