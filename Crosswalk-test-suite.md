@@ -30,19 +30,12 @@ Attribute & Method Coverage <= Parameter Coverage <= Statement Coverage
 
 The Crosswalk Web API specifications includes various types of docs to define JavaScript(JS) interfaces, HTML elements, CSS properties or other Misc usages. The following table describes the implication of specification coverage level for different specification types:
 
-{| class#"wikitable"
-|-
-! Spec Type !! Attribute & Method Coverage !! Parameter Coverage !! Statement Coverage
-|-
-| JS relevant specs || attribute and method for each interface || values of attribute and parameters of method for each interface
-|| testable statements described in spec doc
-|-
-| HTML relevant specs || attribute and method for each element || values of attribute and parameters of method for each element || testable statements described in spec doc
-|-
-| CSS relavent specs || property || values of property || testable statements described in spec doc
-|-
-| Other specs (e.g. Widget) || Not applicable || Not applicable || testable statements described in spec doc
-|}
+| Spec Type | Attribute & Method Coverage | Parameter Coverage | Statement Coverage
+------------|-----------------------------|--------------------| --------------------
+| JS relevant specs | attribute and method for each interface | values of attribute and parameters of method for each interface | testable statements described in spec doc
+| HTML relevant specs | attribute and method for each element | values of attribute and parameters of method for each element | testable statements described in spec doc
+| CSS relavent specs | property | values of property | testable statements described in spec doc
+| Other specs (e.g. Widget) | Not applicable | Not applicable | testable statements described in spec doc
 
 ### Web API Sample Apps
 * Leverage sample Web Apps to validate the web API support capability of web runtime from application perspective.
