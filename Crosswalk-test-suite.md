@@ -104,7 +104,7 @@ The crosswalk testing is using an automated testing execution framework that con
 
 For Crosswalk Web testing for both automated and manual tests, please set up Crosswalk Test environment according to latest published User Guides.
 * [WebAPI Test Suite User_Guide](https://github.com/crosswalk-project/crosswalk-test-suite/doc/WebAPI_Test_Suite_User_Guide_v1.0.pdf)
-* Web Runtime Test Suite User Guide](https://github.com/crosswalk-project/crosswalk-test-suite/doc/Web_Runtime_Test_Suite_User_Guide_v1.0.pdf)
+* [Web Runtime Test Suite User Guide](https://github.com/crosswalk-project/crosswalk-test-suite/doc/Web_Runtime_Test_Suite_User_Guide_v1.0.pdf)
 * [Behavior Test Tool User Guide](https://github.com/crosswalk-project/crosswalk-test-suite/doc/Behavior_Test_Tool_User_Guide_v1.0.pdf)
 * [Cordova Test Suite User Guide](https://github.com/crosswalk-project/crosswalk-test-suite/doc/Cordova_Test_Suite_User_Guide_v1.0.pdf)
 
