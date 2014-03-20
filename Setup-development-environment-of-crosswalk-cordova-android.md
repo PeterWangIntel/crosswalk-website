@@ -35,4 +35,4 @@ The output is located at: `/path/to/crosswalk/src/out/Release/xwalk_core_library
 ##### Import
 Import XWalkCoreLibrary by linking it to `framework` folder of crosswalk-cordova-android:
 
-    $ ln -s /path/to/xwalk_core_library /path/to/crosswalk-cordova-android/framework/xwalk_core_library
+    $ ln -s /path/to/xwalk_core_library /path/to/crosswalk-cordova-android/framework/
