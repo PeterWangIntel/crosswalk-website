@@ -101,7 +101,7 @@ You can now install Crosswalk:
 
 2.  From the shell on the VM, download the Crosswalk package:
 
-        curl -O https://download.01.org/crosswalk/releases/tizen-ivi/canary/crosswalk-5.32.87.0-0.i586.rpm
+        curl -O https://download.01.org/crosswalk/releases/crosswalk/tizen-ivi/canary/5.32.87.0/crosswalk-5.32.87.0-0.i586.rpm
 
     And install it:
 
