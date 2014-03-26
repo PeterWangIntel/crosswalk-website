@@ -11,11 +11,11 @@ You can either download the binary from crosswalk website or build from the sour
 To download XWalkCoreLibrary, please navigate to [crosswalk/releases](https://download.01.org/crosswalk/releases/). Choose the Android package with specific architecture you would like to build your app.
 For example, for x86:
 
-    $ wget https://download.01.org/crosswalk/releases/android-x86/canary/crosswalk-5.34.104.0-x86.zip
+    $ wget https://download.01.org/crosswalk/releases/crosswalk/android/canary/5.34.104.0/x86/crosswalk-5.34.104.0-x86.zip
 
 For arm: 
 
-    $ wget https://download.01.org/crosswalk/releases/android-arm/canary/crosswalk-5.34.104.0-arm.zip
+    $ wget https://download.01.org/crosswalk/releases/crosswalk/android/canary/5.34.104.0/arm/crosswalk-5.34.104.0-arm.zip
 
 Extract it:
 
