@@ -4,7 +4,7 @@
 
 *Chromium version: 34*
 
-=New Features=
+#New Features
 
 * Option to minify web apps when packaging
 * Integration with system notifications
@@ -15,7 +15,7 @@
 * Use SIMD (Single Instruction, Multiple Data) in JavaScript with the [SIMD4JS API] (https://github.com/johnmccutchan/ecmascript_simd)
 * Support for [Immersive Mode](https://developer.android.com/about/versions/kitkat.html#44-immersive) in fullscreen 
 
-=Notable Bug Fixes=
+# Notable Bug Fixes
 
 * [XWALK-470] - Failed to get correct result of "background-position" when running tct-backgrounds-css3-tests on Android OS
 * [XWALK-753] - setWebContentsDebuggingEnabled API missing in XWalk.
@@ -29,7 +29,7 @@
 * [XWALK-1039] - Remote debugging not enabled for debug build of Crosswalk Cordova application
 * [XWALK-1116] - Capture API test in cordova_mob_spec crashes after recording the audio
 
-=Known issues=
+# Known issues
 
 * [XWALK-1125] Music does not seamlessly loop
 * [XWALK-1126] Setting gain to 0 does not mute
