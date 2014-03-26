@@ -6,14 +6,13 @@
 
 ##New Features
 
-* Option to minify web apps when packaging
-* Integration with system notifications
+* Use SIMD (Single Instruction, Multiple Data) in JavaScript with the [SIMD4JS API] (https://github.com/johnmccutchan/ecmascript_simd)
+* Support for [Immersive Mode](https://developer.android.com/about/versions/kitkat.html#44-immersive) in fullscreen * Integration with system notifications
 * [Vibration API] (http://www.w3.org/TR/vibration/)
-* Initial support of launch screen for crosswalk on Android (needs doc)
+* Initial support of launch screen for crosswalk on Android (doc?)
 * [Content Security Policy] (https://dvcs.w3.org/hg/content-security-policy/raw-file/tip/csp-specification.dev.html) support in manifest 
 * New download folder and package structure to support multiple architectures in one packaging tool
-* Use SIMD (Single Instruction, Multiple Data) in JavaScript with the [SIMD4JS API] (https://github.com/johnmccutchan/ecmascript_simd)
-* Support for [Immersive Mode](https://developer.android.com/about/versions/kitkat.html#44-immersive) in fullscreen 
+* Option to minify web apps when packaging (doc?)
 
 ##Notable Bug Fixes
 
