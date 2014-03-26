@@ -1,16 +1,19 @@
 Status: Beta
+
 Supported platforms: Android 4.0 and newer
+
+Chromium version: 34
 
 New Features
 
-    * Option to minify web apps when packaging
-    * Integration with system notifications
-    * Vibration API (http://www.w3.org/TR/vibration/)
-    * Initial support of launch screen for crosswalk on Android (needs doc)
-    * Content Security Policy support in manifest (https://dvcs.w3.org/hg/content-security-policy/raw-file/tip/csp-specification.dev.html)
-    * New download folder and package structure to support multiple architectures in one packaging tool
-    * Support SIMD (Single Instruction, Multiple Data) in JavaScript with the SIMD4JS API (https://github.com/johnmccutchan/ecmascript_simd)
-    * Support Immersive Mode for fullscreen (https://developer.android.com/about/versions/kitkat.html#44-immersive)
+* Option to minify web apps when packaging
+* Integration with system notifications
+* Vibration API (http://www.w3.org/TR/vibration/)
+* Initial support of launch screen for crosswalk on Android (needs doc)
+* Content Security Policy support in manifest (https://dvcs.w3.org/hg/content-security-policy/raw-file/tip/csp-specification.dev.html)
+* New download folder and package structure to support multiple architectures in one packaging tool
+* Support SIMD (Single Instruction, Multiple Data) in JavaScript with the SIMD4JS API (https://github.com/johnmccutchan/ecmascript_simd)
+* Support Immersive Mode for fullscreen (https://developer.android.com/about/versions/kitkat.html#44-immersive)
 
 Notable bug fixes
 
