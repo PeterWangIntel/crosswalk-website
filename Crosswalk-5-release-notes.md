@@ -7,7 +7,8 @@
 ##New Features
 
 * Use SIMD (Single Instruction, Multiple Data) in JavaScript with the [SIMD4JS API] (https://github.com/johnmccutchan/ecmascript_simd)
-* Support for [Immersive Mode](https://developer.android.com/about/versions/kitkat.html#44-immersive) in fullscreen * Integration with system notifications
+* Support for [Immersive Mode](https://developer.android.com/about/versions/kitkat.html#44-immersive) in fullscreen 
+* Integration with system notifications
 * [Vibration API] (http://www.w3.org/TR/vibration/)
 * Initial support of launch screen for crosswalk on Android (doc?)
 * [Content Security Policy] (https://dvcs.w3.org/hg/content-security-policy/raw-file/tip/csp-specification.dev.html) support in manifest 
