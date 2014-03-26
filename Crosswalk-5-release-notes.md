@@ -12,8 +12,8 @@ New Features
 * Initial support of launch screen for crosswalk on Android (needs doc)
 * [Content Security Policy] (https://dvcs.w3.org/hg/content-security-policy/raw-file/tip/csp-specification.dev.html) support in manifest 
 * New download folder and package structure to support multiple architectures in one packaging tool
-* Support SIMD (Single Instruction, Multiple Data) in JavaScript with the [SIMD4JS API] (https://github.com/johnmccutchan/ecmascript_simd)
-* Support [Immersive Mode](https://developer.android.com/about/versions/kitkat.html#44-immersive) for fullscreen 
+* Use SIMD (Single Instruction, Multiple Data) in JavaScript with the [SIMD4JS API] (https://github.com/johnmccutchan/ecmascript_simd)
+* Support for [Immersive Mode](https://developer.android.com/about/versions/kitkat.html#44-immersive) in fullscreen 
 
 Notable bug fixes
 
