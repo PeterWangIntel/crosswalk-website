@@ -5,6 +5,8 @@
 * Support for declaring a default [Content Security Policy] (https://dvcs.w3.org/hg/content-security-policy/raw-file/tip/csp-specification.dev.html) in the manifest file 
 * New download folder and package structure to support multiple architectures in one packaging tool
 * Ability to minify web app resources (JS, CSS) during packaging
+* Unprefixed Web Audio support
+* Responsive images
 
 ### Android
 
