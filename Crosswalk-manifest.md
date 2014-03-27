@@ -33,6 +33,7 @@ The following fields are *not* required by the manifest specification, but are a
 * **icons**: Specifies icon graphics files to use for the application. The "128" size icon should be set as a minimum. If it's not given, the Crosswalk default logo icon will be used.
 * **permissions** (Crosswalk 4 or later): This field defines which features are used by the application. See the [permissions](https://crosswalk-project.org/#wiki/manifest-permissions) support in Crosswalk.
 * **content_security_policy** (Crosswalk 4 or later): The "content_security_policy" field represent the [CSP](http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html) policy which should be enforced for the application. CSP be disabled if this field is not set.
+* **launch_screen** (Crosswalk 5 or later for Android): The "launch_screen" field represent the [Launch Screen](https://crosswalk-project.org/#wiki/Launch-Screen) feature, which is a static user interface that is shown immediately after the application is launched.
 
 ## Minimal manifest file
 
@@ -133,23 +134,25 @@ This example shows additional fields supported by Crosswalk 4:
 
 ## Manifest fields support status
 
- Field | Platform | Canary | Crosswalk 1 | Crosswalk 2 | Crosswalk 3 | Crosswalk 4
---- | --- | --- | --- | --- | --- | ---
+ Field | Platform | Canary | Crosswalk 1 | Crosswalk 2 | Crosswalk 3 | Crosswalk 4 | Crosswalk 5
+--- | --- | --- | --- | --- | --- | --- | ---
 name | Tizen | Yes | Yes | Yes | Yes | Yes
- | Android | Yes | N/A | Yes | Yes | Yes
-version | Tizen | Yes | Yes | Yes | Yes | Yes
- | Android | Yes | N/A | Yes | Yes | Yes
-app.launch.local_path | Tizen | Yes | Yes | Yes | Yes | Yes
- | Android | Yes | N/A | Yes | Yes | Yes
-app.main.source | Tizen | Yes | Yes | Yes | Yes | Yes
- | Android | N/A | N/A | N/A | N/A | N/A
-app.main.scripts | Tizen | Yes | Yes | Yes | Yes | Yes
- | Android | N/A | N/A | N/A | N/A | N/A
-description | Tizen | Yes | Yes | Yes | Yes | Yes
- | Android | Yes | N/A | Yes | Yes | Yes
-icons | Tizen | Yes | Yes | Yes | Yes
- | Android | Yes | N/A | Yes | Yes | Yes
-content_security_policy | Tizen | Yes | N/A | N/A | N/A | Yes
- | Android | N/A | N/A | N/A | N/A | N/A
-permissions | Tizen | |  |  | |
- | Android | N/A | N/A | N/A | N/A | Yes
+ | Android | Yes | N/A | Yes | Yes | Yes | Yes
+version | Tizen | Yes | Yes | Yes | Yes | Yes | Yes
+ | Android | Yes | N/A | Yes | Yes | Yes | Yes
+app.launch.local_path | Tizen | Yes | Yes | Yes | Yes | Yes | Yes
+ | Android | Yes | N/A | Yes | Yes | Yes | Yes
+app.main.source | Tizen | Yes | Yes | Yes | Yes | Yes | Yes
+ | Android | N/A | N/A | N/A | N/A | N/A | N/A
+app.main.scripts | Tizen | Yes | Yes | Yes | Yes | Yes | Yes
+ | Android | N/A | N/A | N/A | N/A | N/A | N/A
+description | Tizen | Yes | Yes | Yes | Yes | Yes | Yes
+ | Android | Yes | N/A | Yes | Yes | Yes | Yes
+icons | Tizen | Yes | Yes | Yes | Yes | Yes | Yes
+ | Android | Yes | N/A | Yes | Yes | Yes | Yes
+content_security_policy | Tizen | Yes | N/A | N/A | N/A | Yes | Yes
+ | Android | N/A | N/A | N/A | N/A | N/A | N/A
+permissions | Tizen | |  |  | | |
+ | Android | N/A | N/A | N/A | N/A | Yes | Yes
+launch_screen | Tizen | N/A | N/A | N/A | N/A | N/A | N/A
+ | Android | N/A | N/A | N/A | N/A | N/A | Yes
