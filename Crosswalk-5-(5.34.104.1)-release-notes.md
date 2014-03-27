@@ -1,6 +1,6 @@
 ##New Features
 
-* Use SIMD (Single Instruction, Multiple Data) in JavaScript with the [SIMD4JS API] (https://github.com/johnmccutchan/ecmascript_simd)
+* Use SIMD (Single Instruction, Multiple Data) in JavaScript with the [SIMD4JS API] (https://github.com/johnmccutchan/ecmascript_simd) (_Note: SIMD operations are only accelerated on x86 architecture at present_)
 * Support for declaring a default [Content Security Policy] (https://dvcs.w3.org/hg/content-security-policy/raw-file/tip/csp-specification.dev.html) in the manifest file 
 * New download folder and package structure to support multiple architectures in one packaging tool
 * Ability to minify web app resources (JS, CSS) during packaging
