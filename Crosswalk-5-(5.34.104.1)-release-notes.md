@@ -2,7 +2,7 @@
 
 * Use SIMD (Single Instruction, Multiple Data) in JavaScript with the [SIMD4JS API] (https://github.com/johnmccutchan/ecmascript_simd)
 * [Vibration API] (http://www.w3.org/TR/vibration/)
-* [Content Security Policy] (https://dvcs.w3.org/hg/content-security-policy/raw-file/tip/csp-specification.dev.html) support in manifest 
+* Support for declaring a default [Content Security Policy] (https://dvcs.w3.org/hg/content-security-policy/raw-file/tip/csp-specification.dev.html) in the manifest file 
 * New download folder and package structure to support multiple architectures in one packaging tool
 * Ability to minify web app resources (JS, CSS) during packaging
 
@@ -10,7 +10,7 @@
 
 * Android 4.4+ now uses [Immersive Mode](https://developer.android.com/about/versions/kitkat.html#44-immersive) when in fullscreen
 * Integration with system notifications
-* Initial support of launch screen for crosswalk on Android (doc?)
+* Initial support for declaring a launch screen in the manifest file
 
 ##Notable Bug Fixes
 
