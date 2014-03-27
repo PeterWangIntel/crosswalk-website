@@ -11,12 +11,11 @@
    * Responsive images
    * [Vibration API] (http://www.w3.org/TR/vibration/)
 
-
 ### Android
 
 * Android 4.4+ now uses [Immersive Mode](https://developer.android.com/about/versions/kitkat.html#44-immersive) when in fullscreen
 * Integration with system notifications
-* Initial support for declaring a launch screen in the manifest file
+* Initial support for declaring a [launch screen](https://crosswalk-project.org/#wiki/Launch-Screen) in the manifest file
 
 ##Notable Bugs Fixed
 
