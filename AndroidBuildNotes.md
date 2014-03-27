@@ -1,4 +1,4 @@
-NB: Page can be deleted. A more structured version of this is https://github.com/crosswalk-project/crosswalk-website/wiki/BuildsystemNotes
+NB: Page can be deleted. A more structured version of this is https://github.com/crosswalk-project/crosswalk-website/wiki/AndroidBuild
 
 Notes taken from building on Fedora 19. This complements the original build instructions. Assumption is that the host is a 64bit system, ymmv on 32bit.
 
