@@ -59,6 +59,8 @@ Crosswalk test reports
  * [Beta Test Report](https://lists.crosswalk-project.org/pipermail/crosswalk-dev/)
  * Stable test report 
 
+Crosswalk test result indicators
+
 Crosswalk feature list
  * [Crosswalk Features](https://crosswalk-project.org/jira/issues/?filter=10004)
 
