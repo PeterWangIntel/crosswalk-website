@@ -1,3 +1,5 @@
+### Crosswalk 5.34.104.1 Beta
+
 ##New Features
 
 * Use SIMD (Single Instruction, Multiple Data) in JavaScript with the [SIMD4JS API] (https://github.com/johnmccutchan/ecmascript_simd) (_Note: SIMD operations are only accelerated on x86 architecture at present_)
