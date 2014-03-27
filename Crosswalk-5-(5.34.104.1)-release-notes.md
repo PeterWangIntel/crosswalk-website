@@ -34,7 +34,6 @@
 
 * Music does not seamlessly loop [XWALK-1125] 
 * Setting gain to 0 does not mute [XWALK-1126] 
-* No error page for HTTP error codes [XWALK-1274]
 * Web app cannot detect the right motion when device orientation change [XWALK-1264]
 * Full screen immersive mode doesn't work by swiping up from bottom [XWALK-1200]
 * Fail to get correct value of CSS3 multicolumn column-rule-width [XWALK-1093]
