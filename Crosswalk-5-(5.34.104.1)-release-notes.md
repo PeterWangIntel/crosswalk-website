@@ -1,19 +1,16 @@
-*Status: Beta*
-
-*Supported platforms: Android 4.0 and newer*
-
-*Chromium version: 34*
-
 ##New Features
 
 * Use SIMD (Single Instruction, Multiple Data) in JavaScript with the [SIMD4JS API] (https://github.com/johnmccutchan/ecmascript_simd)
-* Support for [Immersive Mode](https://developer.android.com/about/versions/kitkat.html#44-immersive) in fullscreen 
-* Integration with system notifications
 * [Vibration API] (http://www.w3.org/TR/vibration/)
-* Initial support of launch screen for crosswalk on Android (doc?)
 * [Content Security Policy] (https://dvcs.w3.org/hg/content-security-policy/raw-file/tip/csp-specification.dev.html) support in manifest 
 * New download folder and package structure to support multiple architectures in one packaging tool
-* Option to minify web apps when packaging (doc?)
+* Ability to minify web app resources (JS, CSS) during packaging
+
+### Android
+
+* Android 4.4+ now uses [Immersive Mode](https://developer.android.com/about/versions/kitkat.html#44-immersive) when in fullscreen
+* Integration with system notifications
+* Initial support of launch screen for crosswalk on Android (doc?)
 
 ##Notable Bug Fixes
 
