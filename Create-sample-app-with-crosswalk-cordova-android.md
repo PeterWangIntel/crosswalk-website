@@ -25,7 +25,7 @@ into `AndroidManifest.xml`. Please refer to [Android manifest permissions](http:
 
 ### Importing a Crosswalk-based Cordova Android Project into Eclipse
 
-1. Import Crosswalk-based Cordova Android and XWalkCoreLibrary library projects by File > Import... > Existing Android Code Into Workspace. Point to /path/to/crosswalk-cordova-android/framework and click Finish. **Notice**: if you see error messages as "[2014-02-24 08:58:56 - xwalk_core_library] R.java was modified manually! Reverting to generated version!", you may need to turn-off Project > Automatically Build as workaround. Please track the bug [XWALK-1036](https://crosswalk-project.org/jira/browse/XWALK-1036).
+1. Import Crosswalk-based Cordova Android and XWalkCoreLibrary library projects by File > Import... > Existing Android Code Into Workspace. Point to /path/to/crosswalk-cordova-android/framework and click Finish. 
 2. Build xwalk_core_library and Cordova project by right clicking on each project then choose Build Project.
 3. Import the generated project by File > Import... > Existing Android Code. Point to the generated app path.
 4. Right click on the project root: Run as > Run Configurations
