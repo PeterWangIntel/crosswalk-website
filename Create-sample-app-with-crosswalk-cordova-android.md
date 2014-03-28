@@ -1,5 +1,3 @@
-If you haven't setup the development environment yet, please refer to [Setup Development Environment](Setup-Development-Environment-Of-Crosswalk-Cordova-Android)
-
 ### Create, Build and Run a Sample App with Command-line Tool:
 Create a sample app, for example (You may supply `--shared` switch to avoid copying crosswalk-cordova-android/framework folder into each project):
 
