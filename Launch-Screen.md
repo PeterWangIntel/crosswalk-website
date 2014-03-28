@@ -29,7 +29,7 @@ Member | Description
 Application readiness state | Preconditions
 --- | ---
 "first-paint" | * The first visually non-empty paint has occurred.
-"complete" | * The first visually non-empty paint has occurred. <br> * All the resources have been loaded.
+"complete" | * The first visually non-empty paint has occurred. <br> * All the resources have been loaded.<br> **_WARNING: It will take a long time as it need to wait until all sub resources are downloaded._**
 "custom" | * The first visually non-empty paint has occurred. <br> * The ```window.screen.show()``` method was called.
 
 
