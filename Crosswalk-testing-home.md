@@ -80,7 +80,7 @@ Crosswalk open bugs
     * Review new bugs field correctness, such as severity, component, assignee, and set bug priority.
     * Make a decision for branch release blocker 
  * IRC: irc://irc.freenode.net, #crosswalk
- * Tuesday, Time: 15:30 ~ 16:00 GMT+8 (Beijing Time), 9:30 ~ 10:00 GMT+2 (Helsinki Time), 7:30 ~ 8:00 GMT+0.
+ * Thursday, Time: 15:30 ~ 16:00 GMT+8 (Beijing Time), 9:30 ~ 10:00 GMT+2 (Helsinki Time), 7:30 ~ 8:00 GMT+0.
  * History log: [Email Archives](https://lists.crosswalk-project.org/pipermail/crosswalk-dev/) 
 
 ## Related Links
