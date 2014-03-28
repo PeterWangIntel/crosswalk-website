@@ -16,11 +16,20 @@ Please refer to **Requirements and Support** and **Install the SDK** in [Cordova
 
 And please install Python 2.6 or greater for your system.
 
-Setup the Development Environment
+Download
 ---
 
-Since Crosswalk-based Cordova Android embeds Crosswalk, firstly you need to setup the dependency. 
- * [Setup Development Environment](Setup-Development-Environment-Of-Crosswalk-Cordova-Android)
+Please download the crosswalk-cordova-android development bundle from [Download Crosswalk Android](https://download.01.org/crosswalk/releases/crosswalk/android). Please pay attention to the release channels  and architectures.
+
+For example, download canary 6.34.107.0 for X86:
+
+    $ wget https://download.01.org/crosswalk/releases/crosswalk/android/canary/6.34.107.0/x86/crosswalk-cordova-6.34.107.0-x86.zip
+
+for ARM:
+
+    $ wget https://download.01.org/crosswalk/releases/crosswalk/android/canary/6.34.107.0/arm/crosswalk-cordova-6.34.107.0-arm.zip
+
+Unzip it and you are ready to create app.
 
 Creating & Running Apps
 ---
