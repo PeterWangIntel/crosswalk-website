@@ -2,7 +2,7 @@
 
 Crosswalk QA follows [text execution plan](https://crosswalk-project.org/#wiki/Crosswalk-testing-home) to perform weekly and daily tests on Android and Tizen platforms, most of the test results are archived in [crosswalk-dev](https://lists.crosswalk-project.org/pipermail/crosswalk-dev/) mailing list. In this page, Crosswalk QA summarizes the test indicators to present the overall test results of Crosswalk binaries.
 
-## Canary
+## Canary indicators
 
 ### Crosswalk Full Test Result on Android IA
 
@@ -24,7 +24,7 @@ Crosswalk QA follows [text execution plan](https://crosswalk-project.org/#wiki/C
 ### Cordova Canary Feature Test Result on Android ARM
 ![Cordova_Canary_Android_ARM_Feature](assets/android_arm_cordova_feature.png)
 
-## Beta
+## Beta indicators
 
 ### Crosswalk Regression Test Result on Android IA
 
