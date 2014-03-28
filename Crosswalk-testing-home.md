@@ -59,7 +59,7 @@ Crosswalk test reports
  * [Beta Test Report](https://lists.crosswalk-project.org/pipermail/crosswalk-dev/)
  * Stable test report 
 
-Crosswalk test result indicators
+Crosswalk test result indicators<br/>
 For latest test results about the release channels, see [Crosswalk test result indicators](Crosswalk-test-result-indicators).
 
 Crosswalk feature list
