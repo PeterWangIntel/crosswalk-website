@@ -60,6 +60,7 @@ Crosswalk test reports
  * Stable test report 
 
 Crosswalk test result indicators
+For latest test results about the release channels, see [Crosswalk test result indicators](Crosswalk-test-result-indicators).
 
 Crosswalk feature list
  * [Crosswalk Features](https://crosswalk-project.org/jira/issues/?filter=10004)
