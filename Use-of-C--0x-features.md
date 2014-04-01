@@ -1,4 +1,5 @@
 See also https://github.com/crosswalk-project/crosswalk-website/wiki/Coding-Style-of-XWalk-for-Android
+
 ML discussion https://lists.crosswalk-project.org/pipermail/crosswalk-dev/2014-March/001233.html
 
 The consensus at the moment seems to be to allow use of C++0x features for extensions, as they typically are platform (and thus compiler) bound.
