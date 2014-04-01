@@ -7,11 +7,11 @@ The consensus at the moment seems to be to allow use of C++0x features for exten
 
 Currently, chromium officially does not support c++11 because of gcc on linux, cros and android. 
 https://groups.google.com/a/chromium.org/forum/?fromgroups=#!searchin/chromium-dev/space$20android/chromium-dev/oVTPsijC7d0/WDcnq3AyE4gJ
-windows: msvs2012
-mac: clang
-linux: gcc4.7, clang
-chromeos: gcc4.7
-android: gcc4.6
+* windows: msvs2012
+* mac: clang
+* linux: gcc4.7, clang
+* chromeos: gcc4.7
+* android: gcc4.6
 
 After every platforms support gcc 4.8, chromium would support c++11.
 
