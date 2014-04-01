@@ -1,1 +1,1 @@
-test
+See also https://github.com/crosswalk-project/crosswalk-website/wiki/Coding-Style-of-XWalk-for-Android
