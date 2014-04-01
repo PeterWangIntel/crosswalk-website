@@ -20,6 +20,15 @@ After every platforms support gcc 4.8, chromium would support c++11.
 
 http://gcc.gnu.org/gcc-4.6/cxx0x_status.html
 
+Notable:
+* Initializer lists
+* `auto`-typed variables
+* Lambdas
+* Null pointer constant
+* Strongly-typed enums
+* Unicode and raw string literals
+* Range-based `for`
+
 ## Gcc 4.7 features (relevant for Linux)
 
 http://gcc.gnu.org/gcc-4.7/cxx0x_status.html
