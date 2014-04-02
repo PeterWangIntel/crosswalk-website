@@ -32,6 +32,7 @@ Notable:
 ## Gcc 4.7 features (relevant for Linux)
 
 http://gcc.gnu.org/gcc-4.7/cxx0x_status.html
+
 Changes over 4.6 http://gcc.gnu.org/gcc-4.7/changes.html#cxx
 
 Notable:
