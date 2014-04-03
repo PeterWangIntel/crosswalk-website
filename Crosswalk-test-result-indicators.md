@@ -1,6 +1,6 @@
 ## Crosswalk test result indicators
 
-Crosswalk QA follows [text execution plan](Crosswalk-testing-home) to perform weekly and daily tests on Android and Tizen platforms, most of the test results are archived in [crosswalk-dev](https://lists.crosswalk-project.org/pipermail/crosswalk-dev/) mailing list. In this page, Crosswalk QA summarizes test indicators to present the overall test results of Crosswalk binaries.
+Crosswalk QA team follows [text execution plan](Crosswalk-testing-home) to perform weekly and daily tests on Android and Tizen platforms, most of the test results are archived in [crosswalk-dev](https://lists.crosswalk-project.org/pipermail/crosswalk-dev/) mailing list. This page summarizes test indicators of overall test results of Crosswalk binaries:
 
 ## Canary Indicators
 
