@@ -22,6 +22,14 @@ http://gcc.gnu.org/gcc-4.6/cxx0x_status.html
 
 Notable:
 * Initializer lists
+
+```
+struct S {
+    S(std::initializer_list<int>) { /* ... */ }
+};
+S s = { 1, 2, 3 };
+```
+
 * `auto`-typed variables
 * Lambdas
 * Null pointer constant
