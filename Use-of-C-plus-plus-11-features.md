@@ -45,6 +45,10 @@ std::for_each (l.begin(),
 ```
 
 * Null pointer constant
+```
+char *c = nullptr;
+```
+
 * Strongly-typed enums
 * Unicode and raw string literals
 * Range-based `for`
