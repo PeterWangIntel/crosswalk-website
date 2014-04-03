@@ -2,6 +2,18 @@
 
 Crosswalk QA team follows [text execution plan](Crosswalk-testing-home) to perform weekly and daily tests on Android and Tizen platforms, most of the test results are archived in [crosswalk-dev](https://lists.crosswalk-project.org/pipermail/crosswalk-dev/) mailing list. This page summarizes test indicators of overall test results of Crosswalk binaries:
 
+Canary Indicators
+* Crosswalk Full Test Result on Android IA
+* Crosswalk Nightly Test Result on Android IA
+* Cordova Canary Feature Test Result on Android ARM
+* Crosswalk Full Test Result on Tizen IVI
+* Crosswalk BAT Test Result on Tizen Generic
+
+Beta Indicators
+* Crosswalk Regression Test Result on Android IA
+* Crosswalk Regression Test Result on Android ARM
+* Cordova Beta Regression Test Result on Android ARM
+
 ## Canary Indicators
 
 ### Crosswalk Full Test Result on Android IA
