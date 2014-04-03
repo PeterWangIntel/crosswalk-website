@@ -62,6 +62,11 @@ const char *c = u8"Hêllo Wörld";
 ```
 
 * Range-based `for`
+```
+int array[] = { 1, 2, 3, 4, 5 };
+for (int& i : array)
+    std::cout << i << std::endl;
+```
 
 ## Gcc 4.7 features (relevant for Linux)
 
