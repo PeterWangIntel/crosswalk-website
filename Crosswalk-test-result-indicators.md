@@ -12,7 +12,7 @@ Canary Indicators
 Beta Indicators
 * Crosswalk Regression Test Result on Android IA
 * Crosswalk Regression Test Result on Android ARM
-* Cordova Beta Regression Test Result on Android ARM
+* Cordova Regression Test Result on Android ARM
 
 ## Canary Indicators
 
@@ -48,5 +48,5 @@ Beta Indicators
 ![Crosswalk_Beta_Android_ARM_Feature](assets/android_arm_beta_feature.png)
 ![Crosswalk_Beta_Android_ARM_WebAPI](assets/android_arm_beta_webapi.png)
 
-### Cordova Beta Regression Test Result on Android ARM
+### Cordova Regression Test Result on Android ARM
 ![Cordova_Beta_Android_ARM_Feature](assets/android_arm_beta_cordova_feature.png)
