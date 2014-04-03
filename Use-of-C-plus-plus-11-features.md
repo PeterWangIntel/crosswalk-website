@@ -35,6 +35,15 @@ auto i = 1;
 ```
 
 * Lambdas
+```
+std::list<int> l({ 1, 2, 3} );
+std::for_each (l.begin(),
+               l.end(), 
+               [](int i) {
+                    std::cout << i << std::endl;
+               });
+```
+
 * Null pointer constant
 * Strongly-typed enums
 * Unicode and raw string literals
