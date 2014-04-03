@@ -87,4 +87,18 @@ struct Derived : Base {
 ```
 
 * Non-static data member initializers
+```
+struct S {
+    int magic = 42;
+};
+```
+
 * Delegating constructors
+```
+struct S {
+    S(int i) : _i(i) {};
+    S() : S(42) {}
+private:
+    int _i;
+};
+```
