@@ -51,6 +51,10 @@ char *c = nullptr;
 
 * Strongly-typed enums
 * Unicode and raw string literals
+```
+const char *c = u8"Hêllo Wörld";
+```
+
 * Range-based `for`
 
 ## Gcc 4.7 features (relevant for Linux)
