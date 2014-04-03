@@ -9,6 +9,13 @@ Crosswalk QA team follows [text execution plan](Crosswalk-testing-home) to perfo
 ![Crosswalk_Canary_Android_IA_Feature](assets/android_ia_feature.png)
 ![Crosswalk_Canary_Android_IA_WebAPI](assets/android_ia_webapi.png)
 
+### Crosswalk Nightly Test Result on Android IA 
+![Crosswalk_Canary_Android_IA_Nightly_Feature](assets/android_ia_nightly_feature.png)
+![Crosswalk_Canary_Android_IA_Nightly_WebAPI](assets/android_ia_nightly_webapi.png)
+
+### Cordova Canary Feature Test Result on Android ARM
+![Cordova_Canary_Android_ARM_Feature](assets/android_arm_cordova_feature.png)
+
 ### Crosswalk Full Test Result on Tizen IVI
 
 ![Crosswalk_Canary_Tizen_IVI_Feature](assets/tizen_ivi_feature.png)
@@ -16,13 +23,6 @@ Crosswalk QA team follows [text execution plan](Crosswalk-testing-home) to perfo
 
 ### Crosswalk BAT Test Result on Tizen Generic
 ![Crosswalk_Canary_Tizen_Generic_BAT](assets/tizen_generic_bat.png)
-
-### Crosswalk Nightly Test Result on Android IA 
-![Crosswalk_Canary_Android_IA_Nightly_Feature](assets/android_ia_nightly_feature.png)
-![Crosswalk_Canary_Android_IA_Nightly_WebAPI](assets/android_ia_nightly_webapi.png)
-
-### Cordova Canary Feature Test Result on Android ARM
-![Cordova_Canary_Android_ARM_Feature](assets/android_arm_cordova_feature.png)
 
 ## Beta Indicators
 
