@@ -50,6 +50,12 @@ char *c = nullptr;
 ```
 
 * Strongly-typed enums
+```
+// Old-style enums would not allow value names being re-used. 
+enum class Colors { Black, White, Red, Green, Blue };
+enum class Monochrome { Black, White };
+```
+
 * Unicode and raw string literals
 ```
 const char *c = u8"Hêllo Wörld";
