@@ -5,7 +5,7 @@ Crosswalk QA team follows [text execution plan](Crosswalk-testing-home) to perfo
 Canary Indicators
 * Crosswalk Full Test Result on Android IA
 * Crosswalk Nightly Test Result on Android IA
-* Cordova Canary Feature Test Result on Android ARM
+* Cordova Feature Test Result on Android ARM
 * Crosswalk Full Test Result on Tizen IVI
 * Crosswalk BAT Test Result on Tizen Generic
 
@@ -25,7 +25,7 @@ Beta Indicators
 ![Crosswalk_Canary_Android_IA_Nightly_Feature](assets/android_ia_nightly_feature.png)
 ![Crosswalk_Canary_Android_IA_Nightly_WebAPI](assets/android_ia_nightly_webapi.png)
 
-### Cordova Canary Feature Test Result on Android ARM
+### Cordova Feature Test Result on Android ARM
 ![Cordova_Canary_Android_ARM_Feature](assets/android_arm_cordova_feature.png)
 
 ### Crosswalk Full Test Result on Tizen IVI
