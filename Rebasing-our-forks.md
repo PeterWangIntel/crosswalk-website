@@ -69,22 +69,22 @@ Let's start with the dependency deepest down the stack we have: Blink. Most of t
 
     This use of `git fetch` is a bit unusual, and it assumes your `origin` remote points to a read-write checkout of blink-crosswalk, such as `git@github.com:myusername/blink-crosswalk.git`.
     ```shell
-    git fetch https://chromium.googlesource.com/chromium/blink.git branch-heads/chromium/1599:refs/heads/upstream_30_0_1599_66
+    git fetch https://chromium.googlesource.com/chromium/blink.git branch-heads/chromium/1599:my-upstream-copy
     ```
-    A new local branch called `upstream_30_0_1599_66` should now exist and be visible if you call `git branch`.
+    A new local branch called `my-upstream-copy` should now exist and be visible if you call `git branch`.
 
     As the same branch can be used for more than one release, the commit at the tip of the branch might not be the one corresponding to the release we want. Use `git log` or `git svn find-rev` to determine the SHA1 hash corresponding to the Subversion revision determined in the previous section (158213), and then reset to it:
     ```shell
-    git checkout upstream_30_0_1599_66
+    git checkout my-upstream-copy
     git reset --hard <SHA1>
     ```
 
 1. Rebase existing fork-specific changes in `master` on top of the new `upstream` branch.
 
-    1. In the trivial case, we have no fork-specific commits on top of the upstream ones (yay). This means both `master` (and `master_history_28_0_1500_36`) point to the same commit as `upstream_28_0_1500_36`). Updating `master` should be very simple: just make it point to the same change as the new `upstream` branch.
+    1. In the trivial case, we have no fork-specific commits on top of the upstream ones (yay). This means both `master` (and `crosswalk-1/28.0.1500.36`) point to the same commit as `my-upstream-copy`). Updating `master` should be very simple: just make it point to the same change as the new `upstream` branch.
     ```shell
     git checkout master
-    git reset --hard upstream_30_0_1599_66
+    git reset --hard my-upstream-copy
     ```
 
     1. If we do have commits on top of the upstream ones, we need to check which of them are still relevant and re-apply those which are.
@@ -94,7 +94,7 @@ Let's start with the dependency deepest down the stack we have: Blink. Most of t
         Note that there some manual effort is required here: there are likely going to be a lot of conflicts, so you need to check the commits, remove some and adjust some others. Also note that the automatic merge commits from GitHub will be lost.
         ```shell
         git checkout master
-        git rebase -i upstream_30_0_1599_66 # Choose the right commits, resolve conflicts.
+        git rebase -i my-upstream-copy # Choose the right commits, resolve conflicts.
         ```
 
 1. Push your new branches to your fork.
@@ -141,14 +141,14 @@ The parts of the process that are similar to blink-crosswalk have shorter descri
 1. Fetch the new Chromium branch and create a new `upstream` branch.
 
     ```shell
-    git fetch https://chromium.googlesource.com/chromium/src.git branch-heads/1599:refs/heads/upstream_30_0_1599_66
+    git fetch https://chromium.googlesource.com/chromium/src.git branch-heads/1599:my-upstream-copy
     ```
 
-    Verify the new branch `upstream_30_0_1599_66` has been created by running `git branch`.
+    Verify the new branch `my-upstream-copy` has been created by running `git branch`.
 
     As the same branch can be used for more than one release, the commit at the tip of the branch might not be the one corresponding to the release we want. Use `git log` or `git svn find-rev` to determine the SHA1 hash corresponding to the Subversion revision determined in the previous section (226662), and then reset to it:
     ```shell
-    git checkout upstream_30_0_1599_66
+    git checkout my-upstream-copy
     git reset --hard <SHA1>
     ```
 
@@ -157,13 +157,13 @@ The parts of the process that are similar to blink-crosswalk have shorter descri
     1. In the trivial case (ie. we have no commits on top of upstream):
     ```shell
     git checkout master
-    git reset --hard upstream_30_0_1599_66
+    git reset --hard my-upstream-copy
     ```
 
     1. If we do have commits of our own, use `git log` to check if some of the commit messages say certain commits can be safely removed when moving to a newer Chromium release, then rebase:
     ```shell
     git checkout master
-    git rebase -i upstream_30_0_1599_66 # Choose the right commits, resolve conflicts.
+    git rebase -i my-upstream-copy # Choose the right commits, resolve conflicts.
     ```
 
 1. Push your new branches to your fork.
