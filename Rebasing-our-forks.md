@@ -1,4 +1,4 @@
-As described in our [Release Methodology](Release-methodology) page, Crosswalk follows a release process similar to Chromium's. Part of the release of Crosswalk it involves rebasing our forks of our downstream (Blink, Chromium,...) repositories on top of a certain upstream release.
+As described in our [Release Methodology](Release-methodology) page, Crosswalk follows a release process similar to Chromium's. Part of the release of Crosswalk it involves rebasing our forks of our Blink, Chromium and V8 on top of a certain upstream release.
 
 This article shows how perform these rebases and what pitfalls to look out for, as well as how to update Crosswalk itself once the forks have been rebased.
 
@@ -11,6 +11,7 @@ First of all, you *must* be familiar with Chromium's release process (which is w
 * `DEPS` and `DEPS.git` are *not* updated in a branch after it is created from trunk.
 * `DEPS` in a release _is_ updated. However, releases do not have a `DEPS.git`.
 * Analogously, [Blink's](https://src.chromium.org/viewvc/blink/) development happens in trunk (`/trunk`) and a branch is created with the same number as the Chromium one when the latter is branched (`/branches/chromium/<NUMBER>`), except that Chromium branches such as *1234_55* do not have a corresponding branch in Blink; all commits to *1234*, *1234_56*, *1234_678* etc in Chromium go to the same branch *1234* in Blink.
+* Finally, V8's development happens in trunk with release branches accompanying each Chromium release. For example, Chromium 34 uses V8 from the *3.24* branch.
 
 You also need to be familiar with [OmahaProxy](https://omahaproxy.appspot.com/). Understand which row you are supposed to choose and what the columns mean. If you are rebasing Crosswalk's dependencies for a new cycle (ie. you are working on what Crosswalk's `master` branch is going to be based on), you should check the **linux-beta** row in OmahaProxy. Likewise, if you are simply maintaining Crosswalk's stable branch and are thus updating from one Chromium release to another in the _same_ milestone, use the **linux-stable** row.
 
@@ -20,11 +21,11 @@ As for columns, we are particularly interested in _true branch_ and _branch revi
 
 Finally, spend some time getting to know git better. Do not follow the instructions below blindly. Specifically, make sure you know how [references](http://git-scm.com/book/en/Git-Internals-Git-References) and [refspecs](http://git-scm.com/book/en/Git-Internals-The-Refspec) work.
 
-## Branch names in blink-crosswalk and chromium-crosswalk
-When creating new branches or updating existing ones, it is important to pay attention to Crosswalk's branch naming conventions for the forks. They apply to both blink-crosswalk and chromium-crosswalk.
+## Branch names in blink-crosswalk, chromium-crosswalk and v8-crosswalk
+When creating new branches or updating existing ones, it is important to pay attention to Crosswalk's branch naming conventions for the forks. They apply to all our forks (blink-crosswalk, chromium-crosswalk and v8-crosswalk).
 
-The most basic distinction is between the `master_*` branches:
-* `master`, as usual in a git-based workflow, is the current development branch and the one everyone works on at the moment.
+The most basic distinction is between the `master` and the `crosswalk-*` branches:
+* `master`, as usual in a git-based workflow, is the current development branch and the one everyone works on at the moment. It corresponds to the fork versions Crosswalk's `master` branch is using.
 * When rebasing to track a different release, the previous branch should be backed up and preserved as `crosswalk-<version>/<release_number>`. For example, `crosswalk-1/28.0.1500.36` corresponds to all the commits we made to chromium-crosswalk (or blink-crosswalk) while we were tracking Chromium's 28.0.1500.36 release.
 
 In other words, `crosswalk-<version>/<release_number>` simply contains a certain number of commits made by Crosswalk contributors on top of an upstream branch.
@@ -105,8 +106,78 @@ Let's start with the dependency deepest down the stack we have: Blink. Most of t
     git push -f my-fork master
     ```
 
+## Rebasing v8-crosswalk
+The rebasing process for v8-crosswalk is very similar to the one for blink-crosswalk. The differences are in some branch names upstream, and we always carry the SIMD.JS patches on top of upstream.
+
+The parts of the process that are similar to blink-crosswalk have shorter descriptions here. Please refer to the blink-crosswalk section for more detailed explanations of each step. It's not possible to emphasize enough how important it is not to follow the steps blindly, so read up and understand what is going on first.
+
+1. Fork v8-crosswalk.
+
+    Once again, fork the repository if you haven't done it yet, and **DO NOT** push your changes directly to `crosswalk-project/v8-crosswalk.git` directly without testing and talking to people first!
+
+    And, if you haven't done so, add your remote to your checkout:
+    ```shell
+    git remote add my-fork git@github.com:myusername/v8-crosswalk.git
+    ```
+
+1. Back up the existing `master` branch.
+
+    Assuming we are currently tracking Chromium release 28.0.1500.36:
+    ```shell
+    git branch crosswalk-1/28.0.1500.36 master
+    ```
+
+1. Determine the new Chromium branch and revision that are going to be used.
+
+    Assuming we are tracking **linux-beta** and it is now at release **34.0.1847.116**: the _v8 version_ column in OmahaProxy says the branch number is **34.0.1847.116**, so the V8 branch we are interested in is called **3.24**.
+
+    As mentioned above, the `DEPS` and `DEPS.git` files are not updated in the Subversion branches. You need to check the correct Subversion revision for V8 in the *_release_* `DEPS` file (ie. [/releases/34.0.1847.116/DEPS](http://src.chromium.org/viewvc/chrome/releases/34.0.1847.116/DEPS?pathrev=260990)). In this file, we can see the following snippet:
+    ```python
+    # ...
+    'src/v8':
+      Var("v8") + '/branches/3.24@20378',
+    # ...
+    ```
+
+    This means V8 needs to be at SVN revision **20378**.
+
+1. Fetch the new V8 branch and create a new `upstream` branch.
+
+    ```shell
+    git fetch https://chromium.googlesource.com/external/v8.git +refs/branch-heads/3.24:my-upstream-copy
+    ```
+
+    Verify the new branch `my-upstream-copy` has been created by running `git branch`.
+
+    As the same branch can be used for more than one release, the commit at the tip of the branch might not be the one corresponding to the release we want. Use `git log` or `git svn find-rev` to determine the SHA1 hash corresponding to the Subversion revision determined in the previous section (20378), and then reset to it:
+    ```shell
+    git checkout my-upstream-copy
+    git reset --hard <SHA1>
+    ```
+
+1. Rebase existing fork-specific changes in `master` on top of the new `upstream` branch.
+
+    1. In the trivial case (ie. we have no commits on top of upstream):
+    ```shell
+    git checkout master
+    git reset --hard my-upstream-copy
+    ```
+
+    1. If we do have commits of our own, use `git log` to check if some of the commit messages say certain commits can be safely removed when moving to a newer V8 release, then rebase:
+    ```shell
+    git checkout master
+    git rebase -i my-upstream-copy # Choose the right commits, resolve conflicts.
+    ```
+
+1. Push your new branches to your fork.
+
+    ```shell
+    git push my-fork crosswalk-1/28.0.1500.36
+    git push -f my-fork master
+    ```
+
 ## Rebasing chromium-crosswalk
-The rebasing process for chromium-crosswalk is very similar to the one for blink-crosswalk. The differences are in some branch names upstream and in the fact that it is much more likely that we have commits on top of the upstream ones than for blink-crosswalk.
+Again, the rebasing process for chromium-crosswalk is very similar to the one for blink-crosswalk. The differences are in some branch names upstream and in the fact that it is much more likely that we have commits on top of the upstream ones than for blink-crosswalk.
 
 The parts of the process that are similar to blink-crosswalk have shorter descriptions here. Please refer to the blink-crosswalk section for more detailed explanations of each step. It's not possible to emphasize enough how important it is not to follow the steps blindly, so read up and understand what is going on first.
 
@@ -141,7 +212,7 @@ The parts of the process that are similar to blink-crosswalk have shorter descri
 1. Fetch the new Chromium branch and create a new `upstream` branch.
 
     ```shell
-    git fetch https://chromium.googlesource.com/chromium/src.git branch-heads/1599:my-upstream-copy
+    git fetch https://chromium.googlesource.com/chromium/src.git +refs/branch-heads/1599:my-upstream-copy
     ```
 
     Verify the new branch `my-upstream-copy` has been created by running `git branch`.
@@ -190,13 +261,13 @@ Now that the forks themselves have been updated, we need to work on the Crosswal
 
 1. Update `DEPS.xwalk`.
 
-    This should not require many explanations: it is the file used to generate `.gclient-xwalk` and determines where we fetch Blink and Chromium from and at what revision.
+    This should not require many explanations: it is the file used to generate `.gclient-xwalk` and determines where we fetch Blink, Chromium and V8 from and at what revision.
 
     First of all, check if there are entries there that could be removed (for example, there could be an entry saying "Delete the dependency below once we track Chromium >M30"), and remove them.
 
-    After that, update `chromium_version`, `chromium_crosswalk_point` and `blink_crosswalk_pint` to the new upstream Chromium version, the new chromium-crosswalk SHA1 hash and the new blink-crosswalk SHA1 hash, respectively.
+    After that, update `chromium_version`, `chromium_crosswalk_point`, `blink_crosswalk_point` and `v8_crosswalk_point` to the new upstream Chromium version, the new chromium-crosswalk SHA1 hash, the new blink-crosswalk SHA1 hash and the new v8-crosswalk SHA1 hash, respectively.
 
-    Last, update the blink-crosswalk and chromium-crosswalk lines in the `deps_xwalk` dictionary to point to **your fork**, since you have not pushed your new branches and changes to `crosswalk-project`'s repositories yet. Doing so is also useful to let others fetch the changes from your fork and help updating Crosswalk's code if necessary.
+    Last, update the blink-crosswalk, chromium-crosswalk and v8-crosswalk lines in the `deps_xwalk` dictionary to point to **your fork**, since you have not pushed your new branches and changes to `crosswalk-project`'s repositories yet. Doing so is also useful to let others fetch the changes from your fork and help updating Crosswalk's code if necessary.
 
 1. Smoke-test the fork updates.
 
@@ -242,8 +313,11 @@ First, the build and try bot masters need to be shut down before you push your b
 
 Once that is done, push your new branches:
 ```shell
-# Assuming origin points to git@github.com:crosswalk-project/{blink,chromium}-crosswalk.git
+# Assuming origin points to git@github.com:crosswalk-project/{blink,chromium,v8}-crosswalk.git
 cd /path/to/chromium-crosswalk/third_party/WebKit
+git push -f origin master
+
+cd /path/to/chromium-crosswalk/v8
 git push -f origin master
 
 cd /path/to/chromium-crosswalk
@@ -255,10 +329,10 @@ Next, clone the private `build-infrastructure.git` repository or ask someone to 
 After that, restart the build and try bot masters. If the new commits to blink-crosswalk and chromium-crosswalk are not picked up automatically by the build bots, force-build the content bots.
 
 ## Push your changes
-Once everything is working, you can push your blink-crosswalk and chromium-crosswalk changes to crosswalk-project if you haven't done so yet.
+Once everything is working, you can push your blink-crosswalk, chromium-crosswalk and v8-crosswalk changes to crosswalk-project if you haven't done so yet.
 
 ```shell
-# Assuming origin points to git@github.com:crosswalk-project/{blink,chromium}-crosswalk.git
+# Assuming origin points to git@github.com:crosswalk-project/{blink,chromium,v8}-crosswalk.git
 cd /path/to/chromium-crosswalk/third_party/WebKit
 git push origin crosswalk-1/28.0.1500.36
 git push -f origin next
@@ -270,14 +344,14 @@ git push -f origin next
 
 This should not break anything for Crosswalk users, as the SHA1 hashes referenced in the Crosswalk repository are still present in the forks.
 
-Finally, create a **single commit** in Crosswalk that updates version numbers, adjusts the code and changes `DEPS.xwalk` and send a pull request. Don't forget to **update** `DEPS.xwalk` so it tracks the correct blink-crosswalk and chromium-crosswalk (git@github.com:crosswalk-project/{blink,chromium}-crosswalk.git) back again.
+Finally, create a **single commit** in Crosswalk that updates version numbers, adjusts the code and changes `DEPS.xwalk` and send a pull request. Don't forget to **update** `DEPS.xwalk` so it tracks the correct *-crosswalk (git@github.com:crosswalk-project/{blink,chromium,v8}-crosswalk.git) back again.
 
 After you pushed to the next branch you can call for help and patches that couldn't be rebase trivially.
 
 When the quality of next is acceptable you can merge it back into master.
 
 ```shell
-# Assuming origin points to git@github.com:crosswalk-project/{blink,chromium}-crosswalk.git and you are in next branch
+# Assuming origin points to git@github.com:crosswalk-project/{blink,chromium,v8}-crosswalk.git and you are in next branch
 cd /path/to/chromium-crosswalk/third_party/WebKit
 git push -f origin next
 
