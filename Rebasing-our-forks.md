@@ -238,7 +238,7 @@ _This is an annoying step that we are trying to get rid of. It is required only 
 
 By now it should be fairly clear that the rebases have been done correctly and Crosswalk is also working as expected, but if you are rebasing to track a different Chromium milestone (ie. you are working on Crosswalk's development branch) the QA infrastructure needs to be updated as well.
 
-First, the build and try bot masters need to be shut down before you push your blink-crosswalk and chromium-crosswalk changes to the crosswalk-project repositories, otherwise there is a risk that the bots will try to build each new commit individually. You need to either ask people who have access to the build/try bots infrastructure (such as Shiliu Wang, Halton Huo, Raphael Kubo da Costa and Alexis Menard) or get access to the necessary infrastructure and do it yourself.
+First, the build and try bot masters need to be shut down before you push your blink-crosswalk and chromium-crosswalk changes to the crosswalk-project repositories, otherwise there is a risk that the bots will try to build each new commit individually. You need to either ask people who have access to the build/try bots infrastructure (Raphael Kubo da Costa and Alexis Menard) or get access to the necessary infrastructure and do it yourself.
 
 Once that is done, push your new branches:
 ```shell
@@ -250,7 +250,7 @@ cd /path/to/chromium-crosswalk
 git push -f origin master
 ```
 
-Next, clone the private `build-infrastructure.git` repository or ask someone to update `XWALK_CHROMIUM_VERSION` in `masters/master.tryserver.wrt/master.cfg` and `masters/master.wrt/master.cfg` there.
+Next, clone the private `build-infrastructure.git` repository or ask someone to update `XWALK_CHROMIUM_VERSION` in `masters/master.tryserver.crosswalk/master.cfg` and `masters/master.wrt/master.cfg` there.
 
 After that, restart the build and try bot masters. If the new commits to blink-crosswalk and chromium-crosswalk are not picked up automatically by the build bots, force-build the content bots.
 
