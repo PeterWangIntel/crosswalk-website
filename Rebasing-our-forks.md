@@ -221,11 +221,8 @@ Now that the forks themselves have been updated, we need to work on the Crosswal
     ```shell
     cd /path/to/chromium-crosswalk
     python xwalk/gyp_xwalk # Optional arguments etc etc.
-    ninja -C out/Debug xwalk
-    ninja -C out/Debug xwalk_unittest
-    ninja -C out/Debug xwalk_browsertest
-    ./out/Debug/xwalk_unittest
-    ./out/Debug/xwalk_browsertest
+    ninja -C out/Debug xwalk_builder
+    ./out/Debug/xwalk_unittest # and others
     ```
 
     Again, the exact command line arguments are not described above, and can be found in other pages. The important part is that you must build Crosswalk and test it. Try doing that with as many platforms as you can, such as Android and Tizen as well.
