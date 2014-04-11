@@ -7,7 +7,7 @@
 * Bridge crosswalk manifest permission to Android Manifest in packaging tool
 * Apps can be moved to SD Card
 
-#### Tizen
+#### Tizen (note: Crosswalk 4 on Tizen is only available in the Beta channel)
 
 * "Run As Service" - Allow to run Crosswalk as a central daemon process with additional render/extension process for each running application
 * Extension Process SMACK support for Tizen 2.x
