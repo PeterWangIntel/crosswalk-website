@@ -1,3 +1,5 @@
+**Note that a more up-to-date tutorial is available [on the main Crosswalk website](https://crosswalk-project.org/#documentation/tizen_ivi_extensions).**
+
 # Introduction
 
 Extensions in Crosswalk gives application developers an interface to
