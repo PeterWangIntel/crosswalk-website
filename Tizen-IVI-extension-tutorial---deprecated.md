@@ -1,5 +1,3 @@
-Deprecated
-
 # Writing extensions for Tizen IVI on x86
 
 This tutorial explains how to write a simple "echo" extension for Crosswalk running on [Tizen IVI](https://wiki.tizen.org/wiki/IVI).
