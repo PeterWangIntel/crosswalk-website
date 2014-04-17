@@ -21,13 +21,13 @@ Download
 
 Please download the crosswalk-cordova-android development bundle from [Download Crosswalk Android](https://download.01.org/crosswalk/releases/crosswalk/android). Please pay attention to the release channels  and architectures.
 
-For example, download canary 6.34.107.0 for X86:
+For example, download beta 5.34.104.4 for X86:
 
-    $ wget https://download.01.org/crosswalk/releases/crosswalk/android/canary/6.34.107.0/x86/crosswalk-cordova-6.34.107.0-x86.zip
+    $ wget https://download.01.org/crosswalk/releases/crosswalk/android/beta/5.34.104.4/x86/crosswalk-cordova-5.34.104.4-x86.zip
 
 for ARM:
 
-    $ wget https://download.01.org/crosswalk/releases/crosswalk/android/canary/6.34.107.0/arm/crosswalk-cordova-6.34.107.0-arm.zip
+    $ wget https://download.01.org/crosswalk/releases/crosswalk/android/beta/5.34.104.4/arm/crosswalk-cordova-5.34.104.4-arm.zip
 
 Unzip it and you are ready to create app.
 
