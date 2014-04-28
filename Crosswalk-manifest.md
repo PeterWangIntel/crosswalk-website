@@ -137,7 +137,7 @@ This example shows additional fields supported by Crosswalk 4:
 
  Field | Platform | Canary | Crosswalk 1 | Crosswalk 2 | Crosswalk 3 | Crosswalk 4 | Crosswalk 5
 --- | --- | --- | --- | --- | --- | --- | ---
-name | Tizen | Yes | Yes | Yes | Yes | Yes
+name | Tizen | Yes | Yes | Yes | Yes | Yes | Yes
  | Android | Yes | N/A | Yes | Yes | Yes | Yes
 version | Tizen | Yes | Yes | Yes | Yes | Yes | Yes
  | Android | Yes | N/A | Yes | Yes | Yes | Yes
