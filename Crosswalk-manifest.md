@@ -32,8 +32,9 @@ The following fields are *not* required by the manifest specification, but are a
 * **description**: A text string describing the application.
 * **icons**: Specifies icon graphics files to use for the application. The "128" size icon should be set as a minimum. If it's not given, the Crosswalk default logo icon will be used.
 * **permissions** (Crosswalk 4 or later): This field defines which features are used by the application. See the [permissions](https://crosswalk-project.org/#wiki/manifest-permissions) support in Crosswalk.
-* **content_security_policy** (Crosswalk 4 or later): The "content_security_policy" field represent the [CSP](http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html) policy which should be enforced for the application. CSP be disabled if this field is not set.
-* **launch_screen** (Crosswalk 5 or later for Android): The "launch_screen" field represent the [Launch Screen](https://crosswalk-project.org/#wiki/Launch-Screen) feature, which is a static user interface that is shown immediately after the application is launched.
+* **content_security_policy** (Crosswalk 4 or later): The "content_security_policy" field represents the [CSP](http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html) policy which should be enforced for the application. CSP be disabled if this field is not set.
+* **launch_screen** (Crosswalk 5 or later for Android): The "launch_screen" field represents the [Launch Screen](https://crosswalk-project.org/#wiki/Launch-Screen) feature, which is a static user interface that is shown immediately after the application is launched.
+* **xwalk_hosts** (Crosswalk 6 or later for Android): The 'xwalk_hosts' field allows [Cross Origin XHR](https://crosswalk-project.org/#wiki/Cross-Origin-XHR) on Android.
 
 ## Minimal manifest file
 
