@@ -6,4 +6,4 @@ Import the Crosswalk-Cordova-Android library projects. The projects should be lo
 Configure the app to depend on Crosswalk-Cordova-Android library projects. Right-click on app project, then, in context menu, choose `Properties`. In the `Properties` dialog, remove the reference to the old CordovaLib.
 After that, click `Add…` to configure your project to use a reference to CordovaLib in Crosswalk-Cordova-Android.
 ### Step 4
-Build each project. Start from “xwalk_core_library”, then “CordovaLib”, and finally “HelloWorld”. If all builds pass, your app is now using Crosswalk.
+Build each project. Start from `xwalk_core_library`, then `CordovaLib`, and finally `HelloWorld`. If all builds pass, your app is now using Crosswalk.
