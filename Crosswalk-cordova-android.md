@@ -54,7 +54,7 @@ You could use the `plugman` command-line tool to add Cordova plugins as needed.
   * [Use AdMob plugin in Crosswalk](AdMob-Plugin-on-Crosswalk)
   * [Use IAP plugin in Crosswalk ](IAP-Plugin-on-Crosswalk)
 
-Moving Existing Cordova app to Crosswalk
+Using Crosswalk in Existing Cordova Apps
 ---
-You are able to move existing Android WebView-based Cordova app to Crosswalk.
+You are able to replace Android WebView with Crosswalk in existing Cordova apps.
  * [Moving to Crosswalk](Moving-Existing-Cordova-App-To-Crosswalk)
