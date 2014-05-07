@@ -50,6 +50,7 @@ If you have any question on how to use Crosswalk you can ask on IRC. On freenode
 * [[Best practice guidelines of submitting Crosswalk bugs]]
 * [[Crosswalk test suite]]
 * [[Crosswalk test result indicators]]
+* [[Crosswalk WebDriver]]
 
 ## Crosswalk's infrastructure
 * [Testing Framework](wiki/Crosswalk-testing-framework) 
