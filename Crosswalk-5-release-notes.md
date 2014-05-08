@@ -1,4 +1,4 @@
-### Crosswalk 5.34.104.1 Beta
+### Crosswalk 5.34.104.5 (Stable)
 
 ##New Features
 
