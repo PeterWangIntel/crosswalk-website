@@ -6,66 +6,14 @@
 
 #### Android
 
-* First version of public API for embedded usage (XWalkView)
-* Build Crosswalk applications with Eclipse
-* Packaging tool produced APKs for both ARM and x86 processor architectures
+* First version of public API for embedded usage (XWalkView) (docs?)
+* [Build Crosswalk applications with Eclipse] (https://crosswalk-project.org/#wiki/Crosswalk-Developer-Tools-Eclipse-plugin)
+* Packaging tool generates APKs for both ARM and x86 processor architectures
 * Support for Cordova 3.4.0
-* Full support for "Launch Screen" specification
-* Support for "default orientation" in manifest
-* Pass Chromium command line options via configuration file
-* Option to prevent screen from switching off
-
-* [XWALK-220] - [Android] Implement capturePicture API for XWalkView
-* [XWALK-383] - Widget Access Request Policy
-* [XWALK-401] - [Android] Need to export runtime version to JavaScript
-* [XWALK-529] - Pinch-Zoom and Multitouch
-* [XWALK-670] - One tool to package 2 kinds of APKs for different architectures.
-* [XWALK-683] - Speech API
-* [XWALK-690] - Support multiple icons for packaging tool
-* [XWALK-827] - Better apk packaging tools
-* [XWALK-836] - For release binaries, Provide one package tool for both archs (x86 and arm)
-* [XWALK-1041] - Define public API for embedding usage
-    * [XWALK-1042] - Build embedding API and its internals as an Android library
-    * [XWALK-1043] - Multiple instances of XWalkView
-    * [XWALK-1044] - Support UI inflation/overlay/destroy for the view of embedding API
-    * [XWALK-1051] - Support Cordova 3.4.0 in Crosswalk-based Cordova for Android
-    * [XWALK-1068] - [Tizen][IVI] System Settings API
-    * [XWALK-1069] - [IVI][Tizen] Notification API
-    * [XWALK-1075] - Implement Widget API for WGT applications
-    * [XWALK-1117] - Allow commandline to specific startup options
-    * [XWALK-1133] - [Widget] Check the status of app launcher does not support on crosswalk
-    * [XWALK-1139] - Android packaging tool requests a target folder options.
-    * [XWALK-1164] - [Feature] Web API Support (0350 0360 0370 0380)
-    * [XWALK-1168] - [Feature] 0510. View Mode
-    * [XWALK-1169] - [Feature] Multiple Browsing Context Support (0520 0541 0550)
-    * [XWALK-1173] - [Feature] Private Storage (HTML5 Local Storage and Cookie)  Support (0660 0670)
-    * [XWALK-1175] - [Feature] Content Security Policy (0741 0742 0743)
-    * [XWALK-1198] - Full spec support of launch screen for crosswalk on Android
-    * [XWALK-1234] - Build Chromium as a jar/so/resources for embedding api
-    * [XWALK-1241] - File chooser is not implemented in crosswalk
-    * [XWALK-1246] - Can't handle certificate error for Android
-    * [XWALK-1267] - [Android] Support for "default orientation" in manifest
-    * [XWALK-1269] - Enable command line options from Chromium for Crosswalk on Android
-    * [XWALK-1304] - Enable hardware acceleration video decoding for WebRTC
-    * [XWALK-1341] - GetUserMedia
-    * [XWALK-1353] - Support "xwalk_hosts" field in manifest.json to allow Cross-Origin Access.
-    * [XWALK-1411] - [Android] Support keeping-screen-on for web apps
-    * [XWALK-1483] - [Feature] 0010.Packaged Web Application
-    * [XWALK-1487] - [Feature] 0200.The WRT MUST only support Web Applications with the namespace
-    * [XWALK-1488] - [Feature] 0210.Tizen Application ID 
-    * [XWALK-1493] - [Feature] 0241.Tizen Content Security Policy 
-    * [XWALK-1494] - [Feature] 0260.Tizen Navigation Policy
-    * [XWALK-1495] - [Feature] 0270.Tizen Metadata
-    * [XWALK-1496] - [Feature] 0310.The WRT MUST support and properly generate W3C DOM events
-    * [XWALK-1500] - [Feature] 0410.The WRT MUST support the W3C Widget Access Request Policy.
-    * [XWALK-1504] - [Feature] 0460.The WRT MUST support the W3C Widget Interface. 
-    * [XWALK-1505] - [Feature] 0470.The WRT MUST support the W3C Content Security Policy 1.0. 
-    * [XWALK-1506] - [Feature] 0470.The WRT MUST send the "tizenhwkey " custom event to the Web Application
-
-
-
-
-
+* Full support for "Launch Screen" specification (docs?)
+* Support for "default orientation" in manifest (docs?)
+* Pass Chromium command line options via configuration file (docs?)
+* Option to prevent screen from switching off (docs?)
 
 ** Bug
     * [XWALK-141] - Android Xwalk is failed to set location of iframe 
