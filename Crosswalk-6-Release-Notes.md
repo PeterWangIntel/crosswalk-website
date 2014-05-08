@@ -4,22 +4,27 @@
 
 * Rebased to [Chromium 35] (http://www.chromestatus.com/features)
 
-    * [XWALK-220] - [Android] Implement capturePicture API for XWalkView
-    * [XWALK-383] - Widget Access Request Policy
-    * [XWALK-401] - [Android] Need to export runtime version to JavaScript
-    * [XWALK-435] - [Tizen] Content API
-    * [XWALK-529] - Pinch-Zoom and Multitouch
-    * [XWALK-628] - [Tizen] Tizen API
-    * [XWALK-636] - [Android] Build WebApps with Eclipse
-    * [XWALK-670] - One tool to package 2 kinds of APKs for different architectures.
-    * [XWALK-683] - Speech API
-    * [XWALK-690] - Support multiple icons for packaging tool
-    * [XWALK-810] - Tizen Application API support
-    * [XWALK-827] - Better apk packaging tools
-    * [XWALK-836] - For release binaries, Provide one package tool for both archs (x86 and arm)
-    * [XWALK-990] - Tizen Application API: Application information and operations
-    * [XWALK-1030] - i18n supporting for Tizen Widget
-    * [XWALK-1041] - Define public API for embedding usage
+#### Android
+
+* First version of public API for embedded usage (XWalkView)
+* Build Crosswalk applications with Eclipse
+* Packaging tool produced APKs for both ARM and x86 processor architectures
+* Support for Cordova 3.4.0
+* Full support for "Launch Screen" specification
+* Support for "default orientation" in manifest
+* Pass Chromium command line options via configuration file
+* Option to prevent screen from switching off
+
+* [XWALK-220] - [Android] Implement capturePicture API for XWalkView
+* [XWALK-383] - Widget Access Request Policy
+* [XWALK-401] - [Android] Need to export runtime version to JavaScript
+* [XWALK-529] - Pinch-Zoom and Multitouch
+* [XWALK-670] - One tool to package 2 kinds of APKs for different architectures.
+* [XWALK-683] - Speech API
+* [XWALK-690] - Support multiple icons for packaging tool
+* [XWALK-827] - Better apk packaging tools
+* [XWALK-836] - For release binaries, Provide one package tool for both archs (x86 and arm)
+* [XWALK-1041] - Define public API for embedding usage
     * [XWALK-1042] - Build embedding API and its internals as an Android library
     * [XWALK-1043] - Multiple instances of XWalkView
     * [XWALK-1044] - Support UI inflation/overlay/destroy for the view of embedding API
