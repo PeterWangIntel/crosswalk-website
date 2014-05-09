@@ -141,6 +141,7 @@ Usage: make_apk.py [options]
 Options:
   -h, --help            show this help message and exit
   -v, --version         The version of this python tool.
+  --verbose             Print debug messages.
   --mode=MODE           The packaging mode of the web application. The value
                         'shared' means that the runtime is shared across
                         multiple application instances and that the runtime
@@ -183,7 +184,8 @@ Options:
     They are used for describing the APK information through command line
     options.
 
-    --name=NAME         The apk name. For example, --name=YourApplicationName
+    --name=NAME         The apk name. For example, --name="Your Application
+                        Name"
     --package=PACKAGE   The package name. For example,
                         --package=com.example.YourPackage
 
@@ -194,6 +196,18 @@ Options:
     --app-version=APP_VERSION
                         The version name of the application. For example,
                         --app-version=1.0.0
+    --app-versionCode=APP_VERSIONCODE
+                        The version code of the application. For example,
+                        --app-versionCode=24
+    --app-versionCodeBase=APP_VERSIONCODEBASE
+                        The version code base of the application. Version code
+                        will be made by adding a prefix based on architecture
+                        to the version code base. For example, --app-
+                        versionCodeBase=24
+    --xwalk-command-line=XWALK_COMMAND_LINE
+                        Use command lines.Crosswalk is powered by Chromium and
+                        supports Chromium command line.For example, --xwalk-
+                        command-line='--chromium-command-1 --xwalk-command-2'
     --description=DESCRIPTION
                         The description of the application. For example,
                         --description=YourApplicationDescription
@@ -205,6 +219,7 @@ Options:
                         Linux, Windows and Mac OS respectively. For example,
                         --extensions=/path/to/extension1:/path/to/extension2.
     -f, --fullscreen    Make application fullscreen.
+    --keep-screen-on    Support keeping screen on
     --icon=ICON         The path of application icon. Such as:
                         --icon=/path/to/your/customized/icon
     --orientation=ORIENTATION
@@ -216,7 +231,10 @@ Options:
                         /activity-element.html#screen
     --permissions=PERMISSIONS
                         The list of permissions to be used by web application.
-                        For example, --permissions='geolocation:webgl'
+                        For example, --permissions=geolocation:webgl
+    --target-dir=TARGET_DIR
+                        Packaging tool will move the output APKS to the target
+                        directory
 
   Keystore Options:
     The keystore is a signature from web developer, it's used when
@@ -231,6 +249,10 @@ Options:
     --keystore-passcode=KEYSTORE_PASSCODE
                         The passcode of keystore. For example, --keystore-
                         passcode=code
+    --compressor=COMPRESSOR
+                        Minify and obfuscate javascript and css.--compressor:
+                        compress javascript and css.--compressor=js: compress
+                        javascript.--compressor=css: compress css.
 ```
 Importance: Crosswalk provides the embedded mode and the shared mode in the APK packaging tool as described in [Crosswalk on Android](Crosswalk-on-Android).
 
