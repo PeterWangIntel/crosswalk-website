@@ -26,6 +26,7 @@ out of the wiki and planted in the higher level documentation under either [Docu
 * [Development Guides](wiki/Development-Guides)
 * [Package management] (wiki/Crosswalk-package-management)
 * [Crosswalk Developer Tools Eclipse Plugin] (wiki/Crosswalk-Developer-Tools-Eclipse-plugin)
+* [In App Purchase API documentation] (wiki/in-app-purchase)
 
 If you have any question on how to use Crosswalk you can ask on IRC. On freenode.net, we hang out on the #crosswalk channel.
 
