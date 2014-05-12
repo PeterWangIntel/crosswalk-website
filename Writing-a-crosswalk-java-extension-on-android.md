@@ -84,9 +84,11 @@ public class MyExtension extends XWalkExtensionClient {
 
  The commands to compile and package it to myextension.jar:
  ```
-  javac MyExtension.java -classpath \
+  cd <parent_of_class_name>, in this case, you have ./com/example/extension/MyExtension.java
+  javac com/example/extension/MyExtension.java -classpath \
    /path/to/xwalk_app_template/libs/xwalk_app_runtime_java.jar:/path/to/androidsdk/platforms/android-[version-number]/android.jar
-  jar cvf myextension.jar MyExtension.class
+  
+  jar cvf myextension.jar com/example/extension/MyExtension.class
 ```
 * Configure the extension in myextension.json so that Crosswalk can load the above files.
 ```
@@ -136,5 +138,5 @@ try {
   ```
  * Specify the extension directory when using 'make_apk.py'.
   ```
-python make_apk.py --name=TestExtension --package=org.example.testextension -- extensions="/path/to/myextension/" ...
+python make_apk.py --name=TestExtension --package=org.example.testextension --extensions="/path/to/myextension/" ...
   ```
