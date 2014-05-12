@@ -10,11 +10,10 @@
 * [Build Crosswalk applications with Eclipse] (https://crosswalk-project.org/#wiki/Crosswalk-Developer-Tools-Eclipse-plugin)
 * Packaging tool generates APKs for both ARM and x86 processor architectures
 * Support for Cordova 3.4.0
-* Full support for "Launch Screen" specification (docs?)
-* Support for "default orientation" in manifest (docs?)
-* Pass Chromium command line options via configuration file (docs?)
-* Option to prevent screen from switching off (docs?)
-* Option to ignore GPU blacklist (docs?)
+* Full support for ["Launch Screen" specification] (https://crosswalk-project.org/#wiki/Launch-Screen)
+* [Pass Chromium command line options via configuration file] (https://crosswalk-project.org/#wiki/Use-Chromium-command-lines-in-your-apps-on-Android)
+* [Option to prevent screen from switching off] (https://crosswalk-project.org/#wiki/Try-Crosswalk)
+* [Option to ignore GPU blacklist] (https://crosswalk-project.org/#wiki/Use-Chromium-command-lines-in-your-apps-on-Android)
 
 ### Notable bug fixes
 
