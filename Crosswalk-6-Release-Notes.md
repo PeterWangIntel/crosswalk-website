@@ -1,4 +1,4 @@
-### Crosswalk 6.35.131.1 Beta
+### Crosswalk 6.35.131.4 Beta
 
 ## New Features
 
@@ -6,7 +6,7 @@
 
 #### Android
 
-* First version of public API for embedded usage (XWalkView) (docs?)
+* First version of [public API for embedded usage (XWalkView)] (https://crosswalk-project.org/#documentation/apis/embedding_api)
 * [Build Crosswalk applications with Eclipse] (https://crosswalk-project.org/#wiki/Crosswalk-Developer-Tools-Eclipse-plugin)
 * Packaging tool generates APKs for both ARM and x86 processor architectures
 * Support for Cordova 3.4.0
