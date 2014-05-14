@@ -2,7 +2,7 @@ The Crosswalk embedding API provides a WebView-like view for displaying web page
 
 ## Building your first app with Crosswalk Embedded API
 
-**1. Before you start, [set up your development environment for Android development](http://developer.android.com/training/basics/firstapp/index.html).
+**1. Before you start, [set up your development environment for Android development](http://developer.android.com/training/basics/firstapp/index.html).**
 
 **2. Download Crosswalk Embedding API library**
 
