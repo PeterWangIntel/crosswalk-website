@@ -6,24 +6,24 @@ The Crosswalk embedding API provides a WebView-like view for displaying web page
 
 **2. Download Crosswalk Embedding API library**
 
-  * Download Crosswalk package from [the downloads page](https://download.01.org/crosswalk/releases/android/):
-      - Choose the release you want to use, [canary](https://download.01.org/crosswalk/releases/android/canary), [beta](https://download.01.org/crosswalk/releases/android/beta) or [stable](https://download.01.org/crosswalk/releases/android/stable)
+  * Download Crosswalk package from [here](https://download.01.org/crosswalk/releases/crosswalk/android/)
+      - Choose the release you want to use, [canary](https://download.01.org/crosswalk/releases/crosswalk/android/canary), [beta](https://download.01.org/crosswalk/releases/crosswalk/android/beta) or [stable](https://download.01.org/crosswalk/releases/crosswalk/android/stable)
       - Choose a version. _(the latest version is recommended)_
       - Choose the architecture `x86` or `arm`
-      - Download the package named `crosswalk-cordova-x.xx.xxx.x-<arch>.zip`
-  * Extract the `framework/xwalk_core_library` directory from the downloaded Crosswalk zip file to your work space.
+      - Download the package named `crosswalk-webview-x.xx.xxx.x-<arch>.zip`
+  * Extract the archive from the downloaded crosswalk-webview zip file to your work space.
 
-**3. Import `xwalk_core_library` into Eclipse.**
+**3. Import `crosswalk-webview` into Eclipse.**
   * Start Eclipse.
   * Select *File* > *New* > *Project...*, then *Android* > *Android Project From Existing Code*.
-  * Set *Root Directory* to the path of the `xwalk_core_library/` directory you extracted.
-  * Click *Finish*. The **xwalk_core_library** project will appear in the *Package Explorer*.
+  * Set *Root Directory* to the path of the `crosswalk-webview/` directory you extracted.
+  * Click *Finish*. The **crosswalk-webview** project will appear in the *Package Explorer*.
 
 **4. Use the Crosswalk Embedding API in your project**
   * Create a new Android project. See [Building Your First Android App](http://developer.android.com/training/basics/firstapp/index.html) if you're unfamiliar with this.
   * Right click on your project, and select *Properties*.
   * The *Properties* dialog will appear. Select *Android*.
-  * In the *Library* tab, click *Add*. Add the **xwalk_core_library** project as a library.
+  * In the *Library* tab, click *Add*. Add the **crosswalk-webview** project as a library.
   * Click *Ok* to start.
 
 **5. Use XWalkView in your project**
