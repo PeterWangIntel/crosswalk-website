@@ -1,0 +1,1 @@
+Test whether changing a page title still breaks pages on the wiki
