@@ -33,7 +33,7 @@ If you have any question on how to use Crosswalk you can ask on IRC. On freenode
 ## For Developers
 * [Building Crosswalk](#contribute/building_crosswalk)
 * [Contributing Code](#contribute/contributing-code)
-* [Intent to Implement](#contribute/contributing-code/Declare-your-%22intent-to-implement%22)
+* [Intent to Implement](https://crosswalk-project.org/#contribute/contributing-code/Declare-your-%22intent-to-implement%22)
 * [Crosswalk and downstream Chromium](wiki/Downstream-Chromium)
 * [Development Mailing List (only about development of Crosswalk itself)](https://lists.crosswalk-project.org/mailman/listinfo/crosswalk-dev)
 * [Crosswalk Reviewer Policy](#contribute/reviewer_policy)
