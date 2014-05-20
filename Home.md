@@ -64,7 +64,7 @@ If you have any question on how to use Crosswalk you can ask on IRC. On freenode
 * [Tips and Tricks for Chromium Committers](wiki/Tips-and-Tricks-for-Chromium-Committers)
 
 ## Other resources
-* [Chromium command line switches](http://peter.sh/experiments/chromium-command-line-switches/) (external link) some are especially useful for developers (e.g. ```--allow-file-access-from-files```)
+* [Chromium command line switches](http://peter.sh/experiments/chromium-command-line-switches/) (external link)
 * [Android WebView](wiki/Android-WebView)
 * [Tizen 2.1 Features and Tasks](wiki/Tizen-2.1-WRT-features-and-related-tasks)
 * [[Tizen Integration]]
