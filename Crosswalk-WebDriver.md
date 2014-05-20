@@ -2,11 +2,11 @@
  
 WebDriver is an open source tool for automated testing of webapps across many browsers. It provides capabilities for navigating to web pages, user input, JavaScript execution, and more.  Crosswalk WebDriver(CrosswalkDriver) is a standalone server which implements WebDriver's wire protocol for Crosswalk.  Part of code is ported from ChromeDriver.
 
-Please feel free to send an email to crosswalk-dev@lists.crosswalk-project.org if you have any questions, help with troubleshooting, and general discussion. 
+Please feel free to send an email to <mailto:crosswalk-dev@lists.crosswalk-project.org> or https://lists.crosswalk-project.org/mailman/listinfo/crosswalk-dev if you have any questions, help with troubleshooting, and general discussion. 
 
 All code is currently in the open source crosswalk project. You can build it or download binary direct.This site hosts CrosswalkDriver documentation, issue tracking, and releases.
 
-You can also download binary frome https://github.com/crosswalk-project/crosswalk-web-driver/bin/xwalkdriver.
+You can also download binary from https://github.com/crosswalk-project/crosswalk-web-driver/blob/master/bin/xwalkdriver.
 
 ## For Linux xwalk:
 (1) Build XwalkDriver by building the 'xwalkdriver' target and get an executable
@@ -81,7 +81,7 @@ $ python
 su - app
 export XDG_RUNTIME_DIR="/run/user/5000"
 export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/5000/dbus/user_bus_socket
-systemctl --user status xwalk.servicek
+systemctl --user status xwalk.service
 xwalkctl -i /'path'/wrt-rtbin-tizen-tests.xpk
 </pre>
 
@@ -104,7 +104,7 @@ $ python
 >>> from selenium import webdriver
 >>> capabilities = {
   'xwalkOptions': {
-    'tizenDebuggingAddress': 'hostname/ip:port',
+    'tizenDebuggerAddress': 'hostname/ip:port',
   }
 }
 >>> driver = webdriver.Remote('http://localhost:9515', capabilities)
@@ -115,4 +115,4 @@ $ python
 ## Related Links
 
 * ChroemDriver: https://sites.google.com/a/chromium.org/chromedriver/home
-* CrosswalkDriver binary downloads: https://github.com/crosswalk-project/crosswalk-web-driver/bin/xwalkdriver
+* CrosswalkDriver Source Code: https://github.com/crosswalk-project/crosswalk-web-driver.
