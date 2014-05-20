@@ -1,4 +1,4 @@
-**Note that a more up-to-date tutorial is available [on the main Crosswalk website](https://crosswalk-project.org/#documentation/tizen_ivi_extensions).**
+**Note that a more up-to-date tutorial is available [on the main Crosswalk website](https://crosswalk-project.org/#documentation/tizen_ivi_extensions). This page is retained as it is not Tizen-specific and may be useful to developers on other platforms.**
 
 # Introduction
 
