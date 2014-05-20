@@ -31,7 +31,7 @@ out of the wiki and planted in the higher level documentation under either [Docu
 If you have any question on how to use Crosswalk you can ask on IRC. On freenode.net, we hang out on the #crosswalk channel.
 
 ## For Developers
-* [Build Crosswalk](wiki/Build-Crosswalk)
+* [Building Crosswalk](#contribute/building_crosswalk)
 * [Contributing Code](#contribute/contributing-code)
 * [Intent to Implement](#contribute/contributing-code/Declare-your-%22intent-to-implement%22)
 * [Crosswalk and downstream Chromium](wiki/Downstream-Chromium)
