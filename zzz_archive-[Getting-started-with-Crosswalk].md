@@ -6,5 +6,5 @@ The dates shown below represent when the documentation was current on the Crossw
 
 ## Crosswalk 1, 2 and 3 (2014-02-03)
 
-* [Getting started](Getting-started-20140203)
-* [Developing on Windows](Developing-on-Windows-20140203)
+* [Getting started](zzz_archive [Getting-started-20140203])
+* [Developing on Windows](zzz_archive [Developing-on-Windows-20140203])
