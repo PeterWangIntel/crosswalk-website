@@ -305,7 +305,7 @@ TBD
 ### Debug Your Web App
 Crosswalk also enables remote debugging to a separate instance of a Chrome browser.
 
- * Step 1: Install Google's Chrome browser from https://www.google.com/chrome/‎.
+ * Step 1: Install Google's Chrome browser from https://www.google.com/chrome/.
  * Step 2: Launch Crosswalk with remote debugging option `xwalk.exe --remote-debugging-port=9222 index.html`
  * Step 3: Open `localhost:9222` in the Chrome browser, and you will see the inspectable pages in Chrome tab.
  * Step 4: Click the inspectable page to open the Web Inspector UI to start debugging.
