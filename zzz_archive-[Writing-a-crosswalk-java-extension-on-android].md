@@ -4,6 +4,8 @@ This page has been superseded by documentation on the Crosswalk website:
 
 https://crosswalk-project.org/#documentation/android_extensions
 
+It is retained for historical purposes.
+
 ## Implement an external extension for Crosswalk on Android
 * Write the JavaScript stub code same as the native extension system, saved as a .js file.
 * Create a new class inherited from the class XWalkExtensionClient implements the methods used by JavaScript and compile and package it as a jar file.
