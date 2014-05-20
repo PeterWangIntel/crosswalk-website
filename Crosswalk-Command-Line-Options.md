@@ -1,5 +1,7 @@
 This page is intended to document the command line options specific to Crosswalk.
 
+Note that when you build a Crosswalk application for Android, you can [define command-line options for the runtime](Use-Chromium-command-lines-in-your-apps-on-Android) when building the Android package.
+
 |   Name     |    Description     |     Example
 -------------|--------------------|------------------
 ```--app-icon``` | Specified the icon file path for the app window, support both ICO and PNG file format. | ```xwalk.exe --app-icon=XXX.png``` 
