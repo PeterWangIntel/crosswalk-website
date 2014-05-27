@@ -35,7 +35,7 @@ adb_gdb_xwalk_core_shell --verbose
 ```
 adb_gdb_xwalk_core_shell --verbose --sandboxed=[0-6]
 ```
-* If you wan't to debug the startup process
+* If you want to debug the startup process
 ```
 #Edit a file named 'xwview-shell-command-line' with content:
 Xwalk --wait-for-debugger
