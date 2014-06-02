@@ -304,12 +304,18 @@ Now that the forks themselves have been updated, we need to work on the Crosswal
 
     Rinse and repeat until everything builds, all tests pass and Crosswalk seems to be working.
 
-## For development rebases: update the QA infrastructure
+## Adjust the version numbers in the build bots
 _This is an annoying step that we are trying to get rid of. It is required only for Crosswalk's development branch because the build/try bots do not build the stable branch at the moment._
 
-By now it should be fairly clear that the rebases have been done correctly and Crosswalk is also working as expected, but if you are rebasing to track a different Chromium milestone (ie. you are working on Crosswalk's development branch) the QA infrastructure needs to be updated as well.
+By now it should be fairly clear that the rebases have been done correctly and Crosswalk is also working as expected, but whenever Chromium's version number changes the build bot infrastructure (ie. https://build.crosswalk-project.org and https://build.crosswalk-project.org/try) needs to be updated as well. This is necessary because the Content Shell slaves do not check out Crosswalk at all and need to know which Chromium version to check out the main `DEPS` file from. In other words, they have to get the **XX** in src.chromium.org/chrome/releases/**XX**/DEPS from somewhere.
 
-First, the build and try bot masters need to be shut down before you push your blink-crosswalk and chromium-crosswalk changes to the crosswalk-project repositories, otherwise there is a risk that the bots will try to build each new commit individually. You need to either ask people who have access to the build/try bots infrastructure (Raphael Kubo da Costa and Alexis Menard) or get access to the necessary infrastructure and do it yourself.
+First, you need to either be in contact with the people who have access to the build/try bots infrastructure (Raphael Kubo da Costa and Alexis Menard) or get access to the necessary infrastructure and do it yourself. After that, follow these steps:
+
+1. Clone the private `build-infrastructure.git` repository.
+
+1. Update `XWALK_CHROMIUM_VERSION` in `masters/master.tryserver.crosswalk/master.cfg` and `masters/master.wrt/master.cfg` there.
+
+1. Update the master checkouts appropriately and restart the masters.
 
 Once that is done, push your new branches:
 ```sh
@@ -323,10 +329,6 @@ git push -f origin master
 cd /path/to/chromium-crosswalk
 git push -f origin master
 ```
-
-Next, clone the private `build-infrastructure.git` repository or ask someone to update `XWALK_CHROMIUM_VERSION` in `masters/master.tryserver.crosswalk/master.cfg` and `masters/master.wrt/master.cfg` there.
-
-After that, restart the build and try bot masters. If the new commits to blink-crosswalk and chromium-crosswalk are not picked up automatically by the build bots, force-build the content bots.
 
 ## Push your changes
 Once everything is working, you can push your blink-crosswalk, chromium-crosswalk and v8-crosswalk changes to crosswalk-project if you haven't done so yet.
