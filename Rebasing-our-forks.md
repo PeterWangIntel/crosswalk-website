@@ -244,6 +244,44 @@ The parts of the process that are similar to blink-crosswalk have shorter descri
     git push -f my-fork master
     ```
 
+### Ozone-Wayland and Chromium
+A big difference between Chromium and the other forks is that another project also needs to be taken into account when rebasing it: [Ozone-Wayland](https://github.com/01org/ozone-wayland), which is used to build Crosswalk for Wayland.
+
+One must always make sure that Chromium and Crosswalk build and run correctly with Ozone-Wayland. This is normally not a problem when updating versions within the same Chromium milestone (ie. from 35.0.1916.114 to 35.0.1916.120), but it usually requires some attention otherwise. Ozone-Wayland has a public [release schedule](https://github.com/01org/ozone-wayland/wiki/Releasing) which lists the branches being worked on and which Chromium milestones they correspond to.
+
+An important thing to mention is that Ozone-Wayland has a certain number of patches in `src/ozone/patches` that may need to be applied to chromium-crosswalk itself. Always make sure the patches in chromium-crosswalk match the ones in Ozone-Wayland (since they can change when Ozone-Wayland starts tracking a different Chromium version).
+
+The first and simplest test is just verifying if any change actually needs to be done, which amounts to building Crosswalk for Wayland instead of X11:
+
+1. Install Wayland and Weston on your system.
+
+1. Add `use_aura=1 chromeos=0 use_ozone=1` to your `GYP_DEFINES`.
+
+1. Make sure `gyp_chromium` is run so that the Content Shell target is generated. Otherwise, `gclient sync` will run `xwalk_gyp` last and we are not interested in Crosswalk yet:
+
+    ```sh
+    gclient sync
+    cd src
+    ./build/gyp_chromium
+    ninja -C out/Release content_shell
+    ```
+
+1. Check that it works:
+
+    ```sh
+    cd src
+    weston &
+    ./out/Release/xwalk --no-sandbox /path/to/some/page.html
+    ```
+
+If you are able to see Crosswalk running inside your Weston instance, everything is fine and your work is done.
+
+If building or running Crosswalk fails, make sure there isn't another Ozone-Wayland branch tracking your milestone, or that there aren't additional commits in the branch you are using that fixes your issues. If that is the case, just adjust the commit has in Crosswalk's `DEPS.xwalk` and go back to the tests described above. In any of those cases, make sure the patches in `src/ozone/patches` that are relevant to Crosswalk are properly applied in chromium-crosswalk. Particularly, make sure the versions in chromium-crosswalk are in sync with the ones in Ozone-Wayland.
+
+In case no existing commit fixes your issues, you will need to fix Ozone-Wayland for your branch and coordinate with Oz-Wl team (such as Tiago Vignatti and Kalyan Kondapally). Build problems are normally caused by changes in the Chromium code (changes in method signatures, files being moved around etc). Building Chromium and Crosswalk in C++11 mode (using either clang or g++ with `-std=gnu++11`) is very helpful and makes it easy to catch things such as method changes, especially virtual ones. Runtime crashes can be debugged by building Content Shell or Crosswalk in Debug mode and later calling GDB (`gdb --args ./out/Debug/content_shell --single-process foo.html`).
+
+After things are working, update Crosswalk's `DEPS.xwalk` and go back to the tests described above.
+
 ## Updating Crosswalk itself
 Now that the forks themselves have been updated, we need to work on the Crosswalk part of the rebase. It can be divided in two parts: first, smoke-test your fork changes by building content shell, then update Crosswalk's code since some of the Chromium (and maybe V8) features it uses have changed (this is very much likely if you are tracking a new milestone, whereas stable updated should be fairly painless in this regard).
 
