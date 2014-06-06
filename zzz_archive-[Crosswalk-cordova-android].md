@@ -1,3 +1,5 @@
+*This page has been promoted to the main website content at https://crosswalk-project.org/#documentation/cordova.*
+
 Crosswalk-based Cordova Android
 ==
 Crosswalk-based Cordova Android is derived from [Cordova Android](https://github.com/apache/cordova-android) and embeds [Crosswalk](https://github.com/crosswalk-project/crosswalk) as the HTML5 runtime. It supports Android 4.0+.
