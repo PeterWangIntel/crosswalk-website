@@ -1,3 +1,5 @@
+*The content of this page has been promoted to the main website at https://crosswalk-project.org/#documentation/cordova/migrate_an_application.*
+
 ### Step 1
 Import the existing Cordova app into Android Development Tool (ADT). If you created your app with Cordova command-line tool, the Android platform should be in `platforms/android`. Uncheck the `CordovaLib` project so that you only import the app project. Then press `Finish`.
 ### Step 2
