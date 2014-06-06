@@ -1,3 +1,5 @@
+*This page has been promoted to the main website at https://crosswalk-project.org/#documentation/embedding_crosswalk. Any modifications to the content should preferably be made there, rather than to this wiki page.*
+
 The Crosswalk embedding API provides a WebView-like view for displaying web pages. Unlike a WebView, it provides support for WebGL, plus access to a host of APIs which are not available to a WebView (see [this list](#documentation/apis/web_apis)). 
 
 ## Building your first app with Crosswalk Embedded API
