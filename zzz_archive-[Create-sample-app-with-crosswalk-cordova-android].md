@@ -1,3 +1,5 @@
+*The content of this page has been promoted to the main Crosswalk website at https://crosswalk-project.org/#documentation/cordova/develop_an_application.*
+
 ### Create, Build and Run a Sample App with Command-line Tool:
 Create a sample app, for example (You may supply `--shared` switch to avoid copying crosswalk-cordova-android/framework folder into each project):
 
