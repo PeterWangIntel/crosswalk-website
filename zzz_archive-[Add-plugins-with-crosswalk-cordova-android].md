@@ -1,3 +1,5 @@
+*The content from this page has been promoted to the main website at https://crosswalk-project.org/#documentation/cordova/add_plugins*
+
 We recommend to use `plugman` to install plugins. You need to have [node.js](http://nodejs.org/) installed. Then install `plugman` by:
 
     $ npm install -g plugman
