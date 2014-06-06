@@ -80,7 +80,7 @@ environment might enable better optimizations.
 
 # Current implementation overview (2013-06-10)
 
-See https://github.com/crosswalk-project/crosswalk/tree/extensions/src for the code. Extensions are in ``src/extensions``.
+See https://github.com/crosswalk-project/crosswalk/tree/master/extensions for the code.
 
 We currently implement only builtin extensions that run on the browser
 process. The plan is to cover also external extensions in another process as
