@@ -27,7 +27,7 @@ Example:
      "background_color": "#ff0000",
      "background_image": "bgfoo.png 1x, bgfoo-2x.png 2x",
      "image": "foo.png 1x, foo-2x.png 2x",
-     "image_border": "30px 40px stretch",
+     "image_border": "30px 40px stretch"
    }
 }
 ```
