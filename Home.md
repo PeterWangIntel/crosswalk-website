@@ -19,6 +19,7 @@ out of the wiki and planted in the higher level documentation under either [Docu
 * [Crosswalk 3 release notes] (wiki/Crosswalk-3-release-notes)
 * [Crosswalk 4 release notes] (wiki/Crosswalk-4-release-notes)
 * [Crosswalk 5 release notes] (wiki/Crosswalk-5-release-notes)
+* [Crosswalk 6 release notes] (wiki/Crosswalk-6-release-notes)
 * [Presentation API Documentation] (wiki/presentation-api-manual)
 * [Web API support on different Android versions](wiki/webapi-support-on-different-versions)
 * [Crosswalk-based Cordova Android](wiki/crosswalk-cordova-android) 
