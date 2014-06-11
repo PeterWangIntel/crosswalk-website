@@ -12,8 +12,23 @@ Below dependencies are needed for Crosswalk Developer Tools Eclipse Plugin
 *   For having a runnable xwalk-android, some steps are required to set up the develop host, [INSTALLING THE DEVELOPMENT TOOLS](https://crosswalk-project.org/#documentation/getting_started/host_setup/Installing-the-dev-tools). Futher detail, please refer [Crosswalk Wiki](http://crosswalk-project.org/#wiki)
 
 ## Installation ##
-Several simple steps to install the plugin into your Eclipse as following:
 
+Several simple steps to install the plugin into your Eclipse as following.
+You can use the follow 3 methods to install the plug. Recommended the first method.
+ 
+### Online Install ###
+
+In Eclipse menu select: Help -> Install New Software. Type the follow url:
+https://download.01.org/crosswalk/releases/crosswalk-eclipse-plugin
+Then you can select "Crosswalk Development Tools" and install it.
+
+### Download plugin and install ###
+
+You can download the plugin jar at https://download.01.org/crosswalk/releases/crosswalk-eclipse-plugin/plugins
+Then copy the plugin file you exported to the plugins directory in Eclipse.
+
+### Build source code and install ###
+You can also build it from source code.
 1.Use below command to download the source code
 
     git clone https://github.com/crosswalk-project/crosswalk-developer-tools-eclipse-plugin.git
