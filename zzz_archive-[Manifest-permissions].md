@@ -1,3 +1,5 @@
+*The content of this page has been expanded/corrected and promoted to the main website at https://crosswalk-project.org/#documentation/manifest/permissions. Please make any future edits there.*
+
 Below is the support of permission for Crosswalk API on Android and Tizen. The permission names are used in manifest.json.
 
 |Permission API in Crosswalk|Permission Name in Manifest|Support for Crosswalk on Android since |Support for Crosswalk on Tizen since |
