@@ -1,3 +1,5 @@
+*The content of this page has been promoted to the main website at https://crosswalk-project.org/#documentation/manifest/xwalk_hosts.*
+
 Getting data from remote servers with XMLHttpRequest object is limited by the same origin policy. To allow Cross-Origin XHR, "xwalk_hosts" should be declared in manifest.json for web applications running on Crosswalk for Android.
 
 ## Requesting cross-origin permissions
