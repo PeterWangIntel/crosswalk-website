@@ -1,3 +1,5 @@
+*This page has been promoted to the main website at https://crosswalk-project.org/#documentation/manifest/launch_screen. Please make any future edits there.*
+
 # Introduction
 
 The launch screen is a static user interface that is shown immediately after the application is launched and is hidden when the application and required resources are loaded and the application’s actual user interface can be constructed. The use of a launch screen leads to a better perceived performance and improves the user experience of an application as the user is able to see content relevant to the application immediately.
