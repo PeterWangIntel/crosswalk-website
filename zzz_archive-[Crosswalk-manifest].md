@@ -1,3 +1,5 @@
+*The content in this page has been expanded/corrected and promoted to the main website at https://crosswalk-project.org/#documentation/manifest.**
+
 # Crosswalk manifest format
 
 Crosswalk currently follows the manifest format used by [Chromium packaged applications](http://developer.chrome.com/apps/manifest.html).
