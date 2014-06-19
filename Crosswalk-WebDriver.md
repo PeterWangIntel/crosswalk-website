@@ -87,7 +87,8 @@ xwalkctl -i /'path'/wrt-rtbin-tizen-tests.xpk
 
 (2) Set remote debug port by insert "--remote-debugging-port='PORT'" into "/usr/lib/systemd/user/xwalk.service" on Tizen IVI.
 
-(3) Connect Tizen IVI and PC with sdb
+(3) Connect Tizen IVI and PC with sdb.
+
 a). Run the follow command on Tizen IVI:
  
 <pre>
