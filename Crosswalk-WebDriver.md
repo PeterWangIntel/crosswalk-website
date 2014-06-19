@@ -109,6 +109,10 @@ $sdb root on
 
 (5) Run xwalkdriver binary on PC.
 
+<pre>
+$./xwalkdriver --sdb-port=26099
+</pre>
+
 (6) Execute following commands to test:
 
 <pre>
