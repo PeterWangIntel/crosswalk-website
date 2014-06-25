@@ -1,4 +1,4 @@
-*The content on this page has been migrated to the main website at: https://crosswalk-project.org/#contribute/coding_style (as of 2014-06-25). Please make any modifications there from now on.*
+*The content on this page has been migrated to the main website at: https://crosswalk-project.org/#contribute/coding_style (as of 2014-06-25). Please make any modifications there.*
 
 ## General Coding Style
 In genral, we follow the Chromium coding style: http://www.chromium.org/developers/coding-style, and there are some basic rules:
