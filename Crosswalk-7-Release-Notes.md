@@ -50,3 +50,5 @@
 * [XWALK-1882] - XWalkViewClient.onPageStarted not being called
 * [XWALK-1908] - Cache mode does not work.
 * [XWALK-1963] - Webapp 100% crashes on Android Crosswalk if no SD card on test device
+
+[Release notes in Jira](https://crosswalk-project.org/jira/secure/ReleaseNote.jspa?projectId=10001&version=10606)
