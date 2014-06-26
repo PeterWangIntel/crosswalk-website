@@ -2,7 +2,7 @@
 
 ## New Features
 
-* Rebased to [Chromium 36.0.1985.18] (http://www.chromestatus.com/features):
+* Rebased to [Chromium 36.0.1985.18] (http://www.chromestatus.com/features) which brings:
    * CSS touch-action
    * CSS will-change
    * HTML imports
