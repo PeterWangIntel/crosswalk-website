@@ -17,7 +17,7 @@
 * Support for Cordova 3.5.0
 * Support for In-App Purchases 
 * Ability to open a file with third party app based on the file type
-* Only letters, digits, " " and "_" are allowed for manifest app name
+* Only letters, digits, " " and "_" are allowed for the application's name in the manifest
 
 ## Notable bug fixes
 
