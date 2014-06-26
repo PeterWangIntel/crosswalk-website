@@ -3,7 +3,12 @@
 ## New Features
 
 * Rebased to [Chromium 36.0.1985.18] (http://www.chromestatus.com/features):
-   * ssad
+   * CSS touch-action
+   * CSS will-change
+   * HTML imports
+   * Object.observe()
+   * Unprefixed CSS Transforms
+   * Web Animations JavaScript API [element.animate()]
 * Enabled Native Client (NaCL) on Tizen and Linux for 32 and 64-bit
 * Capability to access native pure file system on Android and Tizen/Linux
 
