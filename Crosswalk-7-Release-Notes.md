@@ -2,7 +2,7 @@
 
 ## New Features
 
-* Rebased to [Chromium 36] (http://www.chromestatus.com/features)
+* Rebased to [Chromium 36.0.1985.18] (http://www.chromestatus.com/features)
 * Enabled Native Client (NaCL) on Tizen and Linux for 32 and 64-bit
 * Capability to access native pure file system on Android and Tizen/Linux
 
@@ -13,12 +13,12 @@
 * Ability to open a file with third party app based on the file type
 * Only letters, digits, " " and "_" are allowed for manifest app name
 
-### Notable bug fixes
+## Notable bug fixes
 
 [XWALK-978] - Pixel game got blurred on crosswalk
 [XWALK-1207] - Throw exception when packer tool manify css files with compressor option
 [XWALK-1209] - Throw exception when packer tool manify JS files with compressor option
-[XWALK-1245] - [REG] Font rendering is weird in Crosswalk 5
+[XWALK-1245] - Font rendering is weird in Crosswalk 5
 [XWALK-1298] - Character handling issue in manifest name field
 [XWALK-1302] - Fail to get correct value of "box-decoration-break" when running "WebAPI/Backgrounds" on Android OS
 [XWALK-1327] - Fail to get the value of “Hash” when running “WebAPI/sanityapp/AppURI” on Android OS
