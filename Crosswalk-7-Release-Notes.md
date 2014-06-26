@@ -16,56 +16,30 @@
 
 ### Notable bug fixes
 
-Bug
-[XWALK-946] - Resolution of the webapp doesn't fit to screen size on IVI
-[XWALK-948] - The scroll indicators will show by default on IVI
-[XWALK-967] - Fail to fire an event after create listener with method RTCPeerConnection.addEventListener() on IVI
 [XWALK-978] - Pixel game got blurred on crosswalk
-[XWALK-987] - The attribute orientation value of interface Screen does not exists when running the "WebAPI/screenorientation" component on IVI
-[XWALK-1037] - Open web pages in default browser instead of in-app browsing
-[XWALK-1125] - Music does not seamlessly loop
 [XWALK-1207] - Throw exception when packer tool manify css files with compressor option
 [XWALK-1209] - Throw exception when packer tool manify JS files with compressor option
-[XWALK-1231] - xwalkctl does not display the correct xpk name after update xpk on IVI
 [XWALK-1245] - [REG] Font rendering is weird in Crosswalk 5
-[XWALK-1251] - v8 should throw exception when assigning a non float32x4 object to Float32x4Array element
-[XWALK-1281] - device orientation doesn't work for HexGL
 [XWALK-1298] - Character handling issue in manifest name field
 [XWALK-1302] - Fail to get correct value of "box-decoration-break" when running "WebAPI/Backgrounds" on Android OS
 [XWALK-1327] - Fail to get the value of “Hash” when running “WebAPI/sanityapp/AppURI” on Android OS
-[XWALK-1328] - Fail to get the value of “Hash” when running “WebAPI/sanityapp/AppURI” on IVI
 [XWALK-1329] - Fail to switch to Full Screen mode when running “WebAPI/sanityapp/FullScreen” on Android OS
 [XWALK-1367] - [REG] Unable to launch application in fullscreen mode
-[XWALK-1381] - Failed to initialize extension: libtizen_system_info
-[XWALK-1383] - [Android] App packaged by xwalk_app_template crashed after rebase to Chromium 35
 [XWALK-1413] - [Beta]The video can not be played when running “WebAPI/sanityapp/” on Android OS
-[XWALK-1426] - Build error
-[XWALK-1443] - The scroll indicators does not appear when zoom in/out the picture on Tizen IVI
-[XWALK-1450] - Virtual keyboard does not work when launching web page on Tizen common
-[XWALK-1457] - No selection list displayed in the input when running “Use Case/Input” on Android OS
 [XWALK-1466] - [Android] make_apk_test fails when out/ has both ARM and x86 builds
 [XWALK-1467] - The webapp can not be installed when the Manifest name is head with special value
 [XWALK-1472] - The webapp can be packed when the Manifest name with Tail Escape Char BackSlash or Tail Unit Dollar
 [XWALK-1476] - Crosswalk crashes if the application name has a space in it
 [XWALK-1538] - [PnP][REG]Power consumption of HTML5 video has increased ~14% on Android/Geek
-[XWALK-1541] - The xpk should not be installed successfully when the Manifest icon is negative value
 [XWALK-1571] - Event tracing is broken in Crosswalk on Android
-[XWALK-1573] - [REG]Only a blank page on UI when launching the MediaPlayer app on Common image 20140424.21
 [XWALK-1574] - Use TextureView and SurfaceView for embedding API
-[XWALK-1576] - No voice when launching the HangOnMan and MemoryGame app on Common image 20140424.21
-[XWALK-1578] - The expected output is incorrect when running the rtcore test cases
 [XWALK-1585] - The audio file cannot be played when running “WebAPI/sanityapp/webaudio” on Android OS
-[XWALK-1586] - The path of the application description is incorrect when running the "tct-sp02/pm-wrt-tests" component
-[XWALK-1587] - Fail to set/get cookies for Application when running "tct-sp01-wrt-tests" component on generic
 [XWALK-1592] - [Android] Add xwalk_core_sample_apk to xwalk_builder
 [XWALK-1593] - [Android] Build CrosswalkSample with Eclipse.
-[XWALK-1599] - [REG]The running crosswalk crash when running the "Tizen/Content" component on common
 [XWALK-1608] - [Android] Can not re-enter fullscreen mode again when playing embeded video
-[XWALK-1613] - [Android] XWalkPreferences implementation may have memory issue
 [XWALK-1616] - Launching Crosswalk-Cordova ARM app on IA device doesn't report Architecture mismatch error
 [XWALK-1617] - Add the sample code for demonstrate the usage of some Crosswalk Embedding API
 [XWALK-1618] - [REG] Apk will crash when set ‘undefined’ arch option
-[XWALK-1620] - Refine the description for embedding api
 [XWALK-1623] - Launch screen display is delayed in Crosswalk 6
 [XWALK-1627] - [REG] Javascript's native confirm box locks the app
 [XWALK-1633] - [Android] Always get IntentReceiverLeaked message when exiting app using Presentation API
@@ -82,9 +56,7 @@ Bug
 [XWALK-1677] - [REG] Crosswalk will crash when launching HangOnMan sample app
 [XWALK-1684] - The case descriptions in some manual cases are missing in "WebAPI/canvas" component
 [XWALK-1685] - [REG]Crosswalk crashed when running WebAPI tests
-[XWALK-1694] - [REG] Fail to login WebRTC app on Tizen IVI
 [XWALK-1695] - [Android] onRsourceLoadStarted callback must be posted to UI thread to run
-[XWALK-1697] - No voice when play the video on Tizen IVI
 [XWALK-1702] - Blank browser after loading URL until it is resized
 [XWALK-1707] - The running crosswalk hang when running the "Tizen/Download" component on IVI
 [XWALK-1710] - Fail to install extensions package due to lack of dependency 'media-data-sdk' on Tizen Common
