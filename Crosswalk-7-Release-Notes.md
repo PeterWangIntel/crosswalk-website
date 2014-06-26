@@ -3,16 +3,15 @@
 ## New Features
 
 * Rebased to [Chromium 36] (http://www.chromestatus.com/features)
-[XWALK-1338] - [LInux 64bit] Enable Native Client (NaCl) in xwalk
-[XWALK-1339] - [Tizen 32bit] Enable Native Client (NaCl) in xwalk
-[XWALK-672] - [Android] Capability to access native pure file system
+* Enabled Native Client (NaCL) on Tizen and Linux for 32 and 64-bit
+* Capability to access native pure file system on Android and Tizen/Linux
 
 #### Android
 
-[XWALK-594] - Support IAP on Android
-[XWALK-1560] - Open a file with third party app
-[XWALK-1826] - Support Cordova 3.5.0 on Crosswalk Android
-[XWALK-1838] - Only letters, digits, " " and "_" are allowed for manifest app name.
+* Support for Cordova 3.5.0
+* Support for In-App Purchases 
+* Ability to open a file with third party app based on the file type
+* Only letters, digits, " " and "_" are allowed for manifest app name
 
 ### Notable bug fixes
 
