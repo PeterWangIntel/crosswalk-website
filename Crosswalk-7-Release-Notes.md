@@ -18,6 +18,7 @@
 * Support for In-App Purchases 
 * Ability to open a file with third party app based on the file type
 * Only letters, digits, " " and "_" are allowed for the application's name in the manifest
+* Use TextureView and SurfaceView for embedding API
 
 ## Notable bug fixes
 
@@ -28,7 +29,6 @@
 * [XWALK-1466] - make_apk_test fails when out/ has both ARM and x86 builds
 * [XWALK-1476] - Crosswalk crashes if the application name has a space in it
 * [XWALK-1538] - Power consumption of HTML5 video has increased ~14% on Android/Geek
-* [XWALK-1574] - Use TextureView and SurfaceView for embedding API
 * [XWALK-1608] - Can not re-enter fullscreen mode again when playing embeded video
 * [XWALK-1616] - Launching Crosswalk-Cordova ARM app on IA device doesn't report Architecture mismatch error
 * [XWALK-1618] - Apk will crash when set ‘undefined’ arch option
