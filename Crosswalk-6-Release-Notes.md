@@ -1,4 +1,4 @@
-### Crosswalk 6.35.131.4 Beta
+### Crosswalk 6.35.131.11
 
 ## New Features
 
