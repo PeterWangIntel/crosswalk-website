@@ -15,7 +15,7 @@
 #### Android
 
 * Support for Cordova 3.5.0
-* Support for In-App Purchases 
+* [API for In-App Purchases](https://github.com/crosswalk-project/crosswalk-android-extensions/wiki/A-Possible-IAP-Web-IDL) 
 * Ability to open a file with third party app based on the MIME type
 * Only letters, digits, " " and "_" are allowed for the application's name in the manifest
 * Use TextureView and SurfaceView for embedding API
