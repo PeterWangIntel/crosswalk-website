@@ -67,6 +67,7 @@ If you have any question on how to use Crosswalk you can ask on IRC. On freenode
 ## Other resources
 * [Chromium command line switches](http://peter.sh/experiments/chromium-command-line-switches/) (external link)
 * [Android WebView](wiki/Android-WebView)
+* [Android SurfaceView vs. TextureView](wiki/Android-SurfaceView-vs-TextureView)
 * [Tizen 2.1 Features and Tasks](wiki/Tizen-2.1-WRT-features-and-related-tasks)
 * [[Tizen Integration]]
 * [Android Debugging] (wiki/Android-Debugging)
