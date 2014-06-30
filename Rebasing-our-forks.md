@@ -212,7 +212,7 @@ The parts of the process that are similar to blink-crosswalk have shorter descri
 1. Fetch the new Chromium branch and create a new `upstream` branch.
 
     ```sh
-    git fetch https://chromium.googlesource.com/chromium/src.git +refs/branch-heads/1599:my-upstream-copy
+    git fetch https://chromium.googlesource.com/chromium/src.git +refs/tags/30.0.1599.66:my-upstream-copy
     ```
 
     Verify the new branch `my-upstream-copy` has been created by running `git branch`.
