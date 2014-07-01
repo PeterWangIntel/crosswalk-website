@@ -13,3 +13,4 @@ Crosswalk Extensions allow exposing new functionality to JavaScript environment 
  * [NPRuntime based Web API Extension](NPRuntime-Based-WebAPI-Extension-Framework)
  * [Extensions and Packaged Apps](Extensions-and-Packaged-Apps)
  * [Web API extension comparison](Web-API-Extension-Comparison)
+* [Building Crosswalk Android Extensions](https://github.com/crosswalk-project/crosswalk-android-extensions/wiki/Building-Crosswalk-Android-Extensions)
