@@ -176,7 +176,7 @@ The parts of the process that are similar to blink-crosswalk have shorter descri
     ```
 
 ## Rebasing chromium-crosswalk
-Again, the rebasing process for chromium-crosswalk is very similar to the one for blink-crosswalk. The differences are in some branch names upstream and in the fact that it is much more likely that we have commits on top of the upstream ones than for blink-crosswalk.
+Again, the rebasing process for chromium-crosswalk is very similar to the one for blink-crosswalk. The differences are in some branch names upstream, the fact that it is much more likely that we have commits on top of the upstream ones than for blink-crosswalk and, most importantly, we rebase on top of a **tag** instead of a branch.
 
 The parts of the process that are similar to blink-crosswalk have shorter descriptions here. Please refer to the blink-crosswalk section for more detailed explanations of each step. It's not possible to emphasize enough how important it is not to follow the steps blindly, so read up and understand what is going on first.
 
@@ -196,31 +196,19 @@ The parts of the process that are similar to blink-crosswalk have shorter descri
     git branch crosswalk-1/28.0.1500.36 master
     ```
 
-1. Determine the new Chromium branch and revision that are going to be used.
+1. Determine the new Chromium release that is going to be used.
 
-    Assuming we are tracking **linux-beta** and it is now at release **30.0.1599.66**: the _true branch_ column in OmahaProxy says the branch number is **1599_59**, so the Subversion branch in Chromium's repository is `branches/1599_66`.
+    Assuming we are tracking **linux-beta** and it is now at release **30.0.1599.66**. This is the tag/release we will rebase onto. Chromium's git repository uses tags a bit differently than most git projects: while most project use a tag to refer to a commit part of a certain branch and can be accessed by traversing this branch, Chromium's release tags point to a single commit descending from a branch but not referenced by it. The sole purpose of this commit is to update `DEPS` and `.DEPS.git` so that Chromium's dependencies are at the correct revisions.
 
-    Contrary to Blink, there is no need to check the `DEPS` file in the release branch; if you still want to, the `'src'` section in `releases/30.0.1599.66/DEPS` should point to the same revision as _true branch_ in OmahaProxy, **226662**:
-    ```python
-    # ...
-    'src':
-      '/branches/1650/src@226662',
-    # ...
-    ```
+    In other words: going to OmahaProxy and looking at the _true branch_ corresponding to **30.0.1599.66**, it is possible to see that it comes from the branch **1599_59**. In git, it means one can fetch and follow `refs/branch-heads/1599_59` containing all commits from trunk/master that have been merged into the 1599_59 branch, but with outdated versions of `DEPS` and `.DEPS.git`. The tag `refs/tags/30.0.1599.66`, on the other hand, points to a commit fixing `DEPS` and `.DEPS.git` that is a direct child of the commit in `refs/branch-heads/1599_59` but is **not** part of that branch.
 
-1. Fetch the new Chromium branch and create a new `upstream` branch.
+1. Fetch the new Chromium tag and create a new `upstream` branch.
 
     ```sh
     git fetch https://chromium.googlesource.com/chromium/src.git +refs/tags/30.0.1599.66:my-upstream-copy
     ```
 
     Verify the new branch `my-upstream-copy` has been created by running `git branch`.
-
-    As the same branch can be used for more than one release, the commit at the tip of the branch might not be the one corresponding to the release we want. Use `git log` or `git svn find-rev` to determine the SHA1 hash corresponding to the Subversion revision determined in the previous section (226662), and then reset to it:
-    ```sh
-    git checkout my-upstream-copy
-    git reset --hard <SHA1>
-    ```
 
 1. Rebase existing fork-specific changes in `master` on top of the new `upstream` branch.
 
