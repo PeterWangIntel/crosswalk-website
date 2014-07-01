@@ -30,8 +30,6 @@ The most basic distinction is between the `master` and the `crosswalk-*` branche
 
 In other words, `crosswalk-<version>/<release_number>` simply contains a certain number of commits made by Crosswalk contributors on top of an upstream branch.
 
-At least for now, we do not keep `lkgr` branches.
-
 ## Rebasing blink-crosswalk
 Let's start with the dependency deepest down the stack we have: Blink. Most of the time, rebasing Blink should be trivial: not only are fork-specific commits discouraged in general, but Blink normally serves Crosswalk's purposes just fine without requiring any changes from our part.
 
