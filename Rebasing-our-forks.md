@@ -6,12 +6,13 @@ This article shows how perform these rebases and what pitfalls to look out for, 
 Some skills are essential in order to rebase the code without losing half of your hair or running away in despair.
 
 First of all, you *must* be familiar with Chromium's release process (which is what we have based our own relase methodology on). Particularly important things to know include:
-* [ViewVC](https://src.chromium.org/viewvc/chrome/) and how to use it.
-* Chromium's SVN repository organization: development happens in trunk (`/trunk/src`), trunk gets branched and branches have numbers (`/branches/<NUMBER>/src`), certain branches are chosen for releases (`/releases/<RELEASE NUMBER>`).
-* `DEPS` and `DEPS.git` are *not* updated in a branch after it is created from trunk.
-* `DEPS` in a release _is_ updated. However, releases do not have a `DEPS.git`.
-* Analogously, [Blink's](https://src.chromium.org/viewvc/blink/) development happens in trunk (`/trunk`) and a branch is created with the same number as the Chromium one when the latter is branched (`/branches/chromium/<NUMBER>`), except that Chromium branches such as *1234_55* do not have a corresponding branch in Blink; all commits to *1234*, *1234_56*, *1234_678* etc in Chromium go to the same branch *1234* in Blink.
+* Chromium's [SVN repository](https://src.chromium.org/viewvc/chrome/) organization: development happens in trunk (`/trunk/src`), trunk gets branched and branches have numbers (`/branches/<NUMBER>/src`), certain branches are chosen for releases (`/releases/<RELEASE NUMBER>`).
+  * Chromium's [git repository](https://chromium.googlesource.com/chromium/src/) organization: as of July 2014, development happens in the SVN repositories and are mirrored in git. git's `master` branch corresponds to `trunk`, while branches are mirrored in `refs/branch-heads/<NUMBER>` and releases are tags in `refs/tags/<RELEASE NUMBER>`. Branches and tags are not fetched by default, contrary to the defaults used by most git projects in the world.
+  * `DEPS` and `.DEPS.git` are *not* updated in a branch after it is created from trunk. They *are* updated for releases, though (the SVN repository only contains updates to `DEPS`, whereas the git tag corresponding to a release points to a commit that updates both `DEPS` and `.DEPS.git`).
+* [Blink's](https://src.chromium.org/viewvc/blink/) development happens in trunk (`/trunk`) and a branch is created with the same number as the Chromium one when the latter is branched (`/branches/chromium/<NUMBER>`), except that Chromium branches such as *1234_55* do not have a corresponding branch in Blink; all commits to *1234*, *1234_56*, *1234_678* etc in Chromium go to the same branch *1234* in Blink.
+  * Blink is also [mirrored in git](https://chromium.googlesource.com/chromium/blink/). git's `master` branch corresponds to `trunk`, branches are in `refs/branch-heads/chromium/<NUMBER>`.
 * Finally, V8's development happens in trunk with release branches accompanying each Chromium release. For example, Chromium 34 uses V8 from the *3.24* branch.
+  * As usual, V8 has a [git mirror](https://chromium.googlesource.com/external/v8/). `master` corresponds to `trunk` and branches are in `refs/branch-heads/<NUMBER>`.
 
 You also need to be familiar with [OmahaProxy](https://omahaproxy.appspot.com/). Understand which row you are supposed to choose and what the columns mean. If you are rebasing Crosswalk's dependencies for a new cycle (ie. you are working on what Crosswalk's `master` branch is going to be based on), you should check the **linux-beta** row in OmahaProxy. Likewise, if you are simply maintaining Crosswalk's stable branch and are thus updating from one Chromium release to another in the _same_ milestone, use the **linux-stable** row.
 
