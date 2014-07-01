@@ -302,7 +302,7 @@ Now that the forks themselves have been updated, we need to work on the Crosswal
 
     First of all, check if there are entries there that could be removed (for example, there could be an entry saying "Delete the dependency below once we track Chromium >M30"), and remove them.
 
-    After that, update `chromium_version`, `chromium_crosswalk_point`, `blink_crosswalk_point` and `v8_crosswalk_point` to the new upstream Chromium version, the new chromium-crosswalk SHA1 hash, the new blink-crosswalk SHA1 hash and the new v8-crosswalk SHA1 hash, respectively.
+    After that, `chromium_crosswalk_rev`, `blink_crosswalk_rev` and `v8_crosswalk_rev` to the new upstream Chromium version, the new chromium-crosswalk SHA1 hash, the new blink-crosswalk SHA1 hash and the new v8-crosswalk SHA1 hash, respectively.
 
     Last, update the blink-crosswalk, chromium-crosswalk and v8-crosswalk lines in the `deps_xwalk` dictionary to point to **your fork**, since you have not pushed your new branches and changes to `crosswalk-project`'s repositories yet. Doing so is also useful to let others fetch the changes from your fork and help updating Crosswalk's code if necessary.
 
