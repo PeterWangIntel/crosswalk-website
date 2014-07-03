@@ -10,6 +10,8 @@ Before starting to debug your web application, make sure the right Google Chrome
  | Crosswalk-3 | >= 32 |
  | Crosswalk-4 | >= 32 |
  | Crosswalk-5 | >= 34 |
+ | Crosswalk-6 | >= 35 |
+ | Crosswalk-7 | >= 36 |
 
 > You can also examine Chrome version from ```navigator.userAgent``` string in your web application.
 
