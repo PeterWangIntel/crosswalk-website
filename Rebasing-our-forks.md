@@ -329,20 +329,9 @@ Now that the forks themselves have been updated, we need to work on the Crosswal
 
     Rinse and repeat until everything builds, all tests pass and Crosswalk seems to be working.
 
-## Adjust the version numbers in the build bots
-_This is an annoying step that we are trying to get rid of. It is required only for Crosswalk's development branch because the build/try bots do not build the stable branch at the moment._
+## Push your changes
+Once everything is working, you can push your blink-crosswalk, chromium-crosswalk and v8-crosswalk changes to crosswalk-project if you haven't done so yet.
 
-By now it should be fairly clear that the rebases have been done correctly and Crosswalk is also working as expected, but whenever Chromium's version number changes the build bot infrastructure (ie. https://build.crosswalk-project.org and https://build.crosswalk-project.org/try) needs to be updated as well. This is necessary because the Content Shell slaves do not check out Crosswalk at all and need to know which Chromium version to check out the main `DEPS` file from. In other words, they have to get the **XX** in src.chromium.org/chrome/releases/**XX**/DEPS from somewhere.
-
-First, you need to either be in contact with the people who have access to the build/try bots infrastructure (Raphael Kubo da Costa and Alexis Menard) or get access to the necessary infrastructure and do it yourself. After that, follow these steps:
-
-1. Clone the private `build-infrastructure.git` repository.
-
-1. Update `XWALK_CHROMIUM_VERSION` in `masters/master.tryserver.crosswalk/master.cfg` and `masters/master.wrt/master.cfg` there.
-
-1. Update the master checkouts appropriately and restart the masters.
-
-Once that is done, push your new branches:
 ```sh
 # Assuming origin points to git@github.com:crosswalk-project/{blink,chromium,v8}-crosswalk.git
 cd /path/to/chromium-crosswalk/third_party/WebKit
@@ -355,34 +344,6 @@ cd /path/to/chromium-crosswalk
 git push -f origin master
 ```
 
-## Push your changes
-Once everything is working, you can push your blink-crosswalk, chromium-crosswalk and v8-crosswalk changes to crosswalk-project if you haven't done so yet.
-
-```sh
-# Assuming origin points to git@github.com:crosswalk-project/{blink,chromium,v8}-crosswalk.git
-cd /path/to/chromium-crosswalk/third_party/WebKit
-git push origin crosswalk-1/28.0.1500.36
-git push -f origin next
-
-cd /path/to/chromium-crosswalk
-git push origin crosswalk-1/28.0.1500.36
-git push -f origin next
-```
-
 This should not break anything for Crosswalk users, as the SHA1 hashes referenced in the Crosswalk repository are still present in the forks.
 
-Finally, create a **single commit** in Crosswalk that updates version numbers, adjusts the code and changes `DEPS.xwalk` and send a pull request. Don't forget to **update** `DEPS.xwalk` so it tracks the correct *-crosswalk (git@github.com:crosswalk-project/{blink,chromium,v8}-crosswalk.git) back again.
-
-After you pushed to the next branch you can call for help and patches that couldn't be rebase trivially.
-
-When the quality of next is acceptable you can merge it back into master.
-
-```sh
-# Assuming origin points to git@github.com:crosswalk-project/{blink,chromium,v8}-crosswalk.git and you are in next branch
-cd /path/to/chromium-crosswalk/third_party/WebKit
-git push -f origin next
-
-cd /path/to/chromium-crosswalk
-git push -f origin next
-```
-The try bots will then test it and, if everything goes well, Crosswalk will be updated for everyone to enjoy.
+Finally, create a **single commit** in Crosswalk that adjusts the code and changes `DEPS.xwalk` and send a pull request.
