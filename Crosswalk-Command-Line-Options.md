@@ -7,11 +7,7 @@ In the examples below, the Crosswalk binary is denoted with `xwalk`. On Windows,
 |   Name     |    Description     |     Example
 -------------|--------------------|------------------
 ```--app-icon``` | Specified the icon file path for the app window, support both ICO and PNG file format. | ```xwalk --app-icon=XXX.png``` 
-```--data-path```  | Specifies the folder name in system configuration folder for the web app launched by Crosswalk. On Linux, the configuration folder is $HOME/.config, while on Windows, it is ```$USER/AppData/Local``` | ```xwalk --data-path=myapp```
-Data goes into a new directory named ```myapp``` under xwalk working directory.
-```--fullscreen``` | Launch the application with fullscreen window. | ```xwalk --fullscreen```
-Launch Crosswalk with in full screen mode.
-```--remote-debugging-port``` | Enable remote debugging on the given local host port. | ```xwalk --remote-debugging-port=9222```
-Access 'http://localhost:9222' in Chrome Browser to see all inspectable pages running under Crosswalk.
-```--list-features-flags``` | List all the features flags of Crosswalk. | ```xwalk --list-features-flags```
-Display a list of all the feature flags of Crosswalk and the command line argument to switch them on or off.
+```--data-path```  | Specifies the folder name in system configuration folder for the web app launched by Crosswalk. On Linux, the configuration folder is $HOME/.config, while on Windows, it is ```$USER/AppData/Local``` | ```xwalk --data-path=myapp```<br>Data goes into a new directory named ```myapp``` under xwalk working directory.
+```--fullscreen``` | Launch the application with fullscreen window. | ```xwalk --fullscreen```<br>Launch Crosswalk in full screen mode.
+```--remote-debugging-port``` | Enable remote debugging on the given local host port. | ```xwalk --remote-debugging-port=9222```<br>Access 'http://localhost:9222' in Chrome Browser to see all inspectable pages running under Crosswalk.
+```--list-features-flags``` | List all the features flags of Crosswalk. | ```xwalk --list-features-flags```<br>Display a list of all the feature flags of Crosswalk and the command line argument to switch them on or off.
