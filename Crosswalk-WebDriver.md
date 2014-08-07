@@ -34,19 +34,13 @@ $ python
 (1) Build XwalkDriver by building the 'xwalkdriver' target and get an executable
 binary in the build folder named 'xwalkdriver'.
 
-(2) Enable remote debugging in your Android app source code, like this
-
-    public void onCreate(Bundle savedInstanceState) {
-        ...
-        setRemoteDebugging(true); // Enable remote debugging
-        super.onCreate(savedInstanceState);
-        ...
-    }
+(2) Get Crosswalk for Android from Download page.
 
 (3) Pakage your app by execute command
 
 <pre>
-    python make_apk.py --manifest=YOUR_APP_PATH/manifest.json
+    python make_apk.py --manifest=YOUR_APP_PATH/manifest.json --enable-remote-debugging
+
 </pre>
 
 (4) Install your apk to device.
