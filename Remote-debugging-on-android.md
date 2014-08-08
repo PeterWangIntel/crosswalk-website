@@ -1,7 +1,8 @@
-## Requirements
+## Map of Crosswalk versions to Chrome versions
 
-Before starting to debug your web application, make sure the right Google Chrome version is installed on the host machine, otherwise, **the remote debugging functionality may not work as expected**. The following is a table to indicate the corresponding Chrome version required by different Crosswalk version.
-* Version Mapping Table
+Before debugging your web application, make sure the right Google Chrome version is installed on the host machine. If you fail to do this, **the remote debugging functionality may not work as expected**. The following table shows which version of Chrome you need to debug a given Crosswalk version.
+
+### Version Mapping Table
 
  | Crosswalk Version | Google Chrome Version |
  --------------------|------------------------
@@ -13,16 +14,19 @@ Before starting to debug your web application, make sure the right Google Chrome
  | Crosswalk-6 | >= 35 |
  | Crosswalk-7 | >= 36 |
 
-> You can also examine Chrome version from ```navigator.userAgent``` string in your web application.
+> You can also examine the Chrome version via the ```navigator.userAgent``` property in your web application.
 
 ## Remote debugging for web applications on Android
+
 Developers can use remote debugging to debug web applications on Android from Chrome Browser on Linux host machines.
+
  * Two ways to enable the remote debugging feature for a web application. You can either enable the remote debugging by default when packaging the web app or send Android intents to the web app if it's running.
   * Option 1: Enable remote debugging by default when packaging a web app, for example,
 ```
   host$ python make_apk.py --package=com.abc.app --name=ABC --app-root=/home/abc/dist --app-local-path=src/index.html --enable-remote-debugging
 ```
   Launch the packaged web app APK and remote debugging is enabled by default.
+
   * Option 2: If a web app APK is not packaged with remote debugging, you can launch it and send an intent to enable/disable remote debugging when it's running. Note that below intent will enable remote debugging feature for all running web apps with Crosswalk.
 ```
   host$ adb shell am broadcast -a org.xwalk.intent -e remotedebugging true  
@@ -36,6 +40,7 @@ Developers can use remote debugging to debug web applications on Android from Ch
   * Web pages or web apps will be shown in the inspection page. Click to the button 'inspect' to inspect it.
 
 ## Remote debugging for XWalk Core Shell on Android
+
 XWalkCoreShell is an internal test shell for Crosswalk developers. It enables remote debugging by default. 
 Follow the steps 'Inspect web pages or web apps in Chrome Browser.
 
