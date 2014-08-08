@@ -4,15 +4,15 @@ Before debugging your web application, make sure the right Google Chrome version
 
 ### Version Mapping Table
 
- | Crosswalk Version | Google Chrome Version |
- --------------------|------------------------
- | Crosswalk-1 | >= 29 |
- | Crosswalk-2 | >= 31 |
- | Crosswalk-3 | >= 32 |
- | Crosswalk-4 | >= 32 |
- | Crosswalk-5 | >= 34 |
- | Crosswalk-6 | >= 35 |
- | Crosswalk-7 | >= 36 |
+| Crosswalk Version | Google Chrome Version |
+|-------------------|-----------------------|
+| Crosswalk-1 | >= 29 |
+| Crosswalk-2 | >= 31 |
+| Crosswalk-3 | >= 32 |
+| Crosswalk-4 | >= 32 |
+| Crosswalk-5 | >= 34 |
+| Crosswalk-6 | >= 35 |
+| Crosswalk-7 | >= 36 |
 
 > You can also examine the Chrome version via the ```navigator.userAgent``` property in your web application.
 
