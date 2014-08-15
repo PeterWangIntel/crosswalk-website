@@ -115,7 +115,7 @@ It is a SQLite database, will save applications' information in it.
  * Start install function when the switch "--install" is enabled in the command line, and with the application package url follow it.
 
 ```sh
-$ xwalk --install path/to/target.xpk
+$ xwalkctl --install path/to/target.xpk
 ```
 
  * Prepare the XPK package
@@ -138,7 +138,7 @@ $ xwalk --install path/to/target.xpk
  * Start the uninstall functionality with the swith "--uninstall" in command line, and using the application ID as its argument. Like this:
 
 ```sh
-$ xwalk --uninstall application_ID
+$ xwalkctl --uninstall application_ID
 ```
 
  * Query the record using application ID in appliation information database, when it's invalid, exit the steps.
@@ -146,10 +146,10 @@ $ xwalk --uninstall application_ID
  * Remove the application resources.
 
 ### Launch
- * An application will be launched when using ```xwalk``` command with its id followed.
+ * An application will be launched when using ```xwalk-launcher``` command with its id followed.
 
 ```sh
-$ xwalk application_ID
+$ xwalk-launcher application_ID
 ```
 
  * Check if the application information is valid in database. If no, exit the steps.
@@ -161,18 +161,16 @@ $ xwalk application_ID
  * Crosswalk runtime can list all installed applications from command line, like this:
 
 ```sh
-$ xwalk --list-apps
+$ xwalkctl
 ```
 
 The result should like this:
 
 ```
-[1023/151523:INFO:xwalk_browser_main_parts.cc(272)] Application ID                       Application Name
-[1023/151523:INFO:xwalk_browser_main_parts.cc(273)] -----------------------------------------------------
-[1023/151523:INFO:xwalk_browser_main_parts.cc(276)] cefebchicgfeafgeemhbknlehlaildhj     Numeroo
-[1023/151523:INFO:xwalk_browser_main_parts.cc(276)] jhnafkobpahgnkbhiijoeijbchlfnjeh     Calculator
-[1023/151523:INFO:xwalk_browser_main_parts.cc(276)] oaebeffdeaajdminlhgehcgmahiflini     Memory Match for Older Kids
-[1023/151523:INFO:xwalk_browser_main_parts.cc(277)] -----------------------------------------------------
+Application ID                       Application Name
+-----------------------------------------------------
+ihogjblnkegkonaaaddobhoncmdpbomi	webapi-idlharness-tests
+-----------------------------------------------------
 ```
 Applications ID and name will be displayed in standard IO stream.
 
